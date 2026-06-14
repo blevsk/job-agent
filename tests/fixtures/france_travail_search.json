@@ -1,0 +1,59 @@
+{
+  "resultats": [
+    {
+      "id": "0001",
+      "intitule": "Assistant Administratif en Alternance H/F",
+      "description": "Au sein de notre service administratif, vous assistez la direction dans la gestion du courrier, l'accueil téléphonique et le suivi des dossiers fournisseurs.\nContrat d'apprentissage de 24 mois.\n\nMissions :\n- Accueil\n- Saisie comptable\n- Classement",
+      "dateCreation": "2099-01-01T08:00:00.000Z",
+      "typeContrat": "CDD",
+      "typeContratLibelle": "CDD - 24 Mois",
+      "natureContrat": "Contrat apprentissage",
+      "alternance": true,
+      "romeCode": "M1607",
+      "romeLibelle": "Secrétariat",
+      "entreprise": {"nom": "Acme SAS"},
+      "lieuTravail": {"libelle": "59 - VILLENEUVE D ASCQ", "codePostal": "59650"},
+      "salaire": {"libelle": "Mensuel de 800 à 1200 €"},
+      "origineOffre": {"urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/0001"}
+    },
+    {
+      "id": "0002",
+      "intitule": "Chargé de mission administrative",
+      "description": "Poste en CDI temps plein au sein de la direction administrative et financière.",
+      "dateCreation": "2099-01-01T08:00:00.000Z",
+      "typeContrat": "CDI",
+      "typeContratLibelle": "Contrat à durée indéterminée",
+      "natureContrat": "Contrat travail",
+      "alternance": false,
+      "entreprise": {"nom": "Gamma Group"},
+      "lieuTravail": {"libelle": "59 - ROUBAIX"},
+      "salaire": {"libelle": "Annuel de 28000 à 32000 €"},
+      "origineOffre": {"urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/0002"}
+    },
+    {
+      "id": "0003",
+      "intitule": "Agent d'entretien (Intérim)",
+      "description": "Mission d'intérim de 3 mois renouvelable.",
+      "dateCreation": "2099-01-01T08:00:00.000Z",
+      "typeContrat": "MIS",
+      "natureContrat": "Contrat travail",
+      "entreprise": {"nom": "Beta Intérim"},
+      "lieuTravail": {"libelle": "59 - LILLE"},
+      "origineOffre": {}
+    },
+    {
+      "id": "0005",
+      "intitule": "Vendeur en alternance (pro)",
+      "description": "Contrat de professionnalisation 18 mois.",
+      "dateCreation": "2099-01-01T08:00:00.000Z",
+      "typeContrat": "CDD",
+      "natureContrat": "Contrat de professionnalisation",
+      "entreprise": {"nom": "Delta"},
+      "lieuTravail": {"libelle": "59 - LILLE"}
+    },
+    {
+      "id": "0004",
+      "description": "Annonce sans intitulé — doit être ignorée"
+    }
+  ]
+}

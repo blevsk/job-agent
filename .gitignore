@@ -1,0 +1,27 @@
+# Variables d'environnement / secrets
+.env
+.env.local
+.envrc
+
+# Environnement virtuel
+.venv/
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
+
+# Fichiers de sortie de tests
+*.egg-info/
+*.egg
+*.pytest_cache/
+
+# Fichiers de configuration d'IDE
+*.idea/
+*.vscode/
+
+# Fichiers de configurations spécifiques à Python
+*.pdb
+*.pycov
+
+# Journalisation de pytest
+*.log

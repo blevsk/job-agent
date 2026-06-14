@@ -1,0 +1,10 @@
+{
+  "include": ["src"],
+  "exclude": ["**/__pycache__", "**/*.pyc"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "checkJs": false
+  }
+}

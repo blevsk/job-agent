@@ -1,0 +1,14 @@
+black
+pre-commit
+ruff
+requests
+beautifulsoup4
+pandas
+jinja2
+typer
+pydantic
+rich
+httpx
+pytest
+sentence-transformers
+anthropic

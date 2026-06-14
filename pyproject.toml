@@ -1,0 +1,27 @@
+[project]
+name = "job-agent"
+version = "0.1.0"
+description = "Un agent pour rechercher des offres d'emploi"
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    "typer",
+    "pydantic",
+    "rich",
+    "httpx",
+    "jinja2",
+    "requests",
+    "beautifulsoup4",
+    "pandas",
+    "sentence-transformers",
+    "anthropic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pre-commit",
+    "pytest",
+    "ruff",
+    "mypy",
+]

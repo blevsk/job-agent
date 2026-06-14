@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "location": "Villeneuve-d'Ascq",
+    "radius_km": 25,
+    "max_results": 75,
+    "published_within_days": 31,
+    "contract_type": null
+  },
+  "searches": [
+    {"keyword": "alternance administratif"},
+    {"keyword": "alternance assistant gestion"},
+    {"keyword": "alternance secrétaire"},
+    {"keyword": "apprentissage assistant"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "keywords": [
+    {"pattern": "alternance", "weight": 5.0},
+    {"pattern": "administratif|assistant", "weight": 3.0},
+    {"pattern": "stage(?!\\s*pro)", "weight": -10.0},
+    {"pattern": "junior|d[ée]butant", "weight": 2.0}
+  ],
+  "preferred_contracts": {
+    "Alternance": 5.0,
+    "CDI": 3.0,
+    "CDD": 1.0,
+    "Stage": -10.0,
+    "Intérim": -2.0
+  },
+  "rome_codes": {
+    "M1607": 5.0,
+    "M1602": 4.0,
+    "M1606": 3.0,
+    "M1203": 3.0,
+    "D1401": 2.0
+  },
+  "preferred_location": "Villeneuve",
+  "location_bonus": 3.0,
+  "freshness_bonus": 2.0,
+  "freshness_max_days": 7
+}

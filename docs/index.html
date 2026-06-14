@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Agent — offres scorées</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Job Agent</h1>
+    <p id="meta">Chargement…</p>
+  </header>
+
+  <section class="controls">
+    <input id="filter" type="search" placeholder="Filtrer (titre, entreprise, lieu, justification LLM)…" autofocus>
+    <label><input id="hideNegative" type="checkbox"> Masquer scores négatifs</label>
+  </section>
+
+  <table id="offers">
+    <thead>
+      <tr>
+        <th data-sort="llm_rank">Rang LLM</th>
+        <th data-sort="score">Score</th>
+        <th data-sort="title">Titre</th>
+        <th data-sort="company">Entreprise</th>
+        <th data-sort="location">Lieu</th>
+        <th data-sort="contract_type">Contrat</th>
+        <th data-sort="rome_code">ROME / Sém.</th>
+        <th data-sort="posted_days_ago">Publié</th>
+        <th>Lien</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <p id="empty" hidden>Aucune offre. Lance le workflow GitHub Action pour générer <code>offers.json</code>.</p>
+
+  <script src="app.js"></script>
+</body>
+</html>

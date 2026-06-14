@@ -1,0 +1,183 @@
+:root {
+  --bg: #f7f7f8;
+  --fg: #1a1a1a;
+  --muted: #6b6b73;
+  --border: #e1e1e6;
+  --accent: #2563eb;
+  --pos: #047857;
+  --neg: #b91c1c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.4;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+#meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+#filter {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+}
+
+#filter:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.controls label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+
+th, td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: sticky;
+  top: 0;
+}
+
+th:hover { color: var(--accent); }
+
+tbody tr:hover { background: #fafafa; }
+tbody tr:last-child td { border-bottom: none; }
+
+.score {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.score.pos { color: var(--pos); }
+.score.neg { color: var(--neg); }
+
+.title {
+  font-weight: 500;
+  max-width: 30rem;
+}
+
+.title-line {
+  font-weight: 500;
+}
+
+.snippet, .llm-reason {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  font-weight: normal;
+}
+
+.llm-reason {
+  color: #1f2937;
+  background: #fef3c7;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid #f59e0b;
+}
+
+.rank-cell {
+  text-align: center;
+  width: 4.5rem;
+}
+
+.rank {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
+  background: #e5e7eb;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.rank.gold {
+  background: #fde68a;
+  color: #78350f;
+}
+
+.rank.silver {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.badge.sem {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: #dbeafe;
+  color: #1e40af;
+  vertical-align: middle;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+#empty {
+  margin: 2rem auto;
+  text-align: center;
+  color: var(--muted);
+}
+
+code {
+  background: #eee;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
