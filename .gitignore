@@ -25,3 +25,5 @@ __pycache__/
 
 # Journalisation de pytest
 *.log
+
+.DS_Store
