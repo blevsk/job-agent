@@ -1,7 +1,7 @@
 {
   "defaults": {
-    "location": "Villeneuve-d'Ascq",
-    "radius_km": 25,
+    "location": "Lille",
+    "radius_km": 15,
     "max_results": 75,
     "published_within_days": 31,
     "contract_type": null
@@ -10,6 +10,8 @@
     {"keyword": "alternance administratif"},
     {"keyword": "alternance assistant gestion"},
     {"keyword": "alternance secrétaire"},
-    {"keyword": "apprentissage assistant"}
+    {"keyword": "apprentissage assistant"},
+    {"keyword": "alternance chargé accueil"},
+    {"keyword": "apprentissage accueil"}
   ]
 }
