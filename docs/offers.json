@@ -27,10 +27,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-06-15T11:10:06+00:00",
+    "scraped_at": "2026-06-15T19:36:17+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 29
+    "total": 28
   },
   "offers": [
     {
@@ -40,21 +40,21 @@
       "location": "59 - Roubaix",
       "contract_type": "Alternance",
       "salary": "Annuel de 10000.0 Euros à 22000.0 Euros",
-      "posted_days_ago": 5,
+      "posted_days_ago": 6,
       "snippet": "Tu cherches une alternance qui matche avec tes envies et ta vie ? On t'explique le profil qu'on cherche ici ! Tu as un oeil aiguisé pour l'analyse et la prise de décision, et tu aimes relever des défis liés à la qualité des produits ? Tu veux jouer un rôle clé dans la conformité réglementaire et l'impact environnemental des produits tout en mettant à profit ta rigueur, ton sens de l'organisation…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3612272",
       "rome_code": "M1607",
-      "semantic_score": 0.45577356219291687,
+      "semantic_score": 0.4557734727859497,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 24.55773562192917,
+      "score": 24.557734727859497,
       "score_breakdown": {
         "keywords": 8.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 4.557735621929169
+        "semantic": 4.557734727859497
       }
     },
     {
@@ -68,17 +68,17 @@
       "snippet": "RESPONSABILITÉS : Sous la responsabilité de la direction, vous participerez progressivement aux missions suivantes : • rédaction et suivi des conventions de formation ; • établissement des CERFA d'apprentissage ; • suivi administratif des contrats d'apprentissage ; • facturation des formations en alternance ; • gestion des questionnaires de satisfaction apprentis, entreprises et partenaires ; • p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3210894",
       "rome_code": "M1607",
-      "semantic_score": 0.532867431640625,
+      "semantic_score": 0.5328675508499146,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 23.32867431640625,
+      "score": 23.328675508499146,
       "score_breakdown": {
         "keywords": 8.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.32867431640625
+        "semantic": 5.3286755084991455
       }
     },
     {
@@ -92,17 +92,17 @@
       "snippet": "Description du poste : L'école One Business School recrute pour l'un de ses partenaires pour le poste d'Assistant administratif et commercial en alternance Tu souhaites intégrer un Titre professionnelle dans le domaine des ressources humaines et tu recherches une alternance ? Alors ils n'attendent que toi Objectif du poste : Assister le département des ressources humaines dans toutes les tâches a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3717521",
       "rome_code": "D1401",
-      "semantic_score": 0.43305960297584534,
+      "semantic_score": 0.4330597221851349,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 21.330596029758453,
+      "score": 21.33059722185135,
       "score_breakdown": {
         "keywords": 8.0,
         "contract": 5.0,
         "rome": 2.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 4.330596029758453
+        "semantic": 4.330597221851349
       }
     },
     {
@@ -116,17 +116,17 @@
       "snippet": "Henner, groupe international et indépendant, crée, gère et commercialise des solutions innovantes en assurances de personnes. Nous sommes collaborateurs présents dans 20 pays dans le monde. Nous accompagnons chaque jour entreprises clientes et 2,3 millions de bénéficiaires. Notre expertise de la protection sociale se résume en un mot : le Caring. Le Caring c'est bien plus qu'une idée. C'est une p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3471016",
       "rome_code": "M1607",
-      "semantic_score": 0.35148075222969055,
+      "semantic_score": 0.3514808416366577,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.514807522296906,
+      "score": 19.514808416366577,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 3.0,
         "freshness": 0.0,
-        "semantic": 3.5148075222969055
+        "semantic": 3.514808416366577
       }
     },
     {
@@ -136,21 +136,21 @@
       "location": "59 - RONCHIN",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 11,
+      "posted_days_ago": 12,
       "snippet": "Secrétaire contrat alternance H/F Missions principales : Assurer l'accueil physique et téléphonique des clients. Gérer les tâches administratives courantes (saisie, classement, archivage). Organiser les rendez-vous et gérer les agendas des équipes. Participer à la rédaction de documents (courriers, comptes-rendus). accueillir les clients, répondre au téléphone, prendre des rendez vous, réaliser d…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209FMKB",
       "rome_code": "M1607",
-      "semantic_score": 0.43859538435935974,
+      "semantic_score": 0.4385955035686493,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.385953843593597,
+      "score": 19.385955035686493,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.385953843593597
+        "semantic": 4.385955035686493
       }
     },
     {
@@ -164,17 +164,17 @@
       "snippet": "Réalise le traitement administratif de dossiers (frappe de courrier, mise en forme de document, ...) et transmet les informations (e-mail, notes, fax, ...) pour le compte d'un ou plusieurs services ou d'un responsable selon l'organisation de l'entreprise. Peut prendre en charge le suivi complet de dossiers (contrats de maintenance des équipements, de la structure, ...). Peut coordonner une équipe.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3624406",
       "rome_code": "M1607",
-      "semantic_score": 0.4010482728481293,
+      "semantic_score": 0.40104836225509644,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.010482728481293,
+      "score": 19.010483622550964,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 4.010482728481293
+        "semantic": 4.010483622550964
       }
     },
     {
@@ -188,17 +188,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3151782",
       "rome_code": "M1609",
-      "semantic_score": 0.5102149248123169,
+      "semantic_score": 0.5102150440216064,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.10214924812317,
+      "score": 18.102150440216064,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 3.0,
         "freshness": 0.0,
-        "semantic": 5.102149248123169
+        "semantic": 5.1021504402160645
       }
     },
     {
@@ -212,17 +212,17 @@
       "snippet": "RESPONSABILITÉS : Que ce soit dans le cadre d'une reconversion ou d'un 1er métier, Proxiserve vous forme et vous accompagne à nos métiers au sein d'une équipe qualifiée, professionnelle et passionnée. Vos missions seront : • La gestion globale de l'organisation et de la planification d'interventions dans le respect du cahier des charges du client. L'objectif est d'organiser la planification et le…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2743189",
       "rome_code": "M1607",
-      "semantic_score": 0.5096454620361328,
+      "semantic_score": 0.5096455812454224,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.096454620361328,
+      "score": 18.096455812454224,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 5.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.096454620361328
+        "semantic": 5.096455812454224
       }
     },
     {
@@ -236,17 +236,17 @@
       "snippet": "Rattaché à la coordination administrative, vos missions seront:Accueillir physiquement et par téléphonique les visiteurs et les partenaires.Traiter du courrier et des emails.Contribuer à l'amélioration des procédures internes.Soutenir les équipes dans leurs tâches quotidiennes.Commander des fournitures et gérer des stocks.Participer à l'intégration des collaborateurs.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2890536",
       "rome_code": "C1401",
-      "semantic_score": 0.43662068247795105,
+      "semantic_score": 0.4366207420825958,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.36620682477951,
+      "score": 17.36620742082596,
       "score_breakdown": {
         "keywords": 8.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.3662068247795105
+        "semantic": 4.366207420825958
       }
     },
     {
@@ -260,17 +260,17 @@
       "snippet": "La team Trésorerie Groupe est à la recherche d'un nouveau joueur dans son équipe Middle Office, composée de 5 personnes.&nbsp; L'équipe Middle Office a pour mission de mettre à disposition de nos utilisateurs des reportings et analyses afin de garantir le respect des cadres opérationnels et guider les décisions stratégiques.&nbsp;Ton terrain de jeu ? Un environnement international combinant la ge…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3640711",
       "rome_code": "C1305",
-      "semantic_score": 0.39745399355888367,
+      "semantic_score": 0.3974539339542389,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.974539935588837,
+      "score": 15.974539339542389,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 3.9745399355888367
+        "semantic": 3.974539339542389
       }
     },
     {
@@ -280,7 +280,7 @@
       "location": "59 - Englos",
       "contract_type": "Alternance",
       "salary": "Mensuel de 400.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Formation : Préparez en alternance le Titre Professionnel Employé(e) Polyvalent(e) en Restauration - niveau 3 (équivalent CAP) avec le CFA GM Transformation de Lens sur 12 mois (1 jour/semaine en formation, 4 jours en entreprise). Missions : - Aide à la préparation des plats simples (sandwichs, salades, desserts...) - Service au comptoir, à table ou en self-service - Encaissement des clients - Ne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3656683",
       "rome_code": "G1603",
@@ -304,21 +304,21 @@
       "location": "59 - Illies",
       "contract_type": "Alternance",
       "salary": "Mensuel de 400.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Formation : Préparez en alternance le Titre Professionnel Employé(e) Polyvalent(e) en Restauration - niveau 3 (équivalent CAP) avec le CFA GM Transformation de Lens sur 12 mois (1 jour/semaine en formation, 4 jours en entreprise). Missions : - Aide à la préparation des plats simples (sandwichs, salades, desserts...) - Service au comptoir, à table ou en self-service - Encaissement des clients - Ne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3657024",
       "rome_code": "G1603",
-      "semantic_score": 0.3626493513584137,
+      "semantic_score": 0.3626495599746704,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.626493513584137,
+      "score": 15.626495599746704,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 3.626493513584137
+        "semantic": 3.626495599746704
       }
     },
     {
@@ -328,21 +328,21 @@
       "location": "62 - Carvin",
       "contract_type": "Alternance",
       "salary": "Mensuel de 400.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Formation : Préparez en alternance le Titre Professionnel Employé(e) Polyvalent(e) en Restauration - niveau 3 (équivalent CAP) avec le CFA GM Transformation de Lens sur 12 mois (1 jour/semaine en formation, 4 jours en entreprise). Missions : - Aide à la préparation des plats simples (sandwichs, salades, desserts...) - Service au comptoir, à table ou en self-service - Encaissement des clients - Ne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3656627",
       "rome_code": "G1603",
-      "semantic_score": 0.3449261486530304,
+      "semantic_score": 0.3449261784553528,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.449261486530304,
+      "score": 15.449261784553528,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 3.449261486530304
+        "semantic": 3.449261784553528
       }
     },
     {
@@ -352,21 +352,21 @@
       "location": "59 - Wavrin",
       "contract_type": "Alternance",
       "salary": "Mensuel de 400.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Formation : Préparez en alternance le Titre Professionnel Employé(e) Polyvalent(e) en Restauration - niveau 3 (équivalent CAP) avec le CFA GM Transformation de Lens sur 12 mois (1 jour/semaine en formation, 4 jours en entreprise). Missions : - Aide à la préparation des plats simples (sandwichs, salades, desserts...) - Service au comptoir, à table ou en self-service - Encaissement des clients - Ne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3656704",
       "rome_code": "G1603",
-      "semantic_score": 0.34095731377601624,
+      "semantic_score": 0.340957373380661,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.409573137760162,
+      "score": 15.40957373380661,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 3.4095731377601624
+        "semantic": 3.40957373380661
       }
     },
     {
@@ -380,41 +380,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3149883",
       "rome_code": "M1609",
-      "semantic_score": 0.502568244934082,
+      "semantic_score": 0.5025684833526611,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.02568244934082,
+      "score": 15.025684833526611,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.02568244934082
-      }
-    },
-    {
-      "id": "3148560",
-      "title": "Secrétaire Médical en alternance F/H - Walter Learning",
-      "company": "Walter Learning",
-      "location": "59 - Wattrelos",
-      "contract_type": "Alternance",
-      "salary": "Mensuel de 760.0 Euros à 1802.0 Euros",
-      "posted_days_ago": 17,
-      "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3148560",
-      "rome_code": "M1609",
-      "semantic_score": 0.4742370843887329,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 14.742370843887329,
-      "score_breakdown": {
-        "keywords": 5.0,
-        "contract": 5.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 4.742370843887329
+        "semantic": 5.025684833526611
       }
     },
     {
@@ -428,17 +404,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3149159",
       "rome_code": "M1609",
-      "semantic_score": 0.46883708238601685,
+      "semantic_score": 0.46883735060691833,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.688370823860168,
+      "score": 14.688373506069183,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.6883708238601685
+        "semantic": 4.688373506069183
       }
     },
     {
@@ -452,17 +428,17 @@
       "snippet": "En tant que Chargé(e) de communication vous aurez pour mission de participer activement à l'animation et la communication de notre site, contribuer à son développement, participer et veiller à la qualité et à la satisfaction des convives. A ce titre, vos missions seront : Répondre aux demandes de communication opérationnel courants (adaptation de supports issus du concepts, création de documents…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3284083",
       "rome_code": "G1101",
-      "semantic_score": 0.42755061388015747,
+      "semantic_score": 0.4275505244731903,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.275506138801575,
+      "score": 14.275505244731903,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.275506138801575
+        "semantic": 4.275505244731903
       }
     },
     {
@@ -476,17 +452,17 @@
       "snippet": "Saisie des heures intérimaires Gestion des arrêts maladie et des accidents de travail Administration des dossiers intérimaires Participation mensuelle au processus de paie Contact et relances clients Participation au processus de facturation des prestations intérim, CDD et CDI",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3478543",
       "rome_code": "E1304",
-      "semantic_score": 0.40469685196876526,
+      "semantic_score": 0.4046969711780548,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.046968519687653,
+      "score": 14.046969711780548,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.046968519687653
+        "semantic": 4.046969711780548
       }
     },
     {
@@ -496,21 +472,21 @@
       "location": "59 - Madeleine",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 13,
+      "posted_days_ago": 14,
       "snippet": "Au cours de ton alternance, tu interviendras principalement sur les missions suivantes : 1) Gestion des dépenses : Collecter les pièces justificatives et saisir les demandes d'engagement, Engager les dépenses dans notre outil comptable (CODA), Suivre le circuit d'approbation et réceptionner les charges, Rapprocher les factures fournisseurs afin de les mettre en paiement. 2) Assistance Opérationne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3246648",
       "rome_code": "M1213",
-      "semantic_score": 0.38664495944976807,
+      "semantic_score": 0.38664498925209045,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.86644959449768,
+      "score": 13.866449892520905,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.8664495944976807
+        "semantic": 3.8664498925209045
       }
     },
     {
@@ -520,21 +496,21 @@
       "location": "59 - VILLENEUVE D ASCQ",
       "contract_type": "CDD",
       "salary": "Annuel de 25000.0 Euros à 25500.0 Euros sur 12.0 mois",
-      "posted_days_ago": 10,
+      "posted_days_ago": 11,
       "snippet": "FORMASUP Hauts-de-France, Centre de Formations d'Apprentis de l'enseignement supérieur, depuis 33 ans, s'illustre par un développement en faveur de l'apprentissage dans l'enseignement supérieur. Fort d'un vaste réseau de grandes écoles et universités répartis sur l'ensemble du territoire régional, FORMASUP Hauts-de-France, accompagne aujourd'hui plus de 15 000 apprentis, de plus de 470 formations…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GSXQ",
       "rome_code": "M1607",
-      "semantic_score": 0.42603766918182373,
+      "semantic_score": 0.42603784799575806,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.260376691818237,
+      "score": 13.26037847995758,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 1.0,
         "rome": 5.0,
         "location": 3.0,
         "freshness": 0.0,
-        "semantic": 4.260376691818237
+        "semantic": 4.260378479957581
       }
     },
     {
@@ -548,17 +524,17 @@
       "snippet": "🎯 Envie d’un taf qui claque ? Tu veux apprendre un métier concret, être payé(e), validé(e) par un diplôme, et le tout sans sortir un centime ? C’est maintenant ou jamais ! 👟 L’Institut Jules, l’école qui forme les pros de demain en présentiel à Carvin (62) et partout en France à distance, recherche pour une entreprise partenaire de son réseau Pros! un(e) employé commercial (H/F) en apprentissage…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2899994",
       "rome_code": "D1409",
-      "semantic_score": 0.4151209592819214,
+      "semantic_score": 0.415120929479599,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.151209592819214,
+      "score": 12.15120929479599,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.151209592819214
+        "semantic": 4.15120929479599
       }
     },
     {
@@ -568,21 +544,21 @@
       "location": "59 - SAILLY-LEZ-LANNOY",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Vous aimez le contact avec les gens, les produits locaux et le travail en équipe ? Rejoignez la Ferme Selosse et participez à la vie d'un commerce de proximité authentique et chaleureux. La Ferme Selosse recherche son employé de vente (H/F) en apprentissage pour commencer dès le 17 août. Les missions : - accueillir et conseiller les clients - mettre en valeur les produits de la ferme - participer…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PHXH",
       "rome_code": "D1107",
-      "semantic_score": 0.493256539106369,
+      "semantic_score": 0.49325650930404663,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.93256539106369,
+      "score": 11.932565093040466,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 4.93256539106369
+        "semantic": 4.932565093040466
       }
     },
     {
@@ -592,21 +568,21 @@
       "location": "59 - MARQUETTE LEZ LILLE",
       "contract_type": "Alternance",
       "salary": "Mensuel de 774.77 Euros à 1865.0 Euros sur 12.0 mois",
-      "posted_days_ago": 25,
+      "posted_days_ago": 26,
       "snippet": "DEVENEZ AIDE-SOIGNANT(E) EN CONTRAT D'APPRENTISSAGE - RENTRÉE SEPTEMBRE 2026 Secteurs : Marquette lez Lille pour les environs de Lille et Dunkerque département 59 / Beaurieux département 02 / Compiègne département 60 Rentrée : septembre 2026 Vous souhaitez exercer un métier humain, utile et porteur d'emploi ? Notre CFA spécialisé dans les métiers de la santé recrute des candidats motivés pour int…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208NFJB",
       "rome_code": "J1501",
-      "semantic_score": 0.531516969203949,
+      "semantic_score": 0.5315169095993042,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.31516969203949,
+      "score": 10.315169095993042,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.31516969203949
+        "semantic": 5.315169095993042
       }
     },
     {
@@ -616,21 +592,21 @@
       "location": "59 - LILLE",
       "contract_type": "CDI",
       "salary": "Mensuel de 2105.06 Euros sur 12.0 mois",
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Service : Accueil de Jour CDI - 31 h MISSIONS - Régulation des entrées et sorties - Gestion de la laverie, de la bagagerie - Douches : Planification et accompagnement des personnes accueillies. - Enregistrement des domiciliations et remise des courriers - Animation des lieux collectifs : - Aller à la rencontre des personnes, prendre le temps d'échanger, d'observer. - Vous faites partie intégrante…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NVZK",
       "rome_code": "K1306",
-      "semantic_score": 0.5064263939857483,
+      "semantic_score": 0.5064264535903931,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.064263939857483,
+      "score": 10.06426453590393,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 3.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 2.0,
-        "semantic": 5.064263939857483
+        "semantic": 5.064264535903931
       }
     },
     {
@@ -644,17 +620,17 @@
       "snippet": "Prêt.e à faire la différence ? Rejoignez-nous ! Après une période d'intégration immersive au sein du magasin et de l'équipe qui vous sera confiée, vous garantirez la satisfaction des clients, gérerez votre compte d'exploitation dans le respect des objectifs fixés et managerez une équipe de 8 collaborateurs, tout en étant responsable de la dynamique commerciale du rayon. Véritable acteur du quotid…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2784504",
       "rome_code": "D1507",
-      "semantic_score": 0.48046445846557617,
+      "semantic_score": 0.4804643988609314,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.804644584655762,
+      "score": 9.804643988609314,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": 3.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.804644584655762
+        "semantic": 4.804643988609314
       }
     },
     {
@@ -664,21 +640,21 @@
       "location": "59 - LILLE",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 18,
+      "posted_days_ago": 19,
       "snippet": "Vous rejoindrez la cellule EDUCFI régionale Hauts de France, dont la mission est de coordonner, développer et organiser la mise en œuvre de la stratégie EDUCFI au sein de la région et en relation avec les partenaires l'Éducation Nationale, des structures d'état, des professionnels des structures et associations en charge de l'accompagnement des entrepreneurs et des personnes en fragilité financiè…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208VDMC",
       "rome_code": "K2111",
-      "semantic_score": 0.44673725962638855,
+      "semantic_score": 0.4467373490333557,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.467372596263885,
+      "score": 9.467373490333557,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 5.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.4673725962638855
+        "semantic": 4.467373490333557
       }
     },
     {
@@ -688,7 +664,7 @@
       "location": "59 - Roubaix",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 18,
+      "posted_days_ago": 19,
       "snippet": "Vous souhaitez contribuer à des projets à impact et participer au déploiement d'une stratégie développement durable ambitieuse ? Voici le profil que nous recherchons: Nous recherchons un stagiaire pour accompagner la mise en oeuvre et le suivi de nos actions Développement Durable. Rattaché au Chef de projet Développement Durable, vous participerez au déploiement de projets variés et participerez…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3086711",
       "rome_code": "M1607",
@@ -716,17 +692,17 @@
       "snippet": "✨Nous sommes. Auchan Retail France, une entreprise de distribution de plus de collaborateurs au service de millions de clients chaque année. Ce que nous voulons, c'est aider nos clients à bien manger et vivre mieux, tout en préservant la planète. Que l'on soit en entrepôt, en magasin ou sur des fonctions support, notre point commun à tous, c'est de faire en sorte que nos clients aient plaisir à f…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2683966",
       "rome_code": "D1401",
-      "semantic_score": 0.29500749707221985,
+      "semantic_score": 0.29500746726989746,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 3.9500749707221985,
+      "score": 3.9500746726989746,
       "score_breakdown": {
         "keywords": -7.0,
         "contract": 3.0,
         "rome": 2.0,
         "location": 3.0,
         "freshness": 0.0,
-        "semantic": 2.9500749707221985
+        "semantic": 2.9500746726989746
       }
     }
   ]
