@@ -54,3 +54,26 @@ jobs:
             git commit -m "chore: refresh offers.json [skip ci]"
             git push
           fi
+
+      - name: Push to Codeberg
+        env:
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          git remote add codeberg https://blevsk:${CODEBERG_TOKEN}@codeberg.org/blevsk/job-agent.git
+          git push codeberg main --force-with-lease
+          # Deploy docs/ vers la branche pages de Codeberg
+          git fetch codeberg pages 2>/dev/null || true
+          if git show-ref --verify --quiet refs/remotes/codeberg/pages; then
+            git worktree add /tmp/pages-tree -b pages codeberg/pages
+          else
+            git worktree add /tmp/pages-tree --orphan pages
+          fi
+          rsync -a --delete docs/ /tmp/pages-tree/
+          cd /tmp/pages-tree
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Pages inchangées."
+          else
+            git commit -m "chore: deploy pages [skip ci]"
+            git push codeberg pages
+          fi
