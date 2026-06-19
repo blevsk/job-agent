@@ -70,9 +70,11 @@
   const $exportCsv   = document.getElementById("exportCsv");
   const $ghConfig    = document.getElementById("gh-config");
   const $openAdd     = document.getElementById("open-add");
-  const $addDialog   = document.getElementById("add-dialog");
+  const $addOverlay  = document.getElementById("add-overlay");
   const $addForm     = document.getElementById("add-form");
   const $cancelAdd   = document.getElementById("cancel-add");
+  function openAddModal()  { $addOverlay.hidden = false; $addOverlay.querySelector("input[name=title]")?.focus(); }
+  function closeAddModal() { $addOverlay.hidden = true; }
 
   // --- Formatting ---
   function fmtDate(iso) {
@@ -473,12 +475,9 @@
   });
 
   // --- Ajout manuel ---
-  $openAdd?.addEventListener("click", () => {
-    $addForm.reset();
-    $addDialog.showModal();
-  });
-  $cancelAdd?.addEventListener("click", () => $addDialog.close());
-  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) $addDialog.close(); });
+  $openAdd?.addEventListener("click", () => { $addForm.reset(); openAddModal(); });
+  $cancelAdd?.addEventListener("click", closeAddModal);
+  $addOverlay?.addEventListener("click", e => { if (e.target === $addOverlay) closeAddModal(); });
 
   $addForm?.addEventListener("submit", e => {
     e.preventDefault();
@@ -507,7 +506,7 @@
     tracking.__manual__.push(offer);
     saveManualOffers();
     state.offers = [...state.rawOffers, ...getManualOffers()];
-    $addDialog.close();
+    closeAddModal();
     render();
     renderDashboard();
     // Scroll vers la nouvelle offre
