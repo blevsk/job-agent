@@ -364,6 +364,10 @@ a:hover { text-decoration: underline; }
   from { opacity: 0; transform: translateY(-8px) scale(0.98); }
   to   { opacity: 1; transform: translateY(0)   scale(1); }
 }
+@keyframes dialog-slide-up {
+  from { opacity: 0; transform: translateY(50%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 .dialog-header {
   display: flex;
@@ -504,8 +508,8 @@ code {
 @media (max-width: 720px) {
   body { padding: 1rem; }
 
-  .controls { gap: 0.6rem; }
-  #filter { min-width: 0; }
+  .controls { gap: 0.5rem; }
+  #filter { min-width: 0; flex-basis: 100%; }
 
   .col-rank,
   .col-rome,
@@ -516,4 +520,58 @@ code {
   .title { max-width: 10rem; }
   .snippet, .llm-reason { display: none; }
   .status-select { max-width: 5.5rem; }
+
+  #markAllRead, #exportCsv { font-size: 0.78rem; }
+  #sync-status { font-size: 0.75rem; }
+}
+
+@media (max-width: 600px) {
+  /* Bottom sheet sur mobile */
+  #add-dialog {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: auto;
+    border-radius: 20px 20px 0 0;
+    max-height: 90vh;
+    max-height: 90svh;
+    overflow-y: auto;
+  }
+  #add-dialog[open] {
+    animation: dialog-slide-up 0.28s cubic-bezier(0.16,1,0.3,1);
+  }
+  /* Poignée visuelle en haut du sheet */
+  #add-dialog::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: #d1d5db;
+    border-radius: 2px;
+    margin: 0.75rem auto 0.25rem;
+  }
+  /* Header sticky pour toujours voir le titre et le bouton ✕ */
+  .dialog-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.85rem;
+    margin-bottom: 0;
+  }
+  #add-form {
+    padding-bottom: 2rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  .btn-cancel, .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
 }

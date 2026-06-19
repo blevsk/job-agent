@@ -473,6 +473,23 @@
   });
 
   // --- Ajout manuel ---
+  // Scroll lock compatible iOS Safari (overflow:hidden seul ne suffit pas)
+  let _scrollY = 0;
+  function lockScroll() {
+    _scrollY = window.scrollY;
+    document.body.style.overflow  = "hidden";
+    document.body.style.position  = "fixed";
+    document.body.style.top       = `-${_scrollY}px`;
+    document.body.style.width     = "100%";
+  }
+  function unlockScroll() {
+    document.body.style.overflow  = "";
+    document.body.style.position  = "";
+    document.body.style.top       = "";
+    document.body.style.width     = "";
+    window.scrollTo(0, _scrollY);
+  }
+
   function hasFormContent() {
     return [...$addForm.querySelectorAll("input, textarea")].some(el => el.value.trim() !== "");
   }
@@ -483,7 +500,7 @@
 
   $openAdd?.addEventListener("click", () => {
     $addForm.reset();
-    document.body.style.overflow = "hidden";
+    lockScroll();
     $addDialog.showModal();
   });
   $cancelAdd?.addEventListener("click", confirmClose);
@@ -497,7 +514,7 @@
     }
   });
   // Restaure le scroll quelle que soit la façon dont la modale se ferme
-  $addDialog?.addEventListener("close", () => { document.body.style.overflow = ""; });
+  $addDialog?.addEventListener("close", unlockScroll);
 
   $addForm?.addEventListener("submit", e => {
     e.preventDefault();
