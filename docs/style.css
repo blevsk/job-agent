@@ -4,7 +4,6 @@
   --muted: #6b6b73;
   --border: #e1e1e6;
   --accent: #7c3aed;
-  --accent-hover: #6d28d9;
   --accent-glow: rgba(124,58,237,0.14);
   --pos: #047857;
   --neg: #b91c1c;
@@ -20,7 +19,6 @@
   --muted: #8e8e96;
   --border: #2c2c32;
   --accent: #a78bfa;
-  --accent-hover: #8b5cf6;
   --accent-glow: rgba(167,139,250,0.18);
   --pos: #34d399;
   --neg: #f87171;
@@ -30,6 +28,13 @@
   color-scheme: dark;
 }
 
+
+@supports (color: AccentColor) {
+  :root, [data-theme="dark"] {
+    --accent: AccentColor;
+    --accent-glow: color-mix(in srgb, AccentColor, transparent 85%);
+  }
+}
 
 html { transition: background-color 0.35s; }
 body { transition: background-color 0.35s, color 0.2s; }
@@ -380,7 +385,7 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
   font-weight: 500;
 }
-.btn-add:hover { background: var(--accent-hover); }
+.btn-add:hover { filter: brightness(0.85); }
 
 /* Dialog */
 #add-dialog {
@@ -508,7 +513,7 @@ a:hover { text-decoration: underline; }
   font-family: inherit;
   transition: background 0.15s;
 }
-.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:hover { filter: brightness(0.85); }
 .btn-cancel {
   background: var(--surface-raised);
   border: none;
