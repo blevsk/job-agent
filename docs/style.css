@@ -438,7 +438,7 @@ a:hover { text-decoration: underline; }
 }
 #add-form textarea {
   resize: vertical;
-  min-height: 72px;
+  min-height: 130px;
   line-height: 1.5;
 }
 .form-row {

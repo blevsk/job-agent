@@ -473,16 +473,30 @@
   });
 
   // --- Ajout manuel ---
+  function hasFormContent() {
+    return [...$addForm.querySelectorAll("input, textarea")].some(el => el.value.trim() !== "");
+  }
+  function confirmClose() {
+    if (hasFormContent() && !confirm("Des informations ont été saisies. Fermer sans sauvegarder ?")) return;
+    $addDialog.close();
+  }
+
   $openAdd?.addEventListener("click", () => {
     $addForm.reset();
     document.body.style.overflow = "hidden";
     $addDialog.showModal();
   });
-  const closeDialog = () => $addDialog.close();
-  $cancelAdd?.addEventListener("click", closeDialog);
-  document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", closeDialog);
-  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) closeDialog(); });
-  // Restaure le scroll (déclenché aussi par Échap et toute autre fermeture)
+  $cancelAdd?.addEventListener("click", confirmClose);
+  document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", confirmClose);
+  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) confirmClose(); });
+  // Échap : intercepter avant fermeture native pour demander confirmation si besoin
+  $addDialog?.addEventListener("cancel", e => {
+    if (hasFormContent()) {
+      e.preventDefault();
+      if (confirm("Des informations ont été saisies. Fermer sans sauvegarder ?")) $addDialog.close();
+    }
+  });
+  // Restaure le scroll quelle que soit la façon dont la modale se ferme
   $addDialog?.addEventListener("close", () => { document.body.style.overflow = ""; });
 
   $addForm?.addEventListener("submit", e => {
