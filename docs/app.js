@@ -8,6 +8,69 @@
   const GH_PATH     = "docs/tracking.json";
   const GH_API      = `https://api.github.com/repos/${GH_REPO}/contents/${GH_PATH}`;
 
+  // --- Thème automatique (lever/coucher du soleil) ---
+  const LS_COORDS = "job-agent:coords";
+  const _sind = d => Math.sin(d * Math.PI / 180);
+  const _cosd = d => Math.cos(d * Math.PI / 180);
+
+  function getSunTimes(lat, lng) {
+    const now = new Date();
+    const n   = now.getTime() / 86400000 + 2440587.5 - 2451545.0;
+    const L   = (280.460 + 0.9856474 * n) % 360;
+    const g   = (357.528 + 0.9856003 * n) % 360;
+    const lam = L + 1.915 * _sind(g) + 0.020 * _sind(2 * g);
+    const obl = 23.439 - 4e-7 * n;
+    const sinDec = _sind(obl) * _sind(lam);
+    const dec    = Math.asin(sinDec) * 180 / Math.PI;
+    const RA     = Math.atan2(_cosd(obl) * _sind(lam), _cosd(lam)) * 180 / Math.PI;
+    const cosH   = (_sind(-0.833) - _sind(lat) * _sind(dec)) / (_cosd(lat) * _cosd(dec));
+    if (Math.abs(cosH) >= 1) return null;
+    const H    = Math.acos(cosH) * 180 / Math.PI;
+    const noon = 12 - lng / 15 - ((L - RA + 180) % 360 - 180) / 15;
+    const base = new Date(now); base.setUTCHours(0, 0, 0, 0);
+    return {
+      sunrise: new Date(base.getTime() + (noon - H / 15) * 3600000),
+      sunset:  new Date(base.getTime() + (noon + H / 15) * 3600000),
+    };
+  }
+
+  function applyTheme(lat, lng) {
+    const times = getSunTimes(lat, lng);
+    const now   = Date.now();
+    const dark  = !times || now < times.sunrise.getTime() || now > times.sunset.getTime();
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    if (times) {
+      const next = dark
+        ? (now < times.sunrise.getTime() ? times.sunrise.getTime() : times.sunrise.getTime() + 86400000)
+        : times.sunset.getTime();
+      setTimeout(() => applyTheme(lat, lng), next - now + 60000);
+    }
+  }
+
+  function applySystemTheme() {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    document.documentElement.setAttribute("data-theme", mq.matches ? "dark" : "light");
+    mq.addEventListener("change", e =>
+      document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light")
+    );
+  }
+
+  (() => {
+    try {
+      const c = JSON.parse(localStorage.getItem(LS_COORDS) || "null");
+      if (c) { applyTheme(c.lat, c.lng); return; }
+    } catch {}
+    applySystemTheme();
+    if (!("geolocation" in navigator)) return;
+    navigator.geolocation.getCurrentPosition(
+      ({ coords: { latitude: lat, longitude: lng } }) => {
+        localStorage.setItem(LS_COORDS, JSON.stringify({ lat, lng }));
+        applyTheme(lat, lng);
+      },
+      () => {}
+    );
+  })();
+
   // --- localStorage helpers ---
   function loadSet(key) {
     try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
