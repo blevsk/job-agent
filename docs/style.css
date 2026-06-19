@@ -43,6 +43,9 @@ body {
   background: var(--bg);
   color: var(--fg);
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 header {
@@ -560,7 +563,10 @@ code {
 }
 
 #table-wrapper {
-  overflow: visible;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 4px 12px;
 }
 
 /* Notes dialog — même structure que #add-form */
@@ -631,7 +637,7 @@ code {
   html { overflow-x: clip; }
 
   /* ── Table → cartes ── */
-  #table-wrapper { overflow: hidden; border-radius: 0; }
+  #table-wrapper { flex: none; overflow: hidden; border-radius: 0; padding: 0; }
 
   #offers { display: block; border: none; background: transparent; min-width: 0; }
   #offers thead { display: none; }
@@ -782,6 +788,16 @@ code {
     text-align: center;
     padding: 0.75rem;
   }
+}
+
+/* ── Responsive vertical : écrans courts ── */
+@media (max-height: 640px) and (min-width: 601px) {
+  body { padding-top: 0.75rem; padding-bottom: 0.5rem; }
+  header { margin-bottom: 0.6rem; }
+  h1 { font-size: 1.25rem; }
+  #meta { font-size: 0.8rem; }
+  #dashboard { margin-top: 0.2rem; }
+  .controls { margin: 0.4rem 0; gap: 0.3rem; }
 }
 
 /* ── Dark mode : éléments colorés ── */
