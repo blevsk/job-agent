@@ -49,23 +49,29 @@ def _merge_with_defaults(search: dict[str, Any], defaults: dict[str, Any]) -> di
 
 
 def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> list[JobOffer]:
-    """Lance chaque recherche, agrège dans une liste (avec doublons possibles inter-recherches)."""
+    """Lance chaque recherche (keyword ou rome_code), agrège dans une liste."""
     all_offers: list[JobOffer] = []
     for idx, s in enumerate(searches, start=1):
         params = _merge_with_defaults(s, defaults)
-        keyword = params.get("keyword")
+        keyword = params.get("keyword") or None
+        rome_code = params.get("rome_code") or None
         location = params.get("location")
-        if not keyword or not location:
-            print(f"[skip] search #{idx} : keyword/location manquants ({params})")
+        label = params.get("_label") or rome_code or keyword or "?"
+
+        if not location or (not keyword and not rome_code):
+            print(f"[skip] search #{idx} : location/keyword/rome_code manquants")
             continue
-        print(f"[search #{idx}] keyword='{keyword}' location='{location}'")
+
+        print(f"[search #{idx}] {label} — location='{location}'")
         offers = france_travail.search(
-            keyword=keyword,
             location=location,
+            keyword=keyword,
+            rome_code=rome_code,
             radius_km=params.get("radius_km", 25),
-            max_results=params.get("max_results", 75),
+            max_results=params.get("max_results", 150),
             type_contrat=params.get("contract_type"),
             published_within_days=params.get("published_within_days"),
+            alternance_only=bool(params.get("alternance_only", False)),
             on_page=lambda p, f, n, _idx=idx: print(f"  [#{_idx}] page {p} → {f} offres ({n} nouvelles)"),
         )
         print(f"  [#{idx}] → {len(offers)} offres")
@@ -147,7 +153,15 @@ def main() -> int:
     # 6 : export
     meta = {
         "source": "france_travail",
-        "searches": [{"keyword": s.get("keyword"), "location": _merge_with_defaults(s, defaults).get("location")} for s in searches],
+        "searches": [
+            {
+                "label": _merge_with_defaults(s, defaults).get("_label") or s.get("rome_code") or s.get("keyword"),
+                "rome_code": s.get("rome_code"),
+                "keyword": s.get("keyword"),
+                "location": _merge_with_defaults(s, defaults).get("location"),
+            }
+            for s in searches
+        ],
         "scraped_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "rerank_active": any(s.offer.llm_rank is not None for s in scored),
         "semantic_active": any(s.offer.semantic_score is not None for s in scored),

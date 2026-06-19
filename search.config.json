@@ -2,16 +2,18 @@
   "defaults": {
     "location": "Lille",
     "radius_km": 15,
-    "max_results": 75,
-    "published_within_days": 31,
+    "max_results": 150,
+    "published_within_days": null,
+    "alternance_only": true,
     "contract_type": null
   },
   "searches": [
-    {"keyword": "alternance administratif"},
-    {"keyword": "alternance assistant gestion"},
-    {"keyword": "alternance secrétaire"},
-    {"keyword": "apprentissage assistant"},
-    {"keyword": "alternance chargé accueil"},
-    {"keyword": "apprentissage accueil"}
+    {"rome_code": "M1607", "_label": "Secrétariat"},
+    {"rome_code": "M1601", "_label": "Accueil et renseignements"},
+    {"rome_code": "M1606", "_label": "Saisie de données"},
+    {"rome_code": "M1609", "_label": "Secrétariat médical"},
+    {"rome_code": "M1501", "_label": "Assistanat RH"},
+    {"rome_code": "M1605", "_label": "Assistanat de direction"},
+    {"rome_code": "M1604", "_label": "Assistanat commercial (malus scoring)"}
   ]
 }

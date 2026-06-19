@@ -214,24 +214,31 @@ def _fetch_page(
     client: httpx.Client,
     token: str,
     *,
-    keyword: str,
+    keyword: str | None,
+    rome_code: str | None,
     commune: str,
     distance: int,
     range_start: int,
     range_end: int,
     type_contrat: str | None,
     published_within_days: int | None,
+    alternance_only: bool,
 ) -> tuple[list[JobOffer], int]:
     params: dict[str, str] = {
-        "motsCles": keyword,
         "commune": commune,
         "distance": str(distance),
         "range": f"{range_start}-{range_end}",
     }
+    if keyword:
+        params["motsCles"] = keyword
+    if rome_code:
+        params["codeROME"] = rome_code
     if type_contrat:
         params["typeContrat"] = type_contrat
     if published_within_days:
         params["publieeDepuis"] = str(published_within_days)
+    if alternance_only:
+        params["alternance"] = "true"
 
     response = client.get(
         SEARCH_URL,
@@ -240,7 +247,6 @@ def _fetch_page(
     )
 
     if response.status_code in (200, 206):
-        # 206 = pagination partielle, attendu pour les ranges
         offers = parse_search_response(response.json())
         return offers, len(offers)
     if response.status_code == 204:
@@ -251,20 +257,24 @@ def _fetch_page(
 
 
 def search(
-    keyword: str,
     location: str,
     radius_km: int = 25,
     *,
-    max_results: int = 75,
+    keyword: str | None = None,
+    rome_code: str | None = None,
+    max_results: int = 150,
     type_contrat: str | None = None,
     published_within_days: int | None = None,
+    alternance_only: bool = False,
     timeout: float = 20.0,
     on_page: Callable[[int, int, int], None] | None = None,
     dotenv_path: Path | None = None,
 ) -> list[JobOffer]:
-    """Recherche des offres France Travail et retourne une liste dédupliquée de JobOffer."""
+    """Recherche des offres France Travail. Accepte keyword, rome_code, ou les deux."""
+    if not keyword and not rome_code:
+        raise ValueError("Il faut au moins un keyword ou un rome_code.")
     client_id, client_secret = get_credentials(dotenv_path)
-    page_size = 50  # max 150 d'après la doc ; 50 est un bon compromis débit/payload
+    page_size = 50
     collected: dict[str, JobOffer] = {}
 
     with httpx.Client(timeout=timeout) as client:
@@ -282,12 +292,14 @@ def search(
                 client,
                 token,
                 keyword=keyword,
+                rome_code=rome_code,
                 commune=commune_insee,
                 distance=radius_km,
                 range_start=range_start,
                 range_end=range_end,
                 type_contrat=type_contrat,
                 published_within_days=published_within_days,
+                alternance_only=alternance_only,
             )
 
             new_count = 0
@@ -300,7 +312,7 @@ def search(
                 on_page(page_idx + 1, found, new_count)
 
             if found < (range_end - range_start + 1):
-                break  # plus de résultats côté API
+                break
 
             page_idx += 1
 

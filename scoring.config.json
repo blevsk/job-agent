@@ -1,26 +1,32 @@
 {
   "keywords": [
-    {"pattern": "alternance", "weight": 5.0},
-    {"pattern": "administratif|assistant", "weight": 3.0},
+    {"pattern": "accueil|accueillant", "weight": 3.0},
+    {"pattern": "administratif|administratif|assistante", "weight": 3.0},
+    {"pattern": "agenda|planning|courrier|classement|dossier", "weight": 2.0},
+    {"pattern": "commercial|prospection|démarchage|vente", "weight": -5.0},
+    {"pattern": "manutention|port.de.charge|charge.lourde|physique", "weight": -8.0},
     {"pattern": "stage(?!\\s*pro)", "weight": -10.0},
-    {"pattern": "junior|d[ée]butant", "weight": 2.0}
+    {"pattern": "int[ée]rim", "weight": -4.0}
   ],
   "preferred_contracts": {
-    "Alternance": 5.0,
-    "CDI": 3.0,
-    "CDD": 1.0,
+    "Alternance": 8.0,
+    "CDI": -2.0,
+    "CDD": -2.0,
     "Stage": -10.0,
-    "Intérim": -2.0
+    "Intérim": -6.0
   },
   "rome_codes": {
-    "M1607": 5.0,
-    "M1602": 4.0,
-    "M1606": 3.0,
-    "M1203": 3.0,
-    "D1401": 2.0
+    "M1607": 8.0,
+    "M1601": 7.0,
+    "M1609": 5.0,
+    "M1501": 5.0,
+    "M1606": 4.0,
+    "M1605": 6.0,
+    "M1604": -3.0
   },
-  "preferred_location": "Villeneuve",
-  "location_bonus": 3.0,
-  "freshness_bonus": 2.0,
-  "freshness_max_days": 7
+  "preferred_location": "Lille",
+  "location_bonus": 2.0,
+  "freshness_bonus": 3.0,
+  "freshness_max_days": 14,
+  "semantic_weight": 12.0
 }

@@ -163,11 +163,41 @@ tbody tr:last-child td { border-bottom: none; }
   vertical-align: middle;
 }
 
+/* Offres lues */
+tbody tr.read {
+  opacity: 0.38;
+}
+tbody tr.read .title-line {
+  font-weight: 400;
+}
+
+/* Badge "Nouveau" */
+.badge.new {
+  display: inline-block;
+  margin-right: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: #dcfce7;
+  color: #15803d;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+
+#markAllRead {
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+#markAllRead:hover { color: var(--accent); }
 
 #empty {
   margin: 2rem auto;
