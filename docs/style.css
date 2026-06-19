@@ -3,8 +3,8 @@
   --fg: #1a1a1a;
   --muted: #6b6b73;
   --border: #e1e1e6;
-  --accent: #7c3aed;
-  --accent-glow: rgba(124,58,237,0.14);
+  --accent: #2563eb;
+  --accent-glow: rgba(37,99,235,0.13);
   --pos: #047857;
   --neg: #b91c1c;
   --surface: white;
@@ -18,8 +18,8 @@
   --fg: #ededef;
   --muted: #8e8e96;
   --border: #2c2c32;
-  --accent: #a78bfa;
-  --accent-glow: rgba(167,139,250,0.18);
+  --accent: #60a5fa;
+  --accent-glow: rgba(96,165,250,0.18);
   --pos: #34d399;
   --neg: #f87171;
   --surface: #1c1c20;
@@ -607,15 +607,21 @@ code {
   white-space: nowrap;
 }
 
-@media (max-width: 720px) {
-  body { padding: 1rem; }
-  #table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
+/* 601-1200px : enlève les colonnes secondaires, réduit les marges */
+@media (max-width: 1200px) {
+  body { padding: 1.5rem 2rem; }
   .col-rank, .col-rome, .col-age { display: none; }
+  .title { max-width: 22rem; }
+}
 
-  table { font-size: 0.82rem; min-width: 480px; }
-  th, td { padding: 0.4rem 0.5rem; }
-  .title { max-width: 10rem; }
+/* 601-900px : tableau compact, plus de colonnes cachées */
+@media (max-width: 900px) {
+  body { padding: 1rem 1.25rem; }
+  .col-location, .col-contract { display: none; }
+  #table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { font-size: 0.84rem; }
+  th, td { padding: 0.45rem 0.6rem; }
+  .title { max-width: 14rem; }
   .snippet, .llm-reason { display: none; }
   .status-select { max-width: 5.5rem; }
 }
