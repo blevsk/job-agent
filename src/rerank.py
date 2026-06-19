@@ -71,17 +71,52 @@ def _extract_json(text: str) -> dict[str, Any]:
     return json.loads(text[start : end + 1])
 
 
+BATCH_SIZE = 40
+
+
+def _process_batch(
+    offers: list[JobOffer],
+    profile_text: str,
+    rank_offset: int,
+    model: str,
+    client: Any,
+) -> None:
+    """Envoie un lot au LLM et écrit llm_rank + llm_reason sur chaque offre."""
+    user_msg = _build_user_message(profile_text, offers)
+    response = client.messages.create(
+        model=model,
+        max_tokens=5000,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": user_msg}],
+    )
+    text = "".join(getattr(block, "text", "") for block in response.content)
+    parsed = _extract_json(text)
+    ranking = parsed.get("ranking") or []
+
+    by_id = {o.id: o for o in offers}
+    for entry in ranking:
+        offer = by_id.get(str(entry.get("id")))
+        if offer is None:
+            continue
+        rank = entry.get("rank")
+        if isinstance(rank, int):
+            offer.llm_rank = rank_offset + rank
+        reason = entry.get("reason")
+        if isinstance(reason, str):
+            offer.llm_reason = reason.strip()
+
+
 def llm_rerank(
     offers: list[JobOffer],
     profile_text: str,
     *,
-    top_n: int = 20,
+    top_n: int | None = None,
     model: str = MODEL,
     client: Any = None,
 ) -> list[JobOffer]:
-    """Re-rank les `top_n` premières offres et écrit `llm_rank` + `llm_reason` dessus.
+    """Re-rank toutes les offres par lots de BATCH_SIZE et écrit llm_rank + llm_reason.
 
-    Renvoie la liste complète d'offres (les non-rerankées ont `llm_rank=None`).
+    Renvoie la liste complète d'offres.
     Skip silencieusement si pas de clé API Anthropic configurée.
     """
     if not offers or not profile_text.strip():
@@ -95,31 +130,12 @@ def llm_rerank(
 
         client = Anthropic(api_key=api_key)
 
-    head = offers[:top_n]
-    user_msg = _build_user_message(profile_text, head)
-
-    response = client.messages.create(
-        model=model,
-        max_tokens=2000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_msg}],
-    )
-
-    # L'API renvoie une liste de content blocks ; on récupère le texte concaténé.
-    text = "".join(getattr(block, "text", "") for block in response.content)
-    parsed = _extract_json(text)
-    ranking = parsed.get("ranking") or []
-
-    by_id = {o.id: o for o in head}
-    for entry in ranking:
-        offer = by_id.get(str(entry.get("id")))
-        if offer is None:
-            continue
-        rank = entry.get("rank")
-        if isinstance(rank, int):
-            offer.llm_rank = rank
-        reason = entry.get("reason")
-        if isinstance(reason, str):
-            offer.llm_reason = reason.strip()
+    head = offers[:top_n] if top_n else offers
+    for i in range(0, len(head), BATCH_SIZE):
+        batch = head[i : i + BATCH_SIZE]
+        try:
+            _process_batch(batch, profile_text, rank_offset=i, model=model, client=client)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[rerank] erreur lot {i // BATCH_SIZE + 1} : {exc} — skip")
 
     return offers
