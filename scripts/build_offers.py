@@ -1,7 +1,7 @@
 """Orchestrateur appelé par le workflow GitHub Action (et localement).
 
 Pipeline :
-  1. Fan-out sur N recherches France Travail (search.config.json)
+  1. Fan-out sur N recherches (France Travail + La Bonne Alternance) via search.config.json
   2. Dédup floue
   3. Embeddings sémantiques (profile.md ↔ offres) — gratuit en local
   4. Scoring (mots-clés + contrat + ROME + lieu + fraîcheur + sémantique)
@@ -20,9 +20,10 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src import france_travail  # noqa: E402
+from src import france_travail, la_bonne_alternance  # noqa: E402
 from src.dedup import dedupe_offers  # noqa: E402
 from src.exporter import export_json  # noqa: E402
+from src.la_bonne_alternance import MissingLBAKeyError  # noqa: E402
 from src.models import JobOffer, ScoringConfig  # noqa: E402
 from src.scoring import score_offers  # noqa: E402
 
@@ -48,32 +49,62 @@ def _merge_with_defaults(search: dict[str, Any], defaults: dict[str, Any]) -> di
     return {**defaults, **search}
 
 
+def _search_france_travail(idx: int, params: dict[str, Any]) -> list[JobOffer]:
+    keyword   = params.get("keyword") or None
+    rome_code = params.get("rome_code") or None
+    location  = params.get("location")
+    if not location or (not keyword and not rome_code):
+        print(f"[skip] search #{idx} : location/keyword/rome_code manquants")
+        return []
+    return france_travail.search(
+        location=location,
+        keyword=keyword,
+        rome_code=rome_code,
+        radius_km=params.get("radius_km", 25),
+        max_results=params.get("max_results", 150),
+        type_contrat=params.get("contract_type"),
+        published_within_days=params.get("published_within_days"),
+        alternance_only=bool(params.get("alternance_only", False)),
+        on_page=lambda p, f, n, _idx=idx: print(f"  [#{_idx}] page {p} → {f} offres ({n} nouvelles)"),
+    )
+
+
+def _search_lba(idx: int, params: dict[str, Any]) -> list[JobOffer]:
+    location = params.get("location")
+    if not location:
+        print(f"[skip] search #{idx} LBA : location manquante")
+        return []
+    rome_codes = params.get("rome_codes") or None
+    try:
+        return la_bonne_alternance.search(
+            location=location,
+            radius_km=params.get("radius_km", 25),
+            rome_codes=rome_codes,
+            diploma_level=params.get("diploma_level", "4"),
+            max_results=params.get("max_results", 150),
+        )
+    except MissingLBAKeyError:
+        print(f"  [#{idx}] API_APPRENTISSAGE_KEY absente — skip LBA")
+        return []
+
+
 def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> list[JobOffer]:
-    """Lance chaque recherche (keyword ou rome_code), agrège dans une liste."""
+    """Lance chaque recherche (France Travail ou La Bonne Alternance), agrège le tout."""
     all_offers: list[JobOffer] = []
     for idx, s in enumerate(searches, start=1):
         params = _merge_with_defaults(s, defaults)
-        keyword = params.get("keyword") or None
-        rome_code = params.get("rome_code") or None
-        location = params.get("location")
-        label = params.get("_label") or rome_code or keyword or "?"
+        source = params.get("source", "france_travail")
+        label  = params.get("_label") or params.get("rome_code") or params.get("keyword") or source
 
-        if not location or (not keyword and not rome_code):
-            print(f"[skip] search #{idx} : location/keyword/rome_code manquants")
+        print(f"[search #{idx}] {label} ({source}) — location='{params.get('location')}'")
+        if source == "france_travail":
+            offers = _search_france_travail(idx, params)
+        elif source == "la_bonne_alternance":
+            offers = _search_lba(idx, params)
+        else:
+            print(f"[skip] source inconnue : {source}")
             continue
 
-        print(f"[search #{idx}] {label} — location='{location}'")
-        offers = france_travail.search(
-            location=location,
-            keyword=keyword,
-            rome_code=rome_code,
-            radius_km=params.get("radius_km", 25),
-            max_results=params.get("max_results", 150),
-            type_contrat=params.get("contract_type"),
-            published_within_days=params.get("published_within_days"),
-            alternance_only=bool(params.get("alternance_only", False)),
-            on_page=lambda p, f, n, _idx=idx: print(f"  [#{_idx}] page {p} → {f} offres ({n} nouvelles)"),
-        )
         print(f"  [#{idx}] → {len(offers)} offres")
         all_offers.extend(offers)
     return all_offers

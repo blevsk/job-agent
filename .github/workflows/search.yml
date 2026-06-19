@@ -40,6 +40,7 @@ jobs:
           FRANCE_TRAVAIL_CLIENT_ID: ${{ secrets.FRANCE_TRAVAIL_CLIENT_ID }}
           FRANCE_TRAVAIL_CLIENT_SECRET: ${{ secrets.FRANCE_TRAVAIL_CLIENT_SECRET }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          API_APPRENTISSAGE_KEY: ${{ secrets.API_APPRENTISSAGE_KEY }}
         run: python scripts/build_offers.py
 
       - name: Commit offers.json if changed

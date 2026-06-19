@@ -14,6 +14,12 @@
     {"rome_code": "M1609", "_label": "Secrétariat médical"},
     {"rome_code": "M1501", "_label": "Assistanat RH"},
     {"rome_code": "M1605", "_label": "Assistanat de direction"},
-    {"rome_code": "M1604", "_label": "Assistanat commercial (malus scoring)"}
+    {"rome_code": "M1604", "_label": "Assistanat commercial (malus scoring)"},
+    {
+      "source": "la_bonne_alternance",
+      "rome_codes": ["M1607", "M1601", "M1606", "M1609", "M1501", "M1605", "M1604"],
+      "diploma_level": "4",
+      "_label": "La Bonne Alternance — Administratif Lille"
+    }
   ]
 }
