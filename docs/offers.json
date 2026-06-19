@@ -45,10 +45,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-06-19T11:46:12+00:00",
+    "scraped_at": "2026-06-19T16:18:04+00:00",
     "rerank_active": true,
     "semantic_active": true,
-    "total": 137
+    "total": 133
   },
   "offers": [
     {
@@ -62,17 +62,17 @@
       "snippet": "RESPONSABILITÉS : Sous la responsabilité de la direction, vous participerez progressivement aux missions suivantes : • rédaction et suivi des conventions de formation ; • établissement des CERFA d'apprentissage ; • suivi administratif des contrats d'apprentissage ; • facturation des formations en alternance ; • gestion des questionnaires de satisfaction apprentis, entreprises et partenaires ; • p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3210894",
       "rome_code": "M1607",
-      "semantic_score": 0.5172958374023438,
+      "semantic_score": 0.5172959566116333,
       "llm_rank": 1,
-      "llm_reason": "Alternance administrative à Lille, mission d'accueil et gestion administrative, durée longue adaptée",
-      "score": 27.207550048828125,
+      "llm_reason": "Alternance administrative à Lille au CFA, parfait alignement profil et localisation recherchés.",
+      "score": 27.2075514793396,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 8.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.207550048828125
+        "semantic": 6.2075514793396
       }
     },
     {
@@ -86,17 +86,17 @@
       "snippet": "LE POSTE Notre Direction des Partenariats recherche son futur apprenti « Assistant(e) Chef(fe) de Projets Partenariat F/H » pour une durée de 12 mois. Basé dans nos locaux de Villeneuve d'Ascq, vous travaillerez en étroite collaboration avec le Manager partenariat ainsi que les chefs de projets et participerez activement à la coordination des projets liés aux partenaires assureurs, délégataires o…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3429220",
       "rome_code": "M1607",
-      "semantic_score": 0.4793975353240967,
+      "semantic_score": 0.47939756512641907,
       "llm_rank": 2,
-      "llm_reason": "Alternance 12 mois à Villeneuve-d'Ascq, gestion administrative et organisationnelle, proximité accessible",
-      "score": 21.75277042388916,
+      "llm_reason": "Alternance 12 mois à Villeneuve-d'Ascq, missions administratives et gestion de projets adaptées.",
+      "score": 21.75277078151703,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.75277042388916
+        "semantic": 5.752770781517029
       }
     },
     {
@@ -110,41 +110,17 @@
       "snippet": "🎯 Envie d’un taf qui claque ? Tu veux apprendre un métier concret, être payé(e), validé(e) par un diplôme, et le tout sans sortir un centime ? C’est maintenant ou jamais ! 👟 L’Institut Jules, l’école qui forme les pros de demain en présentiel à Carvin (62) et partout en France à distance, recherche pour une entreprise partenaire de son réseau Pros! un(e) Assistant(e) de direction / Assistant(e) c…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3809079",
       "rome_code": "M1607",
-      "semantic_score": 0.3782297968864441,
+      "semantic_score": 0.3782300055027008,
       "llm_rank": 3,
-      "llm_reason": "Alternance administrative à Roncq, contrat de formation reconnu, secteur proche métropole lilloise",
-      "score": 26.53875756263733,
+      "llm_reason": "Alternance assistant administratif à Roncq, proche métropole lilloise, formation diplômante.",
+      "score": 26.53876006603241,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 8.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.538757562637329
-      }
-    },
-    {
-      "id": "3612272",
-      "title": "Assistant Qualité - RSE Fournisseurs et Réglementaires / Alternance - H/F",
-      "company": null,
-      "location": "59 - Roubaix",
-      "contract_type": "Alternance",
-      "salary": "Annuel de 10000.0 Euros à 22000.0 Euros",
-      "posted_days_ago": 9,
-      "snippet": "Tu cherches une alternance qui matche avec tes envies et ta vie ? On t'explique le profil qu'on cherche ici ! Tu as un oeil aiguisé pour l'analyse et la prise de décision, et tu aimes relever des défis liés à la qualité des produits ? Tu veux jouer un rôle clé dans la conformité réglementaire et l'impact environnemental des produits tout en mettant à profit ta rigueur, ton sens de l'organisation…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3612272",
-      "rome_code": "M1607",
-      "semantic_score": 0.43747779726982117,
-      "llm_rank": 4,
-      "llm_reason": "Alternance à Roubaix, gestion administrative et qualité, localisation très accessible en transport",
-      "score": 24.249733567237854,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.249733567237854
+        "semantic": 4.53876006603241
       }
     },
     {
@@ -159,8 +135,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3924349",
       "rome_code": "M1607",
       "semantic_score": 0.3397843837738037,
-      "llm_rank": 5,
-      "llm_reason": "CDI administratif et pédagogique à Lille, accueil et gestion dossiers, mais contrat CDI non apprentissage",
+      "llm_rank": 4,
+      "llm_reason": "Assistant administratif-pédagogique à Lille, accueil et gestion administrative, mais CDI non recherché.",
       "score": 20.077412605285645,
       "score_breakdown": {
         "keywords": 5.0,
@@ -172,43 +148,19 @@
       }
     },
     {
-      "id": "3446440",
-      "title": "Assistant Administratif H/F",
-      "company": null,
-      "location": "59 - Villeneuve-d'Ascq",
-      "contract_type": "CDI",
-      "salary": "Annuel de 25000.0 Euros à 30000.0 Euros",
-      "posted_days_ago": 14,
-      "snippet": "Rattaché(e) au Manager d'Activité, vous assurez le bon fonctionnement administratif de l'agence et intervenez comme véritable relais au quotidien. Vos missions principales : Gestion administrative courante (courriers, dossiers, classement, suivi documentaire) Édition et suivi de la facturation clients Contrôle des notes de frais et suivi administratif des sous-traitants Suivi des dossiers RH (emb…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3446440",
-      "rome_code": "M1607",
-      "semantic_score": 0.4281880557537079,
-      "llm_rank": 6,
-      "llm_reason": "CDI administratif à Villeneuve-d'Ascq, gestion administrative courante, mais contrat CDI non apprentissage",
-      "score": 19.138256669044495,
-      "score_breakdown": {
-        "keywords": 5.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.138256669044495
-      }
-    },
-    {
       "id": "209WBCF",
       "title": "Secrétaire polyvalent / Secrétaire polyvalente (H/F)",
       "company": "FOYER DE VIE DE MARQUILLIES",
       "location": "59 - Baisieux",
       "contract_type": "CDI",
       "salary": "Mensuel de 2000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 2,
+      "posted_days_ago": 3,
       "snippet": "Description du poste : Sous la responsabilité de la Chef de Service Administratif et Financier, vous exercerez vos missions au sein du Foyer de Vie le Rivage accueillant - en internat et en externat - des adultes porteurs de troubles du développement intellectuel léger à sévère, avec ou sans troubles associés. Vous travaillerez en collaboration avec l'agent administratif principal qui diminue son…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209WBCF",
       "rome_code": "M1607",
       "semantic_score": 0.37775400280952454,
-      "llm_rank": 7,
-      "llm_reason": "CDI secrétaire polyvalente Baisieux, gestion administrative, mais contrat CDI et transport moins accessible",
+      "llm_rank": 5,
+      "llm_reason": "Secrétaire polyvalent à Baisieux proche Lille, gestion administrative mais CDI non recherché.",
       "score": 19.533048033714294,
       "score_breakdown": {
         "keywords": 6.0,
@@ -220,19 +172,43 @@
       }
     },
     {
+      "id": "2639677",
+      "title": "Agent administratif et gestion (H/F)",
+      "company": null,
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 36,
+      "snippet": "Description du poste : Dans le cadre de vos missions, vous avez la responsabilité de : -Assurer l'accueil téléphonique, renseigner les interlocuteurs, Groupement de Soutien (GS), Ressources Humaines (RH), administrés. Filtrer et transférer les communications extérieures vers les bureaux concernés. -Réceptionner les demandes de billetterie adressées au Bureau Transit (messagerie) et vérifier la co…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2639677",
+      "rome_code": "M1607",
+      "semantic_score": 0.37928926944732666,
+      "llm_rank": 6,
+      "llm_reason": "Agent administratif à Lille, accueil et gestion, mais CDI non recherché et offre ancienne.",
+      "score": 18.55147123336792,
+      "score_breakdown": {
+        "keywords": 6.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 2.0,
+        "freshness": 0.0,
+        "semantic": 4.55147123336792
+      }
+    },
+    {
       "id": "209NWDJ",
       "title": "Secretaire (H/F)",
       "company": "Association EOLE",
       "location": "59 - LILLE",
       "contract_type": "CDD",
       "salary": "Mensuel de 2105.06 Euros sur 12.0 mois",
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "Service : Accueil de jour CDD du 14/09/2026 au 20/04/2027 - 24h Missions - Accueil téléphonique (gestion du standard) et ventilation des messages auprès des salarié-e-s - Gestion des commandes, des stocks et réception des produits (produit d'entretien, fournitures de bureau, transport.) - Indicateurs d'activités mensuelles et annuel (statistiques/ rapport d'activité) - Gestion administrative du p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NWDJ",
       "rome_code": "M1607",
       "semantic_score": 0.4034286141395569,
-      "llm_rank": 8,
-      "llm_reason": "CDD accueil Lille, gestion administrative, mais courte durée 8 mois non apprentissage qualifiant",
+      "llm_rank": 7,
+      "llm_reason": "Secrétaire à Lille avec accueil, mais CDD court ne permettant pas montée en compétences.",
       "score": 18.841143369674683,
       "score_breakdown": {
         "keywords": 3.0,
@@ -254,65 +230,17 @@
       "snippet": "Dans le cadre d'un remplacement, Le GAP - Etablissement Le Gîte, au sein du Réseau Insertion et Avenir, recherche un(e) Secrétaire éducatif(ve) en CDD à mi-temps. Rattaché(e) au Responsable du Réseau Insertion et Avenir et au cadre administratif, vous assurez un rôle central d'accueil, de gestion administrative et de soutien aux équipes éducatives accompagnant les jeunes. Vos missions 1. Accueil…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PZMH",
       "rome_code": "M1607",
-      "semantic_score": 0.5072027444839478,
-      "llm_rank": 9,
-      "llm_reason": "CDD secrétaire administrative Wasquehal mi-temps, mais non-apprentissage et durée limitée",
-      "score": 21.086432933807373,
+      "semantic_score": 0.5072028040885925,
+      "llm_rank": 8,
+      "llm_reason": "Secrétaire éducative à Wasquehal proche Lille, mais CDD mi-temps ne répond pas au projet.",
+      "score": 21.08643364906311,
       "score_breakdown": {
         "keywords": 6.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.086432933807373
-      }
-    },
-    {
-      "id": "2639677",
-      "title": "Agent administratif et gestion (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 36,
-      "snippet": "Description du poste : Dans le cadre de vos missions, vous avez la responsabilité de : -Assurer l'accueil téléphonique, renseigner les interlocuteurs, Groupement de Soutien (GS), Ressources Humaines (RH), administrés. Filtrer et transférer les communications extérieures vers les bureaux concernés. -Réceptionner les demandes de billetterie adressées au Bureau Transit (messagerie) et vérifier la co…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2639677",
-      "rome_code": "M1607",
-      "semantic_score": 0.3792891502380371,
-      "llm_rank": 10,
-      "llm_reason": "CDI agent administratif Lille, accueil et gestion, mais contrat CDI non alternance",
-      "score": 18.551469802856445,
-      "score_breakdown": {
-        "keywords": 6.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 4.551469802856445
-      }
-    },
-    {
-      "id": "3533360",
-      "title": "Assistant administratif SAV F/H (H/F)",
-      "company": "ONET",
-      "location": "59 - Lille",
-      "contract_type": "CDD",
-      "salary": null,
-      "posted_days_ago": 13,
-      "snippet": "Rejoignez un acteur majeur de la sécurité électronique : Onet Sécurité Systèmes ! Véritable architecte de solutions de sécurité/sûreté, nous concevons, intégrons et maintenons des systèmes électroniques sur-mesure, capables de répondre aux exigences de nos clients. Partenaire de grands acteurs publics et privés, nous intervenons dans des environnements exigeants où la sécurité est un enjeu clé. D…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3533360",
-      "rome_code": "M1607",
-      "semantic_score": 0.34756672382354736,
-      "llm_rank": 11,
-      "llm_reason": "CDD assistant SAV Lille, gestion administrative, mais courte durée et non-apprentissage",
-      "score": 18.17080068588257,
-      "score_breakdown": {
-        "keywords": 3.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 4.170800685882568
+        "semantic": 6.08643364906311
       }
     },
     {
@@ -326,17 +254,17 @@
       "snippet": "Description du poste : L'école NextStepAcademy recrute pour l'un de ses partenaires pour le poste d'Assistant en ressources humaines Tu souhaites intégrer un Titre professionnelle dans le domaine des ressources humaines et tu recherches une alternance ? Alors ils n'attendent que toi Vos missions principales en tant qu'alternant(e) ressources humaines sont les suivantes Suivi des dossiers administ…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3714567",
       "rome_code": "M1501",
-      "semantic_score": 0.4906821846961975,
-      "llm_rank": 12,
-      "llm_reason": "Alternance RH Lille, gestion administrative, mais profil RH moins aligné compétences cherchées",
-      "score": 25.88818621635437,
+      "semantic_score": 0.4906822443008423,
+      "llm_rank": 9,
+      "llm_reason": "Assistant RH à Lille en alternance, mais domaine RH éloigné des compétences administratives visées.",
+      "score": 25.888186931610107,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.88818621635437
+        "semantic": 5.888186931610107
       }
     },
     {
@@ -350,17 +278,41 @@
       "snippet": "Description du poste : Offre d'alternance - Assistant(e) Ressources Humaines (Formation à distance avec YouSchool) Lieu : Lille (59000) Contrat : Alternance Formation : Titre Pro Assistant(e) Ressources Humaines (YouSchool - 100% à distance)***Description du poste Dans le cadre de son développement, notre entreprise partenaire située à Lille (59000) recherche un(e) Assistant(e) Ressources Humaine…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3714999",
       "rome_code": "M1501",
-      "semantic_score": 0.4492877721786499,
-      "llm_rank": 13,
-      "llm_reason": "Alternance RH Lille, gestion administrative, mais domaine RH moins centré accueil gestion administrative",
-      "score": 23.3914532661438,
+      "semantic_score": 0.44928786158561707,
+      "llm_rank": 10,
+      "llm_reason": "Assistant RH à Lille en alternance, mais domaine RH ne correspond pas au projet administratif.",
+      "score": 23.391454339027405,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.391453266143799
+        "semantic": 5.391454339027405
+      }
+    },
+    {
+      "id": "3969485",
+      "title": "Alternance assistant de direction H/F",
+      "company": null,
+      "location": "59 - Lille",
+      "contract_type": "Alternance",
+      "salary": "Mensuel de 800.0 Euros à 1600.0 Euros",
+      "posted_days_ago": 1,
+      "snippet": "Rejoignez une entreprise dynamique et préparez un diplôme reconnu avec ICADEMIE, spécialiste de la formation à distance. ICADEMIE accompagne son entreprise partenaire, LEADER en école supérieur, dans le recrutement de sa/son futur(e) Assistant de direction H/FH/F en alternance. Ce poste, basé à Lille , est à pourvoir dès Aout. En postulant, vous manifestez votre souhait de rejoindre ICADEMIE pour…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3969485",
+      "rome_code": "M1501",
+      "semantic_score": 0.44170790910720825,
+      "llm_rank": 11,
+      "llm_reason": "Assistant de direction à Lille en alternance, intéressant mais domaine RH légèrement éloigné.",
+      "score": 23.3004949092865,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 5.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 5.300494909286499
       }
     },
     {
@@ -374,17 +326,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e assistant(e) Ressources Humaines pour une de ses entreprises partenaires. En tant qu'assistant en Ressources Humaines, vos missions seront les suivantes : Recrutement et intégration du personnel - Mise en ligne des annonces, et suivi des recrutements (prise de références, prise de rendez-vous…) - Sourcing et présélection des c…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3149752",
       "rome_code": "M1501",
-      "semantic_score": 0.5177119374275208,
-      "llm_rank": 14,
-      "llm_reason": "Alternance RH Lille, mais domaine RH moins prioritaire, manque focus accueil administratif",
-      "score": 21.21254324913025,
+      "semantic_score": 0.5177121162414551,
+      "llm_rank": 12,
+      "llm_reason": "Assistant RH à Lille en alternance, mais domaine RH moins aligné que l'administratif pur.",
+      "score": 21.21254539489746,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.212543249130249
+        "semantic": 6.212545394897461
       }
     },
     {
@@ -398,41 +350,17 @@
       "snippet": "Leader européen de l’entretien et de l’équipement automobile et enseigne du groupe Mobivia, Norauto accompagne depuis plus de 50 ans les automobilistes. Présent dans 5 pays (la France, la Belgique avec Auto5, l’Italie, l’Espagne et le Portugal), Norauto c’est aujourd’hui un réseau de plus de 650 centres auto et 11 000 collaboratrices et collaborateurs. Notre moteur ? Accompagner la transition res…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3107060",
       "rome_code": "M1501",
-      "semantic_score": 0.39976128935813904,
-      "llm_rank": 15,
-      "llm_reason": "Alternance RH Villeneuve-d'Ascq, mais domaine RH éloigné, secteur automobile moins pertinent",
-      "score": 20.79713547229767,
+      "semantic_score": 0.3997613191604614,
+      "llm_rank": 13,
+      "llm_reason": "Assistant RH à Villeneuve-d'Ascq en alternance, domaine RH moins pertinent pour profil cible.",
+      "score": 20.797135829925537,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.7971354722976685
-      }
-    },
-    {
-      "id": "3969485",
-      "title": "Alternance assistant de direction H/F",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "Alternance",
-      "salary": "Mensuel de 800.0 Euros à 1600.0 Euros",
-      "posted_days_ago": 0,
-      "snippet": "Rejoignez une entreprise dynamique et préparez un diplôme reconnu avec ICADEMIE, spécialiste de la formation à distance. ICADEMIE accompagne son entreprise partenaire, LEADER en école supérieur, dans le recrutement de sa/son futur(e) Assistant de direction H/FH/F en alternance. Ce poste, basé à Lille , est à pourvoir dès Aout. En postulant, vous manifestez votre souhait de rejoindre ICADEMIE pour…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3969485",
-      "rome_code": "M1501",
-      "semantic_score": 0.4417078495025635,
-      "llm_rank": 16,
-      "llm_reason": "Alternance assistant direction Lille, formation à distance, mais domaine direction moins accueil",
-      "score": 23.30049419403076,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 5.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.300494194030762
+        "semantic": 4.797135829925537
       }
     },
     {
@@ -442,21 +370,21 @@
       "location": "59 - Avelin",
       "contract_type": "Alternance",
       "salary": "Annuel de 10000.0 Euros à 15000.0 Euros",
-      "posted_days_ago": 16,
+      "posted_days_ago": 17,
       "snippet": "SERIS recherche un-e Assistant Ressources Humaines (H/F) en alternance pour son agence qui se trouve à Avelin (59710). Rattaché-e au Directeur d'Agence et en collaboration avec les Planificateurs, vous assurez le suivi administratif de l'agence et la gestion du personnel. Vos missions principales : - L'administration du personnel et de la paie : établissement des contrats de travail, suivi des en…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3319140",
       "rome_code": "M1501",
-      "semantic_score": 0.39819368720054626,
-      "llm_rank": 17,
-      "llm_reason": "Alternance RH Avelin, domaine RH non prioritaire, localisation moins accessible transports",
-      "score": 20.778324246406555,
+      "semantic_score": 0.3981938064098358,
+      "llm_rank": 14,
+      "llm_reason": "Assistant RH à Avelin en alternance, localisation moins accessible et domaine RH non ciblé.",
+      "score": 20.77832567691803,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.778324246406555
+        "semantic": 4.77832567691803
       }
     },
     {
@@ -470,17 +398,17 @@
       "snippet": "Rejoignez le Groupe VERBAERE Automobiles en tant qu'alternant(e) Ressources Humaines ! Vous souhaitez évoluer au sein d'un service RH polyvalent, dans un groupe en pleine croissance, et développer vos compétences sur des missions concrètes et variées ? Cette alternance est faite pour vous ! Directement rattaché(e) à la Chargée Ressources Humaines et au Directeur des Ressources Humaines, vous inte…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208TXMY",
       "rome_code": "M1501",
-      "semantic_score": 0.43334728479385376,
-      "llm_rank": 18,
-      "llm_reason": "Alternance RH Lille, domaine RH secondaire, éloigné profil accueil gestion administrative",
-      "score": 20.200167417526245,
+      "semantic_score": 0.433347225189209,
+      "llm_rank": 15,
+      "llm_reason": "Alternant RH à Lille, domaine RH moins aligné et offre ancienne de plus de 3 semaines.",
+      "score": 20.200166702270508,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.200167417526245
+        "semantic": 5.200166702270508
       }
     },
     {
@@ -494,17 +422,41 @@
       "snippet": "Rejoignez le Campus Dalkia : Devenez l'architecte de nos formations !Le Campus Dalkia, le cœur de l'expertise énergétique de Dalkia et EDF, recherche un(e) Assistant(e) Formation pour rejoindre son équipe dynamique de plus de 50 collaborateurs basés à Lomme (). Vous contribuerez activement au développement des compétences de salariés Dalkia à travers la France ! Plus qu'un simple job, une opportu…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2787741",
       "rome_code": "M1501",
-      "semantic_score": 0.3470837473869324,
-      "llm_rank": 19,
-      "llm_reason": "Alternance formation Lomme, domaine formation moins aligné accueil gestion administrative",
-      "score": 19.16500496864319,
+      "semantic_score": 0.3470839262008667,
+      "llm_rank": 16,
+      "llm_reason": "Assistant Formation à Lomme en alternance, domaine formation éloigné des objectifs administratifs.",
+      "score": 19.1650071144104,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.1650049686431885
+        "semantic": 4.1650071144104
+      }
+    },
+    {
+      "id": "3612272",
+      "title": "Assistant Qualité - RSE Fournisseurs et Réglementaires / Alternance - H/F",
+      "company": null,
+      "location": "59 - Roubaix",
+      "contract_type": "Alternance",
+      "salary": "Annuel de 10000.0 Euros à 22000.0 Euros",
+      "posted_days_ago": 10,
+      "snippet": "Tu cherches une alternance qui matche avec tes envies et ta vie ? On t'explique le profil qu'on cherche ici ! Tu as un oeil aiguisé pour l'analyse et la prise de décision, et tu aimes relever des défis liés à la qualité des produits ? Tu veux jouer un rôle clé dans la conformité réglementaire et l'impact environnemental des produits tout en mettant à profit ta rigueur, ton sens de l'organisation…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3612272",
+      "rome_code": "M1607",
+      "semantic_score": 0.43747782707214355,
+      "llm_rank": 17,
+      "llm_reason": "Assistant Qualité-RSE à Roubaix en alternance, domaine très éloigné du projet administratif.",
+      "score": 24.249733924865723,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 8.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 5.249733924865723
       }
     },
     {
@@ -518,17 +470,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3982641",
       "rome_code": "M1609",
-      "semantic_score": 0.4812074601650238,
-      "llm_rank": 20,
-      "llm_reason": "Alternance secrétaire médical Wattrelos, secteur médical très différent, domaine non administratif",
-      "score": 18.774489521980286,
+      "semantic_score": 0.48120740056037903,
+      "llm_rank": 18,
+      "llm_reason": "Secrétaire médical à Wattrelos en alternance, secteur médical éloigné et cadre physique inadapté.",
+      "score": 18.77448880672455,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.774489521980286
+        "semantic": 5.774488806724548
       }
     },
     {
@@ -542,17 +494,41 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3149883",
       "rome_code": "M1609",
-      "semantic_score": 0.507428765296936,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 18.089145183563232,
+      "semantic_score": 0.5074289441108704,
+      "llm_rank": 19,
+      "llm_reason": "Secrétaire médical à Lille en alternance, secteur médical très éloigné du projet administratif.",
+      "score": 18.089147329330444,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.089145183563232
+        "semantic": 6.089147329330444
+      }
+    },
+    {
+      "id": "3533360",
+      "title": "Assistant administratif SAV F/H (H/F)",
+      "company": "ONET",
+      "location": "59 - Lille",
+      "contract_type": "CDD",
+      "salary": null,
+      "posted_days_ago": 13,
+      "snippet": "Rejoignez un acteur majeur de la sécurité électronique : Onet Sécurité Systèmes ! Véritable architecte de solutions de sécurité/sûreté, nous concevons, intégrons et maintenons des systèmes électroniques sur-mesure, capables de répondre aux exigences de nos clients. Partenaire de grands acteurs publics et privés, nous intervenons dans des environnements exigeants où la sécurité est un enjeu clé. D…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3533360",
+      "rome_code": "M1607",
+      "semantic_score": 0.3475668430328369,
+      "llm_rank": 20,
+      "llm_reason": "Assistant administratif SAV à Lille en CDD, court terme ne permettant pas montée en compétences.",
+      "score": 18.170802116394043,
+      "score_breakdown": {
+        "keywords": 3.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 4.170802116394043
       }
     },
     {
@@ -566,17 +542,17 @@
       "snippet": "Nous recherchons un(e) Assistant(e) Administratif(ve) dynamique et rigoureux(se) pour rejoindre notre équipe dans le domaine de la gestion des dossiers patients et de la logistique des équipements médicaux. Vous serez en charge de diverses missions essentielles liées à la gestion administrative des patients, à la communication avec les équipes et au suivi des traitements. Vos principales missions…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209LZDR",
       "rome_code": "M1607",
-      "semantic_score": 0.33451417088508606,
+      "semantic_score": 0.334514319896698,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.014170050621033,
+      "score": 18.014171838760376,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.014170050621033
+        "semantic": 4.014171838760376
       }
     },
     {
@@ -586,7 +562,7 @@
       "location": "59 - ROUBAIX",
       "contract_type": "CDD",
       "salary": "Horaire de 12.31 Euros sur 12.0 mois",
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Nous recherchons pour notre cabinet un(e) secrétaire juridique. Vos missions : - Assurer les tâches administratives courantes (gestion des appels téléphoniques, des mails, du courrier, etc.) ; - Assurer le support administratif auprès de son responsable ; - Gérer la communication entre les différentes parties prenantes (clients, avocats, services internes, juridictions et administrations). Caract…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209YXBT",
       "rome_code": "M1607",
@@ -614,17 +590,17 @@
       "snippet": "Secrétaire contrat alternance H/F Missions principales : Assurer l'accueil physique et téléphonique des clients. Gérer les tâches administratives courantes (saisie, classement, archivage). Organiser les rendez-vous et gérer les agendas des équipes. Participer à la rédaction de documents (courriers, comptes-rendus). accueillir les clients, répondre au téléphone, prendre des rendez vous, réaliser d…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209FMKB",
       "rome_code": "M1607",
-      "semantic_score": 0.4075787663459778,
+      "semantic_score": 0.40757885575294495,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.890945196151733,
+      "score": 17.89094626903534,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": 8.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.890945196151733
+        "semantic": 4.890946269035339
       }
     },
     {
@@ -634,21 +610,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Mensuel de 12.0 Euros à 14.0 Euros",
-      "posted_days_ago": 2,
+      "posted_days_ago": 3,
       "snippet": "Description du poste : A PROPOS DU POSTE Nous recherchons un(e) Assistant(e) d'agence pour notre agence Azaé Lille Nationale. En lien avec les équipes et les clients, vos missions principales sont les suivantes L'établissement des plannings des intervenant(e)s : Vous établissez et saisissez les plannings mensuels. Vous ajustez quotidiennement les plannings en fonction des absences, des congés et…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3840813",
       "rome_code": "M1607",
-      "semantic_score": 0.40532663464546204,
+      "semantic_score": 0.4053266644477844,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.863919615745544,
+      "score": 17.863919973373413,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.863919615745544
+        "semantic": 4.863919973373413
       }
     },
     {
@@ -662,17 +638,17 @@
       "snippet": "Nous recherchons pour l'un de nos clients, un(e) Agent administratif H/F sur le secteur de Lesquin (59). Les missions : * Accueil des clients * Gestion des expéditions (création des étiquettes et documents d'expédition) * Gestion des retraits et livraisons * Saisie, mise à jour et archivage des dossiers clients * Saisie informatique sur les logiciels internes Salaire : SMIC + Indemnités de déplac…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3941283",
       "rome_code": "M1607",
-      "semantic_score": 0.40518918633461,
+      "semantic_score": 0.40518930554389954,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.86227023601532,
+      "score": 17.862271666526794,
       "score_breakdown": {
         "keywords": 8.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.86227023601532
+        "semantic": 4.862271666526794
       }
     },
     {
@@ -682,21 +658,21 @@
       "location": "59 - Chapelle-d'Armentières",
       "contract_type": "CDD",
       "salary": null,
-      "posted_days_ago": 1,
+      "posted_days_ago": 2,
       "snippet": "Rattaché à la Direction Marketing et Développement, le service OAD (Outils d'aide à la Décision) de Semences de France a pour but de développer des outils et des applications afin de faciliter le travail des équipes de terrain au quotidien. Le service OAD prend également en charge la gestion de la donnée pour les outils proposés. Ce travail permet de valoriser la donnée, de fluidifier l'informati…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3902852",
       "rome_code": "M1607",
-      "semantic_score": 0.4312170743942261,
+      "semantic_score": 0.4312173128128052,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.174604892730713,
+      "score": 17.174607753753662,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.174604892730713
+        "semantic": 5.174607753753662
       }
     },
     {
@@ -710,17 +686,17 @@
       "snippet": "Vous désirez intégrer une entreprise innovante en pleine expansion ? Rejoignez-nous ! Assistant(e) qualité (H/F) Contrat renouvelable Rattaché(e) au Directeur Qualité et Affaires Réglementaires, et intégré(e) à l'équipe composée de 6 personnes, vous participez au suivi administratif du système qualité en interne, ainsi qu'auprès de nos clients. A ce titre, vos missions principales sont les suivan…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209RDCP",
       "rome_code": "M1607",
-      "semantic_score": 0.4239954352378845,
+      "semantic_score": 0.4239954650402069,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.087945222854614,
+      "score": 17.087945580482483,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.087945222854614
+        "semantic": 5.087945580482483
       }
     },
     {
@@ -730,21 +706,21 @@
       "location": "59 - Lille",
       "contract_type": "Intérim",
       "salary": "Annuel de 22000.0 Euros à 25000.0 Euros",
-      "posted_days_ago": 9,
+      "posted_days_ago": 10,
       "snippet": "Nous recrutons pour un client spécialisé dans le secteur de l'énergie et des services techniques un(e) hôte(sse) d'accueil pour assurer l'accueil et l'orientation des visiteurs et collaborateurs. Missions principales : - Accueillir et orienter les visiteurs avec professionnalisme - Gérer les appels téléphoniques et les emails - Assurer le suivi administratif lié à l'accueil - Veiller à la bonne p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3611930",
       "rome_code": "M1601",
-      "semantic_score": 0.381937175989151,
+      "semantic_score": 0.38193726539611816,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.583246111869812,
+      "score": 16.583247184753418,
       "score_breakdown": {
         "keywords": 6.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.583246111869812
+        "semantic": 4.583247184753418
       }
     },
     {
@@ -758,17 +734,17 @@
       "snippet": "Description du poste : Vous êtes un acteur essentiel à la préparation et l'organisation de la Journée Défense et Citoyenneté. En amont de la JD, vous Contrôler et traiter les fichiers reçus des mairies. * Affecter les jeunes aux sessions en optimisant l'organisation des salles. * Préparer la logistique des sessions (transports, matériel, etc Maintenir en bon état les équipements nécessaires aux a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1208976",
       "rome_code": "M1607",
-      "semantic_score": 0.4553412199020386,
+      "semantic_score": 0.45534130930900574,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.464094638824463,
+      "score": 16.46409571170807,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.464094638824463
+        "semantic": 5.464095711708069
       }
     },
     {
@@ -782,17 +758,41 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3151782",
       "rome_code": "M1609",
-      "semantic_score": 0.5146530866622925,
+      "semantic_score": 0.514653205871582,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.17583703994751,
+      "score": 16.175838470458984,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.17583703994751
+        "semantic": 6.175838470458984
+      }
+    },
+    {
+      "id": "3446440",
+      "title": "Assistant Administratif H/F",
+      "company": null,
+      "location": "59 - Villeneuve-d'Ascq",
+      "contract_type": "CDI",
+      "salary": "Annuel de 25000.0 Euros à 30000.0 Euros",
+      "posted_days_ago": 15,
+      "snippet": "Rattaché(e) au Manager d'Activité, vous assurez le bon fonctionnement administratif de l'agence et intervenez comme véritable relais au quotidien. Vos missions principales : Gestion administrative courante (courriers, dossiers, classement, suivi documentaire) Édition et suivi de la facturation clients Contrôle des notes de frais et suivi administratif des sous-traitants Suivi des dossiers RH (emb…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3446440",
+      "rome_code": "M1607",
+      "semantic_score": 0.4281880855560303,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 16.138257026672363,
+      "score_breakdown": {
+        "keywords": 5.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 5.138257026672363
       }
     },
     {
@@ -806,17 +806,17 @@
       "snippet": "Nous rechercherons un secrétaire BTP (H/F). Missions: _ Réalise le traitement administratif de dossiers (frappe de courrier, mise en forme de document..) et transmet les informations (e-mail, notes..) _ Prend en charge le suivi complet de dossiers (contrats de maintenance des équipements, de la structure..). Expérience dans le BTP exigée. Possibilité de télétravailler",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GGSD",
       "rome_code": "M1607",
-      "semantic_score": 0.42121392488479614,
+      "semantic_score": 0.42121395468711853,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.054567098617554,
+      "score": 16.054567456245422,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.054567098617554
+        "semantic": 5.054567456245422
       }
     },
     {
@@ -830,17 +830,17 @@
       "snippet": "Walter Learning, organisme de formation en alternance, recherche (un)e secrétaire médicale pour une de ses entreprises partenaires. Vos missions en entreprise : - Accueil physique et prise en charge des patients et des usagers - Accueil téléphonique pour prise de rendez-vous et planification des activités du service - Réalisation de synthèses de dossiers médicaux - Facturation et suivi administra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3149159",
       "rome_code": "M1609",
-      "semantic_score": 0.4963100254535675,
+      "semantic_score": 0.4963103234767914,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.95572030544281,
+      "score": 15.955723881721497,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": 8.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.95572030544281
+        "semantic": 5.955723881721497
       }
     },
     {
@@ -854,89 +854,17 @@
       "snippet": "Créé en 2022, le groupe Chronos Dental s'est rapidement imposé comme l'un des leader sur le marché de la prothèse dentaire en France. Il compte aujourd'hui 28 laboratoires. Tous les laboratoires du groupe sont fortement dotés en machines modernes, et notamment en équipement CFAO (conception, usinage et impression 3D), pour accompagner ses dentistes partenaires dans l'intégration des nouvelles tec…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZZLD",
       "rome_code": "M1607",
-      "semantic_score": 0.3123316764831543,
+      "semantic_score": 0.31233182549476624,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.747980117797852,
+      "score": 15.747981905937195,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.7479801177978516
-      }
-    },
-    {
-      "id": "3727961",
-      "title": "Saisonnier - Agent Administratif (H/F) QUESNOY SUR DEULE",
-      "company": null,
-      "location": "59 - Quesnoy-sur-Deûle",
-      "contract_type": "CDD",
-      "salary": null,
-      "posted_days_ago": 7,
-      "snippet": "Chez Unéal, nous ne sommes pas seulement la première coopérative agricole des Hauts-de-France, nous sommes un collectif de femmes et d'hommes engagés au service de plus de 6 000 agriculteurs adhérents. Ensemble, nous récoltons chaque année plus de 1,3 million de tonnes de céréales, et construisons une agriculture performante, durable et résolument tournée vers l'avenir. Intégrer Unéal, maison mèr…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3727961",
-      "rome_code": "M1607",
-      "semantic_score": 0.3075845539569855,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 15.691014647483826,
-      "score_breakdown": {
-        "keywords": 3.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 3.6910146474838257
-      }
-    },
-    {
-      "id": "3447191",
-      "title": "Assistant(e) Administratif(ve) Transport (H/F)",
-      "company": null,
-      "location": "59 - Fretin",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 1800.0 Euros à 2000.0 Euros",
-      "posted_days_ago": 14,
-      "snippet": "Envoyé Spécial est un acteur reconnu dans le monde du transport routier urgent et spécifique depuis plus de 25 ans. Nos équipes, spécialisées en gestion et réalisation de transports sensibles organisent la livraison d'un simple colis jusqu'au camion complet - 7j/7 et 24/24h sur le territoire National et Européen. Rattaché(e) au Responsable Transport, vous assurez le suivi administratif des opérat…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3447191",
-      "rome_code": "M1607",
-      "semantic_score": 0.30293765664100647,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 15.635251879692078,
-      "score_breakdown": {
-        "keywords": 3.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 3.6352518796920776
-      }
-    },
-    {
-      "id": "3727966",
-      "title": "Saisonnier - Agent Administratif (H/F) CARVIN",
-      "company": null,
-      "location": "62 - Carvin",
-      "contract_type": "CDD",
-      "salary": null,
-      "posted_days_ago": 7,
-      "snippet": "Chez Unéal, nous ne sommes pas seulement la première coopérative agricole des Hauts-de-France, nous sommes un collectif de femmes et d'hommes engagés au service de plus de 6 000 agriculteurs adhérents. Ensemble, nous récoltons chaque année plus de 1,3 million de tonnes de céréales, et construisons une agriculture performante, durable et résolument tournée vers l'avenir. Intégrer Unéal, maison mèr…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3727966",
-      "rome_code": "M1607",
-      "semantic_score": 0.2880590260028839,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 15.456708312034607,
-      "score_breakdown": {
-        "keywords": 3.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 3.456708312034607
+        "semantic": 3.747981905937195
       }
     },
     {
@@ -946,21 +874,21 @@
       "location": "59 - Lille",
       "contract_type": "CDD",
       "salary": "Annuel de 25675.0 Euros sur 12.0 mois",
-      "posted_days_ago": 20,
+      "posted_days_ago": 21,
       "snippet": "Pilote-Assistant Administratif H/F Tingari - Groupe Manpower - CDD 6 mois renouvelable - 25675€ brut annuel Tingari, engagés pour une employabilité durable Chez Tingari, entreprise dédiée à la transformation professionnelle du groupe Manpower, nous accompagnons chaque année des milliers de personnes vers un emploi durable, choisi et sécurisé. Rejoindre Tingari, c'est agir concrètement pour l'inse…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208YLNH",
       "rome_code": "M1607",
-      "semantic_score": 0.36875784397125244,
+      "semantic_score": 0.36875778436660767,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.42509412765503,
+      "score": 15.425093412399292,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.425094127655029
+        "semantic": 4.425093412399292
       }
     },
     {
@@ -974,17 +902,17 @@
       "snippet": "Votre agence Proman Lille Tertiaire recherche pour son client, société spécialisée dans l'expertise et la gestion de dossiers techniques, plusieurs Téléconseiller(e)s pour renforcer son équipe administrative et relation clients. Vous aurez pour missions : La prise en charge des appels entrants et sortants La prise de rendez-vous clients La gestion des plannings La mise à jour des informations dan…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209TTCF",
       "rome_code": "M1607",
-      "semantic_score": 0.4351256787776947,
+      "semantic_score": 0.43512582778930664,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.221508145332336,
+      "score": 15.22150993347168,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.221508145332336
+        "semantic": 5.22150993347168
       }
     },
     {
@@ -998,17 +926,17 @@
       "snippet": "Description du poste Effectuer le suivi médico-administratif des Congés Longue Maladie (CLM) et Congés Longue Durée (CLD), du courrier, des ordres de missions et des demandes de permissions - Gérer la prise de rdv et suivi médico-administratif avec les Hôpitaux d'Instruction des Armées (HIA) - Gérer la formation continue du personnel rattaché à la cellule parcours de soins et au secrétariat - Sup…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/7224711",
       "rome_code": "M1609",
-      "semantic_score": 0.4298253059387207,
+      "semantic_score": 0.42982542514801025,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.157903671264648,
+      "score": 15.157905101776123,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.157903671264648
+        "semantic": 5.157905101776123
       }
     },
     {
@@ -1022,17 +950,17 @@
       "snippet": "Description du poste : L'école de commerce One business School recrute pour l'un de ses partenaires pour le poste d'Assistant manager. Tu souhaites intégrer un Titre professionnelle dans le domaine du commerce et tu recherches une alternance ? Alors ils n'attendent que toi ! Diplôme ciblé : Titre Professionnel Manager d'Unité Marchande (RNCP32291), de niveau 5. Diplôme national délivré par le Min…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3829376",
       "rome_code": "M1604",
-      "semantic_score": 0.4254165291786194,
+      "semantic_score": 0.42541664838790894,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.104998350143433,
+      "score": 15.104999780654907,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": -3.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.104998350143433
+        "semantic": 5.104999780654907
       }
     },
     {
@@ -1046,17 +974,17 @@
       "snippet": "Description du poste : Enregistrer, exploiter, classer et archiver le courrier , reprendre et diffuser les notes du centre, suivi des contrôles élémentaires; Suivre la planification de la campagne scolaire, coordonné les actions de communication avec les autorités militaires et prescripteurs du CIRFA ; Suivre et établir tous les contrats de candidature (militaires du rang, sous-officiers, officie…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/0195289",
       "rome_code": "M1607",
-      "semantic_score": 0.41374266147613525,
+      "semantic_score": 0.4137426018714905,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.964911937713623,
+      "score": 14.964911222457886,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.964911937713623
+        "semantic": 4.964911222457886
       }
     },
     {
@@ -1070,41 +998,17 @@
       "snippet": "Sous la responsabilité de votre manager, vous avez un rôle clé dans la satisfaction de nos clients en étant disponible et bienveillant. En accueillant les clients au moment de leur passage en caisse, vous participez à leur fidélisation. Vous effectuez l'enregistrement des achats et réalisez l'encaissement dans le respect des procédures afin d'assurer le bon déroulement du passage en caisse. Vous…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3633793",
       "rome_code": "M1601",
-      "semantic_score": 0.3143470883369446,
+      "semantic_score": 0.31434717774391174,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.772165060043335,
+      "score": 14.772166132926941,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.772165060043335
-      }
-    },
-    {
-      "id": "209GNRL",
-      "title": "ALTERNANT CHEF DE PROJETS - BU HABITAT (H/F)",
-      "company": "PROJEX",
-      "location": "59 - Villeneuve-d'Ascq",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 1868.0 Euros à 1870.0 Euros sur 12.0 mois",
-      "posted_days_ago": 14,
-      "snippet": "En tant que Chef(fe) de Projets en alternance, vos principales missions sont : * Assister les chefs de projets dans les différentes phases des projets en réhabilitation de logements; * Réaliser les visites techniques pour établir le diagnostic et le programme travaux nécessaires dans les logements; * Participer à la production et l'avancement du projet; * Participer à la production des documents…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GNRL",
-      "rome_code": "M1607",
-      "semantic_score": 0.4567036032676697,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 14.480443239212036,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.480443239212036
+        "semantic": 3.772166132926941
       }
     },
     {
@@ -1118,17 +1022,17 @@
       "snippet": "Nous recherchons pour le compte de notre client, organisme bancaire basé à Croix, un(e) chargé(e) de clientèle back office bancaire pour un tâche de 4 mois.Vous intervenez sur l'ensemble du cycle de vie des dossiers de crédits clients. Vous assurez la relation avec les clients, les partenaires et les services internes. L'activité est composée de 80% de traitement administratif et de 20% de relati…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3937546",
       "rome_code": "M1607",
-      "semantic_score": 0.36001452803611755,
+      "semantic_score": 0.36001455783843994,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.32017433643341,
+      "score": 14.32017469406128,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.320174336433411
+        "semantic": 4.320174694061279
       }
     },
     {
@@ -1138,21 +1042,21 @@
       "location": "62 - LIBERCOURT",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "Poste à pourvoir dans une PME de 15 personnes - Libercourt Vos missions principales : - Emission, suivi et relance des factures clients - Saisie et contrôle des opérations comptables courantes (comptes clients) - Suivi des encaissements et rapprochements bancaires - Gestion et archivage des dossiers administratifs et comptables - Coordination des informations entre les services (commercial, logis…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NZFW",
       "rome_code": "M1607",
-      "semantic_score": 0.44171714782714844,
+      "semantic_score": 0.44171711802482605,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.300605773925781,
+      "score": 14.300605416297913,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.300605773925781
+        "semantic": 5.300605416297913
       }
     },
     {
@@ -1166,41 +1070,17 @@
       "snippet": "À propos de la mission En tant qu'Assistant Administratif, vous assurez la gestion quotidienne des appels téléphoniques, emails et courriers entrants. Vous créez et mettez à jour les dossiers administratifs, rédigez des comptes rendus et préparez les dossiers pour la facturation. - Réceptionner et traiter les appels téléphoniques, courriers, emails - Créer et tenir à jour les dossiers administrat…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VGCG",
       "rome_code": "M1607",
-      "semantic_score": 0.35408076643943787,
+      "semantic_score": 0.3540809154510498,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.248969197273254,
+      "score": 14.248970985412598,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.248969197273254
-      }
-    },
-    {
-      "id": "209GSXQ",
-      "title": "Contractualisation - service apprentissage (H/F)",
-      "company": null,
-      "location": "59 - VILLENEUVE D ASCQ",
-      "contract_type": "CDD",
-      "salary": "Annuel de 25000.0 Euros à 25500.0 Euros sur 12.0 mois",
-      "posted_days_ago": 14,
-      "snippet": "FORMASUP Hauts-de-France, Centre de Formations d'Apprentis de l'enseignement supérieur, depuis 33 ans, s'illustre par un développement en faveur de l'apprentissage dans l'enseignement supérieur. Fort d'un vaste réseau de grandes écoles et universités répartis sur l'ensemble du territoire régional, FORMASUP Hauts-de-France, accompagne aujourd'hui plus de 15 000 apprentis, de plus de 470 formations…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GSXQ",
-      "rome_code": "M1607",
-      "semantic_score": 0.43605679273605347,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 14.232681512832642,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.232681512832642
+        "semantic": 4.248970985412598
       }
     },
     {
@@ -1214,17 +1094,17 @@
       "snippet": "Pour ce poste d'Assistant Administratif H/F, situé à Ronchin, rejoignez une entreprise reconnue dans les services BtoB, avec des équipes dynamiques et un environnement de travail structuré et collaboratif.En tant qu'Assistant Administratif H/F, basé à Ronchin, vous prenez en charge le suivi administratif complet des dossiers commerciaux. À ce titre, vos principales responsabilités seront les suiv…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3972478",
       "rome_code": "M1607",
-      "semantic_score": 0.3332997262477875,
+      "semantic_score": 0.33329981565475464,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.99959671497345,
+      "score": 13.999597787857056,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.9995967149734497
+        "semantic": 3.9995977878570557
       }
     },
     {
@@ -1258,21 +1138,21 @@
       "location": "59 - Lille",
       "contract_type": "Intérim",
       "salary": "Annuel de 20000.0 Euros à 25000.0 Euros",
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Description du poste : Gestionnaire de paye et administration du personnel Missions Recueillir, préparer et saisir les éléments variables et fixes Traiter et contrôler les bulletins de salaire jusqu'à la clôture Gérer les prêts, pensions, saisies arrêts et acomptes, Établir les soldes de tout compte Assurer le suivi des droits conventionnels (CP, RTT, RC, etc Participer au traitement des tâches p…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3960100",
       "rome_code": "M1607",
-      "semantic_score": 0.31998544931411743,
+      "semantic_score": 0.31998559832572937,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.83982539176941,
+      "score": 13.839827179908752,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.839825391769409
+        "semantic": 3.8398271799087524
       }
     },
     {
@@ -1286,17 +1166,17 @@
       "snippet": "L'agence Lille Relation Client recherche pour l'un de ses clients un TECHNICIENS / INGENIEURS QUALITE (H/F). Au sein de l'entreprise, vous serez en charge de : - Analyse des factures rejetées sur Chorus Pro - Traitement des anomalies et mise en conformité des factures - Contact des magasins par mail pour obtenir les documents manquants (bon de commande, justificatifs...) - Utilisation des outils…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XVQV",
       "rome_code": "M1607",
-      "semantic_score": 0.46874478459358215,
+      "semantic_score": 0.46874484419822693,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.624937415122986,
+      "score": 13.624938130378723,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.624937415122986
+        "semantic": 5.624938130378723
       }
     },
     {
@@ -1310,17 +1190,17 @@
       "snippet": "Notre histoire : Depuis plus de 80 ans, le Groupe NICOLLIN s’est construit autour de valeurs fortes : l’humain, l’engagement et le sens du travail bien fait. Aujourd’hui, avec 12 000 collaborateurs/trices et un chiffre d’affaires de 700 M€, nous sommes un acteur de référence des services aux collectivités et aux entreprises sur l’ensemble du territoire (métropole et DROM-COM), à travers trois pôl…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3147596",
       "rome_code": "M1607",
-      "semantic_score": 0.37898385524749756,
+      "semantic_score": 0.3789839744567871,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.54780626296997,
+      "score": 13.547807693481445,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.547806262969971
+        "semantic": 4.547807693481445
       }
     },
     {
@@ -1334,41 +1214,17 @@
       "snippet": "Votre agence Temporis Experts & Cadres Roubaix recrute un.e agen.te administratif.ve et comptable pour une entreprise située à Tourcoing. Rejoignez une entreprise , leader dans le traitement de la chaîne de paiement et partenaire de confiance pour des millions de clients à travers la France. Sur un site convivial regroupant entre 45 et 50 collaborateurs, vous travaillerez au sein d’un environneme…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3948897",
       "rome_code": "M1607",
-      "semantic_score": 0.44121965765953064,
+      "semantic_score": 0.4412197768688202,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.294635891914368,
+      "score": 13.294637322425842,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.294635891914368
-      }
-    },
-    {
-      "id": "2821689",
-      "title": "Assistant technique F/H - CDD",
-      "company": null,
-      "location": "59 - Halluin",
-      "contract_type": "CDD",
-      "salary": "Annuel de 0.0 Euros",
-      "posted_days_ago": 29,
-      "snippet": "Mission Participer au traitement administratif, au suivi et au contrôle d'une partie de l'opération travaux Participer avec son responsable à l'élaboration, au pilotage et au suivi des contrats de maintenance et des politiques techniquesActivités principales Gestion administrative · Assurer les enregistrements informatiques nécessaires à la création d'une opération travaux et à son suivi · Mettre…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2821689",
-      "rome_code": "M1607",
-      "semantic_score": 0.3420043885707855,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 13.104052662849426,
-      "score_breakdown": {
-        "keywords": 3.0,
-        "contract": -2.0,
-        "rome": 8.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 4.104052662849426
+        "semantic": 5.294637322425842
       }
     },
     {
@@ -1378,21 +1234,21 @@
       "location": "59 - Madeleine",
       "contract_type": "Intérim",
       "salary": "Horaire de 13.0 Euros à 13.0 Euros sur 12.0 mois",
-      "posted_days_ago": 10,
+      "posted_days_ago": 11,
       "snippet": "Aquila RH Villeneuve d'Ascq, agence de recrutement en intérim, CDD et CDI, de tous types profils de niveau CAP à Bac. Vos missions: °Gérer l'accueil et le standard téléphonique. °Enregistrer les transactions des clients, établir les factures et effectuer le suivi des relances. °Initier les demandes d'achat, établir les commandes, et vérifier ainsi que les factures des fournisseurs sont réglées. °…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209KNYB",
       "rome_code": "M1607",
-      "semantic_score": 0.4922267198562622,
+      "semantic_score": 0.4922267496585846,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.906720638275146,
+      "score": 12.906720995903015,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.9067206382751465
+        "semantic": 5.906720995903015
       }
     },
     {
@@ -1402,21 +1258,45 @@
       "location": "59 - Tourcoing",
       "contract_type": "Intérim",
       "salary": null,
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Votre agence Temporis Experts & Cadres Roubaix recrute un(e) Agent Administratif & Comptable Encaissement pour une entreprise spécialisée dans la gestion externalisée des flux financiers et de la chaîne de paiement pour de grands groupes. Acteur reconnu dans son domaine, notre client intervient sur des activités telles que la gestion des virements, chèques, remboursements et rapprochements bancai…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3744403",
       "rome_code": "M1607",
-      "semantic_score": 0.4087389409542084,
+      "semantic_score": 0.4087391495704651,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.9048672914505,
+      "score": 12.904869794845581,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.9048672914505005
+        "semantic": 4.904869794845581
+      }
+    },
+    {
+      "id": "3447191",
+      "title": "Assistant(e) Administratif(ve) Transport (H/F)",
+      "company": null,
+      "location": "59 - Fretin",
+      "contract_type": "CDI",
+      "salary": "Mensuel de 1800.0 Euros à 2000.0 Euros",
+      "posted_days_ago": 15,
+      "snippet": "Envoyé Spécial est un acteur reconnu dans le monde du transport routier urgent et spécifique depuis plus de 25 ans. Nos équipes, spécialisées en gestion et réalisation de transports sensibles organisent la livraison d'un simple colis jusqu'au camion complet - 7j/7 et 24/24h sur le territoire National et Européen. Rattaché(e) au Responsable Transport, vous assurez le suivi administratif des opérat…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3447191",
+      "rome_code": "M1607",
+      "semantic_score": 0.302937775850296,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 12.635253310203552,
+      "score_breakdown": {
+        "keywords": 3.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 3.6352533102035522
       }
     },
     {
@@ -1430,17 +1310,17 @@
       "snippet": "RESPONSABILITÉS : Votre enthousiasme, votre polyvalence et votre professionnalisme seront mis en avant au travers des tâches confiées pour notre client spécialisé dans le secteur de l'emploi : • Accueil physique et téléphonique • Gestion des salles de réunions, des planning de rendez-vous, des plis, colis et coursiers • Gestion des badges • Gestion de la logistique pour les évènements • Promotion…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3988717",
       "rome_code": "M1601",
-      "semantic_score": 0.45844781398773193,
+      "semantic_score": 0.4584479033946991,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.501373767852783,
+      "score": 12.50137484073639,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": -2.0,
         "rome": 7.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.501373767852783
+        "semantic": 5.501374840736389
       }
     },
     {
@@ -1454,17 +1334,17 @@
       "snippet": "Notre agence Temporis Seclin accompagne l’un de ses clients basé à Lesquin dans la recherche d’un Assistant Administratif et Transports H/F pour un recrutement sur du long terme à temps plein. Sous la responsabilité de la Responsable Administrative et Transports, vous intervenez sur un poste polyvalent mêlant gestion administrative, relation clients et organisation des transports. Vous êtes un ac…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3821924",
       "rome_code": "M1607",
-      "semantic_score": 0.36960655450820923,
+      "semantic_score": 0.369606614112854,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.43527865409851,
+      "score": 12.435279369354248,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.435278654098511
+        "semantic": 4.435279369354248
       }
     },
     {
@@ -1474,21 +1354,21 @@
       "location": "59 - Wattrelos",
       "contract_type": "CDD",
       "salary": "Mensuel de 1800.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 9,
+      "posted_days_ago": 10,
       "snippet": "Envie de rejoindre un laboratoire où votre bienveillance compte autant que la bonne gestion de vos dossiers ? Où vous travaillez au sein d'une équipe solidaire engagée pour la santé des Français ?Alors postulez chez SYNLAB, nous sommes faits pour nous entendre !SYNLAB : la force des dynamiques locales, la puissance d'un réseauLeader européen du diagnostic médical, SYNLAB c'est un réseau solide de…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3611483",
       "rome_code": "M1609",
-      "semantic_score": 0.36822420358657837,
+      "semantic_score": 0.36822426319122314,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.41869044303894,
+      "score": 12.418691158294678,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.41869044303894
+        "semantic": 4.418691158294678
       }
     },
     {
@@ -1502,17 +1382,17 @@
       "snippet": "Vos missions&nbsp;: Rattaché au Directeur de l'établissement, vous l'accompagnez quotidiennement dans la gestion et la vie de l'établissement et venez en appui aux équipes.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3971580",
       "rome_code": "M1604",
-      "semantic_score": 0.35052841901779175,
+      "semantic_score": 0.35052862763404846,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.206341028213501,
+      "score": 12.206343531608582,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.206341028213501
+        "semantic": 4.2063435316085815
       }
     },
     {
@@ -1522,7 +1402,7 @@
       "location": "59 - TEMPLEUVE EN PEVELE",
       "contract_type": "CDD",
       "salary": "Horaire de 12.31 Euros sur 12 mois",
-      "posted_days_ago": 50,
+      "posted_days_ago": 51,
       "snippet": "Nous recherchons un(e) Hôte/Hôtesse pour rejoindre notre équipe. Vous travaillerez en étroite collaboration avec l'équipe pluridisciplinaire pour fournir un excellent service client. Responsabilités : - Répondre aux appels téléphoniques et transférer les appels aux personnes concernées - Gérer les courriers entrants et sortants - Assurer la réception des colis et leur distribution aux destinatair…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/207RCQV",
       "rome_code": "M1601",
@@ -1546,21 +1426,21 @@
       "location": "59 - Roubaix",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 22,
+      "posted_days_ago": 23,
       "snippet": "Vous souhaitez contribuer à des projets à impact et participer au déploiement d'une stratégie développement durable ambitieuse ? Voici le profil que nous recherchons: Nous recherchons un stagiaire pour accompagner la mise en oeuvre et le suivi de nos actions Développement Durable. Rattaché au Chef de projet Développement Durable, vous participerez au déploiement de projets variés et participerez…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3086711",
       "rome_code": "M1607",
-      "semantic_score": 0.48756060004234314,
+      "semantic_score": 0.48756054043769836,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.850727200508118,
+      "score": 11.85072648525238,
       "score_breakdown": {
         "keywords": -10.0,
         "contract": 8.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.850727200508118
+        "semantic": 5.85072648525238
       }
     },
     {
@@ -1574,17 +1454,17 @@
       "snippet": "Créée en 2011, DAVRICOURT est une société de conseil à taille humaine, spécialisée dans le recrutement et la prestation d'ingénieurs et de techniciens dans les secteurs automobile, ferroviaire, naval, aéronautique, défense, énergie, grande distribution, sciences de la vie, et du numérique. Répartis sur 6 agences en France, notre ambition est de proposer des solutions techniques de haute qualité,…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3832526",
       "rome_code": "M1501",
-      "semantic_score": 0.32074418663978577,
+      "semantic_score": 0.320744127035141,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.84893023967743,
+      "score": 11.848929524421692,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.848930239677429
+        "semantic": 3.848929524421692
       }
     },
     {
@@ -1598,17 +1478,65 @@
       "snippet": "Notre agence Adéquat Hénin Beaumont recrute un accueil chauffeur F/H pour l'un de ses clients basé sur LIBERCOURT. Vos futures missions : - Accueil des chauffeurs - Contrôle réception quai - Gestion mail - Saisie administratives diverses (CMR) Le Profil Adéquat : - Vous possédez une 1ere expérience similaire - Vous êtes à l'aise avec l'outil informatique - Expérience en logistique souhaitée Poste…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZHBT",
       "rome_code": "M1601",
-      "semantic_score": 0.3783991038799286,
+      "semantic_score": 0.37839922308921814,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.540789246559143,
+      "score": 11.540790677070618,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.540789246559143
+        "semantic": 4.540790677070618
+      }
+    },
+    {
+      "id": "209GNRL",
+      "title": "ALTERNANT CHEF DE PROJETS - BU HABITAT (H/F)",
+      "company": "PROJEX",
+      "location": "59 - Villeneuve-d'Ascq",
+      "contract_type": "CDI",
+      "salary": "Mensuel de 1868.0 Euros à 1870.0 Euros sur 12.0 mois",
+      "posted_days_ago": 15,
+      "snippet": "En tant que Chef(fe) de Projets en alternance, vos principales missions sont : * Assister les chefs de projets dans les différentes phases des projets en réhabilitation de logements; * Réaliser les visites techniques pour établir le diagnostic et le programme travaux nécessaires dans les logements; * Participer à la production et l'avancement du projet; * Participer à la production des documents…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GNRL",
+      "rome_code": "M1607",
+      "semantic_score": 0.45670363306999207,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 11.480443596839905,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 5.480443596839905
+      }
+    },
+    {
+      "id": "209GSXQ",
+      "title": "Contractualisation - service apprentissage (H/F)",
+      "company": null,
+      "location": "59 - VILLENEUVE D ASCQ",
+      "contract_type": "CDD",
+      "salary": "Annuel de 25000.0 Euros à 25500.0 Euros sur 12.0 mois",
+      "posted_days_ago": 15,
+      "snippet": "FORMASUP Hauts-de-France, Centre de Formations d'Apprentis de l'enseignement supérieur, depuis 33 ans, s'illustre par un développement en faveur de l'apprentissage dans l'enseignement supérieur. Fort d'un vaste réseau de grandes écoles et universités répartis sur l'ensemble du territoire régional, FORMASUP Hauts-de-France, accompagne aujourd'hui plus de 15 000 apprentis, de plus de 470 formations…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GSXQ",
+      "rome_code": "M1607",
+      "semantic_score": 0.43605685234069824,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 11.232682228088379,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": -2.0,
+        "rome": 8.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 5.232682228088379
       }
     },
     {
@@ -1622,17 +1550,17 @@
       "snippet": "RESPONSABILITÉS : Rattaché à la Direction Régionale Nord-Est, vous assurez la production des réponses techniques aux appels d'offres travaux courants. Vous êtes le garant de la fiabilité et de la précision du chiffrage de vos dossiers, en étroite collaboration avec l'équipe technique et commerciale. Analyse technique & Chiffrage o Gérer en direct les réponses aux appels d'offres travaux & mainten…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3594359",
       "rome_code": "M1605",
-      "semantic_score": 0.5480899214744568,
+      "semantic_score": 0.548089861869812,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.577079057693481,
+      "score": 10.577078342437744,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": -2.0,
         "rome": 6.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.5770790576934814
+        "semantic": 6.577078342437744
       }
     },
     {
@@ -1670,17 +1598,17 @@
       "snippet": "Notre histoire : Depuis plus de 80 ans, le Groupe NICOLLIN s’est construit autour de valeurs fortes : l’humain, l’engagement et le sens du travail bien fait. Aujourd’hui, avec 12 000 collaborateurs/trices et un chiffre d’affaires de 700 M€, nous sommes un acteur de référence des services aux collectivités et aux entreprises sur l’ensemble du territoire (métropole et DROM-COM), à travers trois pôl…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3147526",
       "rome_code": "M1501",
-      "semantic_score": 0.3801877200603485,
+      "semantic_score": 0.3801877498626709,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.562252640724182,
+      "score": 10.56225299835205,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.562252640724182
+        "semantic": 4.562252998352051
       }
     },
     {
@@ -1690,21 +1618,21 @@
       "location": "59 - ANNOEULLIN",
       "contract_type": "Intérim",
       "salary": "Horaire de 12.31 Euros sur 12.0 mois",
-      "posted_days_ago": 7,
+      "posted_days_ago": 8,
       "snippet": "Votre Mission : Accueillir, Informer et Soutenir les Familles. Vous êtes le point de contact essentiel pour les familles et les proches des personnes détenues. Votre rôle est de les accueillir dans un bâtiment dédié et de leur apporter un soutien pratique et logistique. Vos responsabilités principales incluent : Gestion des Parloirs : Accueillir et renseigner les familles sur la procédure de rése…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209QDSG",
       "rome_code": "M1601",
-      "semantic_score": 0.2828575074672699,
+      "semantic_score": 0.2828575670719147,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.394290089607239,
+      "score": 10.394290804862976,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.3942900896072388
+        "semantic": 3.394290804862976
       }
     },
     {
@@ -1742,17 +1670,17 @@
       "snippet": "Le Centre Hospitalier de Roubaix recherche un(e) secrétaire médical(e) (H/F), à 100% pour un CDD de renfort de 3 mois pour le service d'imagerie médicale. Le Centre Hospitalier de Roubaix emploie 3 000 professionnels, dont plus de 230 médecins, et se classe parmi les plus importants centres hospitaliers généraux de France. Il est le premier établissement non universitaire du GHT Hôpitaux Publics…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209WXVC",
       "rome_code": "M1609",
-      "semantic_score": 0.35083073377609253,
+      "semantic_score": 0.35083070397377014,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.20996880531311,
+      "score": 10.209968447685242,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.20996880531311
+        "semantic": 4.209968447685242
       }
     },
     {
@@ -1766,17 +1694,17 @@
       "snippet": "Qui sommes-nous ? Association d'aide et de soins à domicile, nous accompagnons des personnes âgées et des personnes en situation de handicap dans une logique de proximité, de qualité et de continuité des accompagnements. Dans le cadre de l'évolution de notre activité et du développement des Services Autonomie à Domicile (SAD), nous recrutons un(e) Assistant(e) Coordinateur(trice) afin de soutenir…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209QTTX",
       "rome_code": "M1609",
-      "semantic_score": 0.34218141436576843,
+      "semantic_score": 0.3421815037727356,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.106176972389221,
+      "score": 10.106178045272827,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.106176972389221
+        "semantic": 4.106178045272827
       }
     },
     {
@@ -1790,17 +1718,17 @@
       "snippet": "Notre client est une entreprise reconnue dans le secteur industriel. Elle se distingue par son engagement envers l'excellence opérationnelle et son attention particulière portée à la gestion de son capital humain. Ce poste est basé dans un environnement dynamique et stimulant.En tant qu'Assistant RH H/F, vous aurez les responsabilités suivantes : Gestion de la prépaie en lien avec un cabinet comp…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3854988",
       "rome_code": "M1501",
-      "semantic_score": 0.34110090136528015,
+      "semantic_score": 0.3411009609699249,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.093210816383362,
+      "score": 10.0932115316391,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.093210816383362
+        "semantic": 4.093211531639099
       }
     },
     {
@@ -1810,21 +1738,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Horaire de 14.0 Euros à 14.0 Euros",
-      "posted_days_ago": 1,
+      "posted_days_ago": 2,
       "snippet": "L'agence Groupe Morgan Services recherche pour son client basé sur Lille et spécialisé dans la location, Un assistant administratif H/F Missions principales : - Accueil téléphonique et physique des clients, fournisseurs - Classement des dossiers physiques et numériques (gestion de la boîte mail) - Transmission des informations aux équipes commerciales et techniques - Collaboration avec le service…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3903933",
       "rome_code": "M1607",
-      "semantic_score": 0.3377824127674103,
+      "semantic_score": 0.3377825617790222,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.053388953208923,
+      "score": 10.053390741348267,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.053388953208923
+        "semantic": 4.053390741348267
       }
     },
     {
@@ -1838,17 +1766,17 @@
       "snippet": "DSI, Distribution Services Industriels est une Entreprise Adaptée et inclusive qui a pour vocation la création d'emplois durables et qualifiants pour une majorité de personnes en situation de handicap. Notre métier premier : l'inclusion. Nous proposons du service aux entreprises (sous traitance et co traitance). DSI a été fondée en 1994 et elle est implantée au niveau national : Occitanie, Ile-de…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209WDXY",
       "rome_code": "M1606",
-      "semantic_score": 0.23724205791950226,
+      "semantic_score": 0.23724211752414703,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.846904695034027,
+      "score": 9.846905410289764,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 4.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 2.846904695034027
+        "semantic": 2.8469054102897644
       }
     },
     {
@@ -1862,17 +1790,17 @@
       "snippet": "Contexte de la mission Nous recherchons un Chef de chantier expérimenté pour prendre en charge la réalisation d'une mission de modernisation d'installations de sécurité incendie sur un site commercial majeur. Vous piloterez les travaux d'intégration de détecteurs dans une boucle existante, ainsi que les tirages de câbles associés. Cette mission offre une belle opportunité d'autonomie et de respon…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3768779",
       "rome_code": "M1501",
-      "semantic_score": 0.38766154646873474,
+      "semantic_score": 0.3876616060733795,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.651938557624817,
+      "score": 9.651939272880554,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 0.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.651938557624817
+        "semantic": 4.651939272880554
       }
     },
     {
@@ -1882,21 +1810,21 @@
       "location": "59 - Marcq-en-Barœul",
       "contract_type": "CDI",
       "salary": "Mensuel de 2000.0 Euros à 2200.0 Euros sur 12.0 mois",
-      "posted_days_ago": 37,
+      "posted_days_ago": 38,
       "snippet": "Les missions du poste: Sous la responsabilité de la Responsable Qualité et Relations clients, l'assistant(e) relation client assure le lien entre les entreprises et nos clients. Il/elle veille à la satisfaction et à la fidélisation de la clientèle par un suivi rigoureux de la qualité de services. Vos missions seront les suivantes : Gestion de la réclamation client : - Assurer le suivi des réclama…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208DSQH",
       "rome_code": "M1607",
-      "semantic_score": 0.3021329939365387,
+      "semantic_score": 0.30213311314582825,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.625595927238464,
+      "score": 9.625597357749939,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.6255959272384644
+        "semantic": 3.625597357749939
       }
     },
     {
@@ -1910,17 +1838,17 @@
       "snippet": "Rejoignez nos équipes ! Chez TRENOIS DECAMPS, entreprise familiale en plein essor, nous sommes reconnus pour notre expertise et la convivialité de nos 900 collaborateurs répartis sur 70 points de vente. Distributeurs de matériel pour les pros du bâtiment et de l’industrie, la logistique est essentielle pour livrer nos 45 000 références en J+1 et relever ce défi quotidien. Nous recrutons un(e) Com…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2863132",
       "rome_code": "M1607",
-      "semantic_score": 0.4542626738548279,
+      "semantic_score": 0.45426273345947266,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.451152086257935,
+      "score": 9.451152801513672,
       "score_breakdown": {
         "keywords": -2.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.451152086257935
+        "semantic": 5.451152801513672
       }
     },
     {
@@ -1934,17 +1862,17 @@
       "snippet": "Molinel, acteur majeur du secteur du vêtement professionnel est à la recherche de son.sa futur.e Chargé.e de certification en CDI. Au sein du Bureau d'études, vous intégrez une équipe soudée et jouez un rôle clé dans la mise sur le marché de nos produits normés. Votre mission principale est de préparer, structurer et coordonner l'ensemble des éléments techniques nécessaires à la constitution de n…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208JNRJ",
       "rome_code": "M1605",
-      "semantic_score": 0.452221542596817,
+      "semantic_score": 0.4522216022014618,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.426658511161804,
+      "score": 9.426659226417542,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 6.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.426658511161804
+        "semantic": 5.4266592264175415
       }
     },
     {
@@ -1958,17 +1886,17 @@
       "snippet": "Développez tous vos talents aux côtés de nos résidents.Rattaché(e) au (à la) Directeur(trice) de l'établissement, vous l'accompagnez quotidiennement dans la gestion et la vie de l'établissement et venez en appui aux équipes.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2773272",
       "rome_code": "M1604",
-      "semantic_score": 0.36608895659446716,
+      "semantic_score": 0.36608919501304626,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.393067479133606,
+      "score": 9.393070340156555,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.393067479133606
+        "semantic": 4.393070340156555
       }
     },
     {
@@ -1982,17 +1910,17 @@
       "snippet": "Description du poste : Manpower LILLE TERTIAIRE recherche pour son client, un acteur du secteur de la santé, un Secrétaire médical (H/F) Dans le cadre de vos responsabilités, vous serez amené à Accueillir les patients en réception Gérer la prise de rendez-vous par téléphone et en personne Réceptionner les appels entrants Assurer la gestion administrative des rendez-vous Facturation et encaissemen…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3714138",
       "rome_code": "M1609",
-      "semantic_score": 0.3541184365749359,
+      "semantic_score": 0.3541184663772583,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.249421238899231,
+      "score": 9.2494215965271,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.249421238899231
+        "semantic": 4.2494215965271
       }
     },
     {
@@ -2006,17 +1934,17 @@
       "snippet": "Assistant administratif (H/F) - Wambrechies. Mission polyvalente avec possibilité d'embauche Vous aimez les postes variés et structurants où organisation, rigueur et relationnel font la différence ? Cette opportunité est faite pour vous ! Notre client basé à Wambrechies recherche un(e) Assistant(e) administratif(ve) pour accompagner ses équipes sur des missions à la fois en RH et en facturation.…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209FXZB",
       "rome_code": "M1607",
-      "semantic_score": 0.34534525871276855,
+      "semantic_score": 0.3453453779220581,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.144143104553223,
+      "score": 9.144144535064697,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.144143104553223
+        "semantic": 4.144144535064697
       }
     },
     {
@@ -2030,17 +1958,17 @@
       "snippet": "descriptif du posteVos missions principales :Gestion complète et suivi des plannings des visites médicales (planification, convocations, suivi des aptitudes).Suivi et administration des contrats \"Frais de main-d'œuvre\" (vérification des clauses, facturation, conformité).Tenue rigoureuse de fichiers de suivi (tableaux de bord, bases de données internes) pour garantir la fiabilité des informations.…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2772576",
       "rome_code": "M1501",
-      "semantic_score": 0.5103355050086975,
+      "semantic_score": 0.5103356838226318,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.12402606010437,
+      "score": 9.124028205871582,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.12402606010437
+        "semantic": 6.124028205871582
       }
     },
     {
@@ -2050,21 +1978,21 @@
       "location": "59 - Villeneuve-d'Ascq",
       "contract_type": "Intérim",
       "salary": "Horaire de 13.47 Euros sur 12.0 mois",
-      "posted_days_ago": 6,
+      "posted_days_ago": 7,
       "snippet": "Manpower LILLE TERTIAIRE recherche pour son client, un acteur du secteur de la santé, un Secrétaire médical en centre d'appels (H/F) Vous aurez en charge : - Gestion des appels entrants (prise de rendez-vous, renseignements) - Orientation des patients selon les examens et les urgences - Planification des examens en respectant les protocoles médicaux - Gestion des agendas multi-sites et multi-prat…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209RRTD",
       "rome_code": "M1609",
-      "semantic_score": 0.39573463797569275,
+      "semantic_score": 0.39573487639427185,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.748815655708313,
+      "score": 8.748818516731262,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.748815655708313
+        "semantic": 4.748818516731262
       }
     },
     {
@@ -2078,17 +2006,17 @@
       "snippet": "Nous recherchons pour le compte de notre client un agent de réception (H/F) sur la commune de Erquinghem-Lys.Dans le cadre d'un fort développement de notre client, nous recherchons un agent de réception (H/F) capable d'assurer l'entrée des marchandises avec rigueur et autonomie. Votre rôle ne s'arrête pas au déchargement : vous êtes responsable de l'organisation optimale des produits. Vous êtes l…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3804289",
       "rome_code": "M1601",
-      "semantic_score": 0.3955802619457245,
+      "semantic_score": 0.3955804705619812,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.746963143348694,
+      "score": 8.746965646743774,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.746963143348694
+        "semantic": 4.746965646743774
       }
     },
     {
@@ -2102,17 +2030,17 @@
       "snippet": "Description du poste : Mission En intégrant un de nos restaurants de la métropole, vous serez formé en occupant un poste de Shift Leader (Assistant Manager). Vous intégrerez toute une équipe (qui vous attend impatiemment) qui sera là pour vous former, répondre à vos questions et développer vos compétences. Et aussi pour rire, manger, partager, s'entraider pendant les rushs et travailler dans le f…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2868872",
       "rome_code": "M1604",
-      "semantic_score": 0.3054520785808563,
+      "semantic_score": 0.30545225739479065,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.665424942970276,
+      "score": 8.665427088737488,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.665424942970276
+        "semantic": 3.665427088737488
       }
     },
     {
@@ -2126,17 +2054,17 @@
       "snippet": "Description du poste : Opérateur de saisie (H/F) Missions Lecture et analyse de documents Saisie, vérification et validation des informations Application stricte des règles de gestion Contribution à la performance Compétences maîtrise des outils informatiques Rigueur capacité rapide d'adaptation esprit d'équipe autonome Description du profil : Procéder à l'archivage des données - Réaliser des tra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3958853",
       "rome_code": "M1606",
-      "semantic_score": 0.6379854679107666,
+      "semantic_score": 0.6379854083061218,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.6558256149292,
+      "score": 8.655824899673462,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 7.655825614929199
+        "semantic": 7.655824899673462
       }
     },
     {
@@ -2150,17 +2078,17 @@
       "snippet": "Contrat : Intérim - 12 mois Lieu : Seclin Horaires : jour Salaire : 17,13 € brut de l'heure / 2 590 € brut mensuel Prise de poste : dès que possible Dans le cadre d'un renfort administratif au sein des équipes de production, mon client recherche un(e) Assistant(e) de production pour accompagner le suivi des flux et la fiabilité des données dans le système SAP. Vos missions Au cœur de l'activité d…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3821299",
       "rome_code": "M1607",
-      "semantic_score": 0.3863346576690674,
+      "semantic_score": 0.386334627866745,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.636015892028809,
+      "score": 8.63601553440094,
       "score_breakdown": {
         "keywords": -1.0,
         "contract": -6.0,
         "rome": 8.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.636015892028809
+        "semantic": 4.63601553440094
       }
     },
     {
@@ -2174,17 +2102,17 @@
       "snippet": "Description du poste : Mission En intégrant un de nos restaurants de la métropole, vous serez formé en occupant un poste de Shift Leader (Assistant Manager). Vous intégrerez toute une équipe (qui vous attend impatiemment) qui sera là pour vous former, répondre à vos questions et développer vos compétences. Et aussi pour rire, manger, partager, s'entraider pendant les rushs et travailler dans le f…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2868704",
       "rome_code": "M1604",
-      "semantic_score": 0.29502972960472107,
+      "semantic_score": 0.2950299382209778,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.540356755256653,
+      "score": 8.540359258651733,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.540356755256653
+        "semantic": 3.5403592586517334
       }
     },
     {
@@ -2198,17 +2126,17 @@
       "snippet": "descriptif du posteAu sein du service RH votre role sera d'assurer l'administration du personnel : - gestion des convocations au pole santé travail- mise a jour des tableaux de bord- saisie des elements variables de paie ( déplacement, frais...)profil recherchéVous devez être titulaire d'un Bac+3 et avoir au moins 2 années d'expérience sur un poste similaire.Une bonne maîtrise de l'outil bureauti…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3892157",
       "rome_code": "M1501",
-      "semantic_score": 0.5166784524917603,
+      "semantic_score": 0.5166786313056946,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.200141429901123,
+      "score": 8.200143575668335,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.200141429901123
+        "semantic": 6.200143575668335
       }
     },
     {
@@ -2218,21 +2146,21 @@
       "location": "59 - LILLE",
       "contract_type": "CDD",
       "salary": "Mensuel de 1870.00 Euros à 2072.49 Euros sur 12.0 mois",
-      "posted_days_ago": 44,
+      "posted_days_ago": 45,
       "snippet": "Le Greta Lille Métropole recherche un(e) assistant(e) de formation. Missions : Votre engagement au service de nos clients et usagers s'inscrit dans une démarche globale de développement de nos activités et d'amélioration continue de la qualité de nos prestations. Vous assurerez le suivi administratif et commercial des actions de formation. Suivi de l'activité de formation : * Élaboration des docu…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/207WNHH",
       "rome_code": "M1501",
-      "semantic_score": 0.4225158095359802,
+      "semantic_score": 0.42251595854759216,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.070189714431763,
+      "score": 8.070191502571106,
       "score_breakdown": {
         "keywords": -2.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.070189714431763
+        "semantic": 5.070191502571106
       }
     },
     {
@@ -2246,17 +2174,17 @@
       "snippet": "RESPONSABILITÉS : Votre enthousiasme, votre polyvalence et votre professionnalisme seront mis en avant au travers des tâches confiées pour notre client spécialisé dans le secteur des études supérieures : • Accueil physique et téléphonique • Gestion des salles de réunions, des plis, colis et coursiers • Réservation des taxis • Commande de fournitures • Autres missions administratives annexes Le po…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3988664",
       "rome_code": "M1601",
-      "semantic_score": 0.42137426137924194,
+      "semantic_score": 0.42137423157691956,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.056491136550903,
+      "score": 8.056490778923035,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": -2.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.056491136550903
+        "semantic": 5.056490778923035
       }
     },
     {
@@ -2270,17 +2198,17 @@
       "snippet": "Dans le cadre des congés d'été, nous recherchons un opérateur disponible sur notre centre de Verlinghem à partir de fin juin jusqu'au 31 août 2026. Au sein de notre centre de traitement de documents, vous participez activement au sein d'une équipe dynamique et motivée à la gestion des documents réceptionnés. Un de nos atouts, la « Polyvalence », ainsi, vous intervenez sur l'ensemble du processus…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GHLW",
       "rome_code": "M1606",
-      "semantic_score": 0.5012532472610474,
+      "semantic_score": 0.5012533664703369,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.015038967132568,
+      "score": 8.015040397644043,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.015038967132568
+        "semantic": 6.015040397644043
       }
     },
     {
@@ -2294,17 +2222,17 @@
       "snippet": "descriptif du posteDans le cadre d'un remplacement, vous prenez en charge les missions suivantes:- accueil physique et téléphonique- gestion des salles de réunions- gestion des commandes de fournitures- gestion du courrier entrant et sortant- missions administratives diverses (saisie de document, attestation de formations, classement)Ce poste, basé à Lille, est à pourvoir dans le cadre d'une miss…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3894741",
       "rome_code": "M1601",
-      "semantic_score": 0.40693897008895874,
+      "semantic_score": 0.4069391191005707,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 7.883267641067505,
+      "score": 7.883269429206848,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.883267641067505
+        "semantic": 4.883269429206848
       }
     },
     {
@@ -2318,17 +2246,17 @@
       "snippet": "RESPONSABILITÉS : 📍 Université de Lille – Campus Pont de Bois à VILLENEUVE D'ASCQ 📄 CDD catégorie B – 3 ans Le poste de gestionnaire des ressources humaines, rattaché à la direction de la gestion des personnels BIATSS au sein du bureau de la gestion individuelle, est centré sur le suivi de la carrière des personnels non enseignants, titulaires et contractuels, depuis leur prise de fonctions à l'i…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3410828",
       "rome_code": "M1501",
-      "semantic_score": 0.39118677377700806,
+      "semantic_score": 0.3911868631839752,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 7.694241285324097,
+      "score": 7.694242358207703,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.694241285324097
+        "semantic": 4.694242358207703
       }
     },
     {
@@ -2338,21 +2266,21 @@
       "location": "59 - Lesquin",
       "contract_type": "Intérim",
       "salary": null,
-      "posted_days_ago": 64,
+      "posted_days_ago": 65,
       "snippet": "descriptif du postePRINCIPALES MISSIONS DU POSTE- instruction de dossiers de demande de prise en charge de formation et de factures de formation,- instruction et engagement de contrat d'apprentissage ,- vérification et contrôle de la complétude des dossiers,- contrôle de la conformité des dossiers avec les process et procédures internes,- saisie de données administratives et financières dans notr…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1511445",
       "rome_code": "M1501",
-      "semantic_score": 0.5216485857963562,
+      "semantic_score": 0.521648645401001,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 7.259783029556274,
+      "score": 7.259783744812012,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.259783029556274
+        "semantic": 6.259783744812012
       }
     },
     {
@@ -2366,17 +2294,17 @@
       "snippet": "Description du poste Procéder aux convocations aux visites médicales et en assurer la traçabilité en lien avec les différents services RH des établissements présents sur le site -Organiser les rendez-vous du médecin et de l'infirmier -Effectuer l'accueil physique et téléphonique des personnels -Gérer les communications (par téléphone, courriel.) -Orienter les agents vers l'interlocuteur approprié…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2986427",
       "rome_code": "M1607",
-      "semantic_score": 0.33920496702194214,
+      "semantic_score": 0.3392050862312317,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 7.070459604263306,
+      "score": 7.07046103477478,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.070459604263306
+        "semantic": 4.07046103477478
       }
     },
     {
@@ -2390,17 +2318,17 @@
       "snippet": "Rejoignez le pôle Enseignement Supérieur et Recherche du site de Lille Tourné vers les innovations pédagogiques, la pratique (FabLabs, ateliers, stages...) et l'internationalisation des parcours, ce pôle est le coeur des initiatives personnelles et de la créativité de nos collaborateurs et collaboratrices. Au service d'un enseignement qui place l'élève au coeur de l'apprentissage, il leur permet…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PKBT",
       "rome_code": "M1607",
-      "semantic_score": 0.4824839234352112,
+      "semantic_score": 0.4824841022491455,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.789807081222534,
+      "score": 6.789809226989746,
       "score_breakdown": {
         "keywords": -10.0,
         "contract": -2.0,
         "rome": 8.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.789807081222534
+        "semantic": 5.789809226989746
       }
     },
     {
@@ -2414,41 +2342,17 @@
       "snippet": "Manpower LILLE TERTIAIRE recherche pour son client, un acteur du secteur des services aux entreprises, un Opérateur de saisie gestionnaire (H/F) Au sein du service, vous aurez notamment en charge : - l'analyse de demande d'indemnisations des demandeurs d'emploi de différentes catégories de métiers - l'analyse de documents, comme des bulletins de paie pour étudier les droits de ces bénéficiaires -…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209JVLQ",
       "rome_code": "M1606",
-      "semantic_score": 0.47974881529808044,
+      "semantic_score": 0.4797487258911133,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.756985783576965,
+      "score": 6.756984710693359,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.756985783576965
-      }
-    },
-    {
-      "id": "208QVYN",
-      "title": "Assistant(e) Dentaire Accueil (H/F)",
-      "company": "CABINET DENTAIRE GLOBAL",
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 27,
-      "snippet": "Le Cabinet Dentaire Global, situé en centre ville de Lille, recherche un(e) Assistant(e) Administratif / Secrétaire pour compléter son équipe. Cabinet avec 7 praticiens ouvert du lundi au vendredi de 8h00 à 18h30 et le samedi de 8h00 à 14h00. Vos missions seront les suivantes : - Assurer l'accueil physique des patients, - Gestion des appels entrants et sortants, prendre les messages et les transm…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/208QVYN",
-      "rome_code": "M1609",
-      "semantic_score": 0.30978521704673767,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 6.717422604560852,
-      "score_breakdown": {
-        "keywords": -2.0,
-        "contract": -2.0,
-        "rome": 5.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 3.717422604560852
+        "semantic": 5.756984710693359
       }
     },
     {
@@ -2458,21 +2362,21 @@
       "location": "59 - Tourcoing",
       "contract_type": "Intérim",
       "salary": "Horaire de 13.47 Euros sur 12.0 mois",
-      "posted_days_ago": 6,
+      "posted_days_ago": 7,
       "snippet": "Manpower LILLE TERTIAIRE recherche pour son client, un acteur du secteur de la santé, un Secrétaire médical en sénologie et radiothérapie (H/F) Vos missions seront : - Accueil physique et téléphonique des patients/patientes - Gestion des rendez-vous (mammographie, échographie mammaire, biopsie, radiologie.) - Préparation et suivi des dossiers administratifs et médicaux - Information et accompagne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209RRSH",
       "rome_code": "M1609",
-      "semantic_score": 0.39292609691619873,
+      "semantic_score": 0.3929261267185211,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.715113162994385,
+      "score": 6.715113520622253,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.715113162994385
+        "semantic": 4.715113520622253
       }
     },
     {
@@ -2486,17 +2390,17 @@
       "snippet": "L'EPDSAE, créé en 1982 par le Département du Nord, est le premier Etablissement public social et médicosocial de France. Il est composé de 16 établissements et services implantés sur l'ensemble du Département. L'Etablissement concourt à l'exécution des politiques Départementales et Nationales en matière d'accompagnement, d'accueil, d'hébergement et de suivi à domicile pour les personnes en situat…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3768109",
       "rome_code": "M1604",
-      "semantic_score": 0.29722726345062256,
+      "semantic_score": 0.297227144241333,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.566727161407471,
+      "score": 6.566725730895996,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.5667271614074707
+        "semantic": 3.566725730895996
       }
     },
     {
@@ -2506,21 +2410,21 @@
       "location": "59 - LILLE",
       "contract_type": "CDD",
       "salary": "Mensuel de 2050.0 Euros sur 12.0 mois",
-      "posted_days_ago": 28,
+      "posted_days_ago": 29,
       "snippet": "La Clinique de la Mitterie à Lomme est un établissement de Médecine et de Soins de Suite et de Réadaptation et d'addictologie comprenant 235 lits en places. Nous recherchons une secrétaire médicale (H/F) pour la période estivale (juin à septembre) Missions : - Assurer la saisie et l'envoi des courriers et comptes-rendus médicaux. - Assurer l'accueil téléphonique et physique des patients et la pri…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208PPCX",
       "rome_code": "M1609",
-      "semantic_score": 0.3540985882282257,
+      "semantic_score": 0.3540985584259033,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.2491830587387085,
+      "score": 6.24918270111084,
       "score_breakdown": {
         "keywords": -3.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.2491830587387085
+        "semantic": 4.24918270111084
       }
     },
     {
@@ -2558,17 +2462,17 @@
       "snippet": "Vous interviendrez en support de la saisie, et serez en charge de :- Analyser les fiches de paie - Saisir les données dans le logiciel - Analyse de chaque ligne de paie - Gestion administrative Type de contrat : Intérim 9 semaines, renouvelable - 35hDémarrage : Au plus vite Localisation : Villeneuve d'Ascq Rémunération : EUR BRUT / heure + TR Horaires : Amplitude 6h-19h du Lundi au Vendredi",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3999488",
       "rome_code": "M1606",
-      "semantic_score": 0.5928135514259338,
+      "semantic_score": 0.5928134918212891,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.113762617111206,
+      "score": 6.113761901855469,
       "score_breakdown": {
         "keywords": -4.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 7.113762617111206
+        "semantic": 7.113761901855469
       }
     },
     {
@@ -2582,17 +2486,17 @@
       "snippet": "Votre agence Temporis Experts & Cadres Roubaix recrute un(e) Charge.e de saisie de commandes pour une entreprise industrielle specialisee dans la conception, la fabrication et la distribution d'equipements de stockage et d'amenagement destines aux professionnels, situee en metropole lilloise. Dans le cadre d'un surcroit d'activite, l'entreprise renforce son equipe et recherche un profil rigoureux…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3869652",
       "rome_code": "M1606",
-      "semantic_score": 0.4250909388065338,
+      "semantic_score": 0.4250912070274353,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.101091265678406,
+      "score": 6.101094484329224,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.101091265678406
+        "semantic": 5.101094484329224
       }
     },
     {
@@ -2654,17 +2558,17 @@
       "snippet": "Nous recherchons pour le compte de notre client un agent de réception (H/F) sur la commune de Erquinghem-Lys.Dans le cadre d'un fort développement de notre client, nous recherchons un agent de réception (H/F) capable d'assurer l'entrée des marchandises avec rigueur et autonomie. Votre rôle ne s'arrête pas au déchargement : vous êtes responsable de l'organisation optimale des produits. Vous êtes l…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1681711",
       "rome_code": "M1601",
-      "semantic_score": 0.38015809655189514,
+      "semantic_score": 0.3801582455635071,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.561897158622742,
+      "score": 5.561898946762085,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.561897158622742
+        "semantic": 4.561898946762085
       }
     },
     {
@@ -2678,17 +2582,17 @@
       "snippet": "Vous contribuez à l'assistance d'un ou plusieurs responsables afin d'optimiser la gestion de leur activité en réalisant des missions d'accueil, de secrétariat, de gestion administrative et de gestion logistique Vos missions principales : - Interface entre les acteurs - Secrétariat - Gestion administrative - Gestion logistique - Travail en équipe et participation au dispositif institutionnelRejoig…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PMQP",
       "rome_code": "M1604",
-      "semantic_score": 0.36435386538505554,
+      "semantic_score": 0.36435407400131226,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.3722463846206665,
+      "score": 5.372248888015747,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.3722463846206665
+        "semantic": 4.372248888015747
       }
     },
     {
@@ -2702,17 +2606,17 @@
       "snippet": "L'agence recherche pour l'un de ses clients un(e) Assistant(e) standard H/F basé(e) à Marcq-en-Baroeul, en intérim pour une durée de 15 jours renouvelable. Au sein du siège et rattaché(e) aux services internes, vous serez en charge de traiter les appels entrants et de les orienter vers les agences concernées (15 agences en France), de gérer les boîtes mails du siège en analysant et transférant le…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XVQT",
       "rome_code": "M1601",
-      "semantic_score": 0.44539526104927063,
+      "semantic_score": 0.4453953206539154,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.344743132591248,
+      "score": 5.344743847846985,
       "score_breakdown": {
         "keywords": -4.0,
         "contract": -6.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.344743132591248
+        "semantic": 5.344743847846985
       }
     },
     {
@@ -2726,17 +2630,17 @@
       "snippet": "En lien étroit avec la direction, le/la titulaire du poste contribue à faire le lien entre la vision stratégique et la mise en œuvre opérationnelle. Il/elle participe au pilotage global de la structure, à la coordination des équipes et des projets, ainsi qu'au suivi des activités d'insertion et d'économie circulaire. Ce poste occupe une place centrale dans l'organisation, à l'interface entre la d…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XZPQ",
       "rome_code": "M1604",
-      "semantic_score": 0.4300162196159363,
+      "semantic_score": 0.4300163984298706,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.160194635391235,
+      "score": 5.160196781158447,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.160194635391235
+        "semantic": 5.160196781158447
       }
     },
     {
@@ -2746,21 +2650,21 @@
       "location": "59 - Villeneuve-d'Ascq",
       "contract_type": "Intérim",
       "salary": "Mensuel de 1800.0 Euros à 1900.0 Euros",
-      "posted_days_ago": 2,
+      "posted_days_ago": 3,
       "snippet": "Supplay Lille Tertiaire et Cadres recrute pour son client du domaine de la fonction public un Gestionnaire de dossiers (H/F) pour une mission intérimaire longue durée (un an minimum). Vos missions sont les suivantes Assurer la gestion administrative des dossiers bénéficiaires Mettre à jour et actualiser les salaires et autres éléments de rémunération Vérifier la cohérence et la conformité des inf…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3840022",
       "rome_code": "M1606",
-      "semantic_score": 0.5087013244628906,
+      "semantic_score": 0.5087013840675354,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.1044158935546875,
+      "score": 5.104416608810425,
       "score_breakdown": {
         "keywords": -2.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.1044158935546875
+        "semantic": 6.104416608810425
       }
     },
     {
@@ -2774,17 +2678,17 @@
       "snippet": "Pleinement impliqué dans la relation client, il conjugue performance commerciale, sens du service et coordination avec les équipes opérationnelles pour garantir la réussite de chaque projet. Missions principales Prospects et clients entreprises “BTB” Fort Boyard Aventures et clients “BTI” (Collectivités, écoles, centres de loisirs, associations...) Fort Boyard Aventures et Koezio : - Il propose u…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2730264",
       "rome_code": "M1601",
-      "semantic_score": 0.41608208417892456,
+      "semantic_score": 0.41608211398124695,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 4.992985010147095,
+      "score": 4.992985367774963,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": -2.0,
         "rome": 7.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.992985010147095
+        "semantic": 4.992985367774963
       }
     },
     {
@@ -2798,17 +2702,17 @@
       "snippet": "Descriptif du poste: Aujourd'hui nous recherchons l'Assistant/e de notre Direction générale régionale Nord-Europe, basée à Villeneuve d'Ascq. Principales responsabilités: Assistanat de Direction : * Gérer l'agenda, les courriers et organiser les déplacements de la Directrice Générale Régionale * Gérer les appels téléphoniques, le courrier et les e-mails à destination de notre direction régionale.…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3728655",
       "rome_code": "M1604",
-      "semantic_score": 0.39742642641067505,
+      "semantic_score": 0.3974265456199646,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 4.769117116928101,
+      "score": 4.769118547439575,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.769117116928101
+        "semantic": 4.769118547439575
       }
     },
     {
@@ -2822,17 +2726,17 @@
       "snippet": "Notre client, PME, recherche dans le cadre d'une mission intérim de 3 mois, un(e) Assistant(e) RH dans le secteur de Villeneuve-d'Ascq. Le poste est à pourvoir à partir du 1er Aout.Pour ce poste d'Assistant(e) RH, vous aurez les missions principales suivantes : Gestion de la paie en relation avec le prestataire externe : Préparation des éléments variables et contrôle de la paie, Gestion de l'admi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3972088",
       "rome_code": "M1501",
-      "semantic_score": 0.5256311893463135,
+      "semantic_score": 0.525631308555603,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 4.307574272155762,
+      "score": 4.307575702667236,
       "score_breakdown": {
         "keywords": -4.0,
         "contract": -6.0,
         "rome": 5.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.307574272155762
+        "semantic": 6.307575702667236
       }
     },
     {
@@ -2846,17 +2750,17 @@
       "snippet": "À propos de la mission - Opérateur de saisie de facturation Rythme de travail : - Travail en journée Rémunération & Avantages Rémunération : 12,31 EUR par heure Avantages : - 10% d'indemnités de fin de mission (IFM) + 10% de prime de congés payés (CP), soit un salaire total brut de 14,90EUR - Demandes d'acompte en 24h - Un des meilleurs CET de France avec un taux d'intérêt de 10% par an - Tous vo…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NRZZ",
       "rome_code": "M1606",
-      "semantic_score": 0.26854899525642395,
+      "semantic_score": 0.2685489356517792,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 4.222587943077087,
+      "score": 4.22258722782135,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.2225879430770874
+        "semantic": 3.22258722782135
       }
     },
     {
@@ -2870,17 +2774,17 @@
       "snippet": "Définition du poste L'assistant(e) de direction : Organise pour le ou les Directeur(s) de l'établissement le traitement et la circulation de l'information, des documents et des communications téléphoniques liées au service ou suivi des dossiers. Assiste le ou les Directeur(s) de l'établissement et assure leur secrétariat afin d'optimiser la gestion de leur activité (gestion de planning, organisat…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3881963",
       "rome_code": "M1604",
-      "semantic_score": 0.3335268199443817,
+      "semantic_score": 0.3335268795490265,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 4.002321839332581,
+      "score": 4.002322554588318,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.002321839332581
+        "semantic": 4.002322554588318
       }
     },
     {
@@ -2894,17 +2798,17 @@
       "snippet": "Nord France Invest recrute en CDD de remplacement UN(E) ASSISTANT(E) DE DIRECTION Nord France Invest, l'Agence de Promotion Economique des Hauts-de-France est l'un des acteurs majeurs du développement économique régional. Notre mission est de détecter et d'attirer des projets d'investissements créateurs d'emplois : implantations de nouvelles activités, extensions de sites existants, partenariats…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209KHCH",
       "rome_code": "M1604",
-      "semantic_score": 0.3116210699081421,
+      "semantic_score": 0.31162112951278687,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 3.739452838897705,
+      "score": 3.7394535541534424,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.739452838897705
+        "semantic": 3.7394535541534424
       }
     },
     {
@@ -2914,21 +2818,21 @@
       "location": "59 - Noyelles-lès-Seclin",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "descriptif du posteQuels défis captivants relèverez-vous en tant que Directeur des opérations / exploitation (F/H) ?En tant que lien essentiel entre diverses équipes, vous orchestrerez les opérations quotidiennes pour garantir efficacité et conformité aux normes établies.- Assurer l'organisation et le lancement des shifts en coordonnant briefings, vérifications des effectifs, et attribution des t…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3659220",
       "rome_code": "M1604",
-      "semantic_score": 0.45585718750953674,
+      "semantic_score": 0.4558573067188263,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 3.470286250114441,
+      "score": 3.4702876806259155,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.470286250114441
+        "semantic": 5.4702876806259155
       }
     },
     {
@@ -2942,17 +2846,17 @@
       "snippet": "RESPONSABILITÉS : 📍 Villeneuve d'Ascq – Campus Pont de Bois – 📄 CDD jusqu'au 31 décembre inclus 🎓 Catégorie B 🏛 Faculté des Humanités 🎭 Sous la responsabilité hiérarchique de la directrice des services d'appui et l'autorité fonctionnelle de la doyenne: -Assurer l'organisation, le déroulement et le suivi des instances de la faculté - Assurer le suivi des conventions en lien avec la faculté -Accuei…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3988546",
       "rome_code": "M1604",
-      "semantic_score": 0.43471795320510864,
+      "semantic_score": 0.43471813201904297,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 3.2166154384613037,
+      "score": 3.2166175842285156,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.216615438461304
+        "semantic": 5.216617584228516
       }
     },
     {
@@ -2966,17 +2870,17 @@
       "snippet": "Nous recherchons pour le compte de notre client un opérateur de saisie F/H maîtrisant le logiciel SAGE et EXCELtâches principales : Saisie de données : entrer des informations dans notre logiciel SAGE. Vérification : contrôler que les données sont correctes (pas d'erreurs, informations complètes). Modification des fiches Clients et fournisseurs : mettre à jour adresses, contact, SIREN, TVA INTRAC…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2677021",
       "rome_code": "M1606",
-      "semantic_score": 0.4305596649646759,
+      "semantic_score": 0.43055957555770874,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 3.166715979576111,
+      "score": 3.166714906692505,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.166715979576111
+        "semantic": 5.166714906692505
       }
     },
     {
@@ -3014,17 +2918,17 @@
       "snippet": "Notre client situé à Lille est un centre de dépistage auditif et des troubles du langage. Pourquoi rejoindre cet établissement ? Avec cet établissement en pleine croissance, vous intégrerez une organisation à taille humaine, fondée sur de fortes valeurs humaines, offrant des opportunités stimulantes pour votre épanouissement professionnel.Désirez-vous jouer un rôle clé au cœur d'un Centre social…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3804601",
       "rome_code": "M1609",
-      "semantic_score": 0.3680173456668854,
+      "semantic_score": 0.3680174946784973,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 2.4162081480026245,
+      "score": 2.4162099361419678,
       "score_breakdown": {
         "keywords": -10.0,
         "contract": -2.0,
         "rome": 5.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.4162081480026245
+        "semantic": 4.416209936141968
       }
     },
     {
@@ -3034,21 +2938,21 @@
       "location": "62 - Carvin",
       "contract_type": "Intérim",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "Qui sommes-nous ? SUP INTERIM Hénin-Beaumont, agence de proximité spécialisée dans le recrutement de profils qualifiés, accompagne depuis des années ses clients industriels dans leurs besoins en renfort de personnel.Nous recrutons aujourd'hui pour notre client situé à Carvin, un préparateur de commande vocale H/F. Vos missionsRéceptionner et vérifier la conformité des commandes fournisseurs à l'a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3654957",
       "rome_code": "M1606",
-      "semantic_score": 0.4330996870994568,
+      "semantic_score": 0.4330998361110687,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 2.1971962451934814,
+      "score": 2.1971980333328247,
       "score_breakdown": {
         "keywords": -4.0,
         "contract": -6.0,
         "rome": 4.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.1971962451934814
+        "semantic": 5.197198033332825
       }
     },
     {
@@ -3062,17 +2966,17 @@
       "snippet": "Dans un contexte de développement, nous créons un poste d'Office Manager / Assistant(e) de direction afin d'accompagner la direction au quotidien et de contribuer à la bonne organisation de l'entreprise. Véritable pilier opérationnel, vous intervenez sur des missions variées (administratives, financières, organisationnelles) avec une réelle autonomie et un rôle actif dans l'amélioration des proce…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PJHN",
       "rome_code": "M1604",
-      "semantic_score": 0.3229212164878845,
+      "semantic_score": 0.3229214549064636,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 1.8750545978546143,
+      "score": 1.8750574588775635,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.8750545978546143
+        "semantic": 3.8750574588775635
       }
     },
     {
@@ -3086,17 +2990,17 @@
       "snippet": "Description du poste : Décidez d'être indépendant sans jamais être seul(e) en créant votre activité de soutien administratif avec l'appui du réseau Aadprox. Il ne s'agit pas d'un poste de salarié mais d'une création d'entreprise Être Aadprox (Ambassadeur ADministratif de PROXimité) c'est Soulager les chefs d'entreprises de leur gestion administrative quotidienne * Traiter, gérer et dématérialiser…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/9270951",
       "rome_code": "M1604",
-      "semantic_score": 0.26612013578414917,
+      "semantic_score": 0.2661203444004059,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 1.19344162940979,
+      "score": 1.1934441328048706,
       "score_breakdown": {
         "keywords": 3.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.19344162940979
+        "semantic": 3.1934441328048706
       }
     },
     {
@@ -3106,21 +3010,21 @@
       "location": "59 - Tourcoing",
       "contract_type": "Intérim",
       "salary": null,
-      "posted_days_ago": 64,
+      "posted_days_ago": 65,
       "snippet": "descriptif du posteL'assistant assure un role administratif au sein de l'agence sous la responsabilité du responsable d'agence. Ses missions sont les suivantes : - gestion et suivi des appels et des mails- assure le suivi des appels d'offres, des affaires en attente d'acceptation- assure le suivi des plannings des chantiers- assure le suivi des PV de reception et des cautions bancaires- assure le…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1511507",
       "rome_code": "M1604",
-      "semantic_score": 0.369793176651001,
+      "semantic_score": 0.3697932958602905,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 0.4375181198120117,
+      "score": 0.43751955032348633,
       "score_breakdown": {
         "keywords": 5.0,
         "contract": -6.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.437518119812012
+        "semantic": 4.437519550323486
       }
     },
     {
@@ -3134,17 +3038,17 @@
       "snippet": "Notre Société : Implanté au cœur de la métropole lilloise à Villeneuve d'Ascq, notre cabinet de Géomètre-Expert accompagne depuis de nombreuses années les particuliers, les professionnels et les collectivités dans leurs projets immobiliers et d'aménagement. Chez nous, l'esprit d'équipe n'est pas un vain mot : nous sommes une structure familiale de 14 personnes où règnent la convivialité, l'entrai…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208ZDCY",
       "rome_code": "M1604",
-      "semantic_score": 0.40966102480888367,
+      "semantic_score": 0.40966111421585083,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -0.084067702293396,
+      "score": -0.08406662940979004,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.915932297706604
+        "semantic": 4.91593337059021
       }
     },
     {
@@ -3158,17 +3062,17 @@
       "snippet": "descriptif du posteVos Missions principalesVotre quotidien sera rythmé par des missions variées alliant gestion administrative, RH et logistique :Support à la Direction & Encadrement :Gestion d'agendas complexes et filtrage d'appels.Rédaction de courriers, comptes-rendus et supports de présentation.Organisation des réunions et des déplacements.Développement des Compétences :Gestion et suivi opéra…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1492530",
       "rome_code": "M1604",
-      "semantic_score": 0.4888290762901306,
+      "semantic_score": 0.48882925510406494,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -1.1340510845184326,
+      "score": -1.1340489387512207,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.865948915481567
+        "semantic": 5.865951061248779
       }
     },
     {
@@ -3182,17 +3086,17 @@
       "snippet": "Technicien Helpdesk Bilingue Anglais H/F Contexte Dans le cadre du renforcement de son équipe support, notre client recherche un(e) Technicien(ne) Helpdesk Bilingue Anglais afin d'assurer l'assistance aux utilisateurs et la prise en charge des incidents informatiques de premier niveau. Vous intégrerez une équipe dynamique et participerez activement à la qualité du support apporté aux utilisateurs…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209QRSG",
       "rome_code": "M1604",
-      "semantic_score": 0.39249861240386963,
+      "semantic_score": 0.39249882102012634,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -1.2900166511535645,
+      "score": -1.2900141477584839,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": -6.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.7099833488464355
+        "semantic": 4.709985852241516
       }
     },
     {
@@ -3206,17 +3110,17 @@
       "snippet": "Devenez un acteur clé de nos projets : Nous recherchons un(e) assistant(e) d’Agence pour rejoindre notre agence de Seclin, rattaché(e) au responsable d’agence, vous prendrez en charge : Les démarches commerciales : réponses administratives aux appels d’offres et rédaction des mémoires techniques ; Les démarches financières : facturation, suivi des balances de paiement et suivi administratif des d…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2346070",
       "rome_code": "M1604",
-      "semantic_score": 0.4319833219051361,
+      "semantic_score": 0.43198350071907043,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -1.8162001371383667,
+      "score": -1.8161979913711548,
       "score_breakdown": {
         "keywords": -2.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.183799862861633
+        "semantic": 5.183802008628845
       }
     },
     {
@@ -3230,17 +3134,17 @@
       "snippet": "descriptif du posteEn lien étroit avec l'ensemble de l'équipe opérationnelle, vous prenez en charge les missions suivantes:- préparation des appels d'offres en collaboration avec le responsable Bureau d'Etudes et/ou le responsable de l'Etude- gestion administrative de chantier: préparation des classeurs, envoi des PPSPS aux instances, gestion des OS, envoi de courriers divers- gestion de l'agence…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2078635",
       "rome_code": "M1604",
-      "semantic_score": 0.36194413900375366,
+      "semantic_score": 0.3619442284107208,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -2.656670331954956,
+      "score": -2.65666925907135,
       "score_breakdown": {
         "keywords": 2.0,
         "contract": -6.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.343329668045044
+        "semantic": 4.34333074092865
       }
     },
     {
@@ -3274,21 +3178,21 @@
       "location": "59 - Marcq-en-Barœul",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 1,
+      "posted_days_ago": 2,
       "snippet": "Descriptif du poste: Rattaché à la Direction du Groupe, vous êtes au cœur de la bonne marche administrative et financière de l'entreprise. Véritable chef.fe d'orchestre de l'administration des ventes et de la gestion, vous fluidifiez le quotidien, sécurisez les process et garantissez la fiabilité des flux. Vous ne vous contentez pas d'exécuter, vous optimisez ! Missions Administration des ventes…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3900206",
       "rome_code": "M1604",
-      "semantic_score": 0.3215799629688263,
+      "semantic_score": 0.3215801417827606,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -3.1410404443740845,
+      "score": -3.1410382986068726,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.8589595556259155
+        "semantic": 3.8589617013931274
       }
     },
     {
@@ -3298,21 +3202,21 @@
       "location": "59 - Seclin",
       "contract_type": "CDI",
       "salary": "Annuel de 25000.0 Euros à 30000.0 Euros",
-      "posted_days_ago": 6,
+      "posted_days_ago": 7,
       "snippet": "Nous accompagnons les entreprises et les candidats au travers de prestations de Recrutement et Intérim spécialisées sur le secteur de l'ADV et Supply Chain. TALENTS ADV-SUPPLY, cabinet de recrutement national spécialisé sur les métiers ADV, Assistanat Commercial, Import/Export, Relation client, Logistique, Transport, Achats et Supply Chain Pour notre client du secteur industriel, nous recherchons…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3741056",
       "rome_code": "M1604",
-      "semantic_score": 0.4359695613384247,
+      "semantic_score": 0.43596965074539185,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -5.768365263938904,
+      "score": -5.768364191055298,
       "score_breakdown": {
         "keywords": -9.0,
         "contract": -2.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.231634736061096
+        "semantic": 5.231635808944702
       }
     },
     {
@@ -3326,17 +3230,17 @@
       "snippet": "descriptif du posteVos missions principales:Accueillir physiquement et téléphoniquement les clients, fournisseurs et visiteursClasser, archiver et mettre en forme les documents administratifsGérer les comptes clients (ouverture, mise à jour)Saisir les commandes clients sur EBP Gestion CommercialeÉditer et apposer les bons de livraisonOrganiser et suivre les transports (messagerie, affretement)Vér…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3644500",
       "rome_code": "M1604",
-      "semantic_score": 0.4239998161792755,
+      "semantic_score": 0.4239997863769531,
       "llm_rank": null,
       "llm_reason": null,
-      "score": -7.912002205848694,
+      "score": -7.9120025634765625,
       "score_breakdown": {
         "keywords": -7.0,
         "contract": -6.0,
         "rome": -3.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.087997794151306
+        "semantic": 5.0879974365234375
       }
     }
   ]
