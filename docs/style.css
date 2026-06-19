@@ -716,6 +716,7 @@ code {
   #notes-form {
     padding-bottom: 2rem;
   }
+  #notes-form textarea { min-height: 110px; }
   .form-row {
     grid-template-columns: 1fr;
   }

@@ -25,6 +25,16 @@
   }
   function getToken() { return localStorage.getItem(LS_TOKEN) || ""; }
 
+  // Configuration automatique via lien de partage (#setup=TOKEN dans l'URL)
+  if (location.hash.startsWith("#setup=")) {
+    const _t = decodeURIComponent(location.hash.slice(7)).trim();
+    if (_t) {
+      localStorage.setItem(LS_TOKEN, _t);
+      history.replaceState(null, "", location.pathname);
+      alert("✓ Synchronisation GitHub configurée sur cet appareil !");
+    }
+  }
+
   // --- App state ---
   const readIds  = loadSet(LS_READ);
   const tracking = loadTracking();
@@ -532,10 +542,10 @@
   let _scrollY = 0;
   function lockScroll() {
     _scrollY = window.scrollY;
-    document.documentElement.style.overflowY = "hidden";
+    document.documentElement.style.overflow = "hidden";
   }
   function unlockScroll() {
-    document.documentElement.style.overflowY = "";
+    document.documentElement.style.overflow = "";
     window.scrollTo(0, _scrollY);
   }
 
@@ -604,10 +614,27 @@
 
   $ghConfig?.addEventListener("click", () => {
     const current = getToken();
-    const msg = current
-      ? "Token GitHub configuré ✓\n\nEntre un nouveau token pour le remplacer, laisse vide pour le conserver."
-      : "Colle ici ton Personal Access Token GitHub\n(fine-grained PAT, permission « Contents: Read and write » sur le repo job-agent).";
-    const token = prompt(msg, "");
+    if (current) {
+      const shareUrl = `${location.origin}${location.pathname}#setup=${encodeURIComponent(current)}`;
+      navigator.clipboard?.writeText(shareUrl).catch(() => {});
+      const newToken = prompt(
+        "Token GitHub configuré ✓\n\n" +
+        "📋 Lien de partage copié dans le presse-papier.\n" +
+        "Envoie ce lien sur ton autre appareil (téléphone, tablette…)\n" +
+        "et ouvre-le — la synchro se configurera automatiquement.\n\n" +
+        "Pour changer le token, colle-en un nouveau ci-dessous\n(laisse vide pour conserver l'actuel) :",
+        ""
+      );
+      if (newToken?.trim()) {
+        localStorage.setItem(LS_TOKEN, newToken.trim());
+        fetchFromGitHub();
+      }
+      return;
+    }
+    const token = prompt(
+      "Colle ici ton Personal Access Token GitHub\n(fine-grained PAT, permission « Contents: Read and write » sur le repo job-agent).",
+      ""
+    );
     if (token === null) return;
     if (token.trim()) {
       localStorage.setItem(LS_TOKEN, token.trim());
