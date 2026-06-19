@@ -37,20 +37,23 @@ body { transition: background-color 0.35s, color 0.2s; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  margin: 0;
-  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 1340px;
+  padding: 2rem 2.5rem;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.4;
 }
 
 header {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.5rem;
+  margin: 0 0 0.3rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 #meta {
@@ -121,34 +124,52 @@ h1 {
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0 0.4rem;
+  background: transparent;
+  border: none;
   font-size: 0.92rem;
 }
 
 th, td {
-  padding: 0.55rem 0.7rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.65rem 0.85rem;
+  border: none;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 th {
-  background: var(--surface-alt);
-  font-weight: 600;
+  background: var(--bg);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
   cursor: pointer;
   user-select: none;
   position: sticky;
   top: 0;
+  z-index: 1;
+  padding: 0.4rem 0.85rem 0.6rem;
 }
 
 th:hover { color: var(--accent); }
 
-tbody tr:hover { background: var(--surface-alt); }
-tbody tr:last-child td { border-bottom: none; }
+tbody tr:not(.notes-row) {
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.15s, transform 0.12s;
+}
+tbody tr:not(.notes-row):hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  transform: translateY(-1px);
+}
+tbody tr:not(.notes-row) td:first-child { border-radius: 12px 0 0 12px; }
+tbody tr:not(.notes-row) td:last-child  { border-radius: 0 12px 12px 0; }
+
+/* Quand les notes sont ouvertes : coins bas carrés sur la ligne parent */
+tbody tr.notes-open td:first-child { border-radius: 12px 0 0 0; }
+tbody tr.notes-open td:last-child  { border-radius: 0 12px 0 0; }
 
 .score {
   font-weight: 600;
@@ -261,11 +282,12 @@ tbody tr:last-child td { border-bottom: none; }
 .notes-toggle:hover    { color: var(--accent); }
 .notes-toggle.has-notes { color: var(--accent); }
 
-/* Ligne de notes */
+/* Ligne de notes — connectée visuellement à la carte parent */
 .notes-row td {
-  padding: 0 0.7rem 0.65rem;
-  background: var(--surface-alt);
-  border-top: none;
+  padding: 0 0.85rem 0.75rem;
+  background: var(--surface);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 .notes-area {
   width: 100%;
@@ -537,11 +559,8 @@ code {
   font-size: 0.85em;
 }
 
-/* Mobile */
 #table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 8px;
+  overflow: visible;
 }
 
 /* Notes dialog — même structure que #add-form */
@@ -590,6 +609,7 @@ code {
 
 @media (max-width: 720px) {
   body { padding: 1rem; }
+  #table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
   .col-rank, .col-rome, .col-age { display: none; }
 
@@ -759,6 +779,16 @@ code {
 }
 
 /* ── Dark mode : éléments colorés ── */
+[data-theme="dark"] tbody tr:not(.notes-row) {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+}
+[data-theme="dark"] tbody tr:not(.notes-row):hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+[data-theme="dark"] .notes-row td {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
 [data-theme="dark"] #add-dialog,
 [data-theme="dark"] #notes-dialog { background: var(--surface); }
 
