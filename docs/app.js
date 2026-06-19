@@ -478,6 +478,7 @@
     $addDialog.showModal();
   });
   $cancelAdd?.addEventListener("click", () => $addDialog.close());
+  document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", () => $addDialog.close());
   $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) $addDialog.close(); });
 
   $addForm?.addEventListener("submit", e => {
