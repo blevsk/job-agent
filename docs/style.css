@@ -620,6 +620,24 @@ code {
   .title { max-width: 22rem; }
 }
 
+/* Kanban mobile : colonnes pleine largeur avec snap */
+@media (max-width: 600px) {
+  .kanban-col {
+    min-width: min(82vw, 300px);
+    max-width: min(82vw, 300px);
+    flex-shrink: 0;
+  }
+  #kanban-wrapper:not([hidden]) {
+    scroll-snap-type: x mandatory;
+    gap: 0.5rem;
+    padding: 0 calc((100vw - min(82vw, 300px)) / 2) 12px;
+  }
+  .view-toggle-btn { font-size: 0; }
+  .view-toggle-btn::before { font-size: 1rem; }
+  #view-table::before  { content: "≡"; }
+  #view-kanban::before { content: "⊞"; }
+}
+
 /* 601-900px : tableau compact, plus de colonnes cachées */
 @media (max-width: 900px) {
   body { padding: 1rem 1.25rem; }
@@ -828,7 +846,10 @@ code {
   overflow-x: auto;
   padding: 0 4px 12px;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
 }
+#kanban-wrapper::-webkit-scrollbar { display: none; }
 
 .kanban-col {
   display: flex;
@@ -836,6 +857,7 @@ code {
   min-width: 210px;
   flex: 1;
   max-width: 270px;
+  scroll-snap-align: start;
 }
 
 .kanban-col-header {
