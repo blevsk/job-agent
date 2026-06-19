@@ -29,12 +29,6 @@
 }
 
 
-@supports (color: AccentColor) {
-  :root, [data-theme="dark"] {
-    --accent: AccentColor;
-    --accent-glow: color-mix(in srgb, AccentColor, transparent 85%);
-  }
-}
 
 html { transition: background-color 0.35s; }
 body { transition: background-color 0.35s, color 0.2s; }
