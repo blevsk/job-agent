@@ -265,6 +265,27 @@ a:hover { text-decoration: underline; }
 }
 #markAllRead:hover { color: var(--accent); }
 
+.sync-status {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.sync-status.sync-ok      { color: var(--pos); }
+.sync-status.sync-error   { color: var(--neg); }
+.sync-status.sync-pending { color: var(--muted); }
+
+.gh-config-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.45rem;
+  color: var(--muted);
+  line-height: 1;
+}
+.gh-config-btn:hover { color: var(--accent); border-color: var(--accent); }
+
 #empty {
   margin: 2rem auto;
   text-align: center;
