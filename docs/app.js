@@ -130,6 +130,7 @@
       saveTracking();
       setSyncStatus("ok");
       render();
+      renderDashboard();
     } catch (e) {
       console.error("GitHub fetch:", e);
       setSyncStatus("error");
@@ -233,6 +234,12 @@
     if (!newIds.has(id) || readIds.has(id)) return "";
     return `<span class="badge new" title="Nouvelle offre depuis ta dernière visite">Nouveau</span> `;
   }
+
+  function sourceBadge(id) {
+    return String(id).startsWith("lba_")
+      ? `<span class="badge src lba" title="La Bonne Alternance">LBA</span> `
+      : `<span class="badge src ft"  title="France Travail">FT</span> `;
+  }
   function breakdownTooltip(o) {
     if (!o.score_breakdown) return "";
     return Object.entries(o.score_breakdown)
@@ -256,6 +263,35 @@
     const t = tracking[id] || {};
     if (!t.status || !t.status_date) return "";
     return `<span class="status-date">${fmtStatusDate(t.status_date)}</span>`;
+  }
+
+  // --- Dashboard ---
+  const STATUS_PLURAL = {
+    "Postulée": ["postulée", "postulées"],
+    "Entretien": ["entretien", "entretiens"],
+    "Relancée": ["relancée", "relancées"],
+    "Refusée": ["refusée", "refusées"],
+  };
+
+  function renderDashboard() {
+    const $dash = document.getElementById("dashboard");
+    if (!$dash) return;
+    const counts = { "Postulée": 0, "Entretien": 0, "Relancée": 0, "Refusée": 0 };
+    for (const t of Object.values(tracking)) {
+      if (t.status && counts[t.status] !== undefined) counts[t.status]++;
+    }
+    const parts = Object.entries(counts)
+      .filter(([, n]) => n > 0)
+      .map(([s, n]) => {
+        const [sing, plur] = STATUS_PLURAL[s];
+        return `<span class="dash-stat ${STATUS_CLASS[s]}">${n} ${n > 1 ? plur : sing}</span>`;
+      });
+    if (parts.length) {
+      $dash.innerHTML = parts.join(" · ");
+      $dash.hidden = false;
+    } else {
+      $dash.hidden = true;
+    }
   }
 
   // --- Read ---
@@ -290,17 +326,17 @@
 
       return `
         <tr data-id="${escapeHtml(o.id)}"${isRead ? ' class="read"' : ""}>
-          <td class="rank-cell">${rankBadge(o.llm_rank)}</td>
+          <td class="rank-cell col-rank">${rankBadge(o.llm_rank)}</td>
           <td class="score ${scoreCls}" title="${escapeHtml(breakdownTooltip(o))}">${(o.score ?? 0).toFixed(1)}</td>
           <td class="title">
-            <div class="title-line">${newBadge(o.id)}${escapeHtml(o.title)}</div>
+            <div class="title-line">${sourceBadge(o.id)}${newBadge(o.id)}${escapeHtml(o.title)}</div>
             ${reasonHtml}
           </td>
           <td>${escapeHtml(o.company || "—")}</td>
           <td>${escapeHtml(o.location || "—")}</td>
           <td>${escapeHtml(o.contract_type || "—")}</td>
-          <td>${escapeHtml(o.rome_code || "—")}${semanticBadge(o.semantic_score)}</td>
-          <td>${fmtAge(o.posted_days_ago)}</td>
+          <td class="col-rome">${escapeHtml(o.rome_code || "—")}${semanticBadge(o.semantic_score)}</td>
+          <td class="col-age">${fmtAge(o.posted_days_ago)}</td>
           <td><a href="${escapeHtml(o.url)}" target="_blank" rel="noopener" data-id="${escapeHtml(o.id)}">voir</a></td>
           <td class="status-cell">
             ${statusSelectHtml(o.id)}
@@ -337,6 +373,7 @@
         const dh = statusDateHtml(id);
         if (dh) sel.insertAdjacentHTML("afterend", dh);
         if (status === "Refusée") markRead(id);
+        renderDashboard();
       });
     });
 
@@ -416,6 +453,7 @@
       saveSet(LS_KNOWN, new Set(state.offers.map(o => o.id)));
       renderMeta();
       render();
+      renderDashboard();
       fetchFromGitHub(); // sync tracking depuis GitHub après affichage initial
     })
     .catch(err => {

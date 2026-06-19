@@ -34,6 +34,23 @@ h1 {
   font-size: 0.9rem;
 }
 
+#dashboard {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.dash-stat {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.dash-stat.s-applied   { background: #dbeafe; color: #1e40af; }
+.dash-stat.s-interview { background: #fef3c7; color: #92400e; }
+.dash-stat.s-followup  { background: #ede9fe; color: #5b21b6; }
+.dash-stat.s-rejected  { background: #fee2e2; color: #991b1b; }
+
 .controls {
   display: flex;
   gap: 1rem;
@@ -237,6 +254,21 @@ tbody tr.read .title-line {
   font-weight: 400;
 }
 
+/* Badge source (FT / LBA) */
+.badge.src {
+  display: inline-block;
+  margin-right: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.badge.src.ft  { background: #e5e7eb; color: #374151; }
+.badge.src.lba { background: #d1fae5; color: #065f46; }
+
 /* Badge "Nouveau" */
 .badge.new {
   display: inline-block;
@@ -307,4 +339,28 @@ code {
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
   font-size: 0.85em;
+}
+
+/* Mobile */
+#table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+  body { padding: 1rem; }
+
+  .controls { gap: 0.6rem; }
+  #filter { min-width: 0; }
+
+  .col-rank,
+  .col-rome,
+  .col-age  { display: none; }
+
+  table { font-size: 0.82rem; min-width: 480px; }
+  th, td { padding: 0.4rem 0.5rem; }
+  .title { max-width: 10rem; }
+  .snippet, .llm-reason { display: none; }
+  .status-select { max-width: 5.5rem; }
 }

@@ -10,6 +10,7 @@
   <header>
     <h1>Job Agent</h1>
     <p id="meta">Chargement…</p>
+    <div id="dashboard" hidden></div>
   </header>
 
   <section class="controls">
@@ -29,23 +30,25 @@
     <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>
   </section>
 
+  <div id="table-wrapper">
   <table id="offers">
     <thead>
       <tr>
-        <th data-sort="llm_rank">Rang LLM</th>
+        <th data-sort="llm_rank" class="col-rank">Rang LLM</th>
         <th data-sort="score">Score</th>
         <th data-sort="title">Titre</th>
         <th data-sort="company">Entreprise</th>
         <th data-sort="location">Lieu</th>
         <th data-sort="contract_type">Contrat</th>
-        <th data-sort="rome_code">ROME / Sém.</th>
-        <th data-sort="posted_days_ago">Publié</th>
+        <th data-sort="rome_code" class="col-rome">ROME / Sém.</th>
+        <th data-sort="posted_days_ago" class="col-age">Publié</th>
         <th>Lien</th>
         <th>Statut</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
+  </div>
 
   <p id="empty" hidden>Aucune offre. Lance le workflow GitHub Action pour générer <code>offers.json</code>.</p>
 
