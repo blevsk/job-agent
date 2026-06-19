@@ -368,7 +368,7 @@ a:hover { text-decoration: underline; }
 .dialog-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.6rem;
   padding: 1.25rem 1.5rem 0;
 }
 .dialog-header h2 {

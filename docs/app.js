@@ -475,11 +475,15 @@
   // --- Ajout manuel ---
   $openAdd?.addEventListener("click", () => {
     $addForm.reset();
+    document.body.style.overflow = "hidden";
     $addDialog.showModal();
   });
-  $cancelAdd?.addEventListener("click", () => $addDialog.close());
-  document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", () => $addDialog.close());
-  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) $addDialog.close(); });
+  const closeDialog = () => $addDialog.close();
+  $cancelAdd?.addEventListener("click", closeDialog);
+  document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", closeDialog);
+  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) closeDialog(); });
+  // Restaure le scroll (déclenché aussi par Échap et toute autre fermeture)
+  $addDialog?.addEventListener("close", () => { document.body.style.overflow = ""; });
 
   $addForm?.addEventListener("submit", e => {
     e.preventDefault();
