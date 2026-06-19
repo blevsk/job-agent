@@ -61,8 +61,11 @@
       <button type="button" id="close-notes" class="dialog-close" aria-label="Fermer">✕</button>
       <h2 id="notes-dialog-title">Notes</h2>
     </div>
-    <div class="notes-dialog-body">
-      <textarea id="notes-dialog-area" placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…" rows="7"></textarea>
+    <div id="notes-form">
+      <label>Vos notes<textarea id="notes-dialog-area" placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"></textarea></label>
+      <div class="form-actions">
+        <button type="button" id="close-notes-btn" class="btn-primary">Fermer</button>
+      </div>
     </div>
   </dialog>
 

@@ -521,6 +521,7 @@
   });
 
   document.getElementById("close-notes")?.addEventListener("click", () => $notesDialog.close());
+  document.getElementById("close-notes-btn")?.addEventListener("click", () => $notesDialog.close());
   $notesDialog?.addEventListener("click", e => { if (e.target === $notesDialog) $notesDialog.close(); });
   $notesDialog?.addEventListener("cancel", e => { e.preventDefault(); $notesDialog.close(); });
   $notesDialog?.addEventListener("close", () => { unlockScroll(); currentNotesId = null; });
