@@ -4,6 +4,11 @@
 > le matching sémantique et la justification LLM. Inutile de mettre des dates
 > ou des coordonnées : on ne s'en sert que pour comprendre **ce que tu cherches**.
 
+## Formation visée
+
+**Chargée d'accueil et gestion administrative** — titre RNCP niveau 4 (Bac),
+préparé au **centre AFPA de Roubaix**. Contrat d'apprentissage de 13 mois recherché.
+
 ## Recherche
 
 Je recherche un **contrat d'apprentissage de 13 mois** dans le domaine administratif,
