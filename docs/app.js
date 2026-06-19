@@ -42,7 +42,7 @@
   let ghSha     = null;
   let syncTimer = null;
 
-  // Offres manuelles stockées dans tracking.__manual__ pour être synchro GitHub
+  // Offres manuelles stockées dans tracking.__manual__ pour être synchro Codeberg
   function getManualOffers() { return tracking.__manual__ || []; }
   function saveManualOffers() { saveTracking(); debouncedSync(); }
 
@@ -137,14 +137,14 @@
     setSyncStatus("syncing");
     try {
       const r = await fetch(GH_API, {
-        headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" },
+        headers: { Authorization: `token ${token}`, Accept: "application/json" },
       });
       if (r.status === 404) { ghSha = null; setSyncStatus("ok"); return; }
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       const data     = await r.json();
       ghSha          = data.sha;
       const ghData   = JSON.parse(b64decode(data.content));
-      // GitHub est la source de vérité ; on préserve les clés locales absentes de GitHub
+      // Codeberg est la source de vérité ; on préserve les clés locales absentes de Codeberg
       const merged = { ...ghData };
       for (const id of Object.keys(tracking)) {
         if (!(id in merged)) merged[id] = tracking[id];
@@ -176,7 +176,7 @@
         method: "PUT",
         headers: {
           Authorization: `token ${token}`,
-          Accept: "application/vnd.github.v3+json",
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(body),
@@ -618,7 +618,7 @@
       const shareUrl = `${location.origin}${location.pathname}#setup=${encodeURIComponent(current)}`;
       navigator.clipboard?.writeText(shareUrl).catch(() => {});
       const newToken = prompt(
-        "Token GitHub configuré ✓\n\n" +
+        "Token Codeberg configuré ✓\n\n" +
         "📋 Lien de partage copié dans le presse-papier.\n" +
         "Envoie ce lien sur ton autre appareil (téléphone, tablette…)\n" +
         "et ouvre-le — la synchro se configurera automatiquement.\n\n" +
@@ -632,7 +632,7 @@
       return;
     }
     const token = prompt(
-      "Colle ici ton Personal Access Token GitHub\n(fine-grained PAT, permission « Contents: Read and write » sur le repo job-agent).",
+      "Colle ici ton Personal Access Token Codeberg\n(Settings → Applications → Generate Token, permission « repository »).",
       ""
     );
     if (token === null) return;
