@@ -6,7 +6,7 @@
   const LS_TOKEN    = "job-agent:gh-token";
   const GH_REPO     = "blevsk/job-agent";
   const GH_PATH     = "docs/tracking.json";
-  const GH_API      = `https://api.github.com/repos/${GH_REPO}/contents/${GH_PATH}`;
+  const GH_API      = `https://codeberg.org/api/v1/repos/${GH_REPO}/contents/${GH_PATH}`;
 
   // --- localStorage helpers ---
   function loadSet(key) {
@@ -31,7 +31,7 @@
     if (_t) {
       localStorage.setItem(LS_TOKEN, _t);
       history.replaceState(null, "", location.pathname);
-      alert("✓ Synchronisation GitHub configurée sur cet appareil !");
+      alert("✓ Synchronisation configurée sur cet appareil !");
     }
   }
 
