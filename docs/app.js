@@ -32,6 +32,10 @@
   let ghSha     = null;
   let syncTimer = null;
 
+  // Offres manuelles stockées dans tracking.__manual__ pour être synchro GitHub
+  function getManualOffers() { return tracking.__manual__ || []; }
+  function saveManualOffers() { saveTracking(); debouncedSync(); }
+
   const STATUS_OPTIONS = ["Postulée", "Entretien", "Relancée", "Refusée"];
   const STATUS_CLASS   = {
     "Postulée":  "s-applied",
@@ -41,7 +45,8 @@
   };
 
   const state = {
-    offers: [],
+    offers: [],      // rawOffers + manualOffers
+    rawOffers: [],   // offres depuis offers.json
     meta: null,
     sortKey: "default",
     sortDir: 1,
@@ -64,6 +69,10 @@
   const $markAll     = document.getElementById("markAllRead");
   const $exportCsv   = document.getElementById("exportCsv");
   const $ghConfig    = document.getElementById("gh-config");
+  const $openAdd     = document.getElementById("open-add");
+  const $addDialog   = document.getElementById("add-dialog");
+  const $addForm     = document.getElementById("add-form");
+  const $cancelAdd   = document.getElementById("cancel-add");
 
   // --- Formatting ---
   function fmtDate(iso) {
@@ -130,6 +139,7 @@
       Object.assign(tracking, merged);
       saveTracking();
       setSyncStatus("ok");
+      state.offers = [...state.rawOffers, ...getManualOffers()];
       render();
       renderDashboard();
     } catch (e) {
@@ -237,7 +247,13 @@
   }
 
   function sourceBadge(id) {
-    return String(id).startsWith("lba_")
+    const sid = String(id);
+    if (sid.startsWith("manual_")) {
+      const o   = state.offers.find(x => x.id === id);
+      const src = o?._source || "Manuel";
+      return `<span class="badge src manual" title="${escapeHtml(src)}">${escapeHtml(src)}</span> `;
+    }
+    return sid.startsWith("lba_")
       ? `<span class="badge src lba" title="La Bonne Alternance">LBA</span> `
       : `<span class="badge src ft"  title="France Travail">FT</span> `;
   }
@@ -456,6 +472,51 @@
     URL.revokeObjectURL(url);
   });
 
+  // --- Ajout manuel ---
+  $openAdd?.addEventListener("click", () => {
+    $addForm.reset();
+    $addDialog.showModal();
+  });
+  $cancelAdd?.addEventListener("click", () => $addDialog.close());
+  $addDialog?.addEventListener("click", e => { if (e.target === $addDialog) $addDialog.close(); });
+
+  $addForm?.addEventListener("submit", e => {
+    e.preventDefault();
+    const fd  = new FormData($addForm);
+    const get = k => fd.get(k)?.trim() || null;
+    const id  = `manual_${Date.now()}`;
+    const offer = {
+      id,
+      title:         get("title"),
+      company:       get("company"),
+      location:      get("location"),
+      contract_type: get("contract_type"),
+      url:           get("url"),
+      snippet:       get("snippet"),
+      _source:       get("source") || "Manuel",
+      salary:        null,
+      posted_days_ago: 0,
+      rome_code:     null,
+      semantic_score: null,
+      llm_rank:      null,
+      llm_reason:    null,
+      score:         0,
+      score_breakdown: {},
+    };
+    if (!tracking.__manual__) tracking.__manual__ = [];
+    tracking.__manual__.push(offer);
+    saveManualOffers();
+    state.offers = [...state.rawOffers, ...getManualOffers()];
+    $addDialog.close();
+    render();
+    renderDashboard();
+    // Scroll vers la nouvelle offre
+    setTimeout(() => {
+      const row = $tbody.querySelector(`tr[data-id="${id}"]`);
+      row?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  });
+
   $ghConfig?.addEventListener("click", () => {
     const current = getToken();
     const msg = current
@@ -473,8 +534,9 @@
   fetch("offers.json", { cache: "no-store" })
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(data => {
-      state.meta   = data.meta;
-      state.offers = data.offers || [];
+      state.meta      = data.meta;
+      state.rawOffers = data.offers || [];
+      state.offers    = [...state.rawOffers, ...getManualOffers()];
       const knownIds = loadSet(LS_KNOWN);
       if (knownIds.size > 0)
         newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));

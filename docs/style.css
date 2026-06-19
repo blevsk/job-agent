@@ -266,8 +266,9 @@ tbody tr.read .title-line {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.badge.src.ft  { background: #e5e7eb; color: #374151; }
-.badge.src.lba { background: #d1fae5; color: #065f46; }
+.badge.src.ft     { background: #e5e7eb; color: #374151; }
+.badge.src.lba    { background: #d1fae5; color: #065f46; }
+.badge.src.manual { background: #fce7f3; color: #9d174d; }
 
 /* Badge "Nouveau" */
 .badge.new {
@@ -327,6 +328,100 @@ a:hover { text-decoration: underline; }
   line-height: 1;
 }
 .gh-config-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+.btn-add {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.btn-add:hover { background: #1d4ed8; }
+
+/* Dialog */
+#add-dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 480px;
+  width: 95%;
+}
+#add-dialog::backdrop {
+  background: rgba(0,0,0,0.35);
+}
+#add-form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+#add-form h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+#add-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  gap: 0.25rem;
+}
+#add-form input,
+#add-form select,
+#add-form textarea {
+  font-size: 0.95rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  color: var(--fg);
+  background: white;
+}
+#add-form input:focus,
+#add-form select:focus,
+#add-form textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+#add-form textarea { resize: vertical; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #1d4ed8; }
+.form-actions button[type="button"] {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+.form-actions button[type="button"]:hover { color: var(--fg); }
+.req { color: var(--neg); }
 
 #empty {
   margin: 2rem auto;
