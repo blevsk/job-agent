@@ -27,7 +27,6 @@ from src.la_bonne_alternance import MissingLBAKeyError  # noqa: E402
 from src.models import JobOffer, ScoringConfig  # noqa: E402
 from src.scoring import score_offers  # noqa: E402
 
-RERANK_TOP_N = 20
 
 
 def _load_json(path: Path) -> dict:
@@ -155,14 +154,14 @@ def main() -> int:
     # 4 : scoring (inclut la composante semantic via semantic_weight)
     scored = score_offers(deduped, scoring_cfg)
 
-    # 5 : re-rank LLM sur le top-N (skip si pas de clé)
-    top_offers = [s.offer for s in scored[:RERANK_TOP_N]]
+    # 5 : re-rank LLM sur toutes les offres à score positif (skip si pas de clé)
+    top_offers = [s.offer for s in scored if s.score > 0]
     if profile_text.strip() and top_offers and os.environ.get("ANTHROPIC_API_KEY", "").strip():
         try:
             from src.rerank import llm_rerank  # noqa: I001
 
-            print(f"[rerank] LLM Haiku sur top-{len(top_offers)}…")
-            llm_rerank(top_offers, profile_text, top_n=RERANK_TOP_N)
+            print(f"[rerank] LLM Haiku sur {len(top_offers)} offres à score positif…")
+            llm_rerank(top_offers, profile_text, top_n=len(top_offers))
             n_ranked = sum(1 for o in top_offers if o.llm_rank is not None)
             print(f"[rerank] {n_ranked} offres rangées par le LLM")
             # Re-trier : les offres avec llm_rank passent en tête, puis tri par score
@@ -181,7 +180,8 @@ def main() -> int:
         if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
             print("[rerank] ANTHROPIC_API_KEY absent — skip")
 
-    # 6 : export
+    # 6 : supprimer les offres à score négatif puis export
+    scored = [s for s in scored if s.score >= 0]
     meta = {
         "source": "france_travail",
         "searches": [
