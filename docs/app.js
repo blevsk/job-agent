@@ -69,10 +69,14 @@
   const $markAll     = document.getElementById("markAllRead");
   const $exportCsv   = document.getElementById("exportCsv");
   const $ghConfig    = document.getElementById("gh-config");
-  const $openAdd     = document.getElementById("open-add");
-  const $addDialog   = document.getElementById("add-dialog");
-  const $addForm     = document.getElementById("add-form");
-  const $cancelAdd   = document.getElementById("cancel-add");
+  const $openAdd          = document.getElementById("open-add");
+  const $addDialog        = document.getElementById("add-dialog");
+  const $addForm          = document.getElementById("add-form");
+  const $cancelAdd        = document.getElementById("cancel-add");
+  const $notesDialog      = document.getElementById("notes-dialog");
+  const $notesDialogArea  = document.getElementById("notes-dialog-area");
+  const $notesDialogTitle = document.getElementById("notes-dialog-title");
+  let currentNotesId = null;
 
   // --- Formatting ---
   function fmtDate(iso) {
@@ -404,7 +408,13 @@
     // Notes toggle
     $tbody.querySelectorAll(".notes-toggle").forEach(btn => {
       btn.addEventListener("click", () => {
-        const id      = btn.dataset.id;
+        const id = btn.dataset.id;
+        // Sur mobile : modal bottom sheet
+        if (window.matchMedia("(max-width: 600px)").matches) {
+          openNotesModal(id);
+          return;
+        }
+        // Sur desktop : notes inline
         const row     = $tbody.querySelector(`.notes-row[data-id="${id}"]`);
         const mainRow = $tbody.querySelector(`tr:not(.notes-row)[data-id="${id}"]`);
         if (!row) return;
@@ -487,6 +497,33 @@
     a.click();
     URL.revokeObjectURL(url);
   });
+
+  // --- Modal notes (mobile) ---
+  function openNotesModal(id) {
+    currentNotesId = id;
+    const t     = tracking[id] || {};
+    const offer = state.offers.find(o => o.id === id);
+    if ($notesDialogTitle) $notesDialogTitle.textContent = offer?.title || "Notes";
+    if ($notesDialogArea)  $notesDialogArea.value = t.notes || "";
+    lockScroll();
+    $notesDialog.showModal();
+    setTimeout(() => $notesDialogArea?.focus(), 80);
+  }
+
+  $notesDialogArea?.addEventListener("input", () => {
+    if (!currentNotesId) return;
+    if (!tracking[currentNotesId]) tracking[currentNotesId] = {};
+    tracking[currentNotesId].notes = $notesDialogArea.value;
+    saveTracking();
+    debouncedSync();
+    const btn = $tbody.querySelector(`.notes-toggle[data-id="${currentNotesId}"]`);
+    if (btn) btn.classList.toggle("has-notes", !!$notesDialogArea.value.trim());
+  });
+
+  document.getElementById("close-notes")?.addEventListener("click", () => $notesDialog.close());
+  $notesDialog?.addEventListener("click", e => { if (e.target === $notesDialog) $notesDialog.close(); });
+  $notesDialog?.addEventListener("cancel", e => { e.preventDefault(); $notesDialog.close(); });
+  $notesDialog?.addEventListener("close", () => { unlockScroll(); currentNotesId = null; });
 
   // --- Ajout manuel ---
   // Scroll lock compatible iOS Safari (overflow:hidden seul ne suffit pas)

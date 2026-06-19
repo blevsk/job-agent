@@ -519,6 +519,35 @@ code {
   border-radius: 8px;
 }
 
+/* Notes dialog (mobile) */
+#notes-dialog .notes-dialog-body {
+  padding: 0.75rem 1.5rem 2rem;
+}
+#notes-dialog textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.94rem;
+  color: var(--fg);
+  background: white;
+  resize: vertical;
+  line-height: 1.6;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+#notes-dialog textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+#notes-dialog-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @media (max-width: 720px) {
   body { padding: 1rem; }
 
@@ -532,8 +561,11 @@ code {
 }
 
 @media (max-width: 600px) {
+  /* Empêche tout défilement horizontal */
+  html { overflow-x: clip; }
+
   /* ── Table → cartes ── */
-  #table-wrapper { overflow-x: visible; border-radius: 0; }
+  #table-wrapper { overflow: hidden; border-radius: 0; }
 
   #offers { display: block; border: none; background: transparent; min-width: 0; }
   #offers thead { display: none; }
@@ -549,22 +581,8 @@ code {
     overflow: hidden;
     background: white;
   }
-  /* Quand les notes sont ouvertes : arrondi bas supprimé */
-  #offers tbody tr.notes-open {
-    border-radius: 12px 12px 0 0;
-    border-bottom: 1px solid #f0f0f0;
-    margin-bottom: 0;
-  }
-  /* Notes : rattachées visuellement à la carte */
-  #offers tbody tr.notes-row {
-    display: block;
-    border: 1px solid var(--border);
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    margin-bottom: 0.65rem;
-    background: #f7f8fa;
-  }
-  #offers tbody tr.notes-row td { padding: 0.6rem 0.85rem 0.85rem; border: none; }
+  /* Notes inline cachées sur mobile (remplacées par la modal) */
+  #offers tbody tr.notes-row { display: none; }
 
   #offers td { border: none; padding: 0; vertical-align: top; }
   #offers tbody tr:hover { background: transparent; }
@@ -643,7 +661,8 @@ code {
   #offers tr.read .title-line { font-weight: 400; }
 
   /* ── Bottom sheet sur mobile ── */
-  #add-dialog {
+  #add-dialog,
+  #notes-dialog {
     max-width: 100%;
     width: 100%;
     margin-bottom: 0;
@@ -653,11 +672,13 @@ code {
     max-height: 90svh;
     overflow-y: auto;
   }
-  #add-dialog[open] {
+  #add-dialog[open],
+  #notes-dialog[open] {
     animation: dialog-slide-up 0.28s cubic-bezier(0.16,1,0.3,1);
   }
   /* Poignée visuelle en haut du sheet */
-  #add-dialog::before {
+  #add-dialog::before,
+  #notes-dialog::before {
     content: "";
     display: block;
     width: 36px;
