@@ -3,7 +3,9 @@
   --fg: #1a1a1a;
   --muted: #6b6b73;
   --border: #e1e1e6;
-  --accent: #2563eb;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-glow: rgba(124,58,237,0.14);
   --pos: #047857;
   --neg: #b91c1c;
   --surface: white;
@@ -17,13 +19,23 @@
   --fg: #ededef;
   --muted: #8e8e96;
   --border: #2c2c32;
-  --accent: #5b8dee;
+  --accent: #a78bfa;
+  --accent-hover: #8b5cf6;
+  --accent-glow: rgba(167,139,250,0.18);
   --pos: #34d399;
   --neg: #f87171;
   --surface: #1c1c20;
   --surface-alt: #232328;
   --surface-raised: #2a2a30;
   color-scheme: dark;
+}
+
+@supports (color: AccentColor) {
+  :root {
+    --accent: AccentColor;
+    --accent-hover: color-mix(in srgb, AccentColor, black 18%);
+    --accent-glow: color-mix(in srgb, AccentColor, transparent 86%);
+  }
 }
 
 html { transition: background-color 0.35s; }
@@ -375,7 +387,7 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
   font-weight: 500;
 }
-.btn-add:hover { background: #1d4ed8; }
+.btn-add:hover { background: var(--accent-hover); }
 
 /* Dialog */
 #add-dialog {
@@ -473,7 +485,7 @@ a:hover { text-decoration: underline; }
 #add-form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 #add-form textarea {
   resize: vertical;
@@ -503,7 +515,7 @@ a:hover { text-decoration: underline; }
   font-family: inherit;
   transition: background 0.15s;
 }
-.btn-primary:hover { background: #1d4ed8; }
+.btn-primary:hover { background: var(--accent-hover); }
 .btn-cancel {
   background: var(--surface-raised);
   border: none;
@@ -576,7 +588,7 @@ code {
 #notes-form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 #notes-dialog-title {
   overflow: hidden;
@@ -763,7 +775,7 @@ code {
 [data-theme="dark"] .dash-stat.s-followup  { background: #2d1060; color: #c4b5fd; }
 [data-theme="dark"] .dash-stat.s-rejected  { background: #450a0a; color: #fca5a5; }
 
-[data-theme="dark"] .status-select.s-applied   { background: #1e3058; color: #93c5fd; border-color: #2563eb; }
+[data-theme="dark"] .status-select.s-applied   { background: #1e3058; color: #93c5fd; border-color: var(--accent); }
 [data-theme="dark"] .status-select.s-interview { background: #3d2008; color: #fcd34d; border-color: #d97706; }
 [data-theme="dark"] .status-select.s-followup  { background: #2d1060; color: #c4b5fd; border-color: #7c3aed; }
 [data-theme="dark"] .status-select.s-rejected  { background: #450a0a; color: #fca5a5; border-color: #dc2626; }
