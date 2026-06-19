@@ -526,20 +526,15 @@
   $notesDialog?.addEventListener("close", () => { unlockScroll(); currentNotesId = null; });
 
   // --- Ajout manuel ---
-  // Scroll lock compatible iOS Safari (overflow:hidden seul ne suffit pas)
+  // Scroll lock : on touche uniquement overflow-y sur <html>
+  // pour ne pas interférer avec overflow-x:clip déjà appliqué par le CSS.
   let _scrollY = 0;
   function lockScroll() {
     _scrollY = window.scrollY;
-    document.body.style.overflow  = "hidden";
-    document.body.style.position  = "fixed";
-    document.body.style.top       = `-${_scrollY}px`;
-    document.body.style.width     = "100%";
+    document.documentElement.style.overflowY = "hidden";
   }
   function unlockScroll() {
-    document.body.style.overflow  = "";
-    document.body.style.position  = "";
-    document.body.style.top       = "";
-    document.body.style.width     = "";
+    document.documentElement.style.overflowY = "";
     window.scrollTo(0, _scrollY);
   }
 
