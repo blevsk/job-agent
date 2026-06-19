@@ -72,6 +72,10 @@
   <section class="controls">
     <div class="ctrl-top">
       <input id="filter" type="search" placeholder="Filtrer…" autofocus>
+      <div class="view-toggle">
+        <button class="view-toggle-btn active" id="view-table" title="Vue tableau">≡ Tableau</button>
+        <button class="view-toggle-btn" id="view-kanban" title="Vue Kanban">⊞ Kanban</button>
+      </div>
       <button id="open-add" class="btn-add">+ Ajouter</button>
       <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>
     </div>
@@ -90,6 +94,8 @@
       <span id="sync-status" class="sync-status"></span>
     </div>
   </section>
+
+  <div id="kanban-wrapper" hidden></div>
 
   <div id="table-wrapper">
   <table id="offers">

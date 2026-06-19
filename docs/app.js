@@ -62,6 +62,13 @@
     "Relancée":  "s-followup",
     "Refusée":   "s-rejected",
   };
+  const KANBAN_COLS = [
+    { key: "",           label: "À postuler" },
+    { key: "Postulée",   label: "Postulée" },
+    { key: "Entretien",  label: "Entretien" },
+    { key: "Relancée",   label: "Relancée" },
+    { key: "Refusée",    label: "Refusée" },
+  ];
 
   const state = {
     offers: [],      // rawOffers + manualOffers
@@ -73,6 +80,7 @@
     hideRead: false,
     filterStatus: "",
     openNotes: new Set(),
+    viewMode: "table",
   };
 
   // --- DOM refs ---
@@ -86,6 +94,10 @@
   const $markAll     = document.getElementById("markAllRead");
   const $exportCsv   = document.getElementById("exportCsv");
   const $ghConfig    = document.getElementById("gh-config");
+  const $viewTable   = document.getElementById("view-table");
+  const $viewKanban  = document.getElementById("view-kanban");
+  const $tableWrapper  = document.getElementById("table-wrapper");
+  const $kanbanWrapper = document.getElementById("kanban-wrapper");
   const $openAdd          = document.getElementById("open-add");
   const $addDialog        = document.getElementById("add-dialog");
   const $addForm          = document.getElementById("add-form");
@@ -161,7 +173,7 @@
       saveTracking();
       setSyncStatus("ok");
       state.offers = [...state.rawOffers, ...getManualOffers()];
-      render();
+      renderView();
       renderDashboard();
     } catch (e) {
       console.error("GitHub fetch:", e);
@@ -340,6 +352,7 @@
       if (tr.dataset.id === id && !tr.classList.contains("notes-row"))
         tr.classList.add("read");
     });
+    document.querySelector(`#kanban-wrapper .kanban-card[data-id="${id}"]`)?.classList.add("read");
     renderMeta();
   }
 
@@ -462,6 +475,97 @@
     });
   }
 
+  // --- Kanban ---
+  function kanbanCard(o) {
+    const isRead = readIds.has(o.id);
+    const t      = tracking[o.id] || {};
+    const scoreCls = o.score > 0 ? "pos" : o.score < 0 ? "neg" : "";
+    const sub = [o.location, o.contract_type, o.posted_days_ago != null ? fmtAge(o.posted_days_ago) : null]
+      .filter(Boolean).map(escapeHtml).join(" · ");
+    const reasonHtml = o.llm_reason
+      ? `<div class="llm-reason">💡 ${escapeHtml(o.llm_reason)}</div>` : "";
+    return `
+      <div class="kanban-card${isRead ? " read" : ""}" data-id="${escapeHtml(o.id)}" draggable="true">
+        <div class="kanban-card-top">
+          ${sourceBadge(o.id)}${newBadge(o.id)}${o.llm_rank ? rankBadge(o.llm_rank) : ""}
+          <span class="score ${scoreCls}">${(o.score ?? 0).toFixed(1)}</span>
+        </div>
+        <div class="kanban-card-title">${escapeHtml(o.title)}</div>
+        <div class="kanban-card-company">${escapeHtml(o.company || "—")}</div>
+        ${sub ? `<div class="kanban-card-sub">${sub}</div>` : ""}
+        ${reasonHtml}
+        <div class="kanban-card-actions">
+          <a href="${escapeHtml(o.url)}" target="_blank" rel="noopener" class="kanban-link" data-id="${escapeHtml(o.id)}">Voir →</a>
+          <button class="notes-toggle${t.notes ? " has-notes" : ""} kanban-notes-btn" data-id="${escapeHtml(o.id)}" title="Notes">✏</button>
+        </div>
+      </div>`;
+  }
+
+  function renderKanban() {
+    const rows = sortAndFilter();
+    if (rows.length === 0) { $kanbanWrapper.innerHTML = ""; $empty.hidden = false; return; }
+    $empty.hidden = true;
+    const groups = {};
+    KANBAN_COLS.forEach(c => { groups[c.key] = []; });
+    rows.forEach(o => {
+      const s = tracking[o.id]?.status || "";
+      (groups[s] !== undefined ? groups[s] : groups[""]).push(o);
+    });
+    $kanbanWrapper.innerHTML = KANBAN_COLS.map(col => `
+      <div class="kanban-col">
+        <div class="kanban-col-header">
+          <span>${escapeHtml(col.label)}</span>
+          <span class="kanban-col-count">${groups[col.key].length}</span>
+        </div>
+        <div class="kanban-cards" data-status="${escapeHtml(col.key)}">
+          ${groups[col.key].map(kanbanCard).join("")}
+        </div>
+      </div>`).join("");
+
+    // Drag & drop
+    $kanbanWrapper.querySelectorAll(".kanban-card").forEach(card => {
+      card.addEventListener("dragstart", e => {
+        e.dataTransfer.setData("text/plain", card.dataset.id);
+        setTimeout(() => card.classList.add("dragging"), 0);
+      });
+      card.addEventListener("dragend", () => card.classList.remove("dragging"));
+    });
+    $kanbanWrapper.querySelectorAll(".kanban-cards").forEach(zone => {
+      zone.addEventListener("dragover", e => { e.preventDefault(); zone.classList.add("drag-over"); });
+      zone.addEventListener("dragleave", () => zone.classList.remove("drag-over"));
+      zone.addEventListener("drop", e => {
+        e.preventDefault();
+        zone.classList.remove("drag-over");
+        const id = e.dataTransfer.getData("text/plain");
+        const newStatus = zone.dataset.status;
+        if (!tracking[id]) tracking[id] = {};
+        tracking[id].status      = newStatus;
+        tracking[id].status_date = newStatus ? new Date().toISOString().slice(0, 10) : null;
+        saveTracking();
+        debouncedSync();
+        if (newStatus === "Refusée") markRead(id);
+        renderKanban();
+        renderDashboard();
+      });
+    });
+
+    // Notes + links
+    $kanbanWrapper.querySelectorAll(".kanban-notes-btn").forEach(btn => {
+      btn.addEventListener("click", () => openNotesModal(btn.dataset.id));
+    });
+    $kanbanWrapper.querySelectorAll(".kanban-link").forEach(a => {
+      a.addEventListener("click", () => markRead(a.dataset.id));
+    });
+  }
+
+  function renderView() {
+    const isKanban = state.viewMode === "kanban";
+    $tableWrapper.hidden  = isKanban;
+    $kanbanWrapper.hidden = !isKanban;
+    if (isKanban) renderKanban();
+    else render();
+  }
+
   // --- Controls ---
   document.querySelectorAll("th[data-sort]").forEach(th => {
     th.addEventListener("click", () => {
@@ -471,18 +575,31 @@
         state.sortKey = k;
         state.sortDir = (k === "score" || k === "posted_days_ago" || k === "semantic_score") ? -1 : 1;
       }
-      render();
+      renderView();
     });
   });
 
-  $filter.addEventListener("input",   () => { state.filter       = $filter.value;    render(); });
-  $hideRead.addEventListener("change",     () => { state.hideRead     = $hideRead.checked;   render(); });
-  $filterStatus.addEventListener("change", () => { state.filterStatus = $filterStatus.value; render(); });
+  $viewTable?.addEventListener("click", () => {
+    state.viewMode = "table";
+    $viewTable.classList.add("active");
+    $viewKanban.classList.remove("active");
+    renderView();
+  });
+  $viewKanban?.addEventListener("click", () => {
+    state.viewMode = "kanban";
+    $viewKanban.classList.add("active");
+    $viewTable.classList.remove("active");
+    renderView();
+  });
+
+  $filter.addEventListener("input",   () => { state.filter       = $filter.value;    renderView(); });
+  $hideRead.addEventListener("change",     () => { state.hideRead     = $hideRead.checked;   renderView(); });
+  $filterStatus.addEventListener("change", () => { state.filterStatus = $filterStatus.value; renderView(); });
   $markAll.addEventListener("click",  e  => {
     e.preventDefault();
     sortAndFilter().forEach(o => readIds.add(o.id));
     saveSet(LS_READ, readIds);
-    render();
+    renderView();
     renderMeta();
   });
 
@@ -531,8 +648,11 @@
     tracking[currentNotesId].notes = $notesDialogArea.value;
     saveTracking();
     debouncedSync();
+    const hasNotes = !!$notesDialogArea.value.trim();
     const btn = $tbody.querySelector(`.notes-toggle[data-id="${currentNotesId}"]`);
-    if (btn) btn.classList.toggle("has-notes", !!$notesDialogArea.value.trim());
+    if (btn) btn.classList.toggle("has-notes", hasNotes);
+    const kbtn = $kanbanWrapper?.querySelector(`.kanban-notes-btn[data-id="${currentNotesId}"]`);
+    if (kbtn) kbtn.classList.toggle("has-notes", hasNotes);
   });
 
   document.getElementById("close-notes")?.addEventListener("click", () => $notesDialog.close());
@@ -608,7 +728,7 @@
     saveManualOffers();
     state.offers = [...state.rawOffers, ...getManualOffers()];
     $addDialog.close();
-    render();
+    renderView();
     renderDashboard();
     // Scroll vers la nouvelle offre
     setTimeout(() => {
@@ -659,7 +779,7 @@
         newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));
       saveSet(LS_KNOWN, new Set(state.offers.map(o => o.id)));
       renderMeta();
-      render();
+      renderView();
       renderDashboard();
       fetchFromGitHub(); // sync tracking depuis GitHub après affichage initial
     })
