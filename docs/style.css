@@ -30,13 +30,6 @@
   color-scheme: dark;
 }
 
-@supports (color: AccentColor) {
-  :root {
-    --accent: AccentColor;
-    --accent-hover: color-mix(in srgb, AccentColor, black 18%);
-    --accent-glow: color-mix(in srgb, AccentColor, transparent 86%);
-  }
-}
 
 html { transition: background-color 0.35s; }
 body { transition: background-color 0.35s, color 0.2s; }
