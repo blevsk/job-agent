@@ -16,6 +16,14 @@
     <input id="filter" type="search" placeholder="Filtrer (titre, entreprise, lieu, justification LLM)…" autofocus>
     <label><input id="hideNegative" type="checkbox"> Masquer scores négatifs</label>
     <label><input id="hideRead" type="checkbox"> Masquer les lues</label>
+    <select id="filterStatus">
+      <option value="">Tous les statuts</option>
+      <option value="__none__">Sans statut</option>
+      <option value="Postulée">Postulée</option>
+      <option value="Entretien">Entretien</option>
+      <option value="Relancée">Relancée</option>
+      <option value="Refusée">Refusée</option>
+    </select>
     <a id="markAllRead" href="#">Tout marquer comme lu</a>
     <span id="sync-status" class="sync-status"></span>
     <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>

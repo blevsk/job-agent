@@ -258,6 +258,16 @@ a {
 }
 a:hover { text-decoration: underline; }
 
+#filterStatus {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  color: var(--fg);
+}
+
 #markAllRead {
   font-size: 0.85rem;
   color: var(--muted);

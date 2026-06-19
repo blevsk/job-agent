@@ -48,6 +48,7 @@
     filter: "",
     hideNegative: false,
     hideRead: false,
+    filterStatus: "",
     openNotes: new Set(),
   };
 
@@ -58,8 +59,9 @@
   const $empty    = document.getElementById("empty");
   const $filter   = document.getElementById("filter");
   const $hideNeg  = document.getElementById("hideNegative");
-  const $hideRead = document.getElementById("hideRead");
-  const $markAll  = document.getElementById("markAllRead");
+  const $hideRead      = document.getElementById("hideRead");
+  const $filterStatus  = document.getElementById("filterStatus");
+  const $markAll       = document.getElementById("markAllRead");
   const $ghConfig = document.getElementById("gh-config");
 
   // --- Formatting ---
@@ -198,8 +200,10 @@
   function sortAndFilter() {
     const q = state.filter.trim().toLowerCase();
     let rows = state.offers.filter(o => matchesFilter(o, q));
-    if (state.hideNegative) rows = rows.filter(o => (o.score ?? 0) >= 0);
-    if (state.hideRead)     rows = rows.filter(o => !readIds.has(o.id));
+    if (state.hideNegative)   rows = rows.filter(o => (o.score ?? 0) >= 0);
+    if (state.hideRead)       rows = rows.filter(o => !readIds.has(o.id));
+    if (state.filterStatus === "__none__") rows = rows.filter(o => !tracking[o.id]?.status);
+    else if (state.filterStatus)          rows = rows.filter(o => tracking[o.id]?.status === state.filterStatus);
     if (state.sortKey === "default") {
       rows.sort(defaultSort);
     } else {
@@ -377,7 +381,8 @@
 
   $filter.addEventListener("input",   () => { state.filter       = $filter.value;    render(); });
   $hideNeg.addEventListener("change", () => { state.hideNegative = $hideNeg.checked;  render(); });
-  $hideRead.addEventListener("change",() => { state.hideRead     = $hideRead.checked; render(); });
+  $hideRead.addEventListener("change",     () => { state.hideRead     = $hideRead.checked;   render(); });
+  $filterStatus.addEventListener("change", () => { state.filterStatus = $filterStatus.value; render(); });
   $markAll.addEventListener("click",  e  => {
     e.preventDefault();
     sortAndFilter().forEach(o => readIds.add(o.id));
