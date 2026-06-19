@@ -53,15 +53,25 @@ h1 {
 
 .controls {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   margin: 1rem 0;
+}
+.ctrl-top {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.ctrl-bottom {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 #filter {
   flex: 1;
-  min-width: 200px;
+  min-width: 0;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -74,11 +84,15 @@ h1 {
   outline-offset: 1px;
 }
 
-.controls label {
-  font-size: 0.9rem;
+.ctrl-bottom label {
+  font-size: 0.88rem;
   color: var(--muted);
   cursor: pointer;
+  white-space: nowrap;
 }
+
+/* Meta-line : lieu · contrat · âge (affiché uniquement en mode carte mobile) */
+.meta-line { display: none; }
 
 table {
   width: 100%;
@@ -508,25 +522,127 @@ code {
 @media (max-width: 720px) {
   body { padding: 1rem; }
 
-  .controls { gap: 0.5rem; }
-  #filter { min-width: 0; flex-basis: 100%; }
-
-  .col-rank,
-  .col-rome,
-  .col-age  { display: none; }
+  .col-rank, .col-rome, .col-age { display: none; }
 
   table { font-size: 0.82rem; min-width: 480px; }
   th, td { padding: 0.4rem 0.5rem; }
   .title { max-width: 10rem; }
   .snippet, .llm-reason { display: none; }
   .status-select { max-width: 5.5rem; }
-
-  #markAllRead, #exportCsv { font-size: 0.78rem; }
-  #sync-status { font-size: 0.75rem; }
 }
 
 @media (max-width: 600px) {
-  /* Bottom sheet sur mobile */
+  /* ── Table → cartes ── */
+  #table-wrapper { overflow-x: visible; border-radius: 0; }
+
+  #offers { display: block; border: none; background: transparent; min-width: 0; }
+  #offers thead { display: none; }
+  #offers tbody { display: flex; flex-direction: column; gap: 0; }
+
+  /* Carte principale */
+  #offers tbody tr:not(.notes-row) {
+    display: grid;
+    grid-template-columns: 1fr 6.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 0.65rem;
+    overflow: hidden;
+    background: white;
+  }
+  /* Quand les notes sont ouvertes : arrondi bas supprimé */
+  #offers tbody tr.notes-open {
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 0;
+  }
+  /* Notes : rattachées visuellement à la carte */
+  #offers tbody tr.notes-row {
+    display: block;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 0.65rem;
+    background: #f7f8fa;
+  }
+  #offers tbody tr.notes-row td { padding: 0.6rem 0.85rem 0.85rem; border: none; }
+
+  #offers td { border: none; padding: 0; vertical-align: top; }
+  #offers tbody tr:hover { background: transparent; }
+  #offers tbody tr:not(.notes-row):hover { background: #fafcff; }
+
+  /* Colonne Rang LLM : cachée */
+  #offers td.col-rank { display: none; }
+  /* Colonne ROME : cachée */
+  #offers td.col-rome { display: none; }
+  /* Colonne Âge : cachée (incluse dans meta-line) */
+  #offers td.col-age { display: none; }
+  /* Lieu et Contrat : cachés (inclus dans meta-line) */
+  #offers td.col-location, #offers td.col-contract { display: none; }
+
+  /* Score : coin supérieur droit */
+  #offers td:nth-child(2) {
+    grid-column: 2; grid-row: 1;
+    padding: 0.8rem 0.85rem 0.25rem 0;
+    font-size: 0.88rem;
+    text-align: right;
+  }
+  /* Titre (+ raison LLM) : zone principale gauche */
+  #offers td.title {
+    grid-column: 1; grid-row: 1;
+    padding: 0.8rem 0.4rem 0.3rem 0.85rem;
+    max-width: none;
+  }
+  /* Raison LLM : visible dans la carte */
+  #offers .llm-reason {
+    display: block;
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.45rem;
+  }
+  #offers .snippet { display: none; }
+
+  /* Entreprise + meta-line : sous le titre */
+  #offers td.company-cell {
+    grid-column: 1; grid-row: 2;
+    padding: 0 0.4rem 0.3rem 0.85rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  /* Meta-line : lieu · contrat · âge */
+  .meta-line {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+    color: var(--muted);
+  }
+
+  /* Lien "Voir l'offre" : bas gauche */
+  #offers td.col-link {
+    grid-column: 1; grid-row: 3;
+    padding: 0.2rem 0.4rem 0.8rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  /* Statut : colonne droite sur toute la hauteur */
+  #offers td.status-cell {
+    grid-column: 2; grid-row: 1 / 4;
+    padding: 0.8rem 0.85rem 0.8rem 0;
+    min-width: 0;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+  #offers .status-select { max-width: 100%; width: 6rem; font-size: 0.75rem; }
+  #offers .status-date { font-size: 0.68rem; text-align: right; }
+  #offers .notes-toggle { margin-left: 0; }
+
+  /* Offres lues */
+  #offers tr.read { opacity: 0.38; }
+  #offers tr.read .title-line { font-weight: 400; }
+
+  /* ── Bottom sheet sur mobile ── */
   #add-dialog {
     max-width: 100%;
     width: 100%;

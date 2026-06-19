@@ -340,21 +340,28 @@
       const reasonHtml = o.llm_reason
         ? `<div class="llm-reason">💡 ${escapeHtml(o.llm_reason)}</div>`
         : (o.snippet ? `<div class="snippet">${escapeHtml(o.snippet)}</div>` : "");
+      const metaParts = [
+        o.location,
+        o.contract_type,
+        o.posted_days_ago != null ? fmtAge(o.posted_days_ago) : null,
+      ].filter(Boolean);
+      const metaHtml = metaParts.map(escapeHtml).join(" · ");
+      const trClass  = [isRead ? "read" : "", hasNotes ? "notes-open" : ""].filter(Boolean).join(" ");
 
       return `
-        <tr data-id="${escapeHtml(o.id)}"${isRead ? ' class="read"' : ""}>
+        <tr data-id="${escapeHtml(o.id)}"${trClass ? ` class="${trClass}"` : ""}>
           <td class="rank-cell col-rank">${rankBadge(o.llm_rank)}</td>
           <td class="score ${scoreCls}" title="${escapeHtml(breakdownTooltip(o))}">${(o.score ?? 0).toFixed(1)}</td>
           <td class="title">
             <div class="title-line">${sourceBadge(o.id)}${newBadge(o.id)}${escapeHtml(o.title)}</div>
             ${reasonHtml}
           </td>
-          <td>${escapeHtml(o.company || "—")}</td>
-          <td>${escapeHtml(o.location || "—")}</td>
-          <td>${escapeHtml(o.contract_type || "—")}</td>
+          <td class="company-cell">${escapeHtml(o.company || "—")}<span class="meta-line">${metaHtml}</span></td>
+          <td class="col-location">${escapeHtml(o.location || "—")}</td>
+          <td class="col-contract">${escapeHtml(o.contract_type || "—")}</td>
           <td class="col-rome">${escapeHtml(o.rome_code || "—")}${semanticBadge(o.semantic_score)}</td>
           <td class="col-age">${fmtAge(o.posted_days_ago)}</td>
-          <td><a href="${escapeHtml(o.url)}" target="_blank" rel="noopener" data-id="${escapeHtml(o.id)}">voir</a></td>
+          <td class="col-link"><a href="${escapeHtml(o.url)}" target="_blank" rel="noopener" data-id="${escapeHtml(o.id)}">Voir l'offre →</a></td>
           <td class="status-cell">
             ${statusSelectHtml(o.id)}
             ${statusDateHtml(o.id)}
@@ -397,12 +404,21 @@
     // Notes toggle
     $tbody.querySelectorAll(".notes-toggle").forEach(btn => {
       btn.addEventListener("click", () => {
-        const id  = btn.dataset.id;
-        const row = $tbody.querySelector(`.notes-row[data-id="${id}"]`);
+        const id      = btn.dataset.id;
+        const row     = $tbody.querySelector(`.notes-row[data-id="${id}"]`);
+        const mainRow = $tbody.querySelector(`tr:not(.notes-row)[data-id="${id}"]`);
         if (!row) return;
         const open = !row.hidden;
-        if (open) { state.openNotes.delete(id); row.hidden = true; }
-        else      { state.openNotes.add(id);    row.hidden = false; row.querySelector("textarea")?.focus(); }
+        if (open) {
+          state.openNotes.delete(id);
+          row.hidden = true;
+          mainRow?.classList.remove("notes-open");
+        } else {
+          state.openNotes.add(id);
+          row.hidden = false;
+          mainRow?.classList.add("notes-open");
+          row.querySelector("textarea")?.focus();
+        }
       });
     });
 

@@ -57,22 +57,26 @@
   </dialog>
 
   <section class="controls">
-    <input id="filter" type="search" placeholder="Filtrer (titre, entreprise, lieu, justification LLM)…" autofocus>
-    <label><input id="hideNegative" type="checkbox"> Masquer scores négatifs</label>
-    <label><input id="hideRead" type="checkbox"> Masquer les lues</label>
-    <select id="filterStatus">
-      <option value="">Tous les statuts</option>
-      <option value="__none__">Sans statut</option>
-      <option value="Postulée">Postulée</option>
-      <option value="Entretien">Entretien</option>
-      <option value="Relancée">Relancée</option>
-      <option value="Refusée">Refusée</option>
-    </select>
-    <a id="markAllRead" href="#">Tout marquer comme lu</a>
-    <a id="exportCsv" href="#">Exporter CSV</a>
-    <button id="open-add" class="btn-add">+ Ajouter une offre</button>
-    <span id="sync-status" class="sync-status"></span>
-    <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>
+    <div class="ctrl-top">
+      <input id="filter" type="search" placeholder="Filtrer…" autofocus>
+      <button id="open-add" class="btn-add">+ Ajouter</button>
+      <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>
+    </div>
+    <div class="ctrl-bottom">
+      <label><input id="hideNegative" type="checkbox"> Masquer négatifs</label>
+      <label><input id="hideRead" type="checkbox"> Masquer lues</label>
+      <select id="filterStatus">
+        <option value="">Tous statuts</option>
+        <option value="__none__">Sans statut</option>
+        <option value="Postulée">Postulée</option>
+        <option value="Entretien">Entretien</option>
+        <option value="Relancée">Relancée</option>
+        <option value="Refusée">Refusée</option>
+      </select>
+      <a id="markAllRead" href="#">Tout lire</a>
+      <a id="exportCsv" href="#">Export CSV</a>
+      <span id="sync-status" class="sync-status"></span>
+    </div>
   </section>
 
   <div id="table-wrapper">
