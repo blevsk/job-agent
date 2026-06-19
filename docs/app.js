@@ -61,8 +61,9 @@
   const $hideNeg  = document.getElementById("hideNegative");
   const $hideRead      = document.getElementById("hideRead");
   const $filterStatus  = document.getElementById("filterStatus");
-  const $markAll       = document.getElementById("markAllRead");
-  const $ghConfig = document.getElementById("gh-config");
+  const $markAll     = document.getElementById("markAllRead");
+  const $exportCsv   = document.getElementById("exportCsv");
+  const $ghConfig    = document.getElementById("gh-config");
 
   // --- Formatting ---
   function fmtDate(iso) {
@@ -426,6 +427,33 @@
     saveSet(LS_READ, readIds);
     render();
     renderMeta();
+  });
+
+  $exportCsv?.addEventListener("click", e => {
+    e.preventDefault();
+    const cols = ["Titre", "Entreprise", "Lieu", "Contrat", "Source", "Score", "Statut", "Date statut", "Notes", "Lien"];
+    const esc  = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const rows = state.offers
+      .filter(o => tracking[o.id]?.status)
+      .sort((a, b) => {
+        const order = { "Entretien": 0, "Postulée": 1, "Relancée": 2, "Refusée": 3 };
+        return (order[tracking[a.id]?.status] ?? 9) - (order[tracking[b.id]?.status] ?? 9);
+      })
+      .map(o => {
+        const t = tracking[o.id] || {};
+        const src = String(o.id).startsWith("lba_") ? "La Bonne Alternance" : "France Travail";
+        return [o.title, o.company, o.location, o.contract_type, src, (o.score ?? 0).toFixed(1),
+                t.status, t.status_date, t.notes, o.url].map(esc).join(",");
+      });
+    if (!rows.length) { alert("Aucune candidature enregistrée."); return; }
+    const csv  = [cols.map(esc).join(","), ...rows].join("\r\n");
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" });
+    const url  = URL.createObjectURL(blob);
+    const a    = Object.assign(document.createElement("a"), {
+      href: url, download: `candidatures_${new Date().toISOString().slice(0,10)}.csv`
+    });
+    a.click();
+    URL.revokeObjectURL(url);
   });
 
   $ghConfig?.addEventListener("click", () => {

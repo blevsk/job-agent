@@ -300,12 +300,12 @@ a:hover { text-decoration: underline; }
   color: var(--fg);
 }
 
-#markAllRead {
+#markAllRead, #exportCsv {
   font-size: 0.85rem;
   color: var(--muted);
   white-space: nowrap;
 }
-#markAllRead:hover { color: var(--accent); }
+#markAllRead:hover, #exportCsv:hover { color: var(--accent); }
 
 .sync-status {
   font-size: 0.8rem;
