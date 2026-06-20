@@ -1,0 +1,85 @@
+name: Rebuild profile offers
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  rebuild:
+    if: startsWith(github.event.issue.title, '[job-agent-rebuild] ')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Cache HuggingFace models
+        uses: actions/cache@v5
+        with:
+          path: ~/.cache/huggingface
+          key: hf-models-${{ hashFiles('requirements.txt') }}
+          restore-keys: hf-models-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Extract profile ID
+        id: pid
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          PID=$(python3 -c "import os,json; print(json.loads(os.environ['ISSUE_BODY'])['profileId'])")
+          echo "profile_id=$PID" >> $GITHUB_OUTPUT
+
+      - name: Build offers
+        env:
+          FRANCE_TRAVAIL_CLIENT_ID: ${{ secrets.FRANCE_TRAVAIL_CLIENT_ID }}
+          FRANCE_TRAVAIL_CLIENT_SECRET: ${{ secrets.FRANCE_TRAVAIL_CLIENT_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          API_APPRENTISSAGE_KEY: ${{ secrets.API_APPRENTISSAGE_KEY }}
+        run: python scripts/build_offers.py --profile "${{ steps.pid.outputs.profile_id }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "feat: rebuild offers ${{ steps.pid.outputs.profile_id }} [skip ci]"
+            git push
+          fi
+
+      - name: Close issue — succès
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X POST \
+            "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
+            -f "body=✅ Offres mises à jour."
+          gh api -X PATCH \
+            "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
+            -f "state=closed"
+
+      - name: Close issue — échec
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X POST \
+            "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
+            -f "body=❌ Rebuild échoué. Voir les logs du workflow."
+          gh api -X PATCH \
+            "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
+            -f "state=closed"

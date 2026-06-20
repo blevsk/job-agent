@@ -805,13 +805,14 @@
   const $obOverlay = document.getElementById("onboarding-overlay");
   const $obCard    = document.getElementById("onboarding-card");
   let obData = {};
+  let obIsEdit = false;
   let obFakeProgressStop = null;
   let _progressPct = 0;
 
   const OB_STEPS = [
     {
       title: "Votre recherche",
-      subtitle: "Définissez le poste et la zone géographique ciblés.",
+      subtitle: "Définissez le poste, la zone géographique et vos préférences.",
       fields: () => `
         <label>Intitulé du poste <span class="req">*</span>
           <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
@@ -830,25 +831,20 @@
               ).join("")}
             </select>
           </label>
-        </div>`,
-    },
-    {
-      title: "Affiner la recherche",
-      subtitle: "Ces critères ajustent le score de pertinence de chaque offre.",
-      fields: () => `
-        <label>Mots-clés favorables <span class="opt">(séparés par des virgules)</span>
-          <input name="keywords_pos" value="${escapeHtml(obData.keywords_pos || "")}" placeholder="Ex : télétravail, Python, senior">
-        </label>
-        <label>Mots-clés à exclure <span class="opt">(séparés par des virgules)</span>
-          <input name="keywords_neg" value="${escapeHtml(obData.keywords_neg || "")}" placeholder="Ex : commercial, manutention, nuit">
-        </label>
+        </div>
         <label>Fraîcheur des offres
           <select name="fraicheur">
             ${[["","Toutes les offres"],["7","7 derniers jours"],["14","14 derniers jours"],["30","30 derniers jours"]].map(([v, l]) =>
               `<option value="${v}"${(obData.fraicheur || "") === v ? " selected" : ""}>${l}</option>`
             ).join("")}
           </select>
-        </label>`,
+        </label>
+        <p class="ob-checks-label">Préférences de scoring</p>
+        <div class="ob-checks">
+          <label class="ob-check"><input type="checkbox" name="pref_remote"${obData.pref_remote === "on" ? " checked" : ""}> Favoriser le télétravail / hybride</label>
+          <label class="ob-check"><input type="checkbox" name="pref_no_interim"${obData.pref_no_interim === "on" ? " checked" : ""}> Pénaliser les offres d'intérim</label>
+          <label class="ob-check"><input type="checkbox" name="pref_no_junior"${obData.pref_no_junior === "on" ? " checked" : ""}> Pénaliser les postes débutants / juniors</label>
+        </div>`,
     },
     {
       title: "Votre profil",
@@ -861,6 +857,7 @@
   ];
 
   function showOnboarding() {
+    obIsEdit = false;
     $obOverlay.hidden = false;
     obData = { profileId: generateProfileId() };
     renderOnboardStep(0);
@@ -872,6 +869,9 @@
     const dots = OB_STEPS.map((_, i) =>
       `<span class="ob-dot${i < step ? " done" : i === step ? " active" : ""}"></span>`
     ).join("");
+    let leftBtn = "";
+    if (step > 0) leftBtn = `<button type="button" class="ob-btn-secondary" id="ob-back">Retour</button>`;
+    else if (obIsEdit) leftBtn = `<button type="button" class="ob-btn-secondary" id="ob-cancel-edit">Annuler</button>`;
     $obCard.innerHTML = `
       <h2>${escapeHtml(s.title)}</h2>
       <p class="ob-subtitle">${escapeHtml(s.subtitle)}</p>
@@ -879,21 +879,34 @@
       <form id="ob-form">
         ${s.fields()}
         <div class="ob-actions">
-          ${step > 0 ? `<button type="button" class="ob-btn-secondary" id="ob-back">Retour</button>` : ""}
-          <button type="submit" class="ob-btn-primary">${isLast ? "Créer mon profil" : "Suivant →"}</button>
+          ${leftBtn}
+          <button type="submit" class="ob-btn-primary">${isLast ? (obIsEdit ? "Sauvegarder" : "Créer mon profil") : "Suivant →"}</button>
         </div>
       </form>`;
-    if (step > 0) {
-      document.getElementById("ob-back").addEventListener("click", () => {
-        collectOBStep(step);
-        renderOnboardStep(step - 1);
-      });
-    }
+    document.getElementById("ob-back")?.addEventListener("click", () => {
+      collectOBStep(step);
+      renderOnboardStep(step - 1);
+    });
+    document.getElementById("ob-cancel-edit")?.addEventListener("click", () => {
+      $obOverlay.hidden = true;
+      obIsEdit = false;
+    });
     document.getElementById("ob-form").addEventListener("submit", e => {
       e.preventDefault();
       collectOBStep(step);
-      if (isLast) startCreation(obData);
-      else renderOnboardStep(step + 1);
+      if (isLast) {
+        if (obIsEdit) {
+          showProgressState();
+          saveProfileEdits(obData).catch(err => {
+            if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
+            showProgressError(`Erreur : ${err.message}`);
+          });
+        } else {
+          startCreation(obData);
+        }
+      } else {
+        renderOnboardStep(step + 1);
+      }
     });
     const first = $obCard.querySelector("input, select");
     if (first) first.focus();
@@ -903,6 +916,10 @@
     const form = document.getElementById("ob-form");
     if (!form) return;
     new FormData(form).forEach((v, k) => { obData[k] = v; });
+    // FormData omet les cases non cochées — on les force à vide
+    form.querySelectorAll("input[type=checkbox]").forEach(cb => {
+      if (!cb.checked) obData[cb.name] = "";
+    });
   }
 
   function showProgressState() {
@@ -978,8 +995,11 @@
       `Poste visé : **${d.poste}** à **${d.ville}** (rayon ${d.rayon || 25} km).`,
     ];
     if (d.contrat && d.contrat !== "Tous") lines.push(`Contrat souhaité : **${d.contrat}**.`);
-    if (d.keywords_pos?.trim()) lines.push(`Critères favorables : ${d.keywords_pos}.`);
-    if (d.keywords_neg?.trim()) lines.push(`Critères à éviter : ${d.keywords_neg}.`);
+    const prefs = [];
+    if (d.pref_remote === "on")    prefs.push("télétravail/hybride");
+    if (d.pref_no_interim === "on") prefs.push("pas d'intérim");
+    if (d.pref_no_junior === "on")  prefs.push("pas de postes juniors/débutants");
+    if (prefs.length) lines.push(`Préférences : ${prefs.join(", ")}.`);
     if (d.profil?.trim()) lines.push("", "## À propos", "", d.profil.trim());
     return lines.join("\n");
   }
@@ -1007,10 +1027,9 @@
     const preferred_contracts = {};
     if (d.contrat && d.contrat !== "Tous") preferred_contracts[d.contrat] = 8.0;
     const keywords = [];
-    (d.keywords_pos || "").split(",").map(s => s.trim()).filter(Boolean)
-      .forEach(kw => keywords.push({ pattern: reEscape(kw), weight: 3.0 }));
-    (d.keywords_neg || "").split(",").map(s => s.trim()).filter(Boolean)
-      .forEach(kw => keywords.push({ pattern: reEscape(kw), weight: -5.0 }));
+    if (d.pref_remote === "on")     keywords.push({ pattern: "t[eé]l[eé]travail|remote|hybride?", weight: 4.0 });
+    if (d.pref_no_interim === "on") keywords.push({ pattern: "int[eé]rim|CTT", weight: -8.0 });
+    if (d.pref_no_junior === "on")  keywords.push({ pattern: "junior|d[eé]butant", weight: -5.0 });
     return {
       keywords,
       preferred_contracts,
@@ -1019,6 +1038,11 @@
       freshness_bonus: 3.0,
       freshness_max_days: parseInt(d.fraicheur) || 14,
       semantic_weight: 12.0,
+      _prefs: {
+        remote: d.pref_remote === "on",
+        no_interim: d.pref_no_interim === "on",
+        no_junior: d.pref_no_junior === "on",
+      },
     };
   }
 
@@ -1038,6 +1062,109 @@
   function getPendingBuild()  { return JSON.parse(localStorage.getItem(LS_PENDING) || "null"); }
   function setPendingBuild(v) { localStorage.setItem(LS_PENDING, JSON.stringify(v)); }
   function clearPendingBuild(){ localStorage.removeItem(LS_PENDING); }
+
+  async function ghUpdateFile(path, content, token) {
+    const getR = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    });
+    if (!getR.ok) throw new Error(`Fichier introuvable : ${path}`);
+    const { sha } = await getR.json();
+    const b64 = btoa(unescape(encodeURIComponent(content)));
+    const putR = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+      body: JSON.stringify({ message: "chore: update profile config [skip ci]", content: b64, sha }),
+    });
+    if (!putR.ok) {
+      const err = await putR.json().catch(() => ({}));
+      throw new Error(err.message || `Impossible de mettre à jour ${path}`);
+    }
+  }
+
+  async function waitForRebuild(issueNumber) {
+    const deadline = Date.now() + 8 * 60 * 1000;
+    while (Date.now() < deadline) {
+      await new Promise(r => setTimeout(r, 10000));
+      try {
+        const r = await fetch(
+          `https://api.github.com/repos/${GH_REPO}/issues/${issueNumber}`,
+          { headers: { Authorization: `Bearer ${ISSUES_TOKEN}`, Accept: "application/vnd.github+json" } }
+        );
+        if (!r.ok) continue;
+        const issue = await r.json();
+        if (issue.state === "closed") return;
+      } catch (_) {}
+    }
+    throw new Error("Timeout : le rebuild n'a pas répondu dans les 8 minutes.");
+  }
+
+  async function showEditProfile() {
+    const pid = currentProfile;
+    if (!pid) return;
+    const token = localStorage.getItem(LS_TOKEN);
+    if (!token) {
+      alert("Token de synchronisation non trouvé. Rechargez la page pour le récupérer automatiquement.");
+      return;
+    }
+    try {
+      const base = `https://raw.githubusercontent.com/${GH_REPO}/main`;
+      const [searchCfg, scoringCfg, profileMdText] = await Promise.all([
+        fetch(`${base}/profiles/${pid}/search.config.json`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+        fetch(`${base}/profiles/${pid}/scoring.config.json`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }),
+        fetch(`${base}/profiles/${pid}/profile.md`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.text(); }),
+      ]);
+      const prefs = scoringCfg._prefs || {};
+      const contrat = searchCfg.defaults?.alternance_only
+        ? "Alternance"
+        : (searchCfg.defaults?.contract_type || "Tous");
+      const pwdays = searchCfg.defaults?.published_within_days;
+      obData = {
+        profileId: pid,
+        poste:          searchCfg.searches?.[0]?.keyword || "",
+        ville:          searchCfg.defaults?.location || "",
+        rayon:          searchCfg.defaults?.radius_km || 25,
+        contrat,
+        fraicheur:      pwdays ? String(pwdays) : "",
+        pref_remote:    prefs.remote     ? "on" : "",
+        pref_no_interim: prefs.no_interim ? "on" : "",
+        pref_no_junior: prefs.no_junior  ? "on" : "",
+        profil:         profileMdText.match(/## À propos\n\n([\s\S]*)/)?.[1]?.trim() || "",
+      };
+      obIsEdit = true;
+      $obOverlay.hidden = false;
+      renderOnboardStep(0);
+    } catch (err) {
+      alert(`Impossible de charger le profil : ${err.message}`);
+    }
+  }
+
+  async function saveProfileEdits(data) {
+    const pid = data.profileId;
+    const token = localStorage.getItem(LS_TOKEN);
+    if (!token) throw new Error("Token de synchronisation non configuré. Rechargez la page.");
+    updateProgress(5, "Mise à jour de la configuration…", "profile.md");
+    await ghUpdateFile(`profiles/${pid}/profile.md`, buildProfileMd(data), token);
+    updateProgress(10, "Mise à jour de la configuration…", "search.config.json");
+    await ghUpdateFile(`profiles/${pid}/search.config.json`, JSON.stringify(buildSearchConfig(data), null, 2), token);
+    updateProgress(14, "Mise à jour de la configuration…", "scoring.config.json");
+    await ghUpdateFile(`profiles/${pid}/scoring.config.json`, JSON.stringify(buildScoringConfig(data), null, 2), token);
+    updateProgress(15, "Rebuild en cours…", "Déclenchement du workflow");
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/issues`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${ISSUES_TOKEN}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+      body: JSON.stringify({ title: `[job-agent-rebuild] ${pid}`, body: JSON.stringify({ profileId: pid }) }),
+    });
+    if (!r.ok) throw new Error("Impossible de déclencher le rebuild");
+    const { number: issueNumber } = await r.json();
+    const fakeStop = startFakeProgress(15, 92, 5.5 * 60 * 1000);
+    await waitForRebuild(issueNumber);
+    fakeStop();
+    updateProgress(100, "Mis à jour !", "Chargement de votre tableau…");
+    await new Promise(r => setTimeout(r, 900));
+    $obOverlay.hidden = true;
+    obIsEdit = false;
+    loadProfile(pid);
+  }
 
   async function pollForTrackingToken(issueNumber) {
     const deadline = Date.now() + 12 * 60 * 1000;
@@ -1140,6 +1267,7 @@
       renderView();
       renderDashboard();
       fetchFromGitHub();
+      document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
     } catch (err) {
       const pb = getPendingBuild();
       if (pb && pb.profileId === profileId) {
@@ -1152,6 +1280,8 @@
       $empty.hidden = false;
     }
   }
+
+  document.getElementById("edit-profile-btn")?.addEventListener("click", () => showEditProfile());
 
   fetch("profiles.json", { cache: "no-store" })
     .then(r => r.ok ? r.json() : null)
