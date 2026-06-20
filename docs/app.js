@@ -1165,6 +1165,8 @@
     .then(r => r.ok ? r.json() : null)
     .then(manifest => {
       const profiles = manifest?.profiles || [];
+      const defaultId = manifest?.default || profiles[0]?.id || null;
+      if (!currentProfile) currentProfile = defaultId;
       renderProfileSwitcher(profiles);
       if (!currentProfile) { showOnboarding(); return; }
       loadProfile(currentProfile);
