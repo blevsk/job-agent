@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source": "france_travail",
+    "searches": [
+      {
+        "label": "Architecte Réseau Cloud",
+        "rome_code": null,
+        "keyword": "Architecte Réseau Cloud",
+        "location": "Lille"
+      }
+    ],
+    "scraped_at": "2026-06-20T12:13:57+00:00",
+    "rerank_active": true,
+    "semantic_active": true,
+    "total": 1
+  },
+  "offers": [
+    {
+      "id": "209MYMD",
+      "title": "Lead Technique Réseau Cloud (H/F)",
+      "company": "AK RECRUTEMENT",
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": "Annuel de 60000.0 Euros à 65000.0 Euros sur 12.0 mois",
+      "posted_days_ago": 10,
+      "snippet": "Notre client est une grande enseigne spécialisée dans la vente d'équipements sportifs. Au sein de l'équipe réseau combinant expertise réseau et pratiques DevOps. Vous participez à la rationalisation des opérations, le renforcement de l'automatisation, et la livraison des services réseau fiables, sécurisés et scalables. Cette année, l'entreprise s'engage à transformer leur backbone réseau vers un…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209MYMD",
+      "rome_code": "M1860",
+      "semantic_score": 0.39808693528175354,
+      "llm_rank": 1,
+      "llm_reason": "CDI Lille, Lead Technique Réseau Cloud parfaitement aligné avec le profil et les critères géographiques du candidat.",
+      "score": 17.777043223381042,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 4.7770432233810425
+      }
+    }
+  ]
+}
