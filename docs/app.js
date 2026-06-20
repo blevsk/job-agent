@@ -858,24 +858,6 @@
           <textarea name="profil" rows="5" placeholder="Ex : 5 ans d'expérience en gestion administrative, maîtrise d'Excel et SAGE, recherche un CDI avec des responsabilités d'organisation et de coordination…">${escapeHtml(obData.profil || "")}</textarea>
         </label>`,
     },
-    {
-      title: "Connexion GitHub",
-      subtitle: "Votre profil sera sauvegardé dans le dépôt du projet via un token personnel.",
-      fields: () => {
-        const pid    = obData.profileId;
-        const ghUrl  = `https://github.com/settings/tokens/new?description=job-agent-${pid}&scopes=repo,workflow`;
-        return `
-          <div class="ob-token-block">
-            <p class="ob-token-label">Nom du token qui sera créé</p>
-            <code class="ob-token-name">job-agent-${pid}</code>
-          </div>
-          <a href="${escapeHtml(ghUrl)}" target="_blank" rel="noopener" class="ob-gh-btn">Générer le token sur GitHub →</a>
-          <p class="ob-hint">Sur GitHub : vérifiez les paramètres pré-remplis, cliquez <em>Generate token</em>, copiez le token et collez-le ci-dessous.</p>
-          <label>Personal Access Token <span class="req">*</span>
-            <input name="token" required type="password" value="${escapeHtml(obData.token || "")}" placeholder="ghp_…">
-          </label>`;
-      },
-    },
   ];
 
   function showOnboarding() {
