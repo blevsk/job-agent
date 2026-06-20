@@ -56,7 +56,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "feat: rebuild offers ${{ steps.pid.outputs.profile_id }} [skip ci]"
+            git commit -m "feat: rebuild offers ${{ steps.pid.outputs.profile_id }}"
             git push
           fi
 

@@ -1046,7 +1046,7 @@
   }
 
   async function waitForOffers(profileId) {
-    const deadline = Date.now() + 6 * 60 * 1000;
+    const deadline = Date.now() + 12 * 60 * 1000;
     while (Date.now() < deadline) {
       await new Promise(r => setTimeout(r, 15000));
       try {
@@ -1155,7 +1155,7 @@
     });
     if (!r.ok) throw new Error("Impossible de déclencher le rebuild");
     const { number: issueNumber } = await r.json();
-    const fakeStop = startFakeProgress(15, 92, 5.5 * 60 * 1000);
+    const fakeStop = startFakeProgress(15, 92, 10 * 60 * 1000);
     await waitForRebuild(issueNumber);
     fakeStop();
     updateProgress(100, "Mis à jour !", "Chargement de votre tableau…");
@@ -1234,7 +1234,7 @@
       }
 
       updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
-      const fakeStop = startFakeProgress(15, 92, 5.5 * 60 * 1000);
+      const fakeStop = startFakeProgress(15, 92, 10 * 60 * 1000);
       await waitForOffers(pid);
       fakeStop();
       updateProgress(100, "C'est prêt !", "Chargement de votre tableau…");

@@ -62,7 +62,7 @@ jobs:
             echo "Nothing to commit."
           else
             PROFILE_ID=$(python3 -c "import json; print(json.load(open('/tmp/job_agent_profile.json'))['profileId'])")
-            git commit -m "feat: add profile ${PROFILE_ID} [skip ci]"
+            git commit -m "feat: add profile ${PROFILE_ID}"
             git push
           fi
 
