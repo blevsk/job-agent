@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Inject ISSUES_TOKEN
+        env:
+          ISSUES_TOKEN: ${{ secrets.ISSUES_TOKEN }}
+        run: |
+          if [ -n "$ISSUES_TOKEN" ]; then
+            sed -i "s|REMPLACER_PAR_TON_TOKEN_ISSUES|${ISSUES_TOKEN}|g" docs/app.js
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4
