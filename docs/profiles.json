@@ -1,9 +1,9 @@
 {
   "profiles": [
     {
-      "id": "yohan",
-      "label": "Yohan"
+      "id": "maman",
+      "label": "Maman"
     }
   ],
-  "default": "yohan"
+  "default": "maman"
 }

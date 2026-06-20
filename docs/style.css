@@ -1052,3 +1052,191 @@ code {
 [data-theme="dark"] .kanban-card:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.5);
 }
+
+/* ── Onboarding overlay ─────────────────────────────────────────────────────── */
+#onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 1rem;
+}
+#onboarding-overlay[hidden] { display: none; }
+
+#onboarding-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+}
+
+#onboarding-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+  color: var(--fg);
+}
+
+.ob-subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.ob-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+.ob-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s;
+}
+.ob-dot.active { background: var(--accent); }
+.ob-dot.done   { background: var(--accent); opacity: 0.45; }
+
+#onboarding-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+#onboarding-card input,
+#onboarding-card select {
+  font-size: 0.95rem;
+  color: var(--fg);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+#onboarding-card input:focus,
+#onboarding-card select:focus { border-color: var(--accent); }
+
+.ob-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: -0.5rem 0 1rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+}
+.ob-hint code {
+  background: var(--surface-raised);
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 0.78rem;
+}
+
+.ob-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.ob-btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+.ob-btn-primary:hover { opacity: 0.85; }
+.ob-btn-secondary {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.ob-btn-secondary:hover { background: var(--surface-alt); }
+
+/* Progress state */
+.ob-progress-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.ob-progress-header h2 { margin: 0; }
+.ob-progress-header .ob-subtitle { margin: 0; }
+
+.ob-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: ob-spin 0.9s linear infinite;
+  margin-bottom: 0.35rem;
+}
+@keyframes ob-spin { to { transform: rotate(360deg); } }
+
+.ob-progress-bar-wrap {
+  background: var(--surface-raised);
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+.ob-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+.ob-progress-step {
+  font-size: 0.85rem;
+  color: var(--fg);
+  text-align: center;
+  font-weight: 500;
+  margin: 0 0 0.2rem;
+}
+.ob-progress-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+}
+.ob-error {
+  color: var(--neg);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  #onboarding-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+  }
+}

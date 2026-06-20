@@ -798,6 +798,338 @@
     });
   }
 
+  // ── Onboarding ───────────────────────────────────────────────────────────────
+
+  const $obOverlay = document.getElementById("onboarding-overlay");
+  const $obCard    = document.getElementById("onboarding-card");
+  let obData = {};
+  let obFakeProgressStop = null;
+  let _progressPct = 0;
+
+  const OB_STEPS = [
+    {
+      title: "Bienvenue !",
+      subtitle: "Créez votre profil en quelques secondes et recevez des offres personnalisées.",
+      fields: () => `
+        <label>Votre prénom <span class="req">*</span>
+          <input name="prenom" required value="${escapeHtml(obData.prenom || "")}" placeholder="Ex : Sophie">
+        </label>`,
+    },
+    {
+      title: "Votre recherche",
+      subtitle: "Quel poste cherchez-vous, et où ?",
+      fields: () => `
+        <label>Intitulé du poste <span class="req">*</span>
+          <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
+        </label>
+        <label>Ville <span class="req">*</span>
+          <input name="ville" required value="${escapeHtml(obData.ville || "")}" placeholder="Ex : Lyon">
+        </label>`,
+    },
+    {
+      title: "Contrat & rayon",
+      subtitle: "Quels types de contrat visez-vous ?",
+      fields: () => `
+        <label>Type de contrat
+          <select name="contrat">
+            ${["Alternance","CDI","CDD","Stage","Intérim","Tous"].map(c =>
+              `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
+            ).join("")}
+          </select>
+        </label>
+        <label>Rayon de recherche (km)
+          <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
+        </label>`,
+    },
+    {
+      title: "Token GitHub",
+      subtitle: "Votre profil sera sauvegardé dans le dépôt GitHub du projet.",
+      fields: () => `
+        <p class="ob-hint">Créez un <strong>Fine-grained PAT</strong> sur GitHub avec les permissions :<br>
+        <code>Contents: Read and write</code> · <code>Actions: Read and write</code><br>
+        sur le dépôt <code>${GH_REPO}</code>.</p>
+        <label>Personal Access Token <span class="req">*</span>
+          <input name="token" required type="password" value="${escapeHtml(obData.token || "")}" placeholder="github_pat_…">
+        </label>`,
+    },
+  ];
+
+  function showOnboarding() {
+    $obOverlay.hidden = false;
+    obData = {};
+    renderOnboardStep(0);
+  }
+
+  function renderOnboardStep(step) {
+    const s = OB_STEPS[step];
+    const isLast = step === OB_STEPS.length - 1;
+    const dots = OB_STEPS.map((_, i) =>
+      `<span class="ob-dot${i < step ? " done" : i === step ? " active" : ""}"></span>`
+    ).join("");
+    $obCard.innerHTML = `
+      <h2>${escapeHtml(s.title)}</h2>
+      <p class="ob-subtitle">${escapeHtml(s.subtitle)}</p>
+      <div class="ob-dots">${dots}</div>
+      <form id="ob-form">
+        ${s.fields()}
+        <div class="ob-actions">
+          ${step > 0 ? `<button type="button" class="ob-btn-secondary" id="ob-back">Retour</button>` : ""}
+          <button type="submit" class="ob-btn-primary">${isLast ? "Créer mon profil" : "Suivant →"}</button>
+        </div>
+      </form>`;
+    if (step > 0) {
+      document.getElementById("ob-back").addEventListener("click", () => {
+        collectOBStep(step);
+        renderOnboardStep(step - 1);
+      });
+    }
+    document.getElementById("ob-form").addEventListener("submit", e => {
+      e.preventDefault();
+      collectOBStep(step);
+      if (isLast) startCreation(obData);
+      else renderOnboardStep(step + 1);
+    });
+    const first = $obCard.querySelector("input, select");
+    if (first) first.focus();
+  }
+
+  function collectOBStep(step) {
+    const form = document.getElementById("ob-form");
+    if (!form) return;
+    new FormData(form).forEach((v, k) => { obData[k] = v; });
+  }
+
+  function showProgressState(prenom) {
+    $obCard.innerHTML = `
+      <div class="ob-progress-header">
+        <div class="ob-spinner"></div>
+        <h2>Construction de votre profil…</h2>
+        <p class="ob-subtitle">Bonjour ${escapeHtml(prenom)} ! Votre tableau sera prêt dans quelques minutes.</p>
+      </div>
+      <div class="ob-progress-bar-wrap"><div class="ob-progress-bar" id="ob-bar"></div></div>
+      <p class="ob-progress-step" id="ob-step-label">&nbsp;</p>
+      <p class="ob-progress-label" id="ob-pct-label">0 %</p>`;
+  }
+
+  function updateProgress(pct, step, label) {
+    if (pct !== null) _progressPct = pct;
+    const bar    = document.getElementById("ob-bar");
+    const stepEl = document.getElementById("ob-step-label");
+    const pctEl  = document.getElementById("ob-pct-label");
+    if (bar) bar.style.width = `${Math.round(_progressPct)}%`;
+    if (pctEl) pctEl.textContent = `${Math.round(_progressPct)} %`;
+    if (stepEl && step !== null) {
+      stepEl.textContent = label ? `${step} — ${label}` : step;
+    }
+  }
+
+  function startFakeProgress(from, to, durationMs) {
+    _progressPct = from;
+    const steps = durationMs / 1500;
+    const inc   = (to - from) / steps;
+    const timer = setInterval(() => {
+      _progressPct = Math.min(to, _progressPct + inc);
+      updateProgress(_progressPct, null, null);
+    }, 1500);
+    obFakeProgressStop = () => clearInterval(timer);
+    return obFakeProgressStop;
+  }
+
+  function showProgressError(msg) {
+    if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
+    const bar = $obCard.querySelector(".ob-progress-bar-wrap");
+    if (bar) bar.style.opacity = "0.3";
+    const spinner = $obCard.querySelector(".ob-spinner");
+    if (spinner) spinner.remove();
+    const errEl = document.createElement("p");
+    errEl.className = "ob-error";
+    errEl.textContent = msg;
+    const retryBtn = document.createElement("button");
+    retryBtn.className = "ob-btn-secondary";
+    retryBtn.textContent = "Recommencer";
+    retryBtn.style.cssText = "margin-top:1rem;width:100%";
+    retryBtn.addEventListener("click", () => {
+      clearPendingBuild();
+      localStorage.removeItem(LS_PROFILE);
+      location.reload();
+    });
+    $obCard.appendChild(errEl);
+    $obCard.appendChild(retryBtn);
+  }
+
+  // ── Profile creation ──────────────────────────────────────────────────────────
+
+  function generateProfileId() {
+    return crypto.randomUUID().replace(/-/g, "").slice(0, 10);
+  }
+
+  function buildProfileMd(d) {
+    const lines = [
+      `# Profil de ${d.prenom}`,
+      "",
+      `Je cherche un poste de **${d.poste}** dans la région de **${d.ville}** (rayon ${d.rayon || 25} km).`,
+    ];
+    if (d.contrat && d.contrat !== "Tous") lines.push(`Je préfère un contrat de type **${d.contrat}**.`);
+    return lines.join("\n");
+  }
+
+  function buildSearchConfig(d) {
+    const searches = [{ keyword: d.poste, "_label": d.poste }];
+    if (d.contrat === "Alternance") {
+      searches.push({ source: "la_bonne_alternance", "_label": `La Bonne Alternance — ${d.poste}` });
+    }
+    return {
+      defaults: {
+        location: d.ville,
+        radius_km: parseInt(d.rayon) || 25,
+        max_results: 150,
+        published_within_days: null,
+        alternance_only: d.contrat === "Alternance",
+        contract_type: (d.contrat && d.contrat !== "Tous") ? d.contrat : null,
+      },
+      searches,
+    };
+  }
+
+  function buildScoringConfig(d) {
+    const preferred_contracts = {};
+    if (d.contrat && d.contrat !== "Tous") preferred_contracts[d.contrat] = 8.0;
+    return {
+      keywords: [],
+      preferred_contracts,
+      preferred_location: d.ville,
+      location_bonus: 2.0,
+      freshness_bonus: 3.0,
+      freshness_max_days: 14,
+      semantic_weight: 12.0,
+    };
+  }
+
+  async function ghCreateFile(token, path, content, message) {
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message, content: encoded, branch: "main" }),
+    });
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(err.message || `HTTP ${r.status} (${path})`);
+    }
+  }
+
+  async function ghTriggerWorkflow(token) {
+    const r = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/actions/workflows/search.yml/dispatches`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/vnd.github+json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ref: "main" }),
+      }
+    );
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(err.message || `HTTP ${r.status} (déclenchement workflow)`);
+    }
+  }
+
+  async function ghPollBuild(token, afterTime) {
+    const deadline = Date.now() + 12 * 60 * 1000;
+    let wait = 15000;
+    while (Date.now() < deadline) {
+      await new Promise(r => setTimeout(r, wait));
+      wait = 20000;
+      try {
+        const res = await fetch(
+          `https://api.github.com/repos/${GH_REPO}/actions/runs?per_page=10`,
+          { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
+        );
+        if (!res.ok) continue;
+        const payload = await res.json();
+        const run = (payload.workflow_runs || []).find(r =>
+          r.created_at >= afterTime && (r.path || "").includes("search.yml")
+        );
+        if (!run) continue;
+        if (run.status === "completed") {
+          if (run.conclusion === "success") return;
+          throw new Error(`Build échoué — conclusion : ${run.conclusion}`);
+        }
+      } catch (err) {
+        if (err.message.startsWith("Build échoué")) throw err;
+      }
+    }
+    throw new Error("Timeout : le build a pris plus de 12 minutes");
+  }
+
+  async function waitForOffers(profileId) {
+    const deadline = Date.now() + 6 * 60 * 1000;
+    while (Date.now() < deadline) {
+      await new Promise(r => setTimeout(r, 15000));
+      try {
+        const res = await fetch(`${profileId}/offers.json?_=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) return;
+      } catch (_) {}
+    }
+    throw new Error("Les offres ne sont pas disponibles après 6 minutes");
+  }
+
+  const LS_PENDING = "job-agent:pending-build";
+  function getPendingBuild()  { return JSON.parse(localStorage.getItem(LS_PENDING) || "null"); }
+  function setPendingBuild(v) { localStorage.setItem(LS_PENDING, JSON.stringify(v)); }
+  function clearPendingBuild(){ localStorage.removeItem(LS_PENDING); }
+
+  async function startCreation(data) {
+    const pid       = generateProfileId();
+    const token     = data.token;
+    const afterTime = new Date().toISOString();
+    currentProfile  = pid;
+    localStorage.setItem(LS_PROFILE, pid);
+    setPendingBuild({ profileId: pid, token, prenom: data.prenom, afterTime });
+    showProgressState(data.prenom);
+    await runBuildPhase(pid, token, data.prenom, afterTime, true, data);
+  }
+
+  async function runBuildPhase(pid, token, prenom, afterTime, createFiles, data) {
+    try {
+      if (createFiles) {
+        const files = [
+          [`profiles/${pid}/meta.json`,           JSON.stringify({ label: prenom }, null, 2)],
+          [`profiles/${pid}/profile.md`,          buildProfileMd(data)],
+          [`profiles/${pid}/search.config.json`,  JSON.stringify(buildSearchConfig(data), null, 2)],
+          [`profiles/${pid}/scoring.config.json`, JSON.stringify(buildScoringConfig(data), null, 2)],
+        ];
+        for (let i = 0; i < files.length; i++) {
+          updateProgress(3 + i * 6, "Création des fichiers…", files[i][0].split("/").pop());
+          await ghCreateFile(token, files[i][0], files[i][1], `feat: add profile ${pid} [skip ci]`);
+        }
+        updateProgress(28, "Déclenchement de la CI…", "");
+        await ghTriggerWorkflow(token);
+      }
+      updateProgress(30, "Build en cours…", "Workflow GitHub Actions démarré");
+      const fakeStop = startFakeProgress(30, 88, 4.5 * 60 * 1000);
+      await ghPollBuild(token, afterTime);
+      fakeStop();
+      updateProgress(92, "Déploiement GitHub Pages…", "");
+      await waitForOffers(pid);
+      updateProgress(100, "C'est prêt !", "Chargement de votre tableau…");
+      clearPendingBuild();
+      await new Promise(r => setTimeout(r, 900));
+      $obOverlay.hidden = true;
+      loadProfile(pid);
+    } catch (err) {
+      if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
+      showProgressError(`Erreur : ${err.message}`);
+    }
+  }
+
   // --- Load ---
   async function loadProfile(profileId) {
     currentProfile = profileId;
@@ -817,6 +1149,13 @@
       renderDashboard();
       fetchFromGitHub();
     } catch (err) {
+      const pb = getPendingBuild();
+      if (pb && pb.profileId === profileId) {
+        showProgressState(pb.prenom);
+        $obOverlay.hidden = false;
+        await runBuildPhase(pb.profileId, pb.token, pb.prenom, pb.afterTime, false, null);
+        return;
+      }
       $meta.textContent = `Erreur de chargement : ${err.message}`;
       $empty.hidden = false;
     }
@@ -826,14 +1165,12 @@
     .then(r => r.ok ? r.json() : null)
     .then(manifest => {
       const profiles = manifest?.profiles || [];
-      const defaultId = manifest?.default || profiles[0]?.id || null;
-      if (!currentProfile) currentProfile = defaultId;
       renderProfileSwitcher(profiles);
+      if (!currentProfile) { showOnboarding(); return; }
       loadProfile(currentProfile);
     })
     .catch(() => {
-      // Pas de manifeste : mode legacy (offers.json à la racine de docs/)
-      currentProfile = currentProfile || "default";
+      if (!currentProfile) { showOnboarding(); return; }
       fetch("offers.json", { cache: "no-store" })
         .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
         .then(data => {
