@@ -35,22 +35,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run search
+      - name: Run search (all profiles)
         env:
           FRANCE_TRAVAIL_CLIENT_ID: ${{ secrets.FRANCE_TRAVAIL_CLIENT_ID }}
           FRANCE_TRAVAIL_CLIENT_SECRET: ${{ secrets.FRANCE_TRAVAIL_CLIENT_SECRET }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           API_APPRENTISSAGE_KEY: ${{ secrets.API_APPRENTISSAGE_KEY }}
-        run: python scripts/build_offers.py
+        run: python scripts/build_offers.py --all
 
-      - name: Commit offers.json if changed
+      - name: Commit results if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/offers.json
+          git add docs/
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: refresh offers.json [skip ci]"
+            git commit -m "chore: refresh offers [skip ci]"
             git push
           fi

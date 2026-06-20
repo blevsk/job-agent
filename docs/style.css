@@ -52,6 +52,38 @@ header {
   margin-bottom: 1.5rem;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#profile-switcher {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.profile-btn {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--muted);
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+.profile-btn:hover { color: var(--fg); border-color: var(--accent); }
+.profile-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
 h1 {
   margin: 0 0 0.3rem;
   font-size: 1.75rem;

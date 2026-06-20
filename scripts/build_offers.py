@@ -6,10 +6,15 @@ Pipeline :
   3. Embeddings sémantiques (profile.md ↔ offres) — gratuit en local
   4. Scoring (mots-clés + contrat + ROME + lieu + fraîcheur + sémantique)
   5. Re-rank LLM Haiku 4.5 sur le top-N (skip si pas d'ANTHROPIC_API_KEY)
-  6. Tri final + export → docs/offers.json
+  6. Tri final + export → docs/{profile}/offers.json
+
+Usage :
+  python scripts/build_offers.py                    # profil par défaut (dossier profiles/ unique)
+  python scripts/build_offers.py --profile yohan    # profil explicite
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import sys
@@ -109,19 +114,100 @@ def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> 
     return all_offers
 
 
+def _resolve_profile(name: str | None) -> tuple[str, Path]:
+    """Retourne (profile_name, profile_dir). Auto-détecte si name est None."""
+    profiles_root = ROOT / "profiles"
+
+    # Compatibilité legacy : pas de dossier profiles/ → on utilise les fichiers à la racine
+    if not profiles_root.exists():
+        return "default", ROOT
+
+    if name:
+        d = profiles_root / name
+        if not d.is_dir():
+            print(f"[error] Profil '{name}' introuvable dans {profiles_root}", file=sys.stderr)
+            sys.exit(2)
+        return name, d
+
+    # Auto-détection : liste des sous-dossiers
+    dirs = sorted(d for d in profiles_root.iterdir() if d.is_dir())
+    if not dirs:
+        print(f"[error] Aucun profil trouvé dans {profiles_root}", file=sys.stderr)
+        sys.exit(2)
+    return dirs[0].name, dirs[0]
+
+
+def _generate_profiles_manifest() -> None:
+    """Génère docs/profiles.json à partir de profiles/*/meta.json."""
+    profiles_root = ROOT / "profiles"
+    if not profiles_root.exists():
+        return
+    entries = []
+    for d in sorted(p for p in profiles_root.iterdir() if p.is_dir()):
+        meta_path = d / "meta.json"
+        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+        entries.append({"id": d.name, "label": meta.get("label", d.name.capitalize())})
+    manifest = {"profiles": entries, "default": entries[0]["id"] if entries else None}
+    out = ROOT / "docs" / "profiles.json"
+    out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[manifest] {len(entries)} profil(s) → {out.relative_to(ROOT)}")
+
+
 def main() -> int:
-    search_cfg_path = ROOT / "search.config.json"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--profile", default=None, help="Nom du profil (dossier dans profiles/)")
+    parser.add_argument("--all", dest="all_profiles", action="store_true",
+                        help="Build tous les profils + génère le manifeste")
+    args = parser.parse_args()
+
+    if args.all_profiles:
+        profiles_root = ROOT / "profiles"
+        if not profiles_root.exists():
+            print("[error] Dossier profiles/ introuvable", file=sys.stderr)
+            return 2
+        dirs = sorted(d for d in profiles_root.iterdir() if d.is_dir())
+        if not dirs:
+            print("[error] Aucun profil dans profiles/", file=sys.stderr)
+            return 2
+        exit_code = 0
+        for d in dirs:
+            print(f"\n{'='*50}\n[profile] {d.name}\n{'='*50}")
+            code = _build_profile(d.name, d)
+            if code != 0:
+                exit_code = code
+        _generate_profiles_manifest()
+        return exit_code
+
+    profile_name, profile_dir = _resolve_profile(args.profile)
+    code = _build_profile(profile_name, profile_dir)
+    _generate_profiles_manifest()
+    return code
+
+
+def _build_profile(profile_name: str, profile_dir: Path) -> int:
+    print(f"[profile] {profile_name} ({profile_dir.relative_to(ROOT)})")
+
+    # Chemins spécifiques au profil
+    if profile_dir == ROOT:
+        # Mode legacy : fichiers à la racine
+        search_cfg_path  = ROOT / "search.config.json"
+        scoring_cfg_path = ROOT / "scoring.config.json"
+        profile_path     = ROOT / "profile.md"
+        output           = ROOT / "docs" / "offers.json"
+    else:
+        search_cfg_path  = profile_dir / "search.config.json"
+        scoring_cfg_path = profile_dir / "scoring.config.json"
+        if not scoring_cfg_path.exists():
+            scoring_cfg_path = ROOT / "scoring.example.json"
+        profile_path = profile_dir / "profile.md"
+        output       = ROOT / "docs" / profile_name / "offers.json"
+        output.parent.mkdir(parents=True, exist_ok=True)
+
     if not search_cfg_path.exists():
         print(f"[error] {search_cfg_path} introuvable.", file=sys.stderr)
         return 2
 
-    scoring_cfg_path = ROOT / "scoring.config.json"
-    if not scoring_cfg_path.exists():
-        scoring_cfg_path = ROOT / "scoring.example.json"
-
-    profile_path = ROOT / "profile.md"
     profile_text = profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
-
     searches, defaults = _load_search_config(search_cfg_path)
     scoring_cfg = ScoringConfig.model_validate(_load_json(scoring_cfg_path))
     print(f"[config] {len(searches)} recherche(s), scoring via {scoring_cfg_path.name}")
@@ -197,7 +283,6 @@ def main() -> int:
         "rerank_active": any(s.offer.llm_rank is not None for s in scored),
         "semantic_active": any(s.offer.semantic_score is not None for s in scored),
     }
-    output = ROOT / "docs" / "offers.json"
     export_json(scored, output, meta)
     print(f"[ok] {len(scored)} offres scorées → {output.relative_to(ROOT)}")
     return 0

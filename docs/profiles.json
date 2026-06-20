@@ -1,0 +1,9 @@
+{
+  "profiles": [
+    {
+      "id": "yohan",
+      "label": "Yohan"
+    }
+  ],
+  "default": "yohan"
+}

@@ -1,12 +1,24 @@
 (() => {
   // --- Constants ---
-  const LS_READ     = "job-agent:read-ids";
-  const LS_KNOWN    = "job-agent:known-ids";
-  const LS_TRACKING = "job-agent:tracking";
   const LS_TOKEN    = "job-agent:gh-token";
+  const LS_PROFILE  = "job-agent:profile";
   const GH_REPO     = "blevsk/job-agent";
-  const GH_PATH     = "docs/tracking.json";
-  const GH_API      = `https://api.github.com/repos/${GH_REPO}/contents/${GH_PATH}`;
+
+  // --- Profile resolution (URL param > localStorage > default) ---
+  let currentProfile = new URLSearchParams(location.search).get("profile")
+    || localStorage.getItem(LS_PROFILE)
+    || null;   // sera fixé après chargement du manifeste
+
+  function profileKey(base) { return `${base}:${currentProfile || "default"}`; }
+
+  function ghPath()  { return `docs/${currentProfile}/tracking.json`; }
+  function ghApi()   { return `https://api.github.com/repos/${GH_REPO}/contents/${ghPath()}`; }
+  function offersUrl() { return `${currentProfile}/offers.json`; }
+
+  // Clés localStorage scopées au profil (migration automatique depuis les anciennes clés)
+  function lsRead()     { return profileKey("job-agent:read-ids"); }
+  function lsKnown()    { return profileKey("job-agent:known-ids"); }
+  function lsTracking() { return profileKey("job-agent:tracking"); }
 
   // --- Thème automatique (préférence système) ---
   (() => {
@@ -26,11 +38,11 @@
     localStorage.setItem(key, JSON.stringify([...set]));
   }
   function loadTracking() {
-    try { return JSON.parse(localStorage.getItem(LS_TRACKING) || "{}"); }
+    try { return JSON.parse(localStorage.getItem(lsTracking()) || "{}"); }
     catch { return {}; }
   }
   function saveTracking() {
-    localStorage.setItem(LS_TRACKING, JSON.stringify(tracking));
+    localStorage.setItem(lsTracking(), JSON.stringify(tracking));
   }
   function getToken() { return localStorage.getItem(LS_TOKEN) || ""; }
 
@@ -45,7 +57,7 @@
   }
 
   // --- App state ---
-  const readIds  = loadSet(LS_READ);
+  const readIds  = loadSet(lsRead());
   const tracking = loadTracking();
   let newIds    = new Set();
   let ghSha     = null;
@@ -155,7 +167,7 @@
     if (!token) return;
     setSyncStatus("syncing");
     try {
-      const r = await fetch(GH_API, {
+      const r = await fetch(ghApi(), {
         headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" },
       });
       if (r.status === 404) { ghSha = null; setSyncStatus("ok"); return; }
@@ -191,7 +203,7 @@
         content: b64encode(JSON.stringify(tracking, null, 2)),
       };
       if (ghSha) body.sha = ghSha;
-      const r = await fetch(GH_API, {
+      const r = await fetch(ghApi(), {
         method: "PUT",
         headers: {
           Authorization: `token ${token}`,
@@ -347,7 +359,7 @@
   function markRead(id) {
     if (readIds.has(id)) return;
     readIds.add(id);
-    saveSet(LS_READ, readIds);
+    saveSet(lsRead(), readIds);
     $tbody.querySelectorAll("tr[data-id]").forEach(tr => {
       if (tr.dataset.id === id && !tr.classList.contains("notes-row"))
         tr.classList.add("read");
@@ -598,7 +610,7 @@
   $markAll.addEventListener("click",  e  => {
     e.preventDefault();
     sortAndFilter().forEach(o => readIds.add(o.id));
-    saveSet(LS_READ, readIds);
+    saveSet(lsRead(), readIds);
     renderView();
     renderMeta();
   });
@@ -767,24 +779,69 @@
     }
   });
 
+  // --- Profile switcher ---
+  function renderProfileSwitcher(profiles) {
+    const $sw = document.getElementById("profile-switcher");
+    if (!$sw || profiles.length <= 1) return;
+    $sw.hidden = false;
+    $sw.innerHTML = profiles.map(p =>
+      `<button class="profile-btn${p.id === currentProfile ? " active" : ""}" data-profile="${escapeHtml(p.id)}">${escapeHtml(p.label)}</button>`
+    ).join("");
+    $sw.querySelectorAll(".profile-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const pid = btn.dataset.profile;
+        localStorage.setItem(LS_PROFILE, pid);
+        const url = new URL(location.href);
+        url.searchParams.set("profile", pid);
+        location.href = url.toString();
+      });
+    });
+  }
+
   // --- Load ---
-  fetch("offers.json", { cache: "no-store" })
-    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-    .then(data => {
+  async function loadProfile(profileId) {
+    currentProfile = profileId;
+    try {
+      const r = await fetch(offersUrl(), { cache: "no-store" });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const data = await r.json();
       state.meta      = data.meta;
       state.rawOffers = data.offers || [];
       state.offers    = [...state.rawOffers, ...getManualOffers()];
-      const knownIds = loadSet(LS_KNOWN);
+      const knownIds = loadSet(lsKnown());
       if (knownIds.size > 0)
         newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));
-      saveSet(LS_KNOWN, new Set(state.offers.map(o => o.id)));
+      saveSet(lsKnown(), new Set(state.offers.map(o => o.id)));
       renderMeta();
       renderView();
       renderDashboard();
-      fetchFromGitHub(); // sync tracking depuis GitHub après affichage initial
-    })
-    .catch(err => {
+      fetchFromGitHub();
+    } catch (err) {
       $meta.textContent = `Erreur de chargement : ${err.message}`;
       $empty.hidden = false;
+    }
+  }
+
+  fetch("profiles.json", { cache: "no-store" })
+    .then(r => r.ok ? r.json() : null)
+    .then(manifest => {
+      const profiles = manifest?.profiles || [];
+      const defaultId = manifest?.default || profiles[0]?.id || null;
+      if (!currentProfile) currentProfile = defaultId;
+      renderProfileSwitcher(profiles);
+      loadProfile(currentProfile);
+    })
+    .catch(() => {
+      // Pas de manifeste : mode legacy (offers.json à la racine de docs/)
+      currentProfile = currentProfile || "default";
+      fetch("offers.json", { cache: "no-store" })
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(data => {
+          state.meta      = data.meta;
+          state.rawOffers = data.offers || [];
+          state.offers    = [...state.rawOffers, ...getManualOffers()];
+          renderMeta(); renderView(); renderDashboard(); fetchFromGitHub();
+        })
+        .catch(err => { $meta.textContent = `Erreur : ${err.message}`; $empty.hidden = false; });
     });
 })();
