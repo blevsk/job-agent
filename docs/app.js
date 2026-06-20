@@ -1057,11 +1057,35 @@
   function setPendingBuild(v) { localStorage.setItem(LS_PENDING, JSON.stringify(v)); }
   function clearPendingBuild(){ localStorage.removeItem(LS_PENDING); }
 
+  async function pollForTrackingToken(issueNumber) {
+    const deadline = Date.now() + 12 * 60 * 1000;
+    while (Date.now() < deadline) {
+      await new Promise(r => setTimeout(r, 5000));
+      try {
+        const r = await fetch(
+          `https://api.github.com/repos/${GH_REPO}/issues/${issueNumber}/comments`,
+          { headers: { Authorization: `Bearer ${ISSUES_TOKEN}`, Accept: "application/vnd.github+json" } }
+        );
+        if (!r.ok) continue;
+        const comments = await r.json();
+        const hit = comments.find(c => c.body?.startsWith("TRACKING_TOKEN:"));
+        if (hit) {
+          const token = hit.body.replace("TRACKING_TOKEN:", "").trim();
+          if (token) {
+            localStorage.setItem(LS_TOKEN, token);
+            fetchFromGitHub();
+            return;
+          }
+        }
+      } catch (_) {}
+    }
+  }
+
   async function startCreation(data) {
     const pid      = data.profileId;
     currentProfile = pid;
     localStorage.setItem(LS_PROFILE, pid);
-    setPendingBuild({ profileId: pid, poste: data.poste });
+    setPendingBuild({ profileId: pid, poste: data.poste, issueNumber: null });
     showProgressState();
     await runBuildPhase(pid, true, data);
   }
@@ -1090,7 +1114,17 @@
           const err = await r.json().catch(() => ({}));
           throw new Error(err.message || `Impossible de créer l'issue (HTTP ${r.status})`);
         }
+        const issueData = await r.json();
+        const issueNumber = issueData.number;
+        setPendingBuild({ profileId: pid, poste: data.poste, issueNumber });
+        // Lance le polling du token en arrière-plan (non bloquant)
+        pollForTrackingToken(issueNumber).catch(() => {});
+      } else {
+        // Reprise après rechargement : relancer le polling si on a le numéro d'issue
+        const pb = getPendingBuild();
+        if (pb?.issueNumber) pollForTrackingToken(pb.issueNumber).catch(() => {});
       }
+
       updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
       const fakeStop = startFakeProgress(15, 92, 5.5 * 60 * 1000);
       await waitForOffers(pid);
