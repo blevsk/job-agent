@@ -3,6 +3,8 @@
   const LS_TOKEN    = "job-agent:gh-token";
   const LS_PROFILE  = "job-agent:profile";
   const GH_REPO     = "blevsk/job-agent";
+  // Fine-grained PAT — permission "Issues: Read and write" sur blevsk/job-agent uniquement
+  const ISSUES_TOKEN = "REMPLACER_PAR_TON_TOKEN_ISSUES";
 
   // --- Profile resolution (URL param > localStorage > default) ---
   let currentProfile = new URLSearchParams(location.search).get("profile")
@@ -1038,70 +1040,6 @@
     };
   }
 
-  async function ghCreateFile(token, path, content, message) {
-    const encoded = btoa(unescape(encodeURIComponent(content)));
-    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message, content: encoded, branch: "main" }),
-    });
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({}));
-      throw new Error(err.message || `HTTP ${r.status} (${path})`);
-    }
-  }
-
-  async function ghTriggerWorkflow(token) {
-    const r = await fetch(
-      `https://api.github.com/repos/${GH_REPO}/actions/workflows/search.yml/dispatches`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: "application/vnd.github+json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ref: "main" }),
-      }
-    );
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({}));
-      throw new Error(err.message || `HTTP ${r.status} (déclenchement workflow)`);
-    }
-  }
-
-  async function ghPollBuild(token, afterTime) {
-    const deadline = Date.now() + 12 * 60 * 1000;
-    let wait = 15000;
-    while (Date.now() < deadline) {
-      await new Promise(r => setTimeout(r, wait));
-      wait = 20000;
-      try {
-        const res = await fetch(
-          `https://api.github.com/repos/${GH_REPO}/actions/runs?per_page=10`,
-          { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
-        );
-        if (!res.ok) continue;
-        const payload = await res.json();
-        const run = (payload.workflow_runs || []).find(r =>
-          r.created_at >= afterTime && (r.path || "").includes("search.yml")
-        );
-        if (!run) continue;
-        if (run.status === "completed") {
-          if (run.conclusion === "success") return;
-          throw new Error(`Build échoué — conclusion : ${run.conclusion}`);
-        }
-      } catch (err) {
-        if (err.message.startsWith("Build échoué")) throw err;
-      }
-    }
-    throw new Error("Timeout : le build a pris plus de 12 minutes");
-  }
-
   async function waitForOffers(profileId) {
     const deadline = Date.now() + 6 * 60 * 1000;
     while (Date.now() < deadline) {
@@ -1120,39 +1058,43 @@
   function clearPendingBuild(){ localStorage.removeItem(LS_PENDING); }
 
   async function startCreation(data) {
-    const pid       = data.profileId;
-    const token     = data.token;
-    const afterTime = new Date().toISOString();
-    currentProfile  = pid;
+    const pid      = data.profileId;
+    currentProfile = pid;
     localStorage.setItem(LS_PROFILE, pid);
-    localStorage.setItem(LS_TOKEN, token);
-    setPendingBuild({ profileId: pid, token, poste: data.poste, afterTime });
+    setPendingBuild({ profileId: pid, poste: data.poste });
     showProgressState();
-    await runBuildPhase(pid, token, afterTime, true, data);
+    await runBuildPhase(pid, true, data);
   }
 
-  async function runBuildPhase(pid, token, afterTime, createFiles, data) {
+  async function runBuildPhase(pid, createIssue, data) {
     try {
-      if (createFiles) {
-        const files = [
-          [`profiles/${pid}/meta.json`,           JSON.stringify({ label: data.poste }, null, 2)],
-          [`profiles/${pid}/profile.md`,          buildProfileMd(data)],
-          [`profiles/${pid}/search.config.json`,  JSON.stringify(buildSearchConfig(data), null, 2)],
-          [`profiles/${pid}/scoring.config.json`, JSON.stringify(buildScoringConfig(data), null, 2)],
-        ];
-        for (let i = 0; i < files.length; i++) {
-          updateProgress(3 + i * 6, "Création des fichiers…", files[i][0].split("/").pop());
-          await ghCreateFile(token, files[i][0], files[i][1], `feat: add profile ${pid} [skip ci]`);
+      if (createIssue) {
+        updateProgress(5, "Envoi de la demande…", "Création de l'issue GitHub");
+        const issueBody = JSON.stringify({
+          profileId:     pid,
+          poste:         data.poste,
+          profileMd:     buildProfileMd(data),
+          searchConfig:  buildSearchConfig(data),
+          scoringConfig: buildScoringConfig(data),
+        });
+        const r = await fetch(`https://api.github.com/repos/${GH_REPO}/issues`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${ISSUES_TOKEN}`,
+            Accept: "application/vnd.github+json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title: `[job-agent] ${pid}`, body: issueBody }),
+        });
+        if (!r.ok) {
+          const err = await r.json().catch(() => ({}));
+          throw new Error(err.message || `Impossible de créer l'issue (HTTP ${r.status})`);
         }
-        updateProgress(28, "Déclenchement de la CI…", "");
-        await ghTriggerWorkflow(token);
       }
-      updateProgress(30, "Build en cours…", "Workflow GitHub Actions démarré");
-      const fakeStop = startFakeProgress(30, 88, 4.5 * 60 * 1000);
-      await ghPollBuild(token, afterTime);
-      fakeStop();
-      updateProgress(92, "Déploiement GitHub Pages…", "");
+      updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
+      const fakeStop = startFakeProgress(15, 92, 5.5 * 60 * 1000);
       await waitForOffers(pid);
+      fakeStop();
       updateProgress(100, "C'est prêt !", "Chargement de votre tableau…");
       clearPendingBuild();
       await new Promise(r => setTimeout(r, 900));
@@ -1187,7 +1129,7 @@
       if (pb && pb.profileId === profileId) {
         showProgressState();
         $obOverlay.hidden = false;
-        await runBuildPhase(pb.profileId, pb.token, pb.afterTime, false, null);
+        await runBuildPhase(pb.profileId, false, null);
         return;
       }
       $meta.textContent = `Erreur de chargement : ${err.message}`;
