@@ -1,13 +1,9 @@
 {
   "profiles": [
     {
-      "id": "49476c5d5b",
-      "label": "Yohan"
-    },
-    {
       "id": "maman",
       "label": "Maman"
     }
   ],
-  "default": "49476c5d5b"
+  "default": "maman"
 }
