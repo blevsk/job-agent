@@ -3,8 +3,7 @@
   const LS_TOKEN    = "job-agent:gh-token";
   const LS_PROFILE  = "job-agent:profile";
   const GH_REPO     = "blevsk/job-agent";
-  // Fine-grained PAT — permission "Issues: Read and write" sur blevsk/job-agent uniquement
-  const ISSUES_TOKEN = "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";
+  const ISSUES_TOKEN = "REMPLACER_PAR_TON_TOKEN_ISSUES";
 
   // --- Profile resolution (URL param > localStorage > default) ---
   let currentProfile = new URLSearchParams(location.search).get("profile")
