@@ -808,55 +808,77 @@
 
   const OB_STEPS = [
     {
-      title: "Bienvenue !",
-      subtitle: "Créez votre profil en quelques secondes et recevez des offres personnalisées.",
-      fields: () => `
-        <label>Votre prénom <span class="req">*</span>
-          <input name="prenom" required value="${escapeHtml(obData.prenom || "")}" placeholder="Ex : Sophie">
-        </label>`,
-    },
-    {
       title: "Votre recherche",
-      subtitle: "Quel poste cherchez-vous, et où ?",
+      subtitle: "Définissez le poste et la zone géographique ciblés.",
       fields: () => `
         <label>Intitulé du poste <span class="req">*</span>
           <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
         </label>
         <label>Ville <span class="req">*</span>
           <input name="ville" required value="${escapeHtml(obData.ville || "")}" placeholder="Ex : Lyon">
-        </label>`,
+        </label>
+        <div class="ob-row">
+          <label>Rayon (km)
+            <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
+          </label>
+          <label>Contrat
+            <select name="contrat">
+              ${["Tous","CDI","CDD","Alternance","Stage","Intérim"].map(c =>
+                `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
+              ).join("")}
+            </select>
+          </label>
+        </div>`,
     },
     {
-      title: "Contrat & rayon",
-      subtitle: "Quels types de contrat visez-vous ?",
+      title: "Affiner la recherche",
+      subtitle: "Ces critères ajustent le score de pertinence de chaque offre.",
       fields: () => `
-        <label>Type de contrat
-          <select name="contrat">
-            ${["Alternance","CDI","CDD","Stage","Intérim","Tous"].map(c =>
-              `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
+        <label>Mots-clés favorables <span class="opt">(séparés par des virgules)</span>
+          <input name="keywords_pos" value="${escapeHtml(obData.keywords_pos || "")}" placeholder="Ex : télétravail, Python, senior">
+        </label>
+        <label>Mots-clés à exclure <span class="opt">(séparés par des virgules)</span>
+          <input name="keywords_neg" value="${escapeHtml(obData.keywords_neg || "")}" placeholder="Ex : commercial, manutention, nuit">
+        </label>
+        <label>Fraîcheur des offres
+          <select name="fraicheur">
+            ${[["","Toutes les offres"],["7","7 derniers jours"],["14","14 derniers jours"],["30","30 derniers jours"]].map(([v, l]) =>
+              `<option value="${v}"${(obData.fraicheur || "") === v ? " selected" : ""}>${l}</option>`
             ).join("")}
           </select>
-        </label>
-        <label>Rayon de recherche (km)
-          <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
         </label>`,
     },
     {
-      title: "Token GitHub",
-      subtitle: "Votre profil sera sauvegardé dans le dépôt GitHub du projet.",
+      title: "Votre profil",
+      subtitle: "Ce texte aide le moteur sémantique à mieux cibler les offres. Plus c'est précis, plus le matching est efficace.",
       fields: () => `
-        <p class="ob-hint">Créez un <strong>Fine-grained PAT</strong> sur GitHub avec les permissions :<br>
-        <code>Contents: Read and write</code> · <code>Actions: Read and write</code><br>
-        sur le dépôt <code>${GH_REPO}</code>.</p>
-        <label>Personal Access Token <span class="req">*</span>
-          <input name="token" required type="password" value="${escapeHtml(obData.token || "")}" placeholder="github_pat_…">
+        <label>Décrivez ce que vous cherchez, vos compétences, votre expérience… <span class="opt">(optionnel)</span>
+          <textarea name="profil" rows="5" placeholder="Ex : 5 ans d'expérience en gestion administrative, maîtrise d'Excel et SAGE, recherche un CDI avec des responsabilités d'organisation et de coordination…">${escapeHtml(obData.profil || "")}</textarea>
         </label>`,
+    },
+    {
+      title: "Connexion GitHub",
+      subtitle: "Votre profil sera sauvegardé dans le dépôt du projet via un token personnel.",
+      fields: () => {
+        const pid    = obData.profileId;
+        const ghUrl  = `https://github.com/settings/tokens/new?description=job-agent-${pid}&scopes=repo,workflow`;
+        return `
+          <div class="ob-token-block">
+            <p class="ob-token-label">Nom du token qui sera créé</p>
+            <code class="ob-token-name">job-agent-${pid}</code>
+          </div>
+          <a href="${escapeHtml(ghUrl)}" target="_blank" rel="noopener" class="ob-gh-btn">Générer le token sur GitHub →</a>
+          <p class="ob-hint">Sur GitHub : vérifiez les paramètres pré-remplis, cliquez <em>Generate token</em>, copiez le token et collez-le ci-dessous.</p>
+          <label>Personal Access Token <span class="req">*</span>
+            <input name="token" required type="password" value="${escapeHtml(obData.token || "")}" placeholder="ghp_…">
+          </label>`;
+      },
     },
   ];
 
   function showOnboarding() {
     $obOverlay.hidden = false;
-    obData = {};
+    obData = { profileId: generateProfileId() };
     renderOnboardStep(0);
   }
 
@@ -899,12 +921,12 @@
     new FormData(form).forEach((v, k) => { obData[k] = v; });
   }
 
-  function showProgressState(prenom) {
+  function showProgressState() {
     $obCard.innerHTML = `
       <div class="ob-progress-header">
         <div class="ob-spinner"></div>
         <h2>Construction de votre profil…</h2>
-        <p class="ob-subtitle">Bonjour ${escapeHtml(prenom)} ! Votre tableau sera prêt dans quelques minutes.</p>
+        <p class="ob-subtitle">Votre tableau sera prêt dans quelques minutes.</p>
       </div>
       <div class="ob-progress-bar-wrap"><div class="ob-progress-bar" id="ob-bar"></div></div>
       <p class="ob-progress-step" id="ob-step-label">&nbsp;</p>
@@ -963,19 +985,25 @@
     return crypto.randomUUID().replace(/-/g, "").slice(0, 10);
   }
 
+  function reEscape(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
   function buildProfileMd(d) {
     const lines = [
-      `# Profil de ${d.prenom}`,
+      `# Profil de recherche : ${d.poste}`,
       "",
-      `Je cherche un poste de **${d.poste}** dans la région de **${d.ville}** (rayon ${d.rayon || 25} km).`,
+      `Poste visé : **${d.poste}** à **${d.ville}** (rayon ${d.rayon || 25} km).`,
     ];
-    if (d.contrat && d.contrat !== "Tous") lines.push(`Je préfère un contrat de type **${d.contrat}**.`);
+    if (d.contrat && d.contrat !== "Tous") lines.push(`Contrat souhaité : **${d.contrat}**.`);
+    if (d.keywords_pos?.trim()) lines.push(`Critères favorables : ${d.keywords_pos}.`);
+    if (d.keywords_neg?.trim()) lines.push(`Critères à éviter : ${d.keywords_neg}.`);
+    if (d.profil?.trim()) lines.push("", "## À propos", "", d.profil.trim());
     return lines.join("\n");
   }
 
   function buildSearchConfig(d) {
+    const isAlternance = d.contrat === "Alternance";
     const searches = [{ keyword: d.poste, "_label": d.poste }];
-    if (d.contrat === "Alternance") {
+    if (isAlternance) {
       searches.push({ source: "la_bonne_alternance", "_label": `La Bonne Alternance — ${d.poste}` });
     }
     return {
@@ -983,9 +1011,9 @@
         location: d.ville,
         radius_km: parseInt(d.rayon) || 25,
         max_results: 150,
-        published_within_days: null,
-        alternance_only: d.contrat === "Alternance",
-        contract_type: (d.contrat && d.contrat !== "Tous") ? d.contrat : null,
+        published_within_days: parseInt(d.fraicheur) || null,
+        alternance_only: isAlternance,
+        contract_type: (d.contrat && d.contrat !== "Tous" && !isAlternance) ? d.contrat : null,
       },
       searches,
     };
@@ -994,13 +1022,18 @@
   function buildScoringConfig(d) {
     const preferred_contracts = {};
     if (d.contrat && d.contrat !== "Tous") preferred_contracts[d.contrat] = 8.0;
+    const keywords = [];
+    (d.keywords_pos || "").split(",").map(s => s.trim()).filter(Boolean)
+      .forEach(kw => keywords.push({ pattern: reEscape(kw), weight: 3.0 }));
+    (d.keywords_neg || "").split(",").map(s => s.trim()).filter(Boolean)
+      .forEach(kw => keywords.push({ pattern: reEscape(kw), weight: -5.0 }));
     return {
-      keywords: [],
+      keywords,
       preferred_contracts,
       preferred_location: d.ville,
       location_bonus: 2.0,
       freshness_bonus: 3.0,
-      freshness_max_days: 14,
+      freshness_max_days: parseInt(d.fraicheur) || 14,
       semantic_weight: 12.0,
     };
   }
@@ -1087,21 +1120,22 @@
   function clearPendingBuild(){ localStorage.removeItem(LS_PENDING); }
 
   async function startCreation(data) {
-    const pid       = generateProfileId();
+    const pid       = data.profileId;
     const token     = data.token;
     const afterTime = new Date().toISOString();
     currentProfile  = pid;
     localStorage.setItem(LS_PROFILE, pid);
-    setPendingBuild({ profileId: pid, token, prenom: data.prenom, afterTime });
-    showProgressState(data.prenom);
-    await runBuildPhase(pid, token, data.prenom, afterTime, true, data);
+    localStorage.setItem(LS_TOKEN, token);
+    setPendingBuild({ profileId: pid, token, poste: data.poste, afterTime });
+    showProgressState();
+    await runBuildPhase(pid, token, afterTime, true, data);
   }
 
-  async function runBuildPhase(pid, token, prenom, afterTime, createFiles, data) {
+  async function runBuildPhase(pid, token, afterTime, createFiles, data) {
     try {
       if (createFiles) {
         const files = [
-          [`profiles/${pid}/meta.json`,           JSON.stringify({ label: prenom }, null, 2)],
+          [`profiles/${pid}/meta.json`,           JSON.stringify({ label: data.poste }, null, 2)],
           [`profiles/${pid}/profile.md`,          buildProfileMd(data)],
           [`profiles/${pid}/search.config.json`,  JSON.stringify(buildSearchConfig(data), null, 2)],
           [`profiles/${pid}/scoring.config.json`, JSON.stringify(buildScoringConfig(data), null, 2)],
@@ -1151,9 +1185,9 @@
     } catch (err) {
       const pb = getPendingBuild();
       if (pb && pb.profileId === profileId) {
-        showProgressState(pb.prenom);
+        showProgressState();
         $obOverlay.hidden = false;
-        await runBuildPhase(pb.profileId, pb.token, pb.prenom, pb.afterTime, false, null);
+        await runBuildPhase(pb.profileId, pb.token, pb.afterTime, false, null);
         return;
       }
       $meta.textContent = `Erreur de chargement : ${err.message}`;
@@ -1165,8 +1199,6 @@
     .then(r => r.ok ? r.json() : null)
     .then(manifest => {
       const profiles = manifest?.profiles || [];
-      const defaultId = manifest?.default || profiles[0]?.id || null;
-      if (!currentProfile) currentProfile = defaultId;
       renderProfileSwitcher(profiles);
       if (!currentProfile) { showOnboarding(); return; }
       loadProfile(currentProfile);
