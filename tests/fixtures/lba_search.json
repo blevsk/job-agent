@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "identifier": {"partner_job_id": "abc-001"},
+      "offer": {
+        "title": "Alternance Assistant Comptable",
+        "status": "Active",
+        "rome_codes": ["M1203"],
+        "publication": {"creation": "2099-01-01T08:00:00.000Z"},
+        "description": "Poste en alternance au sein du service comptabilité."
+      },
+      "workplace": {
+        "brand": "Beta Corp",
+        "location": {"address": "Lille, 59000"}
+      },
+      "contract": {"type": ["Apprentissage"]},
+      "apply": {"url": "https://labonnealternance.apprentissage.beta.gouv.fr/offre/abc-001"}
+    },
+    {
+      "identifier": {"partner_job_id": "abc-002"},
+      "offer": {
+        "title": "Alternance Développeur Web",
+        "status": "Filled",
+        "rome_codes": ["M1805"],
+        "publication": {"creation": "2099-01-01T08:00:00.000Z"},
+        "description": "Poste déjà pourvu."
+      },
+      "workplace": {"brand": "TechCo", "location": {"address": "Roubaix, 59100"}},
+      "contract": {"type": ["Apprentissage"]},
+      "apply": {"url": "https://labonnealternance.apprentissage.beta.gouv.fr/offre/abc-002"}
+    },
+    {
+      "identifier": {},
+      "offer": {"title": "Offre sans ID", "status": "Active"},
+      "workplace": {},
+      "contract": {},
+      "apply": {}
+    },
+    {
+      "identifier": {"partner_job_id": "abc-003"},
+      "offer": {"status": "Active"},
+      "workplace": {},
+      "contract": {},
+      "apply": {}
+    }
+  ]
+}
