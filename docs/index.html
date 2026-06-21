@@ -81,10 +81,9 @@
         <button class="view-toggle-btn" id="view-kanban" title="Vue Kanban">⊞ Kanban</button>
       </div>
       <button id="open-add" class="btn-add">+ Ajouter</button>
-      <button id="gh-config" class="gh-config-btn" title="Configurer la synchronisation GitHub">⚙</button>
     </div>
     <div class="ctrl-bottom">
-<label><input id="hideRead" type="checkbox"> Masquer lues</label>
+      <label><input id="hideRead" type="checkbox"> Masquer lues</label>
       <select id="filterStatus">
         <option value="">Tous statuts</option>
         <option value="__none__">Sans statut</option>
@@ -95,39 +94,37 @@
       </select>
       <a id="markAllRead" href="#">Tout lire</a>
       <a id="exportCsv" href="#">Export CSV</a>
-      <span id="sync-status" class="sync-status"></span>
     </div>
   </section>
 
   <div id="kanban-wrapper" hidden></div>
 
   <div id="table-wrapper">
-  <table id="offers">
-    <thead>
-      <tr>
-        <th data-sort="llm_rank" class="col-rank">Rang LLM</th>
-        <th data-sort="score">Score</th>
-        <th data-sort="title">Titre</th>
-        <th data-sort="company">Entreprise</th>
-        <th data-sort="location" class="col-location">Lieu</th>
-        <th data-sort="contract_type" class="col-contract">Contrat</th>
-        <th data-sort="rome_code" class="col-rome">ROME / Sém.</th>
-        <th data-sort="posted_days_ago" class="col-age">Publié</th>
-        <th>Lien</th>
-        <th>Statut</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <table id="offers">
+      <thead>
+        <tr>
+          <th data-sort="llm_rank" class="col-rank">Rang LLM</th>
+          <th data-sort="score">Score</th>
+          <th data-sort="title">Titre</th>
+          <th data-sort="company">Entreprise</th>
+          <th data-sort="location" class="col-location">Lieu</th>
+          <th data-sort="contract_type" class="col-contract">Contrat</th>
+          <th data-sort="rome_code" class="col-rome">ROME / Sém.</th>
+          <th data-sort="posted_days_ago" class="col-age">Publié</th>
+          <th>Lien</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>
 
   <p id="empty" hidden>Aucune offre. Lance le workflow GitHub Action pour générer <code>offers.json</code>.</p>
 
-  <!-- Onboarding / Progress overlay -->
   <div id="onboarding-overlay" hidden>
     <div id="onboarding-card"></div>
   </div>
 
-  <script src="app.js?v=CACHE_BUST"></script>
+  <script type="module" src="app.js?v=CACHE_BUST"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-name: Rebuild profile offers
+name: Build profile
 
 on:
   issues:
@@ -9,9 +9,15 @@ permissions:
   issues: write
   actions: write
 
+concurrency:
+  group: build-profile-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
 jobs:
-  rebuild:
-    if: startsWith(github.event.issue.title, '[job-agent-rebuild] ')
+  build:
+    if: |
+      startsWith(github.event.issue.title, '[job-agent] ') ||
+      startsWith(github.event.issue.title, '[job-agent-rebuild] ')
     runs-on: ubuntu-latest
 
     steps:
@@ -32,39 +38,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Apply config from issue and extract profile ID
-        id: pid
+      - name: Apply profile config from issue
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
-          python3 - <<'EOF'
-import os, json
-from pathlib import Path
-
-data = json.loads(os.environ['ISSUE_BODY'])
-pid  = data['profileId']
-
-profile_dir = Path('profiles') / pid
-profile_dir.mkdir(parents=True, exist_ok=True)
-
-if 'profileMd' in data:
-    (profile_dir / 'profile.md').write_text(data['profileMd'], encoding='utf-8')
-if 'searchConfig' in data:
-    (profile_dir / 'search.config.json').write_text(
-        json.dumps(data['searchConfig'], ensure_ascii=False, indent=2), encoding='utf-8')
-if 'scoringConfig' in data:
-    (profile_dir / 'scoring.config.json').write_text(
-        json.dumps(data['scoringConfig'], ensure_ascii=False, indent=2), encoding='utf-8')
-if 'poste' in data:
-    meta_path = profile_dir / 'meta.json'
-    meta = json.loads(meta_path.read_text(encoding='utf-8')) if meta_path.exists() else {}
-    meta['label'] = data['poste']
-    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')
-
-with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-    f.write(f'profile_id={pid}\n')
-print(f'[ok] Config applied for profile {pid}')
-EOF
+          python3 -c "import os,sys; sys.stdout.write(os.environ['ISSUE_BODY'])" \
+            | python scripts/apply_profile_config.py
 
       - name: Build offers
         env:
@@ -72,18 +51,21 @@ EOF
           FRANCE_TRAVAIL_CLIENT_SECRET: ${{ secrets.FRANCE_TRAVAIL_CLIENT_SECRET }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           API_APPRENTISSAGE_KEY: ${{ secrets.API_APPRENTISSAGE_KEY }}
-        run: python scripts/build_offers.py --profile "${{ steps.pid.outputs.profile_id }}"
+        run: |
+          PROFILE_ID=$(python3 -c "import json; print(json.load(open('/tmp/job_agent_profile.json'))['profileId'])")
+          python scripts/build_offers.py --profile "$PROFILE_ID"
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/
+          git add profiles/ docs/
           if git diff --staged --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "feat: rebuild offers ${{ steps.pid.outputs.profile_id }}"
+            PROFILE_ID=$(python3 -c "import json; print(json.load(open('/tmp/job_agent_profile.json'))['profileId'])")
+            git commit -m "feat: build profile ${PROFILE_ID}"
             git push
           fi
 
@@ -99,7 +81,7 @@ EOF
         run: |
           gh api -X POST \
             "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
-            -f "body=✅ Offres mises à jour."
+            -f "body=✅ Profil mis à jour et offres générées."
           gh api -X PATCH \
             "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
             -f "state=closed"
@@ -111,7 +93,7 @@ EOF
         run: |
           gh api -X POST \
             "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
-            -f "body=❌ Rebuild échoué. Voir les logs du workflow."
+            -f "body=❌ Build échoué. Voir les logs du workflow."
           gh api -X PATCH \
             "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}" \
             -f "state=closed"

@@ -27,10 +27,13 @@ jobs:
         env:
           ISSUES_TOKEN: ${{ secrets.ISSUES_TOKEN }}
         run: |
-          if [ -n "$ISSUES_TOKEN" ]; then
-            sed -i "s|REMPLACER_PAR_TON_TOKEN_ISSUES|${ISSUES_TOKEN}|g" docs/app.js
-          fi
           GIT_SHA=$(git rev-parse --short HEAD)
+          # Injecter ISSUES_TOKEN + cache-bust dans tous les fichiers JS sous docs/
+          find docs/ -name "*.js" | while read f; do
+            [ -n "$ISSUES_TOKEN" ] && sed -i "s|REMPLACER_PAR_TON_TOKEN_ISSUES|${ISSUES_TOKEN}|g" "$f"
+            sed -i "s|CACHE_BUST|${GIT_SHA}|g" "$f"
+          done
+          # Cache-bust dans index.html
           sed -i "s|CACHE_BUST|${GIT_SHA}|g" docs/index.html
 
       - uses: actions/upload-pages-artifact@v3
