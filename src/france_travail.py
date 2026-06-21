@@ -10,6 +10,7 @@ Souscrire au scope « api_offresdemploiv2 » + « o2dsoffre » et créer une app
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 from collections.abc import Callable
@@ -19,7 +20,10 @@ from typing import Any
 
 import httpx
 
+from .env import load_dotenv
 from .models import JobOffer
+
+logger = logging.getLogger(__name__)
 
 OAUTH_URL = (
     "https://entreprise.francetravail.fr/connexion/oauth2/access_token" "?realm=%2Fpartenaire"
@@ -57,26 +61,8 @@ class MissingCredentialsError(FranceTravailError):
     pass
 
 
-def _load_dotenv(path: Path) -> None:
-    """Minuscule parseur .env pour éviter une dépendance supplémentaire."""
-    if not path.exists():
-        return
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        key = key.strip()
-        value = value.strip().strip('"').strip("'")
-        if key and key not in os.environ:
-            os.environ[key] = value
-
-
 def get_credentials(dotenv_path: Path | None = None) -> tuple[str, str]:
-    if dotenv_path is not None:
-        _load_dotenv(dotenv_path)
-    else:
-        _load_dotenv(Path.cwd() / ".env")
+    load_dotenv(dotenv_path if dotenv_path is not None else Path.cwd() / ".env")
     client_id = os.environ.get("FRANCE_TRAVAIL_CLIENT_ID", "").strip()
     client_secret = os.environ.get("FRANCE_TRAVAIL_CLIENT_SECRET", "").strip()
     if not client_id or not client_secret:
@@ -204,6 +190,7 @@ def parse_search_response(payload: dict[str, Any]) -> list[JobOffer]:
         try:
             mapped = map_offer(raw)
         except Exception:
+            logger.warning("offre France Travail ignorée (parsing échoué)", exc_info=True)
             continue
         if mapped is not None:
             offers.append(mapped)

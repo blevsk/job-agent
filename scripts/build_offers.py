@@ -291,8 +291,11 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
 
     # 6 : supprimer les offres à score négatif puis export
     scored = [s for s in scored if s.score >= 0]
+    sources_used = {
+        _merge_with_defaults(s, defaults).get("source", "france_travail") for s in searches
+    }
     meta = {
-        "source": "france_travail",
+        "source": next(iter(sources_used)) if len(sources_used) == 1 else "mixed",
         "searches": [
             {
                 "label": _merge_with_defaults(s, defaults).get("_label")
