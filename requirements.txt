@@ -11,5 +11,6 @@ pydantic
 rich
 httpx
 pytest
+pytest-cov
 sentence-transformers
 anthropic

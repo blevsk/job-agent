@@ -1,5 +1,7 @@
 # Job Agent
 
+[![Build Profile](https://github.com/blevsk/job-agent/actions/workflows/build-profile.yml/badge.svg)](https://github.com/blevsk/job-agent/actions/workflows/build-profile.yml) [![Refresh](https://github.com/blevsk/job-agent/actions/workflows/refresh.yml/badge.svg)](https://github.com/blevsk/job-agent/actions/workflows/refresh.yml)
+
 Automatically fetches, scores, and ranks job offers from France Travail and La Bonne Alternance for one or more candidate profiles. Results are published to a web app on GitHub Pages.
 
 ## How it works

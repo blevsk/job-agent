@@ -1,7 +1,6 @@
 import json
 from types import SimpleNamespace
 
-from src.models import JobOffer
 from src.rerank import _build_user_message, _extract_json, llm_rerank
 
 
@@ -16,10 +15,6 @@ class FakeAnthropic:
     def create(self, **kwargs):
         self.calls.append(kwargs)
         return SimpleNamespace(content=[SimpleNamespace(text=self.response_text)])
-
-
-def make_offer(id_, title="t"):
-    return JobOffer(id=id_, title=title, url=f"x/{id_}")
 
 
 def test_extract_json_handles_raw():
@@ -38,16 +33,16 @@ def test_extract_json_picks_first_object_from_chatty_response():
     assert _extract_json(payload)["ranking"][0]["id"] == "x"
 
 
-def test_build_user_message_includes_profile_and_offers():
-    offers = [make_offer("a", "Alternance"), make_offer("b", "Stage")]
+def test_build_user_message_includes_profile_and_offers(make_offer):
+    offers = [make_offer(id="a", title="Alternance"), make_offer(id="b", title="Stage")]
     msg = _build_user_message("Mon profil", offers)
     assert "Mon profil" in msg
     assert '"id": "a"' in msg
     assert '"id": "b"' in msg
 
 
-def test_llm_rerank_assigns_rank_and_reason():
-    offers = [make_offer("a"), make_offer("b"), make_offer("c")]
+def test_llm_rerank_assigns_rank_and_reason(make_offer):
+    offers = [make_offer(id="a"), make_offer(id="b"), make_offer(id="c")]
     fake = FakeAnthropic(
         json.dumps(
             {
@@ -73,24 +68,24 @@ def test_llm_rerank_assigns_rank_and_reason():
     assert fake.calls[0]["model"].startswith("claude-haiku")
 
 
-def test_llm_rerank_skips_without_client_or_key(monkeypatch):
+def test_llm_rerank_skips_without_client_or_key(monkeypatch, make_offer):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
-    offer = make_offer("a")
+    offer = make_offer(id="a")
     result = llm_rerank([offer], "profile")
     assert result[0].llm_rank is None
     assert result[0].llm_reason is None
 
 
-def test_llm_rerank_skips_empty_profile():
-    offer = make_offer("a")
+def test_llm_rerank_skips_empty_profile(make_offer):
+    offer = make_offer(id="a")
     fake = FakeAnthropic("{}")
     llm_rerank([offer], "   ", client=fake)
     assert offer.llm_rank is None
     assert fake.calls == []
 
 
-def test_llm_rerank_ignores_unknown_ids_from_llm():
-    offers = [make_offer("a"), make_offer("b")]
+def test_llm_rerank_ignores_unknown_ids_from_llm(make_offer):
+    offers = [make_offer(id="a"), make_offer(id="b")]
     fake = FakeAnthropic(
         json.dumps(
             {

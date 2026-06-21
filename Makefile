@@ -1,4 +1,4 @@
-.PHONY: test lint format build build-all watch
+.PHONY: test lint format build build-all watch coverage coverage-html
 
 test:
 	pytest -q
@@ -17,3 +17,9 @@ build-all:
 
 watch:
 	ptw -- -q --tb=short
+
+coverage:
+	pytest --cov=src --cov-report=term-missing -q
+
+coverage-html:
+	pytest --cov=src --cov-report=html -q && open htmlcov/index.html
