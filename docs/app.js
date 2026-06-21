@@ -1048,13 +1048,17 @@
 
   async function waitForOffers(profileId) {
     const deadline = Date.now() + 12 * 60 * 1000;
+    // Authentifier la requête pour éviter la limite 60 req/h de l'API GitHub non authentifiée
+    const authHeaders = { Accept: "application/vnd.github+json" };
+    if (ISSUES_TOKEN && ISSUES_TOKEN !== "REMPLACER_PAR_TON_TOKEN_ISSUES") {
+      authHeaders["Authorization"] = `Bearer ${ISSUES_TOKEN}`;
+    }
     while (Date.now() < deadline) {
       await new Promise(r => setTimeout(r, 10000));
       try {
-        // Poll l'API GitHub directement (pas de CDN) pour détecter le fichier dès qu'il est commité
         const res = await fetch(
           `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/offers.json`,
-          { headers: { Accept: "application/vnd.github+json" }, cache: "no-store" }
+          { headers: authHeaders, cache: "no-store" }
         );
         if (res.ok) return;
       } catch (_) {}
