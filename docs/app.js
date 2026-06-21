@@ -581,7 +581,21 @@ async function loadProfile(profileId) {
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
-initOnboarding(loadProfile);
+// Appelé après un rebuild pour charger les données fraîches sans passer par le CDN Pages
+function receiveOffers(pid, data) {
+  currentProfile = pid;
+  state.meta      = data.meta;
+  state.rawOffers = data.offers || [];
+  state.offers    = [...state.rawOffers, ...getManualOffers()];
+  const knownIds  = loadSet(lsKnown());
+  if (knownIds.size > 0)
+    newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));
+  saveSet(lsKnown(), new Set(state.offers.map(o => o.id)));
+  renderMeta(); renderView(); renderDashboard();
+  document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
+}
+
+initOnboarding(loadProfile, receiveOffers);
 
 fetch("profiles.json", { cache: "no-store" })
   .then(r => r.ok ? r.json() : null)

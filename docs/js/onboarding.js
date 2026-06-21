@@ -1,5 +1,5 @@
 import { LS_PROFILE, LS_PENDING } from './constants.js?v=CACHE_BUST';
-import { createIssue, waitForOffers, waitForRebuild } from './github-api.js?v=CACHE_BUST';
+import { createIssue, waitForOffers, waitForRebuild, fetchOffers } from './github-api.js?v=CACHE_BUST';
 import {
   escapeHtml, generateProfileId,
   buildProfileMd, buildSearchConfig, buildScoringConfig,
@@ -11,13 +11,15 @@ let obIsEdit          = false;
 let obFakeProgressStop = null;
 let _progressPct      = 0;
 let _onProfileReady   = null;  // callback → loadProfile(pid)
+let _onOffersData     = null;  // callback → (pid, data) utilisé après rebuild pour bypasser le CDN Pages
 
 const $overlay = () => document.getElementById("onboarding-overlay");
 const $card    = () => document.getElementById("onboarding-card");
 
-// Appelé une fois depuis app.js pour brancher le callback de fin de build
-export function init(onProfileReady) {
+// Appelé une fois depuis app.js pour brancher les callbacks de fin de build
+export function init(onProfileReady, onOffersData) {
   _onProfileReady = onProfileReady;
+  _onOffersData   = onOffersData;
 }
 
 // ── Pending build helpers ─────────────────────────────────────────────────────
@@ -293,12 +295,16 @@ async function saveProfileEdits(data) {
   });
   const issue = await createIssue(`[job-agent-rebuild] ${pid}`, issueBody);
   updateProgress(10, "Rebuild en cours…", "Workflow GitHub Actions déclenché");
-  const fakeStop = startFakeProgress(10, 92, 10 * 60 * 1000);
+  const fakeStop = startFakeProgress(10, 88, 10 * 60 * 1000);
   await waitForRebuild(issue.number);
   fakeStop();
+  // Récupérer les offres directement via l'API GitHub pour éviter le délai CDN Pages
+  updateProgress(92, "Récupération des offres…", "Chargement depuis GitHub");
+  const offersData = await fetchOffers(pid);
   updateProgress(100, "Mis à jour !", "Chargement de votre tableau…");
   await new Promise(r => setTimeout(r, 900));
   $overlay().hidden = true;
   obIsEdit = false;
-  _onProfileReady?.(pid);
+  if (_onOffersData) _onOffersData(pid, offersData);
+  else _onProfileReady?.(pid);
 }

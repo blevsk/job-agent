@@ -51,3 +51,14 @@ export async function waitForRebuild(issueNumber) {
   }
   throw new Error("Timeout : le rebuild n'a pas répondu dans les 8 minutes.");
 }
+
+// Récupère le contenu d'offers.json via l'API GitHub (pas le CDN Pages) pour éviter les délais de cache.
+export async function fetchOffers(profileId) {
+  const r = await fetch(
+    `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/offers.json`,
+    { headers: authHeaders(), cache: "no-store" }
+  );
+  if (!r.ok) throw new Error(`Impossible de lire les offres (HTTP ${r.status})`);
+  const meta = await r.json();
+  return JSON.parse(atob(meta.content.replace(/\s/g, "")));
+}
