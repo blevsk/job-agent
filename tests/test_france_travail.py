@@ -40,10 +40,7 @@ def test_alternance_inferred_from_nature_label():
 
 
 def test_normalize_contract_priorities():
-    assert (
-        _normalize_contract("CDD", "Contrat travail", alternance_flag=True)
-        == "Alternance"
-    )
+    assert _normalize_contract("CDD", "Contrat travail", alternance_flag=True) == "Alternance"
     assert _normalize_contract("CDD", "Contrat apprentissage") == "Alternance"
     assert _normalize_contract("CDD", "Contrat de professionnalisation") == "Alternance"
     assert _normalize_contract("CDI", "Contrat travail") == "CDI"

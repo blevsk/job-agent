@@ -13,17 +13,11 @@ def make(id_, title, location, posted_days_ago=5):
 
 
 def test_normalize_title_strips_gender_markers():
-    assert (
-        _normalize_title("Assistant Administratif (H/F)") == "assistant administratif"
-    )
-    assert (
-        _normalize_title("Assistant Administratif (F/H) (H/F)")
-        == "assistant administratif"
-    )
+    assert _normalize_title("Assistant Administratif (H/F)") == "assistant administratif"
+    assert _normalize_title("Assistant Administratif (F/H) (H/F)") == "assistant administratif"
     assert _normalize_title("Vendeur H/F") == "vendeur"
     assert (
-        _normalize_title("Chef de Projets Partenariats F/H (H/F)")
-        == "chef de projets partenariats"
+        _normalize_title("Chef de Projets Partenariats F/H (H/F)") == "chef de projets partenariats"
     )
 
 

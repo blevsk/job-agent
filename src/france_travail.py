@@ -22,8 +22,7 @@ import httpx
 from .models import JobOffer
 
 OAUTH_URL = (
-    "https://entreprise.francetravail.fr/connexion/oauth2/access_token"
-    "?realm=%2Fpartenaire"
+    "https://entreprise.francetravail.fr/connexion/oauth2/access_token" "?realm=%2Fpartenaire"
 )
 SEARCH_URL = "https://api.francetravail.io/partenaire/offresdemploi/v2/offres/search"
 INSEE_LOOKUP_URL = "https://api-adresse.data.gouv.fr/search/"

@@ -23,9 +23,7 @@ def test_extract_json_handles_raw():
 
 def test_extract_json_strips_code_fence():
     payload = '```json\n{"ranking": [{"id": "a", "rank": 1, "reason": "ok"}]}\n```'
-    assert _extract_json(payload) == {
-        "ranking": [{"id": "a", "rank": 1, "reason": "ok"}]
-    }
+    assert _extract_json(payload) == {"ranking": [{"id": "a", "rank": 1, "reason": "ok"}]}
 
 
 def test_extract_json_picks_first_object_from_chatty_response():

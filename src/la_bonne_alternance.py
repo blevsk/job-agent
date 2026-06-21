@@ -64,13 +64,9 @@ def get_api_key(dotenv_path: Path | None = None) -> str:
 
 def resolve_lat_lon(client: httpx.Client, location_label: str) -> tuple[float, float]:
     """Convertit un libellé de commune en (latitude, longitude) via api-adresse.data.gouv.fr."""
-    r = client.get(
-        GEOCODE_URL, params={"q": location_label, "type": "municipality", "limit": 1}
-    )
+    r = client.get(GEOCODE_URL, params={"q": location_label, "type": "municipality", "limit": 1})
     if r.status_code != 200:
-        raise LBAError(
-            f"Géocodage échoué (HTTP {r.status_code}) pour « {location_label} »"
-        )
+        raise LBAError(f"Géocodage échoué (HTTP {r.status_code}) pour « {location_label} »")
     features = r.json().get("features") or []
     if not features:
         raise LBAError(f"Aucune commune trouvée pour « {location_label} »")
@@ -181,9 +177,7 @@ def search(
             },
         )
         if r.status_code != 200:
-            raise LBAError(
-                f"Recherche LBA échouée (HTTP {r.status_code}) : {r.text[:300]}"
-            )
+            raise LBAError(f"Recherche LBA échouée (HTTP {r.status_code}) : {r.text[:300]}")
 
         offers: list[JobOffer] = []
         for raw in r.json().get("jobs") or []:

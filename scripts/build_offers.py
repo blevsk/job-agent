@@ -52,9 +52,7 @@ def _load_search_config(path: Path) -> tuple[list[dict[str, Any]], dict[str, Any
     raise ValueError(f"{path} : ni 'searches' ni 'keyword' trouvés.")
 
 
-def _merge_with_defaults(
-    search: dict[str, Any], defaults: dict[str, Any]
-) -> dict[str, Any]:
+def _merge_with_defaults(search: dict[str, Any], defaults: dict[str, Any]) -> dict[str, Any]:
     return {**defaults, **search}
 
 
@@ -99,20 +97,13 @@ def _search_lba(idx: int, params: dict[str, Any]) -> list[JobOffer]:
         return []
 
 
-def fan_out_search(
-    searches: list[dict[str, Any]], defaults: dict[str, Any]
-) -> list[JobOffer]:
+def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> list[JobOffer]:
     """Lance chaque recherche (France Travail ou La Bonne Alternance), agrège le tout."""
     all_offers: list[JobOffer] = []
     for idx, s in enumerate(searches, start=1):
         params = _merge_with_defaults(s, defaults)
         source = params.get("source", "france_travail")
-        label = (
-            params.get("_label")
-            or params.get("rome_code")
-            or params.get("keyword")
-            or source
-        )
+        label = params.get("_label") or params.get("rome_code") or params.get("keyword") or source
 
         logger.info(
             "search #%d %s (%s) — location='%s'",
@@ -165,11 +156,7 @@ def _generate_profiles_manifest() -> None:
     entries = []
     for d in sorted(p for p in profiles_root.iterdir() if p.is_dir()):
         meta_path = d / "meta.json"
-        meta = (
-            json.loads(meta_path.read_text(encoding="utf-8"))
-            if meta_path.exists()
-            else {}
-        )
+        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
         entries.append({"id": d.name, "label": meta.get("label", d.name.capitalize())})
     manifest = {"profiles": entries, "default": entries[0]["id"] if entries else None}
     out = ROOT / "docs" / "profiles.json"
@@ -179,9 +166,7 @@ def _generate_profiles_manifest() -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--profile", default=None, help="Nom du profil (dossier dans profiles/)"
-    )
+    parser.add_argument("--profile", default=None, help="Nom du profil (dossier dans profiles/)")
     parser.add_argument(
         "--all",
         dest="all_profiles",
@@ -237,14 +222,10 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
         logger.error("%s introuvable", search_cfg_path)
         return 2
 
-    profile_text = (
-        profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
-    )
+    profile_text = profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
     searches, defaults = _load_search_config(search_cfg_path)
     scoring_cfg = ScoringConfig.model_validate(_load_json(scoring_cfg_path))
-    logger.info(
-        "config : %d recherche(s), scoring via %s", len(searches), scoring_cfg_path.name
-    )
+    logger.info("config : %d recherche(s), scoring via %s", len(searches), scoring_cfg_path.name)
     if profile_text.strip():
         logger.info(
             "profil : %d caractères chargés depuis %s",
@@ -275,9 +256,7 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
             n_scored = sum(1 for o in deduped if o.semantic_score is not None)
             logger.info("semantic : %d offres enrichies", n_scored)
         except ImportError as exc:
-            logger.warning(
-                "semantic : sentence-transformers non installé (%s) — skip", exc
-            )
+            logger.warning("semantic : sentence-transformers non installé (%s) — skip", exc)
         except Exception:  # noqa: BLE001
             logger.error("semantic : erreur inattendue — skip", exc_info=True)
 
@@ -286,11 +265,7 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
 
     # 5 : re-rank LLM sur toutes les offres à score positif (skip si pas de clé)
     top_offers = [s.offer for s in scored if s.score > 0]
-    if (
-        profile_text.strip()
-        and top_offers
-        and os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    ):
+    if profile_text.strip() and top_offers and os.environ.get("ANTHROPIC_API_KEY", "").strip():
         try:
             from src.rerank import llm_rerank  # noqa: I001
 

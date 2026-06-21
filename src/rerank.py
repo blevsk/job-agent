@@ -140,12 +140,8 @@ def llm_rerank(
     for i in range(0, len(head), BATCH_SIZE):
         batch = head[i : i + BATCH_SIZE]
         try:
-            _process_batch(
-                batch, profile_text, rank_offset=i, model=model, client=client
-            )
+            _process_batch(batch, profile_text, rank_offset=i, model=model, client=client)
         except Exception:  # noqa: BLE001
-            logger.error(
-                "lot %d : erreur inattendue — skip", i // BATCH_SIZE + 1, exc_info=True
-            )
+            logger.error("lot %d : erreur inattendue — skip", i // BATCH_SIZE + 1, exc_info=True)
 
     return offers

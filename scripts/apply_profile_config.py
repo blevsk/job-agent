@@ -44,15 +44,9 @@ def main() -> int:
 
     if "poste" in data:
         meta_path = profile_dir / "meta.json"
-        meta = (
-            json.loads(meta_path.read_text(encoding="utf-8"))
-            if meta_path.exists()
-            else {}
-        )
+        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
         meta["label"] = data["poste"]
-        meta_path.write_text(
-            json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
+        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if "profileMd" in data:
         (profile_dir / "profile.md").write_text(data["profileMd"], encoding="utf-8")
@@ -69,9 +63,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    Path("/tmp/job_agent_profile.json").write_text(
-        json.dumps({"profileId": pid}), encoding="utf-8"
-    )
+    Path("/tmp/job_agent_profile.json").write_text(json.dumps({"profileId": pid}), encoding="utf-8")
     print(f"[ok] Profil {pid!r} appliqué dans {profile_dir.relative_to(ROOT)}")
     return 0
 

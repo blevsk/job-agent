@@ -36,9 +36,7 @@ def test_search_config_written(tmp_path, monkeypatch):
     cfg = {"defaults": {"location": "Lille"}, "searches": []}
     body = json.dumps({"profileId": "p3", "searchConfig": cfg})
     run(body, tmp_path, monkeypatch)
-    written = json.loads(
-        (tmp_path / "profiles" / "p3" / "search.config.json").read_text()
-    )
+    written = json.loads((tmp_path / "profiles" / "p3" / "search.config.json").read_text())
     assert written["defaults"]["location"] == "Lille"
 
 
@@ -46,9 +44,7 @@ def test_scoring_config_written(tmp_path, monkeypatch):
     cfg = {"keywords": [{"pattern": "python", "weight": 5.0}]}
     body = json.dumps({"profileId": "p4", "scoringConfig": cfg})
     run(body, tmp_path, monkeypatch)
-    written = json.loads(
-        (tmp_path / "profiles" / "p4" / "scoring.config.json").read_text()
-    )
+    written = json.loads((tmp_path / "profiles" / "p4" / "scoring.config.json").read_text())
     assert written["keywords"][0]["pattern"] == "python"
 
 

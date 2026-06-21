@@ -25,9 +25,7 @@ _DEPARTMENT_PREFIX = re.compile(r"^\s*\d{2,3}\s*-\s*", re.UNICODE)
 
 
 def _strip_accents(text: str) -> str:
-    return "".join(
-        c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c)
-    )
+    return "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
 
 
 def _normalize_title(title: str) -> str:

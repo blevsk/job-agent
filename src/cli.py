@@ -14,17 +14,13 @@ from .france_travail import FranceTravailError, MissingCredentialsError
 from .models import ScoringConfig
 from .scoring import score_offers
 
-app = typer.Typer(
-    add_completion=False, help="Recherche et scoring d'annonces France Travail."
-)
+app = typer.Typer(add_completion=False, help="Recherche et scoring d'annonces France Travail.")
 console = Console()
 
 
 def _load_config(path: Path | None) -> ScoringConfig:
     if path is None:
-        console.print(
-            "[yellow]Aucune config de scoring fournie — valeurs par défaut.[/yellow]"
-        )
+        console.print("[yellow]Aucune config de scoring fournie — valeurs par défaut.[/yellow]")
         return ScoringConfig()
     if not path.exists():
         console.print(f"[red]Config introuvable : {path}[/red]")
@@ -112,9 +108,7 @@ def search(
         "radius_km": radius,
         "contract_type": contract_type,
         "published_within_days": published_within,
-        "scraped_at": datetime.now(timezone.utc)
-        .astimezone()
-        .isoformat(timespec="seconds"),
+        "scraped_at": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
     }
     export_json(scored, output, meta)
     console.print(f"[green]✓ JSON écrit dans {output}[/green]")
