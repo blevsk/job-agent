@@ -29,8 +29,11 @@ from src import france_travail, la_bonne_alternance  # noqa: E402
 from src.dedup import dedupe_offers  # noqa: E402
 from src.exporter import export_json  # noqa: E402
 from src.la_bonne_alternance import MissingLBAKeyError  # noqa: E402
+from src.logger import setup_logging  # noqa: E402
 from src.models import JobOffer, ScoringConfig  # noqa: E402
 from src.scoring import score_offers  # noqa: E402
+
+logger = setup_logging()
 
 
 
@@ -58,7 +61,7 @@ def _search_france_travail(idx: int, params: dict[str, Any]) -> list[JobOffer]:
     rome_code = params.get("rome_code") or None
     location  = params.get("location")
     if not location or (not keyword and not rome_code):
-        print(f"[skip] search #{idx} : location/keyword/rome_code manquants")
+        logger.warning("search #%d : location/keyword/rome_code manquants — skip", idx)
         return []
     return france_travail.search(
         location=location,
@@ -69,14 +72,14 @@ def _search_france_travail(idx: int, params: dict[str, Any]) -> list[JobOffer]:
         type_contrat=params.get("contract_type"),
         published_within_days=params.get("published_within_days"),
         alternance_only=bool(params.get("alternance_only", False)),
-        on_page=lambda p, f, n, _idx=idx: print(f"  [#{_idx}] page {p} → {f} offres ({n} nouvelles)"),
+        on_page=lambda p, f, n, _idx=idx: logger.debug("search #%d page %d → %d offres (%d nouvelles)", _idx, p, f, n),
     )
 
 
 def _search_lba(idx: int, params: dict[str, Any]) -> list[JobOffer]:
     location = params.get("location")
     if not location:
-        print(f"[skip] search #{idx} LBA : location manquante")
+        logger.warning("search #%d LBA : location manquante — skip", idx)
         return []
     rome_codes = params.get("rome_codes") or None
     try:
@@ -88,7 +91,7 @@ def _search_lba(idx: int, params: dict[str, Any]) -> list[JobOffer]:
             max_results=params.get("max_results", 150),
         )
     except MissingLBAKeyError:
-        print(f"  [#{idx}] API_APPRENTISSAGE_KEY absente — skip LBA")
+        logger.warning("search #%d LBA : API_APPRENTISSAGE_KEY absente — skip", idx)
         return []
 
 
@@ -100,16 +103,16 @@ def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> 
         source = params.get("source", "france_travail")
         label  = params.get("_label") or params.get("rome_code") or params.get("keyword") or source
 
-        print(f"[search #{idx}] {label} ({source}) — location='{params.get('location')}'")
+        logger.info("search #%d %s (%s) — location='%s'", idx, label, source, params.get("location"))
         if source == "france_travail":
             offers = _search_france_travail(idx, params)
         elif source == "la_bonne_alternance":
             offers = _search_lba(idx, params)
         else:
-            print(f"[skip] source inconnue : {source}")
+            logger.warning("search #%d source inconnue : %s — skip", idx, source)
             continue
 
-        print(f"  [#{idx}] → {len(offers)} offres")
+        logger.info("search #%d → %d offres", idx, len(offers))
         all_offers.extend(offers)
     return all_offers
 
@@ -125,14 +128,14 @@ def _resolve_profile(name: str | None) -> tuple[str, Path]:
     if name:
         d = profiles_root / name
         if not d.is_dir():
-            print(f"[error] Profil '{name}' introuvable dans {profiles_root}", file=sys.stderr)
+            logger.error("profil '%s' introuvable dans %s", name, profiles_root)
             sys.exit(2)
         return name, d
 
     # Auto-détection : liste des sous-dossiers
     dirs = sorted(d for d in profiles_root.iterdir() if d.is_dir())
     if not dirs:
-        print(f"[error] Aucun profil trouvé dans {profiles_root}", file=sys.stderr)
+        logger.error("aucun profil trouvé dans %s", profiles_root)
         sys.exit(2)
     return dirs[0].name, dirs[0]
 
@@ -150,7 +153,7 @@ def _generate_profiles_manifest() -> None:
     manifest = {"profiles": entries, "default": entries[0]["id"] if entries else None}
     out = ROOT / "docs" / "profiles.json"
     out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[manifest] {len(entries)} profil(s) → {out.relative_to(ROOT)}")
+    logger.info("manifest : %d profil(s) → %s", len(entries), out.relative_to(ROOT))
 
 
 def main() -> int:
@@ -163,15 +166,15 @@ def main() -> int:
     if args.all_profiles:
         profiles_root = ROOT / "profiles"
         if not profiles_root.exists():
-            print("[error] Dossier profiles/ introuvable", file=sys.stderr)
+            logger.error("dossier profiles/ introuvable")
             return 2
         dirs = sorted(d for d in profiles_root.iterdir() if d.is_dir())
         if not dirs:
-            print("[error] Aucun profil dans profiles/", file=sys.stderr)
+            logger.error("aucun profil dans profiles/")
             return 2
         exit_code = 0
         for d in dirs:
-            print(f"\n{'='*50}\n[profile] {d.name}\n{'='*50}")
+            logger.info("--- profil : %s ---", d.name)
             code = _build_profile(d.name, d)
             if code != 0:
                 exit_code = code
@@ -185,7 +188,7 @@ def main() -> int:
 
 
 def _build_profile(profile_name: str, profile_dir: Path) -> int:
-    print(f"[profile] {profile_name} ({profile_dir.relative_to(ROOT)})")
+    logger.info("profil : %s (%s)", profile_name, profile_dir.relative_to(ROOT))
 
     # Chemins spécifiques au profil
     if profile_dir == ROOT:
@@ -204,38 +207,38 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
         output.parent.mkdir(parents=True, exist_ok=True)
 
     if not search_cfg_path.exists():
-        print(f"[error] {search_cfg_path} introuvable.", file=sys.stderr)
+        logger.error("%s introuvable", search_cfg_path)
         return 2
 
     profile_text = profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
     searches, defaults = _load_search_config(search_cfg_path)
     scoring_cfg = ScoringConfig.model_validate(_load_json(scoring_cfg_path))
-    print(f"[config] {len(searches)} recherche(s), scoring via {scoring_cfg_path.name}")
+    logger.info("config : %d recherche(s), scoring via %s", len(searches), scoring_cfg_path.name)
     if profile_text.strip():
-        print(f"[profile] {len(profile_text)} caractères chargés depuis {profile_path.name}")
+        logger.info("profil : %d caractères chargés depuis %s", len(profile_text), profile_path.name)
     else:
-        print("[profile] aucun profil — semantic et re-rank désactivés")
+        logger.warning("profil vide — semantic et re-rank désactivés")
 
     # 1 + 2 : fan-out + dédup
     raw_offers = fan_out_search(searches, defaults)
-    print(f"[fetched] {len(raw_offers)} offres brutes (toutes recherches confondues)")
+    logger.info("fetch : %d offres brutes", len(raw_offers))
     deduped = dedupe_offers(raw_offers)
     if len(deduped) < len(raw_offers):
-        print(f"[dedup] -{len(raw_offers) - len(deduped)} doublons → {len(deduped)} uniques")
+        logger.info("dedup : -%d doublons → %d uniques", len(raw_offers) - len(deduped), len(deduped))
 
     # 3 : embeddings sémantiques (skip si pas de profil)
     if profile_text.strip() and deduped:
         try:
             from src.semantic import enrich_with_semantic  # noqa: I001
 
-            print(f"[semantic] embeddings sur {len(deduped)} offres…")
+            logger.info("semantic : embeddings sur %d offres…", len(deduped))
             enrich_with_semantic(deduped, profile_text)
             n_scored = sum(1 for o in deduped if o.semantic_score is not None)
-            print(f"[semantic] {n_scored} offres enrichies")
+            logger.info("semantic : %d offres enrichies", n_scored)
         except ImportError as exc:
-            print(f"[semantic] sentence-transformers non installé ({exc}) — skip")
-        except Exception as exc:  # noqa: BLE001
-            print(f"[semantic] erreur : {exc} — skip")
+            logger.warning("semantic : sentence-transformers non installé (%s) — skip", exc)
+        except Exception:  # noqa: BLE001
+            logger.error("semantic : erreur inattendue — skip", exc_info=True)
 
     # 4 : scoring (inclut la composante semantic via semantic_weight)
     scored = score_offers(deduped, scoring_cfg)
@@ -246,10 +249,10 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
         try:
             from src.rerank import llm_rerank  # noqa: I001
 
-            print(f"[rerank] LLM Haiku sur {len(top_offers)} offres à score positif…")
+            logger.info("rerank : LLM Haiku sur %d offres…", len(top_offers))
             llm_rerank(top_offers, profile_text, top_n=len(top_offers))
             n_ranked = sum(1 for o in top_offers if o.llm_rank is not None)
-            print(f"[rerank] {n_ranked} offres rangées par le LLM")
+            logger.info("rerank : %d offres rangées", n_ranked)
             # Re-trier : les offres avec llm_rank passent en tête, puis tri par score
             scored.sort(
                 key=lambda s: (
@@ -259,12 +262,12 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
                 )
             )
         except ImportError as exc:
-            print(f"[rerank] anthropic non installé ({exc}) — skip")
-        except Exception as exc:  # noqa: BLE001
-            print(f"[rerank] erreur : {exc} — skip")
+            logger.warning("rerank : anthropic non installé (%s) — skip", exc)
+        except Exception:  # noqa: BLE001
+            logger.error("rerank : erreur inattendue — skip", exc_info=True)
     else:
         if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
-            print("[rerank] ANTHROPIC_API_KEY absent — skip")
+            logger.warning("rerank : ANTHROPIC_API_KEY absent — skip")
 
     # 6 : supprimer les offres à score négatif puis export
     scored = [s for s in scored if s.score >= 0]
@@ -284,7 +287,7 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
         "semantic_active": any(s.offer.semantic_score is not None for s in scored),
     }
     export_json(scored, output, meta)
-    print(f"[ok] {len(scored)} offres scorées → {output.relative_to(ROOT)}")
+    logger.info("ok : %d offres scorées → %s", len(scored), output.relative_to(ROOT))
     return 0
 
 

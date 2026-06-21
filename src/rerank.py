@@ -7,11 +7,14 @@ classement ordonné (rang 1 = meilleure offre) avec une justification courte.
 from __future__ import annotations
 
 import json
+import logging
 import os
 import textwrap
 from typing import Any
 
 from .models import JobOffer
+
+logger = logging.getLogger(__name__)
 
 MODEL = "claude-haiku-4-5-20251001"
 SYSTEM_PROMPT = textwrap.dedent("""
@@ -135,7 +138,7 @@ def llm_rerank(
         batch = head[i : i + BATCH_SIZE]
         try:
             _process_batch(batch, profile_text, rank_offset=i, model=model, client=client)
-        except Exception as exc:  # noqa: BLE001
-            print(f"[rerank] erreur lot {i // BATCH_SIZE + 1} : {exc} — skip")
+        except Exception:  # noqa: BLE001
+            logger.error("lot %d : erreur inattendue — skip", i // BATCH_SIZE + 1, exc_info=True)
 
     return offers
