@@ -1054,7 +1054,7 @@
         if (res.ok) return;
       } catch (_) {}
     }
-    throw new Error("Les offres ne sont pas disponibles après 6 minutes");
+    throw new Error("Les offres ne sont pas disponibles après 12 minutes");
   }
 
   const LS_PENDING = "job-agent:pending-build";
