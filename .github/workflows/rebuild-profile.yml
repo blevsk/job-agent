@@ -32,13 +32,39 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Extract profile ID
+      - name: Apply config from issue and extract profile ID
         id: pid
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
-          PID=$(python3 -c "import os,json; print(json.loads(os.environ['ISSUE_BODY'])['profileId'])")
-          echo "profile_id=$PID" >> $GITHUB_OUTPUT
+          python3 - <<'EOF'
+import os, json
+from pathlib import Path
+
+data = json.loads(os.environ['ISSUE_BODY'])
+pid  = data['profileId']
+
+profile_dir = Path('profiles') / pid
+profile_dir.mkdir(parents=True, exist_ok=True)
+
+if 'profileMd' in data:
+    (profile_dir / 'profile.md').write_text(data['profileMd'], encoding='utf-8')
+if 'searchConfig' in data:
+    (profile_dir / 'search.config.json').write_text(
+        json.dumps(data['searchConfig'], ensure_ascii=False, indent=2), encoding='utf-8')
+if 'scoringConfig' in data:
+    (profile_dir / 'scoring.config.json').write_text(
+        json.dumps(data['scoringConfig'], ensure_ascii=False, indent=2), encoding='utf-8')
+if 'poste' in data:
+    meta_path = profile_dir / 'meta.json'
+    meta = json.loads(meta_path.read_text(encoding='utf-8')) if meta_path.exists() else {}
+    meta['label'] = data['poste']
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')
+
+with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+    f.write(f'profile_id={pid}\n')
+print(f'[ok] Config applied for profile {pid}')
+EOF
 
       - name: Build offers
         env:

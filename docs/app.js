@@ -1113,20 +1113,10 @@
   async function showEditProfile() {
     const pid = currentProfile;
     if (!pid) return;
-    let token = localStorage.getItem(LS_TOKEN);
-    if (!token) {
-      const entered = prompt(
-        "Aucun token de synchronisation trouvé.\n\n" +
-        "Crée un Personal Access Token GitHub (classic ou fine-grained) avec la permission « Contents: Read and write » sur ce repo, puis colle-le ici :",
-        ""
-      );
-      if (!entered?.trim()) return;
-      token = entered.trim();
-      localStorage.setItem(LS_TOKEN, token);
-    }
     try {
       const base = `https://raw.githubusercontent.com/${GH_REPO}/main`;
-      const [searchCfg, scoringCfg, profileMdText] = await Promise.all([
+      const [meta, searchCfg, scoringCfg, profileMdText] = await Promise.all([
+        fetch(`${base}/profiles/${pid}/meta.json`, { cache: "no-store" }).then(r => r.ok ? r.json() : {}),
         fetch(`${base}/profiles/${pid}/search.config.json`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }),
         fetch(`${base}/profiles/${pid}/scoring.config.json`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }),
         fetch(`${base}/profiles/${pid}/profile.md`, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.text(); }),
@@ -1138,15 +1128,15 @@
       const pwdays = searchCfg.defaults?.published_within_days;
       obData = {
         profileId: pid,
-        poste:          searchCfg.searches?.[0]?.keyword || "",
-        ville:          searchCfg.defaults?.location || "",
-        rayon:          searchCfg.defaults?.radius_km || 25,
+        poste:           meta.label || searchCfg.searches?.[0]?.keyword || "",
+        ville:           searchCfg.defaults?.location || "",
+        rayon:           searchCfg.defaults?.radius_km || 25,
         contrat,
-        fraicheur:      pwdays ? String(pwdays) : "",
-        pref_remote:    prefs.remote     ? "on" : "",
-        pref_no_interim: prefs.no_interim ? "on" : "",
-        pref_no_junior: prefs.no_junior  ? "on" : "",
-        profil:         profileMdText.match(/## À propos\n\n([\s\S]*)/)?.[1]?.trim() || "",
+        fraicheur:       pwdays ? String(pwdays) : "",
+        pref_remote:     prefs.remote      ? "on" : "",
+        pref_no_interim: prefs.no_interim  ? "on" : "",
+        pref_no_junior:  prefs.no_junior   ? "on" : "",
+        profil:          profileMdText.match(/## À propos\n\n([\s\S]*)/)?.[1]?.trim() || "",
       };
       obIsEdit = true;
       $obOverlay.hidden = false;
@@ -1158,23 +1148,23 @@
 
   async function saveProfileEdits(data) {
     const pid = data.profileId;
-    const token = localStorage.getItem(LS_TOKEN);
-    if (!token) throw new Error("Token de synchronisation non configuré. Rechargez la page.");
-    updateProgress(5, "Mise à jour de la configuration…", "profile.md");
-    await ghUpdateFile(`profiles/${pid}/profile.md`, buildProfileMd(data), token);
-    updateProgress(10, "Mise à jour de la configuration…", "search.config.json");
-    await ghUpdateFile(`profiles/${pid}/search.config.json`, JSON.stringify(buildSearchConfig(data), null, 2), token);
-    updateProgress(14, "Mise à jour de la configuration…", "scoring.config.json");
-    await ghUpdateFile(`profiles/${pid}/scoring.config.json`, JSON.stringify(buildScoringConfig(data), null, 2), token);
-    updateProgress(15, "Rebuild en cours…", "Déclenchement du workflow");
+    updateProgress(5, "Envoi des modifications…", "Création de l'issue GitHub");
+    const issueBody = JSON.stringify({
+      profileId:    pid,
+      poste:        data.poste,
+      profileMd:    buildProfileMd(data),
+      searchConfig: buildSearchConfig(data),
+      scoringConfig: buildScoringConfig(data),
+    });
     const r = await fetch(`https://api.github.com/repos/${GH_REPO}/issues`, {
       method: "POST",
       headers: { Authorization: `Bearer ${ISSUES_TOKEN}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
-      body: JSON.stringify({ title: `[job-agent-rebuild] ${pid}`, body: JSON.stringify({ profileId: pid }) }),
+      body: JSON.stringify({ title: `[job-agent-rebuild] ${pid}`, body: issueBody }),
     });
     if (!r.ok) throw new Error("Impossible de déclencher le rebuild");
     const { number: issueNumber } = await r.json();
-    const fakeStop = startFakeProgress(15, 92, 10 * 60 * 1000);
+    updateProgress(10, "Rebuild en cours…", "Workflow GitHub Actions déclenché");
+    const fakeStop = startFakeProgress(10, 92, 10 * 60 * 1000);
     await waitForRebuild(issueNumber);
     fakeStop();
     updateProgress(100, "Mis à jour !", "Chargement de votre tableau…");
@@ -1184,31 +1174,7 @@
     loadProfile(pid);
   }
 
-  async function pollForTrackingToken(issueNumber) {
-    const deadline = Date.now() + 12 * 60 * 1000;
-    while (Date.now() < deadline) {
-      await new Promise(r => setTimeout(r, 5000));
-      try {
-        const r = await fetch(
-          `https://api.github.com/repos/${GH_REPO}/issues/${issueNumber}/comments`,
-          { headers: { Authorization: `Bearer ${ISSUES_TOKEN}`, Accept: "application/vnd.github+json" } }
-        );
-        if (!r.ok) continue;
-        const comments = await r.json();
-        const hit = comments.find(c => c.body?.startsWith("TRACKING_TOKEN:"));
-        if (hit) {
-          const token = hit.body.replace("TRACKING_TOKEN:", "").trim();
-          if (token) {
-            localStorage.setItem(LS_TOKEN, token);
-            fetchFromGitHub();
-            return;
-          }
-        }
-      } catch (_) {}
-    }
-  }
-
-  async function startCreation(data) {
+async function startCreation(data) {
     const pid      = data.profileId;
     currentProfile = pid;
     localStorage.setItem(LS_PROFILE, pid);
@@ -1244,12 +1210,8 @@
         const issueData = await r.json();
         const issueNumber = issueData.number;
         setPendingBuild({ profileId: pid, poste: data.poste, issueNumber });
-        // Lance le polling du token en arrière-plan (non bloquant)
-        pollForTrackingToken(issueNumber).catch(() => {});
       } else {
-        // Reprise après rechargement : relancer le polling si on a le numéro d'issue
         const pb = getPendingBuild();
-        if (pb?.issueNumber) pollForTrackingToken(pb.issueNumber).catch(() => {});
       }
 
       updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
