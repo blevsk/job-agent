@@ -3,6 +3,14 @@ import { escapeHtml, fmtDate, fmtAge, fmtStatusDate }               from './js/c
 import { init as initOnboarding, showOnboarding, showEditProfile,
          showProgressState, resumeBuild }                            from './js/onboarding.js?v=CACHE_BUST';
 
+// ── Reset localStorage (param ?reset pour tester proprement) ─────────────────
+if (new URLSearchParams(location.search).has('reset')) {
+  Object.keys(localStorage)
+    .filter(k => k.startsWith('job-agent:'))
+    .forEach(k => localStorage.removeItem(k));
+  location.replace(location.pathname + location.search.replace(/[?&]reset/, '').replace(/^&/, '?'));
+}
+
 // ── App state ─────────────────────────────────────────────────────────────────
 
 let currentProfile = new URLSearchParams(location.search).get("profile")
