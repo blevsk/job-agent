@@ -7,7 +7,7 @@ CPU friendly, rapide). Téléchargé à la 1re utilisation et caché dans
 
 from __future__ import annotations
 
-from typing import Protocol
+from typing import Any, Protocol, cast
 
 from .models import JobOffer
 
@@ -18,7 +18,7 @@ class EmbeddingModel(Protocol):
     """Interface minimale qu'on attend d'un encoder (compatible avec sentence-transformers
     et avec n'importe quel mock pour les tests)."""
 
-    def encode(self, texts: list[str], **kwargs) -> object: ...
+    def encode(self, texts: list[str], **kwargs) -> Any: ...
 
 
 def load_default_model(name: str = DEFAULT_MODEL) -> EmbeddingModel:
@@ -26,7 +26,7 @@ def load_default_model(name: str = DEFAULT_MODEL) -> EmbeddingModel:
     (évite de pénaliser les tests qui n'en ont pas besoin)."""
     from sentence_transformers import SentenceTransformer  # noqa: I001
 
-    return SentenceTransformer(name)
+    return cast(EmbeddingModel, SentenceTransformer(name))
 
 
 def _offer_to_text(offer: JobOffer) -> str:

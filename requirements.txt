@@ -12,5 +12,7 @@ rich
 httpx
 pytest
 pytest-cov
+pytest-randomly
+pyright
 sentence-transformers
 anthropic
