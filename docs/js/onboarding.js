@@ -1,4 +1,4 @@
-import { LS_PROFILE, LS_PENDING } from './constants.js?v=CACHE_BUST';
+import { GH_REPO, LS_PROFILE, LS_PENDING } from './constants.js?v=CACHE_BUST';
 import { createIssue, waitForOffers, waitForRebuild, fetchOffers } from './github-api.js?v=CACHE_BUST';
 import {
   escapeHtml, generateProfileId,
@@ -206,7 +206,7 @@ export function showOnboarding() {
 
 export async function showEditProfile(pid) {
   try {
-    const base = `https://raw.githubusercontent.com/blevsk/job-agent/main`;
+    const base = `https://raw.githubusercontent.com/${GH_REPO}/main`;
     const [meta, searchCfg, scoringCfg, profileMdText] = await Promise.all([
       fetch(`${base}/profiles/${pid}/meta.json`,           { cache: "no-store" }).then(r => r.ok ? r.json() : {}),
       fetch(`${base}/profiles/${pid}/search.config.json`,  { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(); return r.json(); }),
