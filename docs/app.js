@@ -1049,9 +1049,13 @@
   async function waitForOffers(profileId) {
     const deadline = Date.now() + 12 * 60 * 1000;
     while (Date.now() < deadline) {
-      await new Promise(r => setTimeout(r, 15000));
+      await new Promise(r => setTimeout(r, 10000));
       try {
-        const res = await fetch(`${profileId}/offers.json?_=${Date.now()}`, { cache: "no-store" });
+        // Poll l'API GitHub directement (pas de CDN) pour détecter le fichier dès qu'il est commité
+        const res = await fetch(
+          `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/offers.json`,
+          { headers: { Accept: "application/vnd.github+json" }, cache: "no-store" }
+        );
         if (res.ok) return;
       } catch (_) {}
     }
