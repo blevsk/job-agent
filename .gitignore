@@ -28,9 +28,8 @@ __pycache__/
 
 .DS_Store
 
-# Claude Code (settings locaux, mémoire, hooks — hors commands et CLAUDE.md qui sont partagés)
+# Claude Code (settings locaux, mémoire, hooks — hors commands qui sont partagés)
 .claude/*
-!.claude/CLAUDE.md
 !.claude/commands/
 !.claude/commands/**
 
