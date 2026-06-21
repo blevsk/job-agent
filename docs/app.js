@@ -1113,10 +1113,16 @@
   async function showEditProfile() {
     const pid = currentProfile;
     if (!pid) return;
-    const token = localStorage.getItem(LS_TOKEN);
+    let token = localStorage.getItem(LS_TOKEN);
     if (!token) {
-      alert("Token de synchronisation non trouvé. Rechargez la page pour le récupérer automatiquement.");
-      return;
+      const entered = prompt(
+        "Aucun token de synchronisation trouvé.\n\n" +
+        "Crée un Personal Access Token GitHub (classic ou fine-grained) avec la permission « Contents: Read and write » sur ce repo, puis colle-le ici :",
+        ""
+      );
+      if (!entered?.trim()) return;
+      token = entered.trim();
+      localStorage.setItem(LS_TOKEN, token);
     }
     try {
       const base = `https://raw.githubusercontent.com/${GH_REPO}/main`;

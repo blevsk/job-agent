@@ -99,7 +99,9 @@ jobs:
             "import json,sys; print(json.load(sys.stdin).get('token') or '')" 2>/dev/null || echo "")
 
           if [ -z "$TRACKING_TOKEN" ]; then
-            echo "Création du token échouée (PAT_MASTER insuffisant ?)."
+            echo "Création du token échouée. Réponse API :"
+            echo "$RESPONSE" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('message') or d)" 2>/dev/null || echo "$RESPONSE"
+            echo "→ PAT_MASTER doit être un classic PAT avec scope 'admin:personal_access_token'."
             exit 0
           fi
 
