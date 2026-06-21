@@ -9,8 +9,16 @@
   },
   "searches": [
     {
-      "keyword": "Architecte/Ingénieur Infrastructure et Réseau",
-      "_label": "Architecte/Ingénieur Infrastructure et Réseau"
+      "keyword": "Architecte",
+      "_label": "Architecte"
+    },
+    {
+      "keyword": "Ingénieur Infrastructure",
+      "_label": "Ingénieur Infrastructure"
+    },
+    {
+      "keyword": "Réseau",
+      "_label": "Réseau"
     }
   ]
 }

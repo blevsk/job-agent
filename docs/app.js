@@ -1006,7 +1006,11 @@
 
   function buildSearchConfig(d) {
     const isAlternance = d.contrat === "Alternance";
-    const searches = [{ keyword: d.poste, "_label": d.poste }];
+    // Split sur "/" et " et " : France Travail fait un AND sur tous les mots, donc les longs keywords retournent 0
+    const keywords = [...new Set(
+      d.poste.split("/").flatMap(part => part.split(/ et /i)).map(k => k.trim()).filter(Boolean)
+    )];
+    const searches = keywords.map(kw => ({ keyword: kw, "_label": kw }));
     if (isAlternance) {
       searches.push({ source: "la_bonne_alternance", "_label": `La Bonne Alternance — ${d.poste}` });
     }
