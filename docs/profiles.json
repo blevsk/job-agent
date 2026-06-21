@@ -1,9 +1,1 @@
-{
-  "profiles": [
-    {
-      "id": "0f93bb9c28",
-      "label": "Architecte/Ingénieur Infrastructure et Réseau"
-    }
-  ],
-  "default": "0f93bb9c28"
-}
+{"profiles":[],"default":null}
