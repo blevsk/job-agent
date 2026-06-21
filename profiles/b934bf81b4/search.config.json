@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "location": "Lille",
+    "radius_km": 25,
+    "max_results": 150,
+    "published_within_days": null,
+    "alternance_only": false,
+    "contract_type": "CDI"
+  },
+  "searches": [
+    {
+      "keyword": "Architecte/Ingénieur Infrastructure et Réseau",
+      "_label": "Architecte/Ingénieur Infrastructure et Réseau"
+    }
+  ]
+}
