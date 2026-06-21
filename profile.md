@@ -39,3 +39,4 @@ accessible en transport en commun** (Lille / Villeneuve-d'Ascq / Roubaix et alen
 - Activités impliquant des gestes répétitifs ou une sollicitation importante du
   bras gauche.
 - Postes demandant des déplacements fréquents dans les escaliers.
+ 
