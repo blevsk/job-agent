@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: build-profile-${{ github.event.issue.number }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:

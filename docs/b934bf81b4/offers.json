@@ -21,11 +21,7 @@
         "location": "Lille"
       }
     ],
-<<<<<<< Updated upstream
     "scraped_at": "2026-06-21T12:58:51+00:00",
-=======
-    "scraped_at": "2026-06-21T12:59:05+00:00",
->>>>>>> Stashed changes
     "rerank_active": true,
     "semantic_active": true,
     "total": 110
@@ -42,76 +38,20 @@
       "snippet": "Nous recherchons un Ingénieur Systèmes, Réseaux et Cybersécurité pour notre partenaire, un groupe multi-site en Europe comptant plus de 250 collaborateurs. Rattaché au Responsable SI, vous travaillerez sur les projets liés à l'infrastructure informatique ainsi qu'à la cybersécurité. Les missions sont les suivantes : Auditer l'infrastructure Identifier des améliorations et des projets à mener Cons…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4067301",
       "rome_code": "M1884",
-      "semantic_score": 0.6172293424606323,
+      "semantic_score": 0.6172294020652771,
       "llm_rank": 1,
-<<<<<<< Updated upstream
       "llm_reason": "Ingénieur systèmes réseaux et cybersécurité à Lille, CDI, projets infrastructure IT alignés parfaitement.",
       "score": 20.406752824783325,
-=======
-      "llm_reason": "Ingénieur systèmes réseaux cybersécurité en CDI à Lille, alignement parfait avec expertise et ambition managériale.",
-      "score": 20.406752109527588,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 7.406752109527588
+        "semantic": 7.406752824783325
       }
     },
     {
-<<<<<<< Updated upstream
-=======
-      "id": "4007886",
-      "title": "Ingénieur Avant-Vente Infrastructure & Sécurité (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 2,
-      "snippet": "Intégrateur de solutions IT, notre client conçoit, déploie et sécurise les infrastructures de ses clients : datacenter, virtualisation, réseau, mobilité et cybersécurité. Ses équipes transforment au quotidien des enjeux techniques complexes en solutions concrètes, fiables et durables, pour des entreprises de toutes tailles.Ce qui l'anime : la proximité client, l'exigence technique, l'esprit d'équ…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007886",
-      "rome_code": "H2404",
-      "semantic_score": 0.66938316822052,
-      "llm_rank": 2,
-      "llm_reason": "Ingénieur avant-vente infrastructure sécurité à Lille, valorise expertise technique et approche projet proche du profil.",
-      "score": 21.03259801864624,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 8.03259801864624
-      }
-    },
-    {
-      "id": "209MYMD",
-      "title": "Lead Technique Réseau Cloud (H/F)",
-      "company": "AK RECRUTEMENT",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 60000.0 Euros à 65000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 11,
-      "snippet": "Notre client est une grande enseigne spécialisée dans la vente d'équipements sportifs. Au sein de l'équipe réseau combinant expertise réseau et pratiques DevOps. Vous participez à la rationalisation des opérations, le renforcement de l'automatisation, et la livraison des services réseau fiables, sécurisés et scalables. Cette année, l'entreprise s'engage à transformer leur backbone réseau vers un…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209MYMD",
-      "rome_code": "M1860",
-      "semantic_score": 0.48439547419548035,
-      "llm_rank": 3,
-      "llm_reason": "Lead technique réseau cloud à Lille en CDI, combine expertise réseau, DevOps et ambitions d'encadrement technique.",
-      "score": 18.812745690345764,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.812745690345764
-      }
-    },
-    {
->>>>>>> Stashed changes
       "id": "3605511",
       "title": "Referent Infrastructure & Securite H/F",
       "company": "Le CabRH",
@@ -122,24 +62,16 @@
       "snippet": "POSTE : Referent Infrastructure & Securite H/F DESCRIPTION : Rattaché au Responsable Informatique, vous intervenez comme référent technique sur les sujets d'infrastructures, d'architecture des systèmes d'information et de cybersécurité. Au sein d'une équipe informatique à taille humaine, vous participez à la structuration et à l'évolution du système d'information dans un environnement multi-sites…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3605511",
       "rome_code": "F1111",
-<<<<<<< Updated upstream
       "semantic_score": 0.6622534990310669,
       "llm_rank": 4,
       "llm_reason": "Référent infrastructure et sécurité à Seclin près Lille, CDI, rôle technique avec responsabilité sur infrastructure.",
       "score": 18.947041988372803,
-=======
-      "semantic_score": 0.6622534394264221,
-      "llm_rank": 4,
-      "llm_reason": "Référent infrastructure sécurité proche Lille (Seclin), rôle technique avec dimension managériale recherchée.",
-      "score": 18.947041273117065,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 7.947041988372803
       }
     },
@@ -189,9 +121,6 @@
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 7.519623756408691
-=======
-        "semantic": 7.947041273117065
->>>>>>> Stashed changes
       }
     },
     {
@@ -206,13 +135,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3874525",
       "rome_code": "M1802",
       "semantic_score": 0.5488443374633789,
-<<<<<<< Updated upstream
       "llm_rank": 7,
       "llm_reason": "Ingénieur système à Lezennes proche Lille, CDI, infrastructure systèmes mais sans spécialité réseau et architecture.",
-=======
-      "llm_rank": 5,
-      "llm_reason": "Ingénieur système à Lezennes en CDI, MCO/évolution infrastructures proche du contexte opérationnel attendu.",
->>>>>>> Stashed changes
       "score": 17.586132049560547,
       "score_breakdown": {
         "keywords": 0.0,
@@ -224,33 +148,6 @@
       }
     },
     {
-<<<<<<< Updated upstream
-=======
-      "id": "3208616",
-      "title": "Ingénieur réseaux H/F",
-      "company": "Experis France",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 45000.0 Euros à 55000.0 Euros",
-      "posted_days_ago": 22,
-      "snippet": "Ingénieur réseaux H/F - Lille Dans le cadre de projets d'évolution et d'harmonisation des infrastructures réseau de ses établissements, nous recherchons un(e) Ingénieur / Administrateur Réseau orienté(e) intégration technique terrain. La mission s'inscrit dans un contexte opérationnel, avec un fort besoin d'expertise technique et d'autonomie sur le déploiement des solutions réseau. Vos missions *…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3208616",
-      "rome_code": "M1802",
-      "semantic_score": 0.6465120315551758,
-      "llm_rank": 6,
-      "llm_reason": "Ingénieur réseaux Lille CDI, intégration technique terrain, mais offre plutôt junior que profil senior attendu.",
-      "score": 17.75814437866211,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 7.758144378662109
-      }
-    },
-    {
->>>>>>> Stashed changes
       "id": "3740018",
       "title": "Ingénieur / Ingénieure validation réseaux de télécoms (H/F)",
       "company": null,
@@ -262,13 +159,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3740018",
       "rome_code": "M1804",
       "semantic_score": 0.5268310904502869,
-<<<<<<< Updated upstream
       "llm_rank": 8,
       "llm_reason": "Ingénieur validation réseaux télécoms à Lambersart, CDI, spécialité télécoms mais validation plutôt qu'architecture.",
-=======
-      "llm_rank": 7,
-      "llm_reason": "Ingénieur validation réseaux télécoms Lambersart, approche réseau pertinente mais éloignement géographique léger.",
->>>>>>> Stashed changes
       "score": 17.321973085403442,
       "score_breakdown": {
         "keywords": 0.0,
@@ -280,33 +172,6 @@
       }
     },
     {
-<<<<<<< Updated upstream
-=======
-      "id": "3984847",
-      "title": "Développeur / Administrateur Systèmes & Réseaux  H/F",
-      "company": "SADTEM SAS",
-      "location": "59 - Douai",
-      "contract_type": "CDI",
-      "salary": "Annuel de 35000.0 Euros à 45000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 2,
-      "snippet": "Mission principale : Au sein de SADTEM, votre profil hybride – alliant informatique industrielle, automatisme et électrotechnique – vous permet d'appréhender les enjeux métiers de l'entreprise avec une compréhension terrain que peu de profils IT classiques possèdent. Vous intervenez en support du Responsable des Systèmes d'Information. Vous participez à la gestion, la sécurisation et l'évolution…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3984847",
-      "rome_code": "H1206",
-      "semantic_score": 0.6266353726387024,
-      "llm_rank": 8,
-      "llm_reason": "Développeur administrateur systèmes réseaux à Douai, CDI hybride mais situé hors rayon 25km préféré Lille.",
-      "score": 22.51962447166443,
-      "score_breakdown": {
-        "keywords": 4.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 7.519624471664429
-      }
-    },
-    {
->>>>>>> Stashed changes
       "id": "3957167",
       "title": "Chef de projet en architecture (H/F)",
       "company": null,
@@ -317,28 +182,17 @@
       "snippet": "Description du poste : LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notr…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3957167",
       "rome_code": "M1885",
-<<<<<<< Updated upstream
       "semantic_score": 0.6784191727638245,
       "llm_rank": 9,
       "llm_reason": "Chef de projet architecture à Lille, CDI, titre attractif mais agence temporaire, détails insuffisants pour validation.",
       "score": 21.141030073165894,
-=======
-      "semantic_score": 0.6784193515777588,
-      "llm_rank": 9,
-      "llm_reason": "Chef projet architecture à Lille CDI, dimension managériale présente mais peu de détails techniques réseau/infra.",
-      "score": 21.141032218933105,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 8.141030073165894
-=======
-        "semantic": 8.141032218933105
->>>>>>> Stashed changes
       }
     },
     {
@@ -352,24 +206,16 @@
       "snippet": "LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations : - 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notre croissance annuel…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955231",
       "rome_code": "M1885",
-<<<<<<< Updated upstream
       "semantic_score": 0.6106842160224915,
       "llm_rank": 10,
       "llm_reason": "Chef de projet architecture à Lille, CDI, titre attrayant mais agence temporaire LTD, non-CDI explicite douteux.",
       "score": 20.328210592269897,
-=======
-      "semantic_score": 0.610684335231781,
-      "llm_rank": 10,
-      "llm_reason": "Chef projet architecture Lille CDI, intérêt managérial mais offre généraliste sans spécialité infrastructure réseau.",
-      "score": 20.328212022781372,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 7.3282105922698975
       }
     },
@@ -515,9 +361,6 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 7.554596185684204
-=======
-        "semantic": 7.328212022781372
->>>>>>> Stashed changes
       }
     },
     {
@@ -531,28 +374,17 @@
       "snippet": "Ingénieur process et Projets - équipements de remplissage (H/F) ASAP Hauts-de-France Freelance / CDIC / CDD À propos de Nalys Nalys est une société de conseil franco-belge spécialisée sur les projets life sciences, innovative software et énergie depuis 2011. Notre mission : offrir aux ingénieurs des projets à forte valeur ajoutée et leur donner tous les moyens nécessaires pour accomplir leurs mis…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007757",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.5252366662025452,
       "llm_rank": 17,
       "llm_reason": "Ingénieur process équipements remplissage à Lille, CDI, spécialité production industrielle non-informatique.",
       "score": 19.302839994430542,
-=======
-      "semantic_score": 0.5252367854118347,
-      "llm_rank": 11,
-      "llm_reason": "Ingénieur process projets équipements Lille CDI, éloigné du domaine réseau/infrastructure candidate.",
-      "score": 19.302841424942017,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.302839994430542
-=======
-        "semantic": 6.302841424942017
->>>>>>> Stashed changes
       }
     },
     {
@@ -567,13 +399,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3854649",
       "rome_code": "M1868",
       "semantic_score": 0.5459778308868408,
-<<<<<<< Updated upstream
       "llm_rank": 18,
       "llm_reason": "Data architect à Lille, CDI, architecture données non-réseau, domaine IT différent sans pertinence.",
-=======
-      "llm_rank": 12,
-      "llm_reason": "Data architect Lille CDI, domaine différent (données) sans alignement avec infrastructure réseau recherchée.",
->>>>>>> Stashed changes
       "score": 19.55173397064209,
       "score_breakdown": {
         "keywords": 0.0,
@@ -585,18 +412,12 @@
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "3958618",
       "title": "Planificateur (H/F)",
-=======
-      "id": "4007577",
-      "title": "Data engineer (H/F)",
->>>>>>> Stashed changes
       "company": null,
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 3,
       "snippet": "Description du poste : LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notr…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3958618",
@@ -605,23 +426,12 @@
       "llm_rank": 20,
       "llm_reason": "Planificateur à Lille, CDI, domaine BTP vague, profil peu aligné avec architecture infrastructure.",
       "score": 19.98793911933899,
-=======
-      "posted_days_ago": 2,
-      "snippet": "Qui sommes-nous ? Nous sommes passionnés par les nouvelles technologies, et vous ? Rejoindre Amiltone, c'est intégrer des équipes dynamiques et soudées dans le cadre de projets novateurs et ambitieux. Nous relevons les challenges techniques de nos clients et les accompagnons dans leur transformation digitale. Pourquoi choisir Amiltone Amiltone, plus qu'une entreprise, un état d'esprit ! Notre obj…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007577",
-      "rome_code": "M1868",
-      "semantic_score": 0.5724351406097412,
-      "llm_rank": 13,
-      "llm_reason": "Data engineer Lille CDI, profil technologique mais domaine données éloigné des besoins infrastructure réseau.",
-      "score": 19.869221687316895,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.987939119338989
       }
     },
@@ -640,31 +450,10 @@
       "llm_rank": 21,
       "llm_reason": "Conducteur travaux VRD à Lille, CDI, domaine génie civil travaux publics, pas informatique.",
       "score": 19.785563230514526,
-=======
-        "semantic": 6.8692216873168945
-      }
-    },
-    {
-      "id": "3637287",
-      "title": "Consultant Bases de Données Senior - Expertise PostgreSQL (H/F)",
-      "company": null,
-      "location": "59 - Lezennes",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 11,
-      "snippet": "Lynx RH, cabinet spécialisé en recrutement, recherche pour son client basé proche de Lille, un Consultant Bases de Données Senior - Expertise PostgreSQL&nbsp;(H/F) en CDI.Vos missionsConcevoir, mettre en place et administrer des environnements PostgreSQL (instance unique, clusters, architectures haute disponibilité, PRA/PCA)Élaborer et déployer des solutions de sauvegarde, de restauration et de r…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3637287",
-      "rome_code": "M1868",
-      "semantic_score": 0.5905202031135559,
-      "llm_rank": 14,
-      "llm_reason": "Consultant bases données PostgreSQL Lezennes CDI, spécialité données non alignée avec infrastructure réseau.",
-      "score": 18.08624243736267,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
-<<<<<<< Updated upstream
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 6.785563230514526
@@ -692,11 +481,6 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 6.697280645370483
-=======
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 7.086242437362671
->>>>>>> Stashed changes
       }
     },
     {
@@ -711,13 +495,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3756527",
       "rome_code": "M1802",
       "semantic_score": 0.49389025568962097,
-<<<<<<< Updated upstream
       "llm_rank": 23,
       "llm_reason": "Consultant support déploiement logiciel à Lille, CDI, support utilisateur, pas architecture infrastructure.",
-=======
-      "llm_rank": 16,
-      "llm_reason": "Consultant support déploiement logiciel Lille CDI, support logiciel éloigné infrastructure réseau expertise.",
->>>>>>> Stashed changes
       "score": 18.92668306827545,
       "score_breakdown": {
         "keywords": 0.0,
@@ -729,187 +508,13 @@
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "3955761",
       "title": "Architecte Cloud Snowflake (H/F)",
-=======
-      "id": "3756658",
-      "title": "Consultant Progiciels Transverses F/H - Numih France - Lille",
-      "company": "Numih France - Lille",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 6,
-      "snippet": "Rejoignez notre équipe en tant que Consultant Progiciels Intégré(e) à une équipe déploiement composée de 11 personnes, dont une responsable opérationnelle, réparties sur 3 sites géographiques. Vos principales missions seront les suivantes : - La gestion de projets (gestion des plannings, coordination des parties prenantes, animation de réunions, production de livrables, conseil et accompagnement…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3756658",
-      "rome_code": "M1802",
-      "semantic_score": 0.5581067800521851,
-      "llm_rank": 17,
-      "llm_reason": "Consultant progiciels transverses Lille CDI, domaine ERP non aligné avec infrastructure réseau spécialisée.",
-      "score": 19.69728136062622,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.697281360626221
-      }
-    },
-    {
-      "id": "209VNRR",
-      "title": "Chargé d'études réseaux (H/F)",
-      "company": null,
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 3140.0 Euros sur 12.0 mois",
-      "posted_days_ago": 5,
-      "snippet": "Description du poste Au sein du Service Etudes Réseaux de Lille, vous contribuez à l'analyse et à l'évolution du réseau électrique en apportant votre expertise technique et vos recommandations. Vous intervenez sur des études stratégiques permettant d'orienter les décisions d'investissement et d'exploitation. Vos responsabilités Analyse et conseil Collecter auprès des différents contributeurs les…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VNRR",
-      "rome_code": "M1802",
-      "semantic_score": 0.59449303150177,
-      "llm_rank": 18,
-      "llm_reason": "Chargé études réseaux électriques Lille CDI, terme réseau mais domaine électricité sans pertinence IT.",
-      "score": 20.13391637802124,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.13391637802124
-      }
-    },
-    {
-      "id": "209WGBZ",
-      "title": "Développeur AS400 (H/F)",
-      "company": "SOCIETE GESER BEST",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 38000.0 Euros à 42000.0 Euros sur 12 mois",
-      "posted_days_ago": 4,
-      "snippet": "Dans le cadre de la prise en charge des activités de gestion d'incident et d'évolutions, GESER BEST Lille recherche un.e Analyste Développeur AS400 H/F pour intégrer une équipe organisée en méthodologie agile. Poste à pouvoir ASAP 2 jours de télétravail possible Missions - Analyse des besoins, - Rédaction de spécification, - Réalisation des développements. Compétences requises - Expérience sur AS…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209WGBZ",
-      "rome_code": "M1860",
-      "semantic_score": 0.6052988767623901,
-      "llm_rank": 19,
-      "llm_reason": "Développeur AS400 Lille CDI, domaine legacy informatique éloigné de l'infrastructure réseau spécialisée.",
-      "score": 24.26358652114868,
-      "score_breakdown": {
-        "keywords": 4.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.263586521148682
-      }
-    },
-    {
-      "id": "3648424",
-      "title": "Machine learning Engineer (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 11,
-      "snippet": "Depuis sa création, KLANIK s'est donnée pour mission de conjuguer expertise technologique et authenticité. Ce pari audacieux, né à Marseille, en France, s'est transformé en une aventure internationale qui compte aujourd'hui plus de 800 collaborateurs, des implantations dans 10 pays, des hubs stratégiques et des filiales innovantes. Notre rôle : recruter les meilleurs talents & les connecter à nos…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3648424",
-      "rome_code": "M1868",
-      "semantic_score": 0.46573108434677124,
-      "llm_rank": 20,
-      "llm_reason": "Machine learning engineer Lille CDI, spécialité IA/données sans lien avec infrastructure réseau expertise.",
-      "score": 18.588773012161255,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.588773012161255
-      }
-    },
-    {
-      "id": "209PJLQ",
-      "title": "GESTIONNAIRE MULTI-SITES (H/F)",
-      "company": null,
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 2000.0 Euros à 2800.0 Euros sur 12.0 mois",
-      "posted_days_ago": 10,
-      "snippet": "Gestionnaire Multi-Sites H/F - Restauration Rapide Description du poste Dans le cadre de notre développement, nous recherchons un(e) Gestionnaire Multi-Sites afin d'assurer le pilotage opérationnel de plusieurs établissements de restauration rapide. Rattaché(e) à la Direction, vous garantissez la performance économique, la qualité de service, le respect des procédures et l'animation des équipes s…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PJLQ",
-      "rome_code": "M1884",
-      "semantic_score": 0.5261008739471436,
-      "llm_rank": 21,
-      "llm_reason": "Gestionnaire multi-sites restauration Lille CDI, domaine commercial/opérations diverge totalement du profil.",
-      "score": 19.313210487365723,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.313210487365723
-      }
-    },
-    {
-      "id": "209ZXYB",
-      "title": "Graphiste - communication graphique H/F (bâtiment - architecture) (H/F)",
-      "company": "APPROACH PEOPLE RECRUITMENT SARL",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 32000.0 Euros à 39000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 2,
-      "snippet": "Aujourd'hui, nous recherchons pour notre client, expert dans son domaine du bâtiment (architecture), un(e) Graphiste - communication graphique H/F pour accompagner son développement. Vos missions : - Votre mission principale sera de vous occuper du graphisme de la société (communication, mise en page, création de signalétiques, vitrophanies et logos pour des projets). Pour ce faire, vous devrez ê…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZXYB",
-      "rome_code": "E1205",
-      "semantic_score": 0.5712369680404663,
-      "llm_rank": 22,
-      "llm_reason": "Graphiste communication graphique Lille CDI, secteur création graphique sans pertinence pour ingénieur réseau.",
-      "score": 19.854843616485596,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.854843616485596
-      }
-    },
-    {
-      "id": "209NVNH",
-      "title": "Travailleur social (H/F)",
-      "company": "Association EOLE",
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 2541.51 Euros sur 12.0 mois",
-      "posted_days_ago": 11,
-      "snippet": "Service : CHRS Familles Résidence Escale/ Résidence Eugénie Smet CDI - 35 h - Horaire d'internat Poste à pourvoir le : 01/07/2026 MISSIONS - Accompagner les familles en CHRS - Etablir un diagnostic social au regard de la situation du ménage. - Elaborer un projet personnalisé dans un travail coopératif avec la personne hébergée (insertion sociale et professionnelle) - Réaliser des entretiens indiv…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NVNH",
-      "rome_code": "K1207",
-      "semantic_score": 0.4611044228076935,
-      "llm_rank": 23,
-      "llm_reason": "Travailleur social Lille CDI, secteur social action sans lien avec infrastructure réseau spécialisée.",
-      "score": 18.533253073692322,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.533253073692322
-      }
-    },
-    {
-      "id": "3958618",
-      "title": "Planificateur (H/F)",
->>>>>>> Stashed changes
       "company": null,
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
       "posted_days_ago": 3,
-<<<<<<< Updated upstream
       "snippet": "Depuis sa création, KLANIK s'est donnée pour mission de conjuguer expertise technologique et authenticité. Ce pari audacieux, né à Marseille en 2011, en France, s'est transformé en une aventure internationale qui compte aujourd'hui plus de 800 collaborateurs, des implantations dans 10 pays et des filiales innovantes. Nous rejoignons en 2026 le groupe ALTEN, acteur mondial de l'ingénierie et des s…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955761",
       "rome_code": "M1860",
@@ -917,15 +522,6 @@
       "llm_rank": 24,
       "llm_reason": "Architecte cloud Snowflake à Lille, CDI, architecture données cloud, pas réseau et sécurité.",
       "score": 18.76982355117798,
-=======
-      "snippet": "Description du poste : LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notr…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3958618",
-      "rome_code": "M1807",
-      "semantic_score": 0.5823283791542053,
-      "llm_rank": 24,
-      "llm_reason": "Planificateur Lille CDI, rôle logistique BTP sans alignement compétences infrastructure réseau IT.",
-      "score": 19.987940549850464,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -942,7 +538,6 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 2,
       "snippet": "Intégrateur de solutions IT, notre client conçoit, déploie et sécurise les infrastructures de ses clients : datacenter, virtualisation, réseau, mobilité et cybersécurité. Ses équipes transforment au quotidien des enjeux techniques complexes en solutions concrètes, fiables et durables, pour des entreprises de toutes tailles.Ce qui l'anime : la proximité client, l'exigence technique, l'esprit d'équ…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007886",
@@ -951,16 +546,6 @@
       "llm_rank": 25,
       "llm_reason": "Data engineer à Lille, CDI, domaine big data, pas connexion avec infrastructure réseau.",
       "score": 21.032597303390503,
-=======
-      "posted_days_ago": 1,
-      "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : LTD, dans le cadre du développement de son activité VRD recherche, un Ingénieur Chargé d'affaires VRD/Réseaux Secs HTA BT H/F Rattaché(e) au chef de service, vous partic…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4048696",
-      "rome_code": "K2306",
-      "semantic_score": 0.5462676286697388,
-      "llm_rank": 25,
-      "llm_reason": "Responsable réseaux assainissement Lille CDI, réseau urbain eau non aligné avec infrastructure réseau IT.",
-      "score": 19.555211544036865,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -981,24 +566,17 @@
       "snippet": "Secteurs : CONTEXTE Notre client est une centrale d’achat reconnue dans l’univers de l’optique en France. Acteur de référence, elle accompagne ses adhérents dans le développement de leur performance économique, commerciale et stratégique. Dans le cadre de son développement, nous recrutons un Animateur Réseau Confirmé H/F sur le secteur Lillois. Avantages : * Formation * Tickets restaurants * Inté…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3684334",
       "rome_code": "N4204",
-<<<<<<< Updated upstream
       "semantic_score": 0.5031881928443909,
       "llm_rank": 26,
       "llm_reason": "Animateur réseau confirmé à Lille, CDI, réseau commercial optique, pas infrastructure informatique.",
       "score": 19.03825831413269,
-=======
-      "semantic_score": 0.5031880736351013,
-      "llm_rank": 26,
-      "llm_reason": "Animateur réseau optique Lille CDI, réseau commercial/adhérents sans lien infrastructure réseau IT.",
-      "score": 19.038256883621216,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 6.038256883621216
+        "semantic": 6.03825831413269
       }
     },
     {
@@ -1007,55 +585,6 @@
       "company": "SUPPLAY",
       "location": "59 - FLERS EN ESCREBIEUX",
       "contract_type": "CDI",
-      "salary": "Annuel de 42000.0 Euros à 48000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 12,
-      "snippet": "Votre cabinet Supplay à le plaisir d'accompagner l'un de ses fidèles clients, dans le cadre de son recrutement de : Responsable Développement Réseau Partenaires H/F Vous souhaitez rejoindre un groupe reconnu dans le secteur du transport et de la logistique, au sein d'un environnement dynamique et stratégique ? Cette opportunité est faite pour vous ! Vos missions principales : Rattaché(e) à la Dir…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209KWVY",
-      "rome_code": "N4204",
-      "semantic_score": 0.5360036492347717,
-      "llm_rank": 27,
-      "llm_reason": "Responsable développement réseau transport Flers-Escrebieux CDI, réseau partenaires logistique hors périmètre.",
-      "score": 17.43204379081726,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 6.432043790817261
-      }
-    },
-    {
-      "id": "3556898",
-      "title": "Technicien de courant faible H/F/X",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 25000.0 Euros à 35000.0 Euros",
-      "posted_days_ago": 14,
-      "snippet": "ACASS, agence de recrutement, recherche pour son client, un Technicien courant faible H/F, dans le cadre d'un CDI. Poste basé à Lille 59 avec un périmètre d'itinérance sur le département. Vos missions : - Réaliser l'installation et la mise en service de systèmes de sécurité et de réseaux, incluant le contrôle d'accès, la détection d'intrusion, la vidéosurveillance, ainsi que les réseaux IP (cuivr…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3556898",
-      "rome_code": "F1623",
-      "semantic_score": 0.5584904551506042,
-      "llm_rank": 28,
-      "llm_reason": "Technicien courant faible Lille CDI, technicien sécurité/réseaux junior inférieur au niveau senior recherché.",
-      "score": 19.70188546180725,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.701885461807251
-      }
-    },
-    {
-      "id": "209KWVY",
-      "title": "RESPONSABLE DÉVELOPPEMENT RÉSEAU TRANSPORT F/H (H/F)",
-      "company": "SUPPLAY",
-      "location": "59 - FLERS EN ESCREBIEUX",
-      "contract_type": "CDI",
-<<<<<<< Updated upstream
       "salary": "Annuel de 42000.0 Euros à 48000.0 Euros sur 12.0 mois",
       "posted_days_ago": 12,
       "snippet": "Votre cabinet Supplay à le plaisir d'accompagner l'un de ses fidèles clients, dans le cadre de son recrutement de : Responsable Développement Réseau Partenaires H/F Vous souhaitez rejoindre un groupe reconnu dans le secteur du transport et de la logistique, au sein d'un environnement dynamique et stratégique ? Cette opportunité est faite pour vous ! Vos missions principales : Rattaché(e) à la Dir…",
@@ -1065,42 +594,21 @@
       "llm_rank": 27,
       "llm_reason": "Responsable développement réseau transport à Flers, CDI, réseau partenaires logistique, pas informatique.",
       "score": 17.432040214538574,
-=======
-      "salary": null,
-      "posted_days_ago": 1,
-      "snippet": "Vos missions : - assurer la réalisation des travaux confiés sur la base des plans transmis par le bureau d'étude de l'entreprise - élaboration des méthodes de réalisations des travaux en lien avec le conducteur de travaux et également définition de vos plannings, respects des délais - diriger votre équipe travaux - commandes des matériaux- matériels, suivis des livraisons/réceptions - assurer la…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/210BBBR",
-      "rome_code": "F1209",
-      "semantic_score": 0.5511888265609741,
-      "llm_rank": 29,
-      "llm_reason": "Chef chantier TP VRD Bailleul CDI, domaine travaux publics/voirie sans pertinence infrastructure réseau IT.",
-      "score": 17.61426591873169,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.432040214538574
       }
     },
     {
       "id": "209PJLQ",
       "title": "GESTIONNAIRE MULTI-SITES (H/F)",
-=======
-        "semantic": 6.6142659187316895
-      }
-    },
-    {
-      "id": "3958150",
-      "title": "Conducteur de travaux VRD (H/F)",
->>>>>>> Stashed changes
       "company": null,
       "location": "59 - LILLE",
       "contract_type": "CDI",
-<<<<<<< Updated upstream
       "salary": "Mensuel de 2000.0 Euros à 2800.0 Euros sur 12.0 mois",
       "posted_days_ago": 10,
       "snippet": "Gestionnaire Multi-Sites H/F - Restauration Rapide Description du poste Dans le cadre de notre développement, nous recherchons un(e) Gestionnaire Multi-Sites afin d'assurer le pilotage opérationnel de plusieurs établissements de restauration rapide. Rattaché(e) à la Direction, vous garantissez la performance économique, la qualité de service, le respect des procédures et l'animation des équipes s…",
@@ -1110,24 +618,12 @@
       "llm_rank": 28,
       "llm_reason": "Gestionnaire multi-sites à Lille, CDI, restauration rapide, domaine complètement différent.",
       "score": 19.313212633132935,
-=======
-      "salary": null,
-      "posted_days_ago": 3,
-      "snippet": "Description du poste : Entreprise reconnue dans le secteur des travaux publics, cette société intervient depuis plusieurs années sur des projets de voirie et réseaux divers (VRD) auprès de collectivités locales et de clients privés. Elle accompagne ses partenaires dans la réalisation d'opérations d'aménagement urbain, de création et de réhabilitation de réseaux (eau potable, assainissement, résea…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3958150",
-      "rome_code": "F1208",
-      "semantic_score": 0.565463662147522,
-      "llm_rank": 30,
-      "llm_reason": "Conducteur travaux VRD Lille CDI, secteur BTP voirie sans alignement infrastructure réseau IT.",
-      "score": 19.785563945770264,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.313212633132935
       }
     },
@@ -1177,9 +673,6 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 5.588773727416992
-=======
-        "semantic": 6.785563945770264
->>>>>>> Stashed changes
       }
     },
     {
@@ -1193,220 +686,17 @@
       "snippet": "Chez EHTP, nous donnons vie à l'eau en maitrisant chaque phase de son cycle?! De l'installation à l'entretien, nos chantiers font de l'eau une ressource durable, pour que chacun puisse en profiter, sans créer de vagues. Notre agence EHTP, basée à Harnes (62), poursuit le développement de ses activités et recrute un Géomètre Projeteur (H/F).? Vous serez en charge des missions suivantes : Procéder…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4057136",
       "rome_code": "F1107",
-<<<<<<< Updated upstream
       "semantic_score": 0.5503323078155518,
       "llm_rank": 31,
       "llm_reason": "Géomètre projeteur réseaux à Harnes, CDI, spécialité eau assainissement, pas informatique.",
       "score": 17.60398769378662,
-=======
-      "semantic_score": 0.5503321290016174,
-      "llm_rank": 31,
-      "llm_reason": "Géomètre projeteur réseaux Harnes, domaine eau/infrastructure hors secteur IT reseau, hors rayon Lille.",
-      "score": 17.60398554801941,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.603987693786621
-=======
-        "semantic": 6.603985548019409
-      }
-    },
-    {
-      "id": "3724936",
-      "title": "Géomètre Détection de Réseaux (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 10,
-      "snippet": "LTd est une agence de travail temporaire et un cabinet de recrutement spécialisé dans le domaine des Travaux Publics VRD, de la topographie, et des Télécoms riche de 20 ans d'expérience sur toute la France. Le poste : Pour une Société de topographie en pleine croissance, spécialisée dans les relevés terrain et la détection de réseaux, nous recherchons un(e) Géomètre Détection de Réseaux (H/F) pou…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3724936",
-      "rome_code": "M1841",
-      "semantic_score": 0.5887567400932312,
-      "llm_rank": 32,
-      "llm_reason": "Géomètre détection réseaux Lille CDI, topographie réseaux souterrains, domaine BTP sans lien IT.",
-      "score": 20.065080881118774,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.065080881118774
-      }
-    },
-    {
-      "id": "209RXCJ",
-      "title": "Opérateur mouvement H/F ",
-      "company": "TECHNICENTRE",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 27730.0 Euros à 32460.0 Euros sur 12.0 mois",
-      "posted_days_ago": 8,
-      "snippet": "Le technicentre Sncf recherche un opérateur mouvement H/F . Vos missions sont les suivantes : Assurer le placement des engins moteurs, automoteurs, automotrices et les voitures pour la maintenance ainsi que leur mise à disposition pour le service commercial Commander les manœuvres Réaliser les manœuvres Confirmer auprès du coordinateur mouvement les entrées sur sites Réaliser les coupes et mises…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209RXCJ",
-      "rome_code": "N4401",
-      "semantic_score": 0.43626222014427185,
-      "llm_rank": 33,
-      "llm_reason": "Opérateur mouvement SNCF Lille CDI, domaine ferroviaire sans pertinence pour infrastructure réseau spécialisée.",
-      "score": 18.235146641731262,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.235146641731262
-      }
-    },
-    {
-      "id": "3955126",
-      "title": "Architecte DE/HMONP (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 3,
-      "snippet": "LTd compte plusieurs agences spécialisées en recrutement et en travail temporaire organisées par pôle d'expertise en Ingénierie, Encadrement BTP et Tertiaire Haut de Gamme - Fonctions Supports sur la France entière et à l'International. Ltd assure Qualité et Performance, fondé sur une procédure de recrutement rigoureuse et adaptée aux exigences du marché. Nous recherchons pour l'un de nos clients…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955126",
-      "rome_code": "F1101",
-      "semantic_score": 0.6209809184074402,
-      "llm_rank": 34,
-      "llm_reason": "Architecte HMONP Lille CDI, architecture bâtiment sans lien avec infrastructure réseau IT.",
-      "score": 20.451771020889282,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.451771020889282
-      }
-    },
-    {
-      "id": "3955019",
-      "title": "ARCHITECTE HMONP (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 3,
-      "snippet": "LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations : - 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notre croissance annuel…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955019",
-      "rome_code": "F1101",
-      "semantic_score": 0.5661094188690186,
-      "llm_rank": 35,
-      "llm_reason": "Architecte HMONP Lille CDI, architecture bâtiment, domaine totalement distinct infrastructure réseau IT.",
-      "score": 19.793313026428223,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.793313026428223
-      }
-    },
-    {
-      "id": "3955491",
-      "title": "Ingénieur Soudage - IWE (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 3,
-      "snippet": "Kali Group est une société de conseil née d'un constat simple : le modèle actuel ne convient ni aux industriels, ni aux consultants. Aujourd'hui, le seul gagnant ; c'est le cabinet de conseil. Notre mission - Concilier les intérêts de tout le monde en créant un nouveau standard qui vous donne la liberté de construire votre plan de carrière. Comment - En relevant les challenges techniques, organis…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955491",
-      "rome_code": "M1802",
-      "semantic_score": 0.4086906611919403,
-      "llm_rank": 36,
-      "llm_reason": "Ingénieur soudage IWE Lille CDI, domaine industriel métallurgie sans pertinence infrastructure réseau.",
-      "score": 17.904287934303284,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 4.904287934303284
-      }
-    },
-    {
-      "id": "3123361",
-      "title": "Dessinateur en VRD (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 24,
-      "snippet": "Description du poste : Bureau d'études indépendant reconnu pour son expertise en ingénierie des infrastructures et aménagements urbains, intervenant sur des projets variés (voirie, réseaux, aménagements publics, lotissements.), la structure accompagne aussi bien des collectivités que des acteurs privés, de la conception à la réalisation. À taille humaine, l'entreprise met l'accent sur la proximit…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3123361",
-      "rome_code": "F1104",
-      "semantic_score": 0.6308987140655518,
-      "llm_rank": 37,
-      "llm_reason": "Dessinateur VRD Lille CDI, secteur infrastructure urbaine BTP sans lien infrastructure réseau IT.",
-      "score": 17.57078456878662,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 7.570784568786621
-      }
-    },
-    {
-      "id": "3857249",
-      "title": "Chef de Projet H/F",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 4,
-      "snippet": "Contexte de la mission :Viveris accompagne les grandes entreprises du secteur Bancassurance dans la transformation de leurs parcours métier et IT, avec une attention particulière portée à la performance des services digitaux, notamment sur le web.Dans le cadre du développement de notre activité, nous recherchons un Chef de projet pour piloter les évolutions stratégiques liées au domaine crédit.Vo…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3857249",
-      "rome_code": "M1854",
-      "semantic_score": 0.6295499205589294,
-      "llm_rank": 38,
-      "llm_reason": "Chef projet Lille CDI contexte bancassurance, généraliste sans spécialité infrastructure réseau.",
-      "score": 20.554599046707153,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.554599046707153
-      }
-    },
-    {
-      "id": "3993062",
-      "title": "Développeur Sage X3 - CANADA (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 2,
-      "snippet": "As-tu un projet d'expatriation au Canada?Tu as développeur.euse et tu connais Sage X3?Voici peut-être ta porte d'entrée vers une nouvelle aventure :)Lynx RH MONTREAL recherche pour son client, un intégrateur de solutions logicielles, un-e développeur.Le poste est à pourvoir à MontréalSalaire : de $ et $CAD, à négocier selon expérience et expertise en relation avec l'emploiVos missionsAs-tu un pro…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3993062",
-      "rome_code": "M1818",
-      "semantic_score": 0.4446881115436554,
-      "llm_rank": 39,
-      "llm_reason": "Développeur Sage X3 Canada CDI, expatriation Canada non compatible recherche Lille, domaine ERP différent.",
-      "score": 18.336257338523865,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.336257338523865
->>>>>>> Stashed changes
       }
     },
     {
@@ -1440,7 +730,6 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 2,
       "snippet": "Qui sommes-nous ? Nous sommes passionnés par les nouvelles technologies, et vous ? Rejoindre Amiltone, c'est intégrer des équipes dynamiques et soudées dans le cadre de projets novateurs et ambitieux. Nous relevons les challenges techniques de nos clients et les accompagnons dans leur transformation digitale. Pourquoi choisir Amiltone Amiltone, plus qu'une entreprise, un état d'esprit ! Notre obj…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007577",
@@ -1449,16 +738,6 @@
       "llm_rank": 33,
       "llm_reason": "Data engineer à Lille, CDI, spécialité données innovantes, sans pertinence infrastructure.",
       "score": 19.869221687316895,
-=======
-      "posted_days_ago": 3,
-      "snippet": "Depuis sa création, KLANIK s'est donnée pour mission de conjuguer expertise technologique et authenticité. Ce pari audacieux, né à Marseille en 2011, en France, s'est transformé en une aventure internationale qui compte aujourd'hui plus de 800 collaborateurs, des implantations dans 10 pays et des filiales innovantes. Nous rejoignons en 2026 le groupe ALTEN, acteur mondial de l'ingénierie et des s…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955761",
-      "rome_code": "M1860",
-      "semantic_score": 0.4808186888694763,
-      "llm_rank": 40,
-      "llm_reason": "Architecte cloud Snowflake redondant, Lille CDI mais spécialité cloud/données sans pertinence infrastructure.",
-      "score": 18.769824266433716,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -1661,7 +940,6 @@
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "3993062",
       "title": "Développeur Sage X3 - CANADA (H/F)",
       "company": null,
@@ -1686,8 +964,6 @@
       }
     },
     {
-=======
->>>>>>> Stashed changes
       "id": "3336506",
       "title": "Administrateur systèmes et réseaux (H/F)",
       "company": null,
@@ -1700,72 +976,15 @@
       "rome_code": "M1801",
       "semantic_score": 0.5258442759513855,
       "llm_rank": 42,
-<<<<<<< Updated upstream
       "llm_reason": "Administrateur systèmes et réseaux CDI Lille, bon match compétences mais pas de dimension architecte explicite.",
       "score": 16.310131311416626,
-=======
-      "llm_reason": "Administrateur systèmes et réseaux CDI Lille, compétences réseau confirmées, structure hiérarchique d'équipe.",
-      "score": 16.3101327419281,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.310131311416626
-=======
-        "semantic": 6.310132741928101
-      }
-    },
-    {
-      "id": "208TFJY",
-      "title": "Technicien systèmes et réseaux H/F (H/F)",
-      "company": "CNAM HAUTS-DE-FRANCE - ASSOCIATION DE GE",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 30285.0 Euros à 31200.0 Euros sur 12.0 mois",
-      "posted_days_ago": 25,
-      "snippet": "Nous sommes à la recherche d'un.e Technicien.ne systèmes & réseaux confirmé.e. À l'aise avec le support utilisateurs et les environnements informatiques du quotidien, vous savez diagnostiquer, résoudre et expliquer. Vous aimez quand les systèmes fonctionnent bien. et encore plus quand vous contribuez à les améliorer ? Nous avons besoin de vous ! Vos missions : Au cœur du système d'information, vo…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/208TFJY",
-      "rome_code": "M1810",
-      "semantic_score": 0.5607242584228516,
-      "llm_rank": 43,
-      "llm_reason": "Technicien systèmes & réseaux CDI Lille confirmé, dimension support et expertise infrastructure pertinente.",
-      "score": 16.72869110107422,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.728691101074219
-      }
-    },
-    {
-      "id": "3229984",
-      "title": "Architecte DevOps - Lille (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 22,
-      "snippet": "Qui sommes-nous ? Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace · Cloud & DevOps · Cybersécurité · Transformation des SI · Data & IA Le poste :…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3229984",
-      "rome_code": "M1855",
-      "semantic_score": 0.5356919169425964,
-      "llm_rank": 44,
-      "llm_reason": "Architecte DevOps CDI Lille, aligne automatisation, CI/CD et infrastructure, mais orientation plus développement.",
-      "score": 16.428303003311157,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.428303003311157
->>>>>>> Stashed changes
       }
     },
     {
@@ -1779,44 +998,27 @@
       "snippet": "Description du poste : Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3828924",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.4833466112613678,
       "llm_rank": 43,
       "llm_reason": "Ingénieur intégration système Thales CDI à Lambersart, proche Lille, infrastructure mais focus système.",
       "score": 16.800159335136414,
-=======
-      "semantic_score": 0.48334670066833496,
-      "llm_rank": 45,
-      "llm_reason": "Ingénieur intégration système CDI Lambersart (25km), expertise infrastructure Thales, dimension architecture.",
-      "score": 16.80016040802002,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 5.800159335136414
       }
     },
     {
       "id": "3229984",
       "title": "Architecte DevOps - Lille (H/F)",
-=======
-        "semantic": 5.8001604080200195
-      }
-    },
-    {
-      "id": "3229947",
-      "title": "Architecte Modern Workplace - Lille (H/F)",
->>>>>>> Stashed changes
       "company": null,
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
       "posted_days_ago": 22,
-<<<<<<< Updated upstream
       "snippet": "Qui sommes-nous ? Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace · Cloud & DevOps · Cybersécurité · Transformation des SI · Data & IA Le poste :…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3229984",
       "rome_code": "M1855",
@@ -1824,26 +1026,13 @@
       "llm_rank": 44,
       "llm_reason": "Architecte DevOps Synapsys CDI Lille, compétences automatisation et infrastructure mais pas cœur réseau.",
       "score": 16.42830228805542,
-=======
-      "snippet": "Qui sommes-nous - Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace · Cloud & DevOps · Cybersécurité · Transformation des SI · Data & IA Le poste :…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3229947",
-      "rome_code": "L1201",
-      "semantic_score": 0.5407775044441223,
-      "llm_rank": 46,
-      "llm_reason": "Architecte Modern Workplace CDI Lille, expertise infrastructure IT, mais orientation poste de travail plutôt que réseau.",
-      "score": 16.489330053329468,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.42830228805542
-=======
-        "semantic": 6.489330053329468
->>>>>>> Stashed changes
       }
     },
     {
@@ -1857,17 +1046,10 @@
       "snippet": "A propos de Talan Hauts-de-FranceImplanté en plein cœur de Lille et Amiens depuis plus de 10 ans, Talan Hauts-de-France compte aujourd'hui une centaine de collaborateurs passionnés qui incarnent les valeurs fondamentales de proximité, d'agilité et de collaboration.Notre équipe dynamique et diversifiée travaille en étroite collaboration avec des entreprises locales pour les accompagner dans leurs…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/0893238",
       "rome_code": "M1860",
-<<<<<<< Updated upstream
       "semantic_score": 0.5610616207122803,
       "llm_rank": 45,
       "llm_reason": "Architecte Solutions Cloud CDI Lille, infrastructure cloud mais peu aligné sur réseau/firewall expertise.",
       "score": 16.732739448547363,
-=======
-      "semantic_score": 0.5610617399215698,
-      "llm_rank": 47,
-      "llm_reason": "Architecte Solutions Cloud CDI Lille, expertise infrastructure cloud, offre ancienne (84 jours), pas encadrement visible.",
-      "score": 16.732740879058838,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -1878,7 +1060,6 @@
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "3229947",
       "title": "Architecte Modern Workplace - Lille (H/F)",
       "company": null,
@@ -1927,8 +1108,6 @@
       }
     },
     {
-=======
->>>>>>> Stashed changes
       "id": "209BMVY",
       "title": "Ingénieur Systèmes z/OS (H/F)",
       "company": "COLCOMBET THIBAULT",
@@ -1939,28 +1118,20 @@
       "snippet": "Opportunité - Administrateur / Ingénieur Système z/OS / Région Nord Nous accompagnons un client de la région Nord dans le recrutement d'un profil mainframe expérimenté. Il rejoindra une équipe Système pluridisciplinaire (Linux, Windows, z/OS, DB2) au sein de la Direction des Opérations. Poste à pourvoir dès que possible. Stack technique : z/OS - JCL - REXX - CLIST - TSO/ISPF - SDSF - RACF - SMP/E…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209BMVY",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.5102746486663818,
       "llm_rank": 48,
       "llm_reason": "Ingénieur z/OS CDI Lille, infrastructure mainframe, très éloigné des compétences réseau/firewall.",
       "score": 16.123295783996582,
-=======
-      "semantic_score": 0.5102747082710266,
-      "llm_rank": 49,
-      "llm_reason": "Ingénieur Systèmes z/OS CDI Lille, expertise système spécialisée mainframe, hors périmètre réseau candidat.",
-      "score": 16.12329649925232,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.123296499252319
+        "semantic": 6.123295783996582
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "1771097",
       "title": "INGÉNIEUR SYSTÈMES (F/H) (H/F)",
       "company": null,
@@ -2011,16 +1182,11 @@
     {
       "id": "3535239",
       "title": "Architecte Solution - Développement Régional - Lille (H/F)",
-=======
-      "id": "3553599",
-      "title": "Architecte Solutions (H/F)",
->>>>>>> Stashed changes
       "company": null,
-      "location": "59 - Lille",
+      "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
       "posted_days_ago": 15,
-<<<<<<< Updated upstream
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3535239",
       "rome_code": "K1803",
@@ -2028,70 +1194,13 @@
       "llm_rank": 51,
       "llm_reason": "Architecte Solution Sopra Steria CDI Lezennes, peu d'informations sur domaine exact, développement régional vague.",
       "score": 15.263075828552246,
-=======
-      "snippet": "Description du poste : En tant qu'organisateur de forums de recrutement, Talents Handicap accompagne de très nombreuses entreprises & organisations en France dans leurs recrutements de collaborateurs en situation de handicap. Participant actuellement à l'un de nos forums. L'entreprise Sopra Steria recherche actuellement des profils : Description de l'entreprise Sopra Steria, acteur majeur de la T…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3553599",
-      "rome_code": "F1101",
-      "semantic_score": 0.5075470805168152,
-      "llm_rank": 50,
-      "llm_reason": "Architecte Solutions CDI Lille Sopra Steria, poste architecture IT, détails insuffisants sur domaine réseau.",
-      "score": 16.090564966201782,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
-        "location": 2.0,
+        "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.090564966201782
-      }
-    },
-    {
-      "id": "202NVBB",
-      "title": "Consultant Technique SAP SuccessFactors H/F (H/F)",
-      "company": "BRAIN LOGIC",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 158,
-      "snippet": "Notre client, un groupe International opérant dans un secteur dynamique renforce son équipe SIRH et recherche un Consultant Technique SAP SuccessFactors H/F. Vos missions : Au sein de la DSI et en lien étroit avec les équipes RH, Finance et IT, vous interviendrez sur les modules SAP SuccessFactors avec une forte composante technique et d'intégration : - Gestion des interfaces liées à la gestion d…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/202NVBB",
-      "rome_code": "M1802",
-      "semantic_score": 0.4859093427658081,
-      "llm_rank": 51,
-      "llm_reason": "Consultant SAP SuccessFactors CDI Lille, infrastructure SI mais orientation SIRH/RH, très ancien (158 jours).",
-      "score": 15.830912113189697,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 5.830912113189697
-      }
-    },
-    {
-      "id": "9919147",
-      "title": "Administrateur systèmes F/H - Système, réseaux, données (H/F)",
-      "company": "ECONOCOM",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 108,
-      "snippet": "Descriptif du poste: Nous vous invitons à relever de nouveaux challenges et à évoluer sur des projets d'expertise et d'innovation en prenant part à l'aventure Econocom. A travers sa marque Workplace Infra Innovation, l'activité Services en région Nord Normandie accompagne plus de 40 clients grands comptes et institutions publiques dans tout secteur d'activité dans la transformation de leur systèm…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/9919147",
-      "rome_code": "M1801",
-      "semantic_score": 0.5431790947914124,
-      "llm_rank": 52,
-      "llm_reason": "Administrateur systèmes CDI Lille Econocom, infrastructure IT, mais poste très ancien (108 jours).",
-      "score": 16.51814913749695,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.518149137496948
+        "semantic": 7.263075828552246
       }
     },
     {
@@ -2105,24 +1214,17 @@
       "snippet": "Contexte : Au sein de la Direction des Services Partagés (DSP), la Ligne Produit Data & IA conçoit, maintient et fait évoluer les plateformes data de la MSA. Ces plateformes supportent à la fois des usages décisionnels historiques et de nouveaux cas d’usage analytiques et IA. Missions principales / Rattaché(e) à la DSP, l’architecte Data a pour mission : Architecture et stratégie Data * Définir l…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1800613",
       "rome_code": "M1811",
-<<<<<<< Updated upstream
       "semantic_score": 0.6487071514129639,
       "llm_rank": 52,
       "llm_reason": "Architecte Data CDI Avelin, expertise data/IA, non-aligné avec compétences réseau et firewall.",
       "score": 15.784485816955566,
-=======
-      "semantic_score": 0.6487069129943848,
-      "llm_rank": 53,
-      "llm_reason": "Architecte Data CDI Avelin (25km), infrastructure data/IA pertinente mais hors expertise réseau du candidat.",
-      "score": 15.784482955932617,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 7.784482955932617
+        "semantic": 7.784485816955566
       }
     },
     {
@@ -2184,24 +1286,17 @@
       "snippet": "RESPONSABILITÉS : Dans le cadre de notre croissance, nous renforçons notre pôle Data pour accompagner nos clients grands comptes, principalement dans les secteurs Banque & Assurance & Retail, où les enjeux de qualité, conformité, gouvernance et performance des données sont critiques. Ces environnements exigent des flux robustes, une gestion fine des référentiels et une traçabilité irréprochable —…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/2959058",
       "rome_code": "M1811",
-<<<<<<< Updated upstream
       "semantic_score": 0.4253295958042145,
       "llm_rank": 55,
       "llm_reason": "Ingénieur Data Stambia CDI Lille, expertise data/gouvernance, totalement éloigné des compétences réseau.",
       "score": 15.103955149650574,
-=======
-      "semantic_score": 0.4253295361995697,
-      "llm_rank": 54,
-      "llm_reason": "Ingénieur Data Semarchy CDI Lille, infrastructure data plutôt que réseau, éloigné du profil cible.",
-      "score": 15.103954434394836,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.103954434394836
+        "semantic": 5.103955149650574
       }
     },
     {
@@ -2216,13 +1311,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/0504342",
       "rome_code": "M1811",
       "semantic_score": 0.5140595436096191,
-<<<<<<< Updated upstream
       "llm_rank": 56,
       "llm_reason": "Data Ingénieur GCP CDI Lille, très ancien (93j), data engineering non-aligné expertise réseau.",
-=======
-      "llm_rank": 55,
-      "llm_reason": "Data Ingénieur GCP CDI Lille, infrastructure cloud data, très ancien (93 jours), pas expertise réseau.",
->>>>>>> Stashed changes
       "score": 16.16871452331543,
       "score_breakdown": {
         "keywords": 0.0,
@@ -2244,118 +1334,14 @@
       "snippet": "Descriptif du poste: Être Data Business Analyst F/H chez Oney, pourquoi c'est mieux ? Plus qu'un poste.une mission pour vous ! Et quelle mission ! Au sein des équipes de la Direction Data groupe, et en hiérarchie du responsable de département Data Business Support, vous aurez la responsabilité de recueillir les besoins métiers pour les traduire en besoins datas. Vous serez responsable des modèles…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3728305",
       "rome_code": "M1419",
-<<<<<<< Updated upstream
       "semantic_score": 0.46749481558799744,
       "llm_rank": 57,
       "llm_reason": "Data Business Analyst Oney CDI Croix, data orientation, peu de rapport avec architecture réseau.",
       "score": 16.60993778705597,
-=======
-      "semantic_score": 0.467494934797287,
-      "llm_rank": 56,
-      "llm_reason": "Data Business Analyst CDI Croix (25km), orientation data/métier, peu aligné avec expertise réseau ingénieur.",
-      "score": 16.609939217567444,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.609939217567444
-      }
-    },
-    {
-      "id": "3863480",
-      "title": "Consultant GRC F/H - LOGIN Sécurité",
-      "company": "LOGIN Sécurité",
-      "location": "59 - Marcq-en-Barœul",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 4,
-      "snippet": "En tant que Consultant GRC, vous jouerez un rôle essentiel dans la mise en œuvre et l'optimisation des politiques et procédures de gouvernance pour nos clients. Vous serez impliqué dans des missions variées, allant de l'Analyse des Risques à l'étude de Conformité Cyber, en passant par des audits de maturité et des sensibilisations en cybersécurité. Votre expertise sera également sollicitée pour d…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3863480",
-      "rome_code": "F1101",
-      "semantic_score": 0.4648538827896118,
-      "llm_rank": 57,
-      "llm_reason": "Consultant GRC CDI Marcq-en-Barœul, cybersécurité/compliance plutôt qu'ingénierie réseau architecture.",
-      "score": 16.578246593475342,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.578246593475342
-      }
-    },
-    {
-      "id": "3511731",
-      "title": "Technicien d'Installation en Télécommunications H/F",
-      "company": "Aquila RH",
-      "location": "59 - Douai",
-      "contract_type": "CDI",
-      "salary": "Horaire de 12.31 Euros à 16.0 Euros",
-      "posted_days_ago": 15,
-      "snippet": "POSTE : Technicien d'Installation en Télécommunications H/F DESCRIPTION : Vous êtes à la recherche du poste idéal correspondant à votre expertise, vos compétences et votre domaine de prédilection ? Venez nous rencontrer au sein de votre future agence dans un cadre \"cocooning\" où nous prendrons le temps pour vous. Alicia ou Eva, chacune spécialisée dans un secteur d'activités, vous accueillera afi…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3511731",
-      "rome_code": "F1623",
-      "semantic_score": 0.5814159512519836,
-      "llm_rank": 58,
-      "llm_reason": "Technicien Installation Télécommunications CDI Douai (25km), niveau technicien, junior pour profil expérimenté.",
-      "score": 14.976991415023804,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 6.976991415023804
-      }
-    },
-    {
-      "id": "209NSDM",
-      "title": "Technicien Fibre Optique (H/F)",
-      "company": "CONNECT TO LIVE CTL",
-      "location": "59 - FACHES-THUMESNIL",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 2500.0 Euros à 2700.0 Euros sur 12.0 mois",
-      "posted_days_ago": 11,
-      "snippet": "Dans le cadre du développement de nos activités dans le secteur des télécommunications, nous recherchons un Technicien Fibre Optique motivé, rigoureux et passionné par les nouvelles technologies. Rattaché au responsable d'exploitation, vous intervenez sur les réseaux de fibre optique auprès de nos partenaires. À ce titre, vous serez amené à : Vos missions : Réaliser le tirage et le raccordement d…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209NSDM",
-      "rome_code": "I1311",
-      "semantic_score": 0.47939881682395935,
-      "llm_rank": 59,
-      "llm_reason": "Technicien Fibre Optique CDI Faches-Thumesnil, niveau technicien, poste junior incompatible avec séniorité.",
-      "score": 16.752785801887512,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.752785801887512
-      }
-    },
-    {
-      "id": "2277938",
-      "title": "RESPONSABLE D'EXPLOITATION POSTE DE TRAVAIL H/F",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 47,
-      "snippet": "Le Domaine Infrastructure et télécom a la responsabilité de l’adéquation du besoin des utilisateurs et du maintien en fonctionnement opérationnel de l’architecture technique du SIH, ainsi que des outils progiciels et équipements mis à disposition des utilisateurs. Le responsable d’exploitation du parc poste de travail pilote la gestion d’un parc de plus de 10000 postes de travail et 2000 impriman…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2277938",
-      "rome_code": "M1801",
-      "semantic_score": 0.6019927263259888,
-      "llm_rank": 60,
-      "llm_reason": "Responsable Exploitation Poste de Travail CDI Lille, infrastructure IT mais orientation postes travail utilisateurs.",
-      "score": 17.223912715911865,
->>>>>>> Stashed changes
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-<<<<<<< Updated upstream
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 5.609937787055969
@@ -2472,111 +1458,13 @@
       "llm_rank": 62,
       "llm_reason": "Technicien Installation Télécoms Douai CDI, télécommunications mais niveau technicien, pas ingénieur.",
       "score": 14.976988554000854,
-=======
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 7.223912715911865
-      }
-    },
-    {
-      "id": "3491516",
-      "title": "INGÉNIEUR RÉSEAUX - VRD (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 16,
-      "snippet": "Vous souhaitez piloter des projets d'infrastructures hydrauliques et intervenir sur des missions complètes de maîtrise d'œuvre dans un environnement d'ingénierie structuré et collaboratif ? Société incontournable sur le marché du recrutement français et européen, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers des VRD / Travaux Publics et de l'Eau…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3491516",
-      "rome_code": "M1841",
-      "semantic_score": 0.6056102514266968,
-      "llm_rank": 61,
-      "llm_reason": "Ingénieur Réseaux VRD CDI Lille, titre trompeur, orientation VRD/hydraulique, pas réseau informatique.",
-      "score": 17.26732301712036,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
-        "location": 2.0,
+        "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.9769885540008545
-=======
-        "semantic": 7.267323017120361
-      }
-    },
-    {
-      "id": "3230264",
-      "title": "CHEF DE PROJET RESEAUX GAZ - BIOMETHANE (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 22,
-      "snippet": "Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Nous sommes à la recherche de deux Responsables de Projet. Si vous avez une expertise dans la gestion juridique et technique des projets de tracé de canalisations, nous vous invitons à rejoind…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3230264",
-      "rome_code": "M1841",
-      "semantic_score": 0.5754068493843079,
-      "llm_rank": 62,
-      "llm_reason": "Chef Projet Réseaux Gaz CDI Lille, réseau d'infrastructure physique, pas expertise IT/réseau informatique.",
-      "score": 16.904882192611694,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.904882192611694
-      }
-    },
-    {
-      "id": "3546464",
-      "title": "Ingénieur Telecom & Réseaux (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 15,
-      "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Dans le cadre de projets d'aménagement urbain, de déploiement de réseaux (fibre optique, électricité, gaz, eau) ou de travaux publics, vous serez responsable de la détec…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546464",
-      "rome_code": "M1804",
-      "semantic_score": 0.5793251991271973,
-      "llm_rank": 63,
-      "llm_reason": "Technicien Fibre Optique, titre similaire 3546464 mais niveau junior, hors périmètre séniorité.",
-      "score": 16.951902389526367,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.951902389526367
-      }
-    },
-    {
-      "id": "3054030",
-      "title": "Ingénieur Gestion de Marchés Ferroviaires – Signalisation H/F",
-      "company": "JEMS ENGINEERING",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 40000.0 Euros à 46000.0 Euros",
-      "posted_days_ago": 25,
-      "snippet": "RESPONSABILITÉS : Contexte : Dans le cadre de projets d'infrastructure ferroviaire en signalisation menés par un acteur majeur du secteur, nous recherchons un.e Ingénieur.e Gestion de Marchés Ferroviaires pour accompagner notre client dans le pilotage et la gestion de marchés de prestations intellectuelles externalisées. Votre rôle sera d'assurer la gestion complète du cycle des marchés tout en g…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3054030",
-      "rome_code": "I1105",
-      "semantic_score": 0.4936352074146271,
-      "llm_rank": 64,
-      "llm_reason": "Ingénieur Gestion Marchés Ferroviaires CDI Lille, signalisation ferroviaire, domaine spécialisé hors réseau IT.",
-      "score": 15.923622488975525,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 5.923622488975525
->>>>>>> Stashed changes
       }
     },
     {
@@ -2585,7 +1473,6 @@
       "company": null,
       "location": "59 - Lille",
       "contract_type": "CDI",
-<<<<<<< Updated upstream
       "salary": null,
       "posted_days_ago": 47,
       "snippet": "Le Domaine Infrastructure et télécom a la responsabilité de l’adéquation du besoin des utilisateurs et du maintien en fonctionnement opérationnel de l’architecture technique du SIH, ainsi que des outils progiciels et équipements mis à disposition des utilisateurs. Le responsable d’exploitation du parc poste de travail pilote la gestion d’un parc de plus de 10000 postes de travail et 2000 impriman…",
@@ -2595,17 +1482,6 @@
       "llm_rank": 63,
       "llm_reason": "Responsable exploitation poste de travail CDI Lille, support utilisateur, non-aligné expertise réseau cœur.",
       "score": 17.223912000656128,
-=======
-      "salary": "Mensuel de 23000.0 Euros à 25200.0 Euros sur 12.0 mois",
-      "posted_days_ago": 19,
-      "snippet": ".MISSION PRINCIPALE ________________________________________ Le service éditique a en charge d'assurer la production et le traitement des états informatiques du Groupe sur différents supports. Votre mission consistera à réaliser l'ensemble des tâches liées à l'activité d'impression et de mise sous plis. ACTIVITES / TACHES SPECIFIQUES DU POSTE ________________________________________ - Gestion des…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/208ZYVP",
-      "rome_code": "M1816",
-      "semantic_score": 0.5131440758705139,
-      "llm_rank": 65,
-      "llm_reason": "Technicien Exploitation Print CDI Lille, informatique mais impression, très éloigné réseau infrastructure.",
-      "score": 16.157728910446167,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -2616,138 +1492,12 @@
       }
     },
     {
-<<<<<<< Updated upstream
-      "id": "8628075",
-      "title": "Monteur / Monteuse réseaux (H/F)",
-=======
-      "id": "207TJFH",
-      "title": "Dessinateur Projeteur VRD - Pôle Génie Urbain (H/F)",
-      "company": "MA-GEO",
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 28000.0 Euros à 32000.0 Euros sur 12.0 mois",
-      "posted_days_ago": 48,
-      "snippet": "Dans le cadre d'un remplacement, MA-GEO recrute son/sa futur(e) Dessinateur Projeteur VRD H/F. Au sein de notre Agence de Lille, vous serez directement rattaché(e) au Directeur d'Etudes et de Travaux VRD. Vous rejoignez une équipe de 12 personnes bienveillantes et dynamiques. Vos missions seront les suivantes : - La dimension des ouvrages (structures de chaussée, réseaux d'assainissement, volumes…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/207TJFH",
-      "rome_code": "F1104",
-      "semantic_score": 0.5360260605812073,
-      "llm_rank": 66,
-      "llm_reason": "Dessinateur Projeteur VRD CDI Lille, infrastructure civile/VRD, pas expertise IT réseau informatique.",
-      "score": 16.432312726974487,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.432312726974487
-      }
-    },
-    {
-      "id": "3998543",
-      "title": "Monteur cableur atelier CDI H/F",
-      "company": null,
-      "location": "62 - Leforest",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 2,
-      "snippet": "Nous recherchons un profil Monteur câbleur pour notre client basé à Leforest Ton profil : Tu bénéficies de minimum deux à trois ans d'expériences en Électricité industrielle Tes principales missions seront la fabrication de coffrets et le câblage d'armoires électriques Ton salaire : entre 1900€ brut/h et et 2300€ brut/h selon niveau et expériences Le poste est en à pourvoir rapidement Les + de l’…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3998543",
-      "rome_code": "F1605",
-      "semantic_score": 0.41072583198547363,
-      "llm_rank": 67,
-      "llm_reason": "Monteur Câbleur CDI Leforest (hors 25km), électricité industrielle, pas réseau IT informatique.",
-      "score": 15.928709983825684,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 4.928709983825684
-      }
-    },
-    {
       "id": "8628075",
       "title": "Monteur / Monteuse réseaux (H/F)",
       "company": null,
       "location": "59 - Bassée",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 137,
-      "snippet": "Description du poste : Ltd compte 9 agences spécialisées en recrutement et en travail temporaire organisées par pôle d'expertise en Ingénierie, Encadrement BTP et Tertiaire Haut de Gamme - Fonctions Supports sur la France entière et à l'International. Ltd assure Qualité et Performance, fondé sur une procédure de recrutement rigoureuse et adaptée aux exigences du marché. Le poste : Nous recherchon…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/8628075",
-      "rome_code": "F1605",
-      "semantic_score": 0.6053422093391418,
-      "llm_rank": 68,
-      "llm_reason": "Monteur Réseaux CDI Bassée, niveau technicien installation, pas ingénierie architecture infrastructure.",
-      "score": 15.264106512069702,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 7.264106512069702
-      }
-    },
-    {
-      "id": "8628060",
-      "title": "Monteur / Monteuse réseaux (H/F)",
-      "company": null,
-      "location": "62 - Béthune",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 137,
-      "snippet": "Description du poste : Ltd compte 9 agences spécialisées en recrutement et en travail temporaire organisées par pôle d'expertise en Ingénierie, Encadrement BTP et Tertiaire Haut de Gamme - Fonctions Supports sur la France entière et à l'International. Ltd assure Qualité et Performance, fondé sur une procédure de recrutement rigoureuse et adaptée aux exigences du marché. Le poste : Nous recherchon…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/8628060",
-      "rome_code": "F1605",
-      "semantic_score": 0.6179134845733643,
-      "llm_rank": 69,
-      "llm_reason": "Monteur Réseaux CDI Béthune (hors 25km), niveau technicien, poste très ancien (137 jours).",
-      "score": 15.414961814880371,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 7.414961814880371
-      }
-    },
-    {
-      "id": "3535239",
-      "title": "Architecte Solution - Développement Régional - Lille (H/F)",
-      "company": null,
-      "location": "59 - Lezennes",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 15,
-      "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3535239",
-      "rome_code": "K1803",
-      "semantic_score": 0.6052564382553101,
-      "llm_rank": 70,
-      "llm_reason": "Architecte Solution CDI Lezennes (25km) Sopra Steria, architecture IT mais détails insuffisants sur réseau.",
-      "score": 15.26307725906372,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 7.263077259063721
-      }
-    },
-    {
-      "id": "3847092",
-      "title": "Chef de mission Expertise H/F",
->>>>>>> Stashed changes
-      "company": null,
-      "location": "59 - Bassée",
-      "contract_type": "CDI",
-      "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 137,
       "snippet": "Description du poste : Ltd compte 9 agences spécialisées en recrutement et en travail temporaire organisées par pôle d'expertise en Ingénierie, Encadrement BTP et Tertiaire Haut de Gamme - Fonctions Supports sur la France entière et à l'International. Ltd assure Qualité et Performance, fondé sur une procédure de recrutement rigoureuse et adaptée aux exigences du marché. Le poste : Nous recherchon…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/8628075",
@@ -2924,23 +1674,12 @@
       "llm_rank": 71,
       "llm_reason": "Monteur câbleur Leforest CDI, câblage électrique industriel, pas informatique, niveau très junior.",
       "score": 15.928709626197815,
-=======
-      "posted_days_ago": 4,
-      "snippet": "Après une formation aux outils et méthodologies du cabinet, vos missions seront les suivantes :- La supervision d'une soixantaine de dossiers variés- L'encadrement d'une équipe de 5 collaborateurs- L'élaboration des bilans comptables et fiscaux- L'établissement de reportings mensuels- La participation à des missions exceptionnelles- Le conseil auprès des clients Ce poste est à pourvoir en CDI dès…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3847092",
-      "rome_code": "K1735",
-      "semantic_score": 0.4924335479736328,
-      "llm_rank": 71,
-      "llm_reason": "Chef Mission Expertise CDI Wasquehal (25km), encadrement équipe mais domaine expertise comptable/fiscal.",
-      "score": 16.909202575683594,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 4.928709626197815
       }
     },
@@ -2959,33 +1698,12 @@
       "llm_rank": 72,
       "llm_reason": "Technicien maintenance électricité Lens CDI, électrotechnique industrielle, domaine différent.",
       "score": 16.698705673217773,
-=======
-        "semantic": 5.909202575683594
-      }
-    },
-    {
-      "id": "3853133",
-      "title": "Chef de mission expertise H/F",
-      "company": null,
-      "location": "59 - Villeneuve-d'Ascq",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 4,
-      "snippet": "Afin de renforcer l'équipe de notre client, nous sommes à la recherche d'un Responsable de dossier expertise F/H. Vous prenez en charge la gestion d'un portefeuille clients avec la collaboration d'un(e) assistant(e) comptable:",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3853133",
-      "rome_code": "K1735",
-      "semantic_score": 0.38427355885505676,
-      "llm_rank": 72,
-      "llm_reason": "Chef Mission Expertise CDI Villeneuve-d'Ascq (25km), gestion dossiers expertise comptable, pas IT.",
-      "score": 15.611282706260681,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 5.698705673217773
       }
     },
@@ -3113,20 +1831,10 @@
       "id": "3176931",
       "title": "Conducteur de ligne (H/F)",
       "company": null,
-=======
-        "semantic": 4.611282706260681
-      }
-    },
-    {
-      "id": "3194747",
-      "title": "Directeur Associé - Réseau Immobilier H/F",
-      "company": "Nextep HR",
->>>>>>> Stashed changes
       "location": "59 - Lille",
       "contract_type": "CDI",
-      "salary": null,
+      "salary": "Annuel de 25000.0 Euros à 30000.0 Euros",
       "posted_days_ago": 22,
-<<<<<<< Updated upstream
       "snippet": "Rattaché(e) au chef d'équipe, vous : - Pilotez une ligne de production et assurez son bon fonctionnement - Réalisez les réglages et la maintenance de 1er niveau - Gérez les aléas et garantissez la continuité de production - Assurez les contrôles qualité et la traçabilité - Respectez strictement les normes sécurité, hygiène et qualité - Participez à l'amélioration continue Poste terrain en horaire…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3176931",
       "rome_code": "N4301",
@@ -3134,22 +1842,12 @@
       "llm_rank": 78,
       "llm_reason": "Conducteur de ligne Lille CDI, production manufacturing, sans rapport infrastructure IT.",
       "score": 15.072676658630371,
-=======
-      "snippet": "POSTE : Directeur Associé - Réseau Immobilier H/F DESCRIPTION : Directeur Associé H/F - Réseau Immobilier - Associez-vous à un réseau en pleine expansion ! Vous rêvez de diriger votre propre structure, avec l'appui d'un réseau solide et des outils déjà en place ? Notre client vous propose un partenariat unique : devenez Directeur Associé d'un Réseau Immobilier, en vous associant au développement…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3194747",
-      "rome_code": "M1303",
-      "semantic_score": 0.5847140550613403,
-      "llm_rank": 73,
-      "llm_reason": "Directeur Associé Réseau Immobilier CDI Lille, franchises immobilier, pas expertise IT réseau informatique.",
-      "score": 17.016568660736084,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 5.072676658630371
       }
     },
@@ -3168,205 +1866,13 @@
       "llm_rank": 79,
       "llm_reason": "Formateur transport voyageurs Hénin CDI, formation conducteurs, domaine transport complètement éloigné.",
       "score": 15.093525886535645,
-=======
-        "semantic": 7.016568660736084
-      }
-    },
-    {
-      "id": "3977987",
-      "title": "Animateur Réseau Franchises - Région Occitanie - H/F",
-      "company": null,
-      "location": "59 - Lesquin",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 2,
-      "snippet": "Animer un réseau d'indépendants, les faire réussir : c'est le challenge de l'animateur Réseau en FranchiseTu seras rattaché à la direction opérationnelle de la Franchise.Au quotidien, à distance ou en présentiel lors de tes visites sur site, tu animes le franchisé sur les principaux KPI commerciaux et financiers qui lui permettront d'optimiser la rentabilité de son point de vente.Pour mener à bie…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3977987",
-      "rome_code": "M1427",
-      "semantic_score": 0.4403405785560608,
-      "llm_rank": 74,
-      "llm_reason": "Animateur Réseau Franchises CDI Lesquin (25km), animation commerciale franchises, pas IT infrastructure.",
-      "score": 16.28408694267273,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.2840869426727295
-      }
-    },
-    {
-      "id": "3725262",
-      "title": "Data Scientis-expert (H/F)",
-      "company": null,
-      "location": "59 - Lezennes",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 10,
-      "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3725262",
-      "rome_code": "M1868",
-      "semantic_score": 0.5198522210121155,
-      "llm_rank": 75,
-      "llm_reason": "Data Scientist Expert CDI Lezennes (25km), orientation data/IA, très éloigné expertise réseau infrastructure.",
-      "score": 17.238226652145386,
->>>>>>> Stashed changes
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 4.0935258865356445
-=======
-        "semantic": 6.238226652145386
-      }
-    },
-    {
-      "id": "1771097",
-      "title": "INGÉNIEUR SYSTÈMES (F/H) (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 60,
-      "snippet": "descriptif du posteEn tant qu'Ingénieur Systèmes, vos missions seront le suivantes : Maintien en condition opérationnelle de la Production :- Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents- Mise en place de flux sur ordonnanceur- Résolution d'incidents- scripting (powershell , bat , shell ..)Maintenance et développement des infrastructures système :- M…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1771097",
-      "rome_code": "M1802",
-      "semantic_score": 0.5004903674125671,
-      "llm_rank": 76,
-      "llm_reason": "Ingénieur Systèmes CDI Lille, MCO production mais focus ordonnanceur, pas expertise réseau architecture.",
-      "score": 16.005884408950806,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.005884408950806
-      }
-    },
-    {
-      "id": "3176931",
-      "title": "Conducteur de ligne (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 25000.0 Euros à 30000.0 Euros",
-      "posted_days_ago": 22,
-      "snippet": "Rattaché(e) au chef d'équipe, vous : - Pilotez une ligne de production et assurez son bon fonctionnement - Réalisez les réglages et la maintenance de 1er niveau - Gérez les aléas et garantissez la continuité de production - Assurez les contrôles qualité et la traçabilité - Respectez strictement les normes sécurité, hygiène et qualité - Participez à l'amélioration continue Poste terrain en horaire…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3176931",
-      "rome_code": "N4301",
-      "semantic_score": 0.42272308468818665,
-      "llm_rank": 77,
-      "llm_reason": "Conducteur Ligne CDI Lille, production manufacturière, totalement hors domaine IT infrastructure.",
-      "score": 15.07267701625824,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 5.07267701625824
-      }
-    },
-    {
-      "id": "209RQCY",
-      "title": "Technicien supérieur de la circulation ferroviaire (F/H) - CDI - LENS",
-      "company": "SNCF RESEAU",
-      "location": "62 - Lens",
-      "contract_type": "CDI",
-      "salary": "Annuel de 26500.0 Euros à 31500.0 Euros sur 12 mois",
-      "posted_days_ago": 8,
-      "snippet": "* Assurer des opérations de régulation et de manoeuvre * Optimiser la circulation des trains en situation normale ou perturbée * S'assurer de l'application des procédures réglementaires Vous jouez un rôle essentiel dans l'optimisation du trafic ferroviaire en assurant une coordination fluide entre les acteurs internes et externes impliqués dans le process. Votre rythme de travail est alternatif,…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209RQCY",
-      "rome_code": "N4401",
-      "semantic_score": 0.37367719411849976,
-      "llm_rank": 78,
-      "llm_reason": "Technicien Circulation Ferroviaire CDI Lens (hors 25km), SNCF, domaine transport ferroviaire pas IT.",
-      "score": 15.484126329421997,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 4.484126329421997
-      }
-    },
-    {
-      "id": "3845826",
-      "title": "TECHNICIEN DE MAINTENANCE ÉLECTRICITÉ 5X8 (F/H) (H/F)",
-      "company": null,
-      "location": "62 - Lens",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 4,
-      "snippet": "descriptif du posteRattaché au responsable maintenance, vous avez en charge d'assurer la maintenance préventive et curative des installations, avec une forte orientation électrique/automatisme.Vous intervenez en cas de dysfonctionnements des machines (mécanique, électrotechnique, électricité, hydraulique, pneumatique, automatisme).Vous participez à l'amélioration continue de l'outil de production…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3845826",
-      "rome_code": "I1309",
-      "semantic_score": 0.47489216923713684,
-      "llm_rank": 79,
-      "llm_reason": "Technicien Maintenance Électricité CDI Lens (hors 25km), électricité industrielle, pas IT réseau.",
-      "score": 16.698706030845642,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.698706030845642
-      }
-    },
-    {
-      "id": "4037724",
-      "title": "Conducteur VOYAGEURS - Devenez Formateur / Hénin-Beaumont H/F",
-      "company": "Aftral",
-      "location": "62 - Hénin-Beaumont",
-      "contract_type": "CDI",
-      "salary": "Annuel de 28000.0 Euros à 30000.0 Euros",
-      "posted_days_ago": 1,
-      "snippet": "Prenez le volant de votre carrière, devenez formateur transport ! Vous êtes expert dans le domaine du transport et avez une réelle passion pour transmettre vos connaissances ? Vous êtes conducteur expérimenté et maîtrisez les exigences du transport de voyageurs ? Et si vous transmettiez aujourd'hui votre savoir-faire à ceux qui prendront la route demain ? Être formateur AFTRAL, c'est : Former les…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4037724",
-      "rome_code": "N4109",
-      "semantic_score": 0.34112730622291565,
-      "llm_rank": 80,
-      "llm_reason": "Conducteur/Formateur Transport CDI Hénin-Beaumont (hors 25km), transport voyageurs, hors secteur IT.",
-      "score": 15.093527674674988,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 4.093527674674988
-      }
-    },
-    {
-      "id": "3958718",
-      "title": "Technicien de contrôle des réseaux d'assainissement (H/F)",
-      "company": null,
-      "location": "59 - Haubourdin",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 3,
-      "snippet": "Description du poste : Dans le cadre du développement de l'activité de notre activité, nous recherchons un Technicien en Assainissement (H/F) pour rejoindre nos équipes et intervenir principalement sur un secteur régional, avec des déplacements ponctuels sur les départements limitrophes. Le poste : Missions principales : Assurer le bon fonctionnement, le nettoyage, la désinfection et le débouchag…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3958718",
-      "rome_code": "K2301",
-      "semantic_score": 0.4921998381614685,
-      "llm_rank": 81,
-      "llm_reason": "Technicien Assainissement CDI Haubourdin, infrastructure civile assainissement, pas IT réseau.",
-      "score": 16.906398057937622,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.906398057937622
->>>>>>> Stashed changes
       }
     },
     {
@@ -3376,7 +1882,6 @@
       "location": "59 - ESTAIRES",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 4,
       "snippet": "Vous interviendrez sur des sites afin de réaliser le nettoyage manuel ou mécanique d'installations chez nos clients industriels, collectivités ou particuliers, dans le respect des modes opératoires et consignes de sécurité. L'environnement de travail peut inclure des périodes de travaux en hauteur ou en milieu confiné ( cuves, caves...). C'est un travail qui peut présenter des difficultés faisant…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VSBK",
@@ -3385,16 +1890,6 @@
       "llm_rank": 80,
       "llm_reason": "Opérateur assainissement Estaires CDI, maintenance industrielle assainissement, domaine très différent.",
       "score": 16.627172231674194,
-=======
-      "posted_days_ago": 67,
-      "snippet": "Notre Cybersecurity Team recherche un·e Tech Lead Engineer basé·e à Lille ou Paris L'équipe Cybersécurité Decathlon assure la protection et la sécurisation de l'ensemble du groupe : elle pilote la stratégie de gouvernance et les processus de gestion du risque, s'assure de la conformité de nos systèmes d'information, définit les moyens techniques nécessaires à la détection et à la réponse aux inci…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1462350",
-      "rome_code": "M1802",
-      "semantic_score": 0.5202783942222595,
-      "llm_rank": 81,
-      "llm_reason": "Tech Lead cybersécurité à Lille : expertise réseau, leadership technique et dimension managériale alignée.",
-      "score": 14.243340730667114,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -3429,13 +1924,12 @@
       }
     },
     {
-      "id": "209VSBK",
-      "title": "Opérateur d'assainissement maintenance industrielle H/F",
-      "company": "SA FLAMME ASSAINISSEMENT",
-      "location": "59 - ESTAIRES",
+      "id": "3534957",
+      "title": "Ingénieur(e) DevOps - Infrastructure - Lille (H/F)",
+      "company": null,
+      "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 15,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3534957",
@@ -3444,23 +1938,13 @@
       "llm_rank": 81,
       "llm_reason": "DevOps/Infrastructure CDI à Lezennes, alignement excellent avec automatisation et expertise technique recherchée.",
       "score": 14.879914045333862,
-=======
-      "posted_days_ago": 4,
-      "snippet": "Vous interviendrez sur des sites afin de réaliser le nettoyage manuel ou mécanique d'installations chez nos clients industriels, collectivités ou particuliers, dans le respect des modes opératoires et consignes de sécurité. L'environnement de travail peut inclure des périodes de travaux en hauteur ou en milieu confiné ( cuves, caves...). C'est un travail qui peut présenter des difficultés faisant…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VSBK",
-      "rome_code": "K2301",
-      "semantic_score": 0.46893107891082764,
-      "llm_rank": 82,
-      "llm_reason": "Opérateur Assainissement CDI Estaires (hors 25km), maintenance industrielle, pas expertise IT.",
-      "score": 16.62717294692993,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.627172946929932
+        "freshness": 0.0,
+        "semantic": 6.879914045333862
       }
     },
     {
@@ -3498,48 +1982,17 @@
       "snippet": "SCC est la division « technologie » du Groupe Rigby. Premier groupe informatique privé en Europe, SCC est un acteur majeur de l'intégration et des services informatiques d'infrastructure. L'ambition de SCC est de fournir à ses clients des solutions technologiques et des services intégrés pour assurer l'efficacité financière et opérationnelle de leur outil informatique et supporter leur compétitiv…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3131619",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.47524863481521606,
       "llm_rank": 83,
       "llm_reason": "Expert systèmes/réseau à Villeneuve-d'Ascq CDI, expertise infrastructure et responsabilités techniques alignées.",
       "score": 13.702983617782593,
-=======
-      "semantic_score": 0.4752484858036041,
-      "llm_rank": 82,
-      "llm_reason": "Expert systèmes et réseau à Villeneuve-d'Ascq : profil senior infrastructure correspondant aux compétences techniques.",
-      "score": 13.70298182964325,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.7029818296432495
-      }
-    },
-    {
-      "id": "3534957",
-      "title": "Ingénieur(e) DevOps - Infrastructure - Lille (H/F)",
-      "company": null,
-      "location": "59 - Lezennes",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 15,
-      "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3534957",
-      "rome_code": "M1827",
-      "semantic_score": 0.5733262896537781,
-      "llm_rank": 83,
-      "llm_reason": "DevOps infrastructure Sopra Steria à Lezennes : CDI, infrastructure cloud et automatisation, légèrement moins aligné sur réseau.",
-      "score": 14.879915475845337,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 6.879915475845337
+        "semantic": 5.702983617782593
       }
     },
     {
@@ -3553,28 +2006,17 @@
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Mission Générale Sous la responsabilité du manager de service, le/la Cartographe Réseaux Secs est chargé(e) de la saisie, de la mise à jour, de l'analyse et de la valori…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546332",
       "rome_code": "M1804",
-<<<<<<< Updated upstream
       "semantic_score": 0.5757643580436707,
       "llm_rank": 84,
       "llm_reason": "Ingénieur Telecom Réseaux CDI à Ronchin, poste réseau mais informations limitées sur envergure et leadership.",
       "score": 14.909172296524048,
-=======
-      "semantic_score": 0.575764536857605,
-      "llm_rank": 84,
-      "llm_reason": "Ingénieur télécom réseaux à Ronchin : CDI, domaine réseau pertinent mais peu de détails sur leadership et architecture.",
-      "score": 14.90917444229126,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.909172296524048
-=======
-        "semantic": 6.90917444229126
->>>>>>> Stashed changes
       }
     },
     {
@@ -3590,11 +2032,7 @@
       "rome_code": "M1802",
       "semantic_score": 0.4617946147918701,
       "llm_rank": 85,
-<<<<<<< Updated upstream
       "llm_reason": "Modern Workplace Lille CDI mais poste junior explicitement, non adapté au profil senior avec 5 ans d'expérience.",
-=======
-      "llm_reason": "Modern Workplace junior à Lille : CDI infrastructure IT mais explicitement junior, ne correspond pas au niveau senior souhaité.",
->>>>>>> Stashed changes
       "score": 10.541535377502441,
       "score_breakdown": {
         "keywords": -5.0,
@@ -3603,7 +2041,6 @@
         "location": 2.0,
         "freshness": 0.0,
         "semantic": 5.541535377502441
-<<<<<<< Updated upstream
       }
     },
     {
@@ -3628,8 +2065,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 6.331620454788208
-=======
->>>>>>> Stashed changes
       }
     },
     {
@@ -3643,52 +2078,17 @@
       "snippet": "Mieux nous connaître Verspieren recrute des talents de tous horizons pour accompagner sa croissance. En tant qu'intermédiaire, Verspieren s'engage aux côtés de ses clients pour les conseiller, construire des programmes d'assurance sur mesure et leur permettre d'entreprendre en toute confiance. Notre raison d'être est d'apporter à tous des solutions durables pour protéger et faire grandir ce qui a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3231277",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.5168727040290833,
       "llm_rank": 87,
       "llm_reason": "Ingénieur système mainframe Wasquehal CDI, expertise système mais mainframe éloigné du profil réseau/cloud.",
       "score": 14.202472448348999,
-=======
-      "semantic_score": 0.516872763633728,
-      "llm_rank": 86,
-      "llm_reason": "Ingénieur système mainframe à Wasquehal : CDI infrastructure mais spécialité mainframe éloignée du profil réseau/cloud.",
-      "score": 14.202473163604736,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.202472448348999
-=======
-        "semantic": 6.202473163604736
-      }
-    },
-    {
-      "id": "3231309",
-      "title": "Responsable d'activité réseau (H/F)",
-      "company": null,
-      "location": "59 - Wasquehal",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 21,
-      "snippet": "Mieux nous connaître Verspieren recrute des talents de tous horizons pour accompagner sa croissance. En tant qu'intermédiaire, Verspieren s'engage aux côtés de ses clients pour les conseiller, construire des programmes d'assurance sur mesure et leur permettre d'entreprendre en toute confiance. Notre raison d'être est d'apporter à tous des solutions durables pour protéger et faire grandir ce qui a…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3231309",
-      "rome_code": "M1867",
-      "semantic_score": 0.5276350378990173,
-      "llm_rank": 87,
-      "llm_reason": "Responsable activité réseau Verspieren à Wasquehal : CDI réseau avec dimension leadership mais dans assurance, secteur éloigné.",
-      "score": 14.331620454788208,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 6.331620454788208
->>>>>>> Stashed changes
       }
     },
     {
@@ -3702,28 +2102,17 @@
       "snippet": "Missions Principales Le Chargé d'Études de Prix en Réseaux Secs analyse les dossiers de consultation des entreprises afin de concevoir et de chiffrer les solutions techniques les plus adaptées et compétitives dans le domaine des infrastructures de réseaux. Il intervient sur des projets liés à l'électricité haute et basse tension, à l'éclairage public, aux télécommunications, à la fibre optique et…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209GQXL",
       "rome_code": "F1120",
-<<<<<<< Updated upstream
       "semantic_score": 0.5585424900054932,
       "llm_rank": 88,
       "llm_reason": "Charge études prix réseaux secs Ronchin CDI, domaine infrastructures mais rôle davantage étude que design/architecture.",
       "score": 14.702509880065918,
-=======
-      "semantic_score": 0.5585424304008484,
-      "llm_rank": 88,
-      "llm_reason": "Chargé études prix réseaux secs à Ronchin : CDI mais rôle administratif/commercial éloigné de l'expertise technique et architecture.",
-      "score": 14.70250916481018,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.702509880065918
-=======
-        "semantic": 6.702509164810181
->>>>>>> Stashed changes
       }
     },
     {
@@ -3737,28 +2126,17 @@
       "snippet": "Mission Générale Sous la responsabilité du manager de service, le/la Cartographe Réseaux Secs est chargé(e) de la saisie, de la mise à jour, de l'analyse et de la valorisation des données géographiques complexes liées aux réseaux secs (électricité, gaz, télécoms/fibre optique, éclairage public). Il/Elle garantit la fiabilité des plans et des bases de données cartographiques nécessaires à la bonne…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209FSLJ",
       "rome_code": "M1808",
-<<<<<<< Updated upstream
       "semantic_score": 0.5392943620681763,
       "llm_rank": 89,
       "llm_reason": "Cartographe réseaux secs Ronchin CDI, infrastructure mais rôle cartographie données peu aligné expertise architecture.",
       "score": 14.471532344818115,
-=======
-      "semantic_score": 0.5392943024635315,
-      "llm_rank": 90,
-      "llm_reason": "Cartographe réseaux secs à Ronchin : CDI mais rôle SIG/données incompatible avec architecture infrastructure et réseau.",
-      "score": 14.471531629562378,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.471532344818115
-=======
-        "semantic": 6.471531629562378
->>>>>>> Stashed changes
       }
     },
     {
@@ -3772,28 +2150,17 @@
       "snippet": "- Installer, mettre en service et maintenir des systèmes :GTB / GTCSupervision et automatismesSystèmes de sûreté : vidéosurveillance, contrôle d'accès, intrusionÉquipements électriques associés - Réaliser des interventions de dépannage sur site- Effectuer les tests, réglages et paramétrages des systèmes- Participer à l'évolution et à l'optimisation des installations existantes- Assurer un support…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1754777",
       "rome_code": "I1312",
-<<<<<<< Updated upstream
       "semantic_score": 0.5100874900817871,
       "llm_rank": 91,
       "llm_reason": "Technicien maintenance courant faible Lesquin CDI, niveau technicien insuffisant, pas dimension architecture recherchée.",
       "score": 14.121049880981445,
-=======
-      "semantic_score": 0.5100876688957214,
-      "llm_rank": 91,
-      "llm_reason": "Technicien maintenance courant faible à Lesquin : CDI mais poste technicien, non-managérial, niveau junior/intermédiaire.",
-      "score": 14.121052026748657,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.121049880981445
-=======
-        "semantic": 6.121052026748657
->>>>>>> Stashed changes
       }
     },
     {
@@ -3807,28 +2174,17 @@
       "snippet": "Dans le cadre de son développement, Pôle Énergie recrute un(e) Technicien(ne) Courant Faible pour intervenir sur des installations auprès d'une clientèle professionnelle et particulière. Vous interviendrez sur différents systèmes liés au courant faible, de l'installation à la maintenance. Vos missions principales : - Installation et mise en service de systèmes courant faible - Maintenance et dépa…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/207WHSQ",
       "rome_code": "I1312",
-<<<<<<< Updated upstream
       "semantic_score": 0.5732991695404053,
       "llm_rank": 92,
       "llm_reason": "Technicien courant faible Beuvry-la-Forêt CDI, profil junior/technicien, candidat recherche poste expérimenté.",
       "score": 14.879590034484863,
-=======
-      "semantic_score": 0.5732993483543396,
-      "llm_rank": 92,
-      "llm_reason": "Technicien courant faible Pôle Énergie à Beuvry : CDI mais poste technique junior/intermédiaire sans dimension architecture.",
-      "score": 14.879592180252075,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 6.879590034484863
-=======
-        "semantic": 6.879592180252075
->>>>>>> Stashed changes
       }
     },
     {
@@ -3842,17 +2198,10 @@
       "snippet": "La Plateforme Proch'emploi accompagne une entreprise à taille humaine, spécialisée dans le BTP dans son recrutement d'un Conducteur de travaux h/f éclairage public et réseaux secs en CDI. Rattaché(e) à la direction, vous êtes le chef d'orchestre de vos chantiers. Vos responsabilités s'articulent autour de quatre piliers : Pilotage Opérationnel : Planifier, organiser et superviser les étapes des c…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/206KCHT",
       "rome_code": "F1302",
-<<<<<<< Updated upstream
       "semantic_score": 0.5623827576637268,
       "llm_rank": 93,
       "llm_reason": "Conducteur travaux TP Douai CDI, domaine BTP éloigné infrastructure IT, non aligné expertise candidate.",
       "score": 14.748593091964722,
-=======
-      "semantic_score": 0.5623828172683716,
-      "llm_rank": 93,
-      "llm_reason": "Conducteur travaux éclairage public à Douai : CDI leadership chantier mais BTP/infrastructure civile, pas infrastructure IT/réseau.",
-      "score": 14.748593807220459,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
@@ -3860,30 +2209,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 6.748593091964722
-      }
-    },
-    {
-      "id": "3491746",
-      "title": "Ingénieur méthode industriel  (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 16,
-      "snippet": "L'industrie européenne se transforme. Les capitaux sont là, les projets aussi. Mais sur le terrain, il manque l'essentiel : les compétences pour faire tourner les lignes. C'est pour répondre à ce contexte que Kali Group existe. Nous sommes un cabinet de conseil spécialisé à 100% dans le manufacturing opérationnel. De l'industrialisation à la modernisation, nous résolvons les défis que la complexi…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3491746",
-      "rome_code": "M1802",
-      "semantic_score": 0.4053637385368347,
-      "llm_rank": 94,
-      "llm_reason": "Ingénieur méthode industriel à Lille : CDI mais domaine manufacturing, sans lien avec infrastructure et réseau.",
-      "score": 14.864364862442017,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 4.864364862442017
       }
     },
     {
@@ -3897,24 +2222,16 @@
       "snippet": "Parce qu'un approvisionnement continu et sécurisé de notre système électrique est essentiel à la bonne circulation des trains sur notre réseau ferroviaire, nous recherchons un(e) superviseur/superviseuse du réseau électrique ferroviaire, pour rejoindre notre grande équipe ! Calme, prudent(e), méthodique et prêt(e) à tout pour satisfaire nos clients ? Vous êtes la personne qu'il nous faut ! Vos jo…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209JSFF",
       "rome_code": "N4401",
-<<<<<<< Updated upstream
       "semantic_score": 0.3956770896911621,
       "llm_rank": 94,
       "llm_reason": "Superviseur réseau ferroviaire Lille CDI, domaine électrique/ferroviaire peu pertinent pour architecte IT.",
       "score": 14.748125076293945,
-=======
-      "semantic_score": 0.3956771492958069,
-      "llm_rank": 95,
-      "llm_reason": "Conducteur travaux éclairage à Douai : CDI leadership mais secteur BTP/infrastructure civile, hors domaine informatique.",
-      "score": 14.748125791549683,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 4.748125076293945
       }
     },
@@ -3933,81 +2250,12 @@
       "llm_rank": 95,
       "llm_reason": "Ingénieur méthode industriel Lille CDI mais manufacturing, domaine très éloigné infrastructure réseau IT.",
       "score": 14.864365220069885,
-=======
-        "semantic": 4.748125791549683
-      }
-    },
-    {
-      "id": "208PYJP",
-      "title": "Chef de projet topographie - H/F (H/F)",
-      "company": "GEOFIT",
-      "location": "59 - Templemars",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 2700.0 Euros à 3500.0 Euros sur 12 mois",
-      "posted_days_ago": 30,
-      "snippet": "Envie d'intégrer un groupe collaboratif et engagé ? Depuis sa création en 1968, GEOFIT est inscrit à l'Ordre des Géomètres-Experts. Les engagements de cette profession ont formé les racines du Groupe et permis de développer un large panel de compétences métier autour de valeurs communes. Acteur clé du développement des territoires et de la ville, nous comptons plus de 1500 collaborateurs en Franc…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/208PYJP",
-      "rome_code": "F1146",
-      "semantic_score": 0.5682790875434875,
-      "llm_rank": 96,
-      "llm_reason": "Chef projet topographie GEOFIT à Templemars : CDI projet mais géomètres-experts, domaine sans lien avec IT/réseau.",
-      "score": 14.81934905052185,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 6.819349050521851
-      }
-    },
-    {
-      "id": "3154054",
-      "title": "Directeur de Projet (H/F)",
-      "company": null,
-      "location": "59 - Lesquin",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 23,
-      "snippet": "Un projet structurant au coeur d'un chantier emblématique Dans le cadre de la réalisation du Canal Seine-Nord Europe, SEMERU intervient sur la construction de l'écluse de Montmacq, un ouvrage stratégique pour le développement du transport fluvial en France et en Europe. Vous prendrez la responsabilité d'un projet d'environ 14 millions d'euros, couvrant : Les installations en courants forts (CFO)…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3154054",
-      "rome_code": "M1854",
-      "semantic_score": 0.4822157621383667,
-      "llm_rank": 97,
-      "llm_reason": "Directeur projet Canal Seine-Nord à Lesquin : CDI direction projet mais secteur fluvial BTP, éloigné de l'expertise.",
-      "score": 13.7865891456604,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 5.7865891456604
-      }
-    },
-    {
-      "id": "1856923",
-      "title": "Consultant progiciel F/H - Numih France - Lille",
-      "company": "Numih France - Lille",
-      "location": "59 - Loos",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 58,
-      "snippet": "Face à l’accélération de la transformation numérique dans le domaine de la santé, Numih France renforce sa capacité à concevoir, industrialiser et déployer ses offres innovantes. Dans ce contexte, nous recrutons un(e) Chargé de Déploiement expérimenté(e), dans l’objectif de renforcer notre équipe en responsabilité de la mise en œuvre, du support et de l’exploitation des plateformes Prodige/dh pou…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1856923",
-      "rome_code": "M1802",
-      "semantic_score": 0.5060137510299683,
-      "llm_rank": 98,
-      "llm_reason": "Consultant progiciel santé Numih à Loos : CDI mais secteur e-santé, sans lien avec infrastructure et réseau.",
-      "score": 14.07216501235962,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 4.864365220069885
       }
     },
@@ -4026,33 +2274,12 @@
       "llm_rank": 96,
       "llm_reason": "Directeur projet Lesquin CDI, dimension leadership mais projet TP construction, secteur non aligné.",
       "score": 13.786589503288269,
-=======
-        "semantic": 6.072165012359619
-      }
-    },
-    {
-      "id": "2294497",
-      "title": "Consultants déploiement progiciel e-santé F/H - Numih France - Lille",
-      "company": "Numih France - Lille",
-      "location": "59 - Loos",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 46,
-      "snippet": "Valérie recherche des consultants déploiement progiciel e-santé. Rattachée à la Direction de l’agence de Loos, vous êtes en charge de déployer les nouvelles fonctionnalités, de paramétrer et de contribuer à la migration de notre Dossier Patient Cariatides (DPI) vers notre DPI Sillage. Professionnelle de la santé avec une appétence IT, ou experte informatique avec une culture hospitalière ancrée,…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2294497",
-      "rome_code": "M1802",
-      "semantic_score": 0.4603275656700134,
-      "llm_rank": 99,
-      "llm_reason": "Consultant déploiement e-santé Numih à Loos : CDI consultant mais secteur santé/progiciel, non-pertinent pour profil réseau.",
-      "score": 13.523930788040161,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 5.786589503288269
       }
     },
@@ -4078,9 +2305,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 6.819347620010376
-=======
-        "semantic": 5.523930788040161
->>>>>>> Stashed changes
       }
     },
     {
@@ -4094,28 +2318,20 @@
       "snippet": "Rattaché(e) à notre site de Lille, en tant que Sales Developer, vous aurez en charge : la prospection, le développement et le suivi de comptes clients dans le secteur du retail. A ce titre, vous : Prospectez et développez les contacts au sein des sociétés ciblées et aussi en charge de gérer et remonter le forecast / les prévisions (donner une vision prévisionnelle des ventes par offre), Détectez…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3110660",
       "rome_code": "M1802",
-<<<<<<< Updated upstream
       "semantic_score": 0.4520251452922821,
       "llm_rank": 98,
       "llm_reason": "Sales Developer Lezennes CDI, commercial retail, domaine sans rapport avec infrastructure/architecture IT.",
       "score": 13.424301743507385,
-=======
-      "semantic_score": 0.4520251750946045,
-      "llm_rank": 100,
-      "llm_reason": "Sales Developer Lezennes : CDI ventes/business développement, métier incompatible avec ingénierie infrastructure.",
-      "score": 13.424302101135254,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 5.424302101135254
+        "semantic": 5.424301743507385
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "2294497",
       "title": "Consultants déploiement progiciel e-santé F/H - Numih France - Lille",
       "company": "Numih France - Lille",
@@ -4262,15 +2478,10 @@
     {
       "id": "0697588",
       "title": "CHARGÉ ADV & RELATION CLIENT / PME INNOVANTE DU BÂTIMENT (F/H) (H/F)",
-=======
-      "id": "1479183",
-      "title": "Expert Data Catalog (f/m/d) (H/F)",
->>>>>>> Stashed changes
       "company": null,
-      "location": "59 - Villeneuve-d'Ascq",
+      "location": "59 - Sequedin",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 88,
       "snippet": "Expectra accompagne une PME en plein essor, dont les produits innovants font baisser l'empreinte carbone des constructions, neuves comme rénovées. Cette société engagée sur des valeurs humaines, sociétales et environnementales, recherche un(e) Chargé(e) d'ADV & relation client pour prendre soin de sa clientèle de négoces matériaux en France.Ce poste s'appuie sur un outil ERP particulièrement effi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/0697588",
@@ -4279,32 +2490,21 @@
       "llm_rank": 105,
       "llm_reason": "Chargé ADV bâtiment Sequedin CDI, relation client PME, domaine construction non aligné expertise.",
       "score": 13.622819900512695,
-=======
-      "posted_days_ago": 67,
-      "snippet": "Product Manager Data Catalog Notre Center of Excellence Data &amp; AI recherche un·e Product Manager basé·e à Lille. Chez Decathlon, nous croyons au pouvoir du sport pour unir et inspirer. Notre mission : rendre le sport accessible au plus grand nombre, partout dans le monde. Pour y parvenir, la data est au cœur de notre stratégie, elle guide chaque décision, de la conception du produit à l'expér…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1479183",
-      "rome_code": "M1868",
-      "semantic_score": 0.4139607548713684,
-      "llm_rank": 101,
-      "llm_reason": "Product Manager Data Catalog Decathlon à Villeneuve : CDI mais rôle produit data, hors domaine infrastructure réseau.",
-      "score": 12.967529058456421,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.967529058456421
+        "semantic": 5.622819900512695
       }
     },
     {
-      "id": "3456676",
-      "title": "CHARGE D'ETUDES H/F",
-      "company": null,
-      "location": "62 - Lens",
+      "id": "3030267",
+      "title": "Manipulateur radio H/F - Lambersart 59",
+      "company": "JoberGroup",
+      "location": "59 - Lambersart",
       "contract_type": "CDI",
-<<<<<<< Updated upstream
       "salary": "Mensuel de 3000.0 Euros à 3500.0 Euros",
       "posted_days_ago": 26,
       "snippet": "Emploi Manipulateur échographie H/F - Lambersart 59 Nous recrutons un manipulateur échographie H/F pour intégrer un cabinet d’imagerie médicale situé à Lambersart, dans le département du Nord, dans le cadre d’un contrat salarié à temps plein ou partiel. Description et missions En tant que manipulateur en électroradiologie médicale, vous interviendrez au sein d’un cabinet d’imagerie polyvalente, a…",
@@ -4314,76 +2514,13 @@
       "llm_rank": 106,
       "llm_reason": "Manipulateur radio Lambersart CDI, secteur santé/imagerie, sans rapport infrastructure IT/réseau.",
       "score": 12.462493062019348,
-=======
-      "salary": null,
-      "posted_days_ago": 16,
-      "snippet": "Dans le cadre de vos fonctions, vous serez en charge des chiffrages et des métrés pour des projets TCE. Vous travaillerez en lien direct avec les différents intervenants et services techniques pour :- Réaliser les métrés et chiffrages des projets,",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3456676",
-      "rome_code": "K1735",
-      "semantic_score": 0.4721769392490387,
-      "llm_rank": 102,
-      "llm_reason": "Chargé études TCE à Lens : CDI études bâtiment, sans lien avec infrastructure IT/réseau, localisation en limite.",
-      "score": 13.666123270988464,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 4.462493062019348
-=======
-        "semantic": 5.666123270988464
-      }
-    },
-    {
-      "id": "3221449",
-      "title": "Technicien usine exploitation et maintenance assainissement H/F",
-      "company": null,
-      "location": "62 - Hénin-Beaumont",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 22,
-      "snippet": "Description de l'entreprise Le groupe Veolia a pour ambition de devenir l'entreprise de référence de la transformation écologique. Présent sur les cinq continents avec près de 179 000 salariés, le Groupe conçoit et déploie des solutions utiles et concrètes pour la gestion de l'eau, des déchets et de l'énergie qui participent à changer radicalement la donne. Au travers de ses trois activités compl…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3221449",
-      "rome_code": "K2301",
-      "semantic_score": 0.45545050501823425,
-      "llm_rank": 103,
-      "llm_reason": "Technicien assainissement Veolia à Hénin-Beaumont : CDI technique eau/assainissement, domaine complètement différent.",
-      "score": 13.465406060218811,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 5.465406060218811
->>>>>>> Stashed changes
-      }
-    },
-    {
-      "id": "0697588",
-      "title": "CHARGÉ ADV & RELATION CLIENT / PME INNOVANTE DU BÂTIMENT (F/H) (H/F)",
-      "company": null,
-      "location": "59 - Sequedin",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 88,
-      "snippet": "Expectra accompagne une PME en plein essor, dont les produits innovants font baisser l'empreinte carbone des constructions, neuves comme rénovées. Cette société engagée sur des valeurs humaines, sociétales et environnementales, recherche un(e) Chargé(e) d'ADV & relation client pour prendre soin de sa clientèle de négoces matériaux en France.Ce poste s'appuie sur un outil ERP particulièrement effi…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/0697588",
-      "rome_code": "M1839",
-      "semantic_score": 0.4685683846473694,
-      "llm_rank": 104,
-      "llm_reason": "Chargé ADV client bâtiment à Sequedin : CDI relationnel/commercial, domaine construction, incompatible avec profil.",
-      "score": 13.622820615768433,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 5.622820615768433
       }
     },
     {
@@ -4397,24 +2534,16 @@
       "snippet": "DESCRIPTION DU POSTE Vous travaillez au sein de l'atelier TECHNIS de LENS MERICOURT En tant qu'agent ou agente de manoeuvre des trains, vous déplacez les locomotives dans un centre de maintenance. Par vos actions vous êtes garant de la ponctualité des trains.. VOS MISSIONS PRINCIPALES SONT LES SUIVANTES : * Le déplacement des rames dans le technicentre : récupération du train à son arrivée sur le…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1246529",
       "rome_code": "N4403",
-<<<<<<< Updated upstream
       "semantic_score": 0.4227037727832794,
       "llm_rank": 107,
       "llm_reason": "Agent mouvement SNCF Méricourt CDI, ferroviaire, domaine sans lien infrastructure réseau IT.",
       "score": 13.072445273399353,
-=======
-      "semantic_score": 0.4227040112018585,
-      "llm_rank": 105,
-      "llm_reason": "Agent mouvement SNCF Lens : CDI mais manœuvre/maintenance matériel roulant, éloigné de l'infrastructure IT/réseau.",
-      "score": 13.072448134422302,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 5.072445273399353
       }
     },
@@ -4435,33 +2564,10 @@
       "score": 5.925413131713867,
       "score_breakdown": {
         "keywords": -8.0,
-=======
-        "semantic": 5.072448134422302
-      }
-    },
-    {
-      "id": "3030267",
-      "title": "Manipulateur radio H/F - Lambersart 59",
-      "company": "JoberGroup",
-      "location": "59 - Lambersart",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 3000.0 Euros à 3500.0 Euros",
-      "posted_days_ago": 26,
-      "snippet": "Emploi Manipulateur échographie H/F - Lambersart 59 Nous recrutons un manipulateur échographie H/F pour intégrer un cabinet d’imagerie médicale situé à Lambersart, dans le département du Nord, dans le cadre d’un contrat salarié à temps plein ou partiel. Description et missions En tant que manipulateur en électroradiologie médicale, vous interviendrez au sein d’un cabinet d’imagerie polyvalente, a…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3030267",
-      "rome_code": "M1807",
-      "semantic_score": 0.37187448143959045,
-      "llm_rank": 106,
-      "llm_reason": "Manipulateur radio Lambersart : CDI secteur santé/imagerie, domaine sans relation avec infrastructure réseau.",
-      "score": 12.462493777275085,
-      "score_breakdown": {
-        "keywords": 0.0,
->>>>>>> Stashed changes
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-<<<<<<< Updated upstream
         "semantic": 5.925413131713867
       }
     },
@@ -4487,9 +2593,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 7.803188323974609
-=======
-        "semantic": 4.4624937772750854
->>>>>>> Stashed changes
       }
     },
     {
@@ -4503,24 +2606,17 @@
       "snippet": "Description du poste : Aquila RH, première agence d'emploi implantée sur le secteur de la Pévèle. Aquila RH, c'est la force d'un réseau, l'implication d'indépendants, la proximité avec les acteurs locaux, pour vos emplois en intérim, CDD et CDI. On recrute un Maçon VRD (H/F) Tu aimes le béton, les réseaux et le travail bien fait ? Lis ça Vos missions Ta mission (si tu l'acceptes)***Poser bordures…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3809284",
       "rome_code": "F1702",
-<<<<<<< Updated upstream
       "semantic_score": 0.4996741712093353,
       "llm_rank": 110,
       "llm_reason": "Ouvrier VRD Mons-en-Pévèle CDI, profil ouvrier/BTP, très éloigné ingénieur architecture infrastructure.",
       "score": 8.996090054512024,
-=======
-      "semantic_score": 0.49967435002326965,
-      "llm_rank": 107,
-      "llm_reason": "Ouvrier VRD Mons-en-Pévèle : CDI ouvrier BTP/voirie, métier manuel sans lien avec infrastructure IT/réseau.",
-      "score": 8.996092200279236,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": -8.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 5.996092200279236
+        "semantic": 5.996090054512024
       }
     },
     {
@@ -4534,89 +2630,10 @@
       "snippet": "Aquila RH, première agence d’emploi implantée sur le secteur de la Pévèle.Aquila RH, c'est la force d’un réseau, l’implication d’indépendants, la proximité avec les acteurs locaux, pour vos emplois en intérim, CDD et CDI. On recrute un Maçon VRD (H/F)Tu aimes le béton, les réseaux et le travail bien fait ? Lis ça Vos missionsTa mission (si tu l’acceptes)Poser bordures, caniveaux, pavés et regards…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4066062",
       "rome_code": "F1704",
-<<<<<<< Updated upstream
       "semantic_score": 0.4882870316505432,
       "llm_rank": 111,
       "llm_reason": "Maçon VRD Mons-en-Pévèle CDI, ouvrier BTP, totalement non aligné profil ingénieur infrastructure.",
       "score": 8.859444379806519,
-=======
-      "semantic_score": 0.48828697204589844,
-      "llm_rank": 108,
-      "llm_reason": "Maçon VRD Mons-en-Pévèle : CDI métier manuel construction voirie, sans relation avec expertise infrastructure.",
-      "score": 8.859443664550781,
-      "score_breakdown": {
-        "keywords": -8.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.859443664550781
-      }
-    },
-    {
-      "id": "2846335",
-      "title": "Technicien Voirie et Réseaux Divers H/F",
-      "company": "Crit",
-      "location": "59 - Roubaix",
-      "contract_type": "CDI",
-      "salary": "Horaire de 12.31 Euros à 12.31 Euros",
-      "posted_days_ago": 31,
-      "snippet": "POSTE : Technicien Voirie et Réseaux Divers H/F DESCRIPTION : Dans le cadre du développement de son activité, nous recherchons pour notre client, spécialisé dans le secteur de la construction et des travaux publics, un technicien voirie et réseaux divers à Roubaix - 59100 en contrat intérimaire. Le poste requiert une expérience de 1 à 2 ans ainsi qu'un BEP/CAP dans le domaine. Les horaires sont d…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2846335",
-      "rome_code": "F1702",
-      "semantic_score": 0.650265634059906,
-      "llm_rank": 109,
-      "llm_reason": "Technicien VRD à Roubaix : intérim BTP/voirie, contrat temporaire et domaine non-pertinent, hors critères.",
-      "score": 7.803187608718872,
-      "score_breakdown": {
-        "keywords": -8.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 7.803187608718872
-      }
-    },
-    {
-      "id": "2846894",
-      "title": "Agent Réseau Eau Potable H/F",
-      "company": "Crit",
-      "location": "59 - Roubaix",
-      "contract_type": "CDI",
-      "salary": "Horaire de 12.31 Euros à 12.31 Euros",
-      "posted_days_ago": 31,
-      "snippet": "POSTE : Agent Réseau Eau Potable H/F DESCRIPTION : Dans le cadre du développement de son activité, nous recherchons pour notre client, spécialisé dans le secteur de la distribution d'eau potable, un Agent réseau eau potable à Roubaix - 59100 en contrat intérimaire de 12 mois. Le candidat idéal devra justifier d'une expérience de 1 à 2 ans, ainsi que d'une formation de niveau BEP/CAP. Les horaires…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/2846894",
-      "rome_code": "K2301",
-      "semantic_score": 0.4937843680381775,
-      "llm_rank": 110,
-      "llm_reason": "Agent réseau eau Roubaix : intérim distribution eau potable, contrat temporaire et domaine incompatible.",
-      "score": 5.92541241645813,
-      "score_breakdown": {
-        "keywords": -8.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 5.92541241645813
-      }
-    },
-    {
-      "id": "3336167",
-      "title": "ALTERNANCE EN COMMUNICATION RÉSEAUX SOCIAUX - H/F",
-      "company": null,
-      "location": "59 - Templeuve-en-Pévèle",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 18,
-      "snippet": "Nous recherchons notre prochain(e) alternant(e) en communication pour notre E.LECLERC de Templeuve afin de répondre aux besoins grandissants des différentes enseigne du Groupe. Sous la direction du Responsable Communication, vous aurez un rôle opérationnel·le dans la production de contenus graphiques pour la conception de supports print, web et vidéo du groupe. Pour satisfaire à vos missions, vot…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3336167",
-      "rome_code": "E1124",
-      "semantic_score": 0.4912490248680115,
-      "llm_rank": 111,
-      "llm_reason": "Alternance communication Templeuve : contrat alternance (non-CDI), domaine communication/réseaux sociaux, junior.",
-      "score": 13.894988298416138,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": -8.0,
         "contract": 8.0,
@@ -4627,18 +2644,12 @@
       }
     },
     {
-<<<<<<< Updated upstream
       "id": "4048696",
       "title": "Responsable de réseaux d'assainissement (H/F)",
-=======
-      "id": "3957262",
-      "title": "Architecte d'intérieur (H/F)",
->>>>>>> Stashed changes
       "company": null,
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-<<<<<<< Updated upstream
       "posted_days_ago": 1,
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : LTD, dans le cadre du développement de son activité VRD recherche, un Ingénieur Chargé d'affaires VRD/Réseaux Secs HTA BT H/F Rattaché(e) au chef de service, vous partic…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4048696",
@@ -4647,27 +2658,13 @@
       "llm_rank": null,
       "llm_reason": null,
       "score": 19.555210828781128,
-=======
-      "posted_days_ago": 3,
-      "snippet": "Description du poste : LTD, c'est un cabinet de recrutement et une agence de travail temporaire spécialisée en Ingénierie, Encadrement BTP, Télécom et Tertiaire Haut de Gamme - en France et à l'international. Nos implantations 5 agences au cœur de Paris - 3 agences en région - 1 agence aux États-Unis - 1 agence au Canada +2000 entreprises partenaires nous font confiance partout en France, et notr…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3957262",
-      "rome_code": "F1102",
-      "semantic_score": 0.6511929631233215,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 20.81431555747986,
->>>>>>> Stashed changes
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-<<<<<<< Updated upstream
         "semantic": 6.555210828781128
-=======
-        "semantic": 7.814315557479858
->>>>>>> Stashed changes
       }
     }
   ]
