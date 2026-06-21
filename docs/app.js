@@ -610,7 +610,17 @@ fetch("profiles.json", { cache: "no-store" })
   .then(manifest => {
     const profiles = manifest?.profiles || [];
     renderProfileSwitcher(profiles);
-    if (!currentProfile) { showOnboarding(); return; }
+    if (!currentProfile) {
+      const defaultId = manifest?.default;
+      if (defaultId && profiles.some(p => p.id === defaultId)) {
+        currentProfile = defaultId;
+        localStorage.setItem(LS_PROFILE, defaultId);
+        loadProfile(defaultId);
+      } else {
+        showOnboarding();
+      }
+      return;
+    }
     if (!profiles.some(p => p.id === currentProfile)) {
       localStorage.removeItem(LS_PROFILE);
       currentProfile = null;
