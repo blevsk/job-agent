@@ -1,10 +1,11 @@
-.PHONY: help test lint format build build-all watch coverage coverage-html
+.PHONY: help test lint format check build build-all watch coverage coverage-html
 
 help:
 	@echo "Cibles disponibles :"
 	@echo "  test          Lance pytest"
 	@echo "  lint          Vérifie le style avec ruff"
 	@echo "  format        Reformate avec black"
+	@echo "  check         Gate qualité complète : lint + test"
 	@echo "  build         Build les offres (profil unique auto-détecté)"
 	@echo "  build-all     Build tous les profils + profiles.json"
 	@echo "  watch         Lance pytest en mode watch (ptw)"
@@ -16,6 +17,8 @@ test:
 
 lint:
 	ruff check src/ scripts/ tests/
+
+check: lint test
 
 format:
 	black src/ scripts/ tests/
