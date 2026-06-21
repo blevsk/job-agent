@@ -28,10 +28,12 @@ __pycache__/
 
 .DS_Store
 
-# Claude Code (settings locaux, mémoire, hooks — hors commands qui sont partagés)
-.claude/*
-!.claude/commands/
-!.claude/commands/**
+# Claude Code (entièrement local — settings, mémoire, hooks, commandes)
+.claude/
+
+# Rapport de couverture HTML
+htmlcov/
+.coverage
 
 # Sauvegardes locales
 job-agent-backup-*.zip
