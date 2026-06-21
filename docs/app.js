@@ -1292,6 +1292,13 @@
       const profiles = manifest?.profiles || [];
       renderProfileSwitcher(profiles);
       if (!currentProfile) { showOnboarding(); return; }
+      const profileExists = profiles.some(p => p.id === currentProfile);
+      if (!profileExists) {
+        localStorage.removeItem(LS_PROFILE);
+        currentProfile = null;
+        showOnboarding();
+        return;
+      }
       loadProfile(currentProfile);
     })
     .catch(() => {
