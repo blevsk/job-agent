@@ -958,6 +958,7 @@
   }
 
   function showProgressError(msg) {
+    clearPendingBuild();
     if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
     const bar = $obCard.querySelector(".ob-progress-bar-wrap");
     if (bar) bar.style.opacity = "0.3";
@@ -1269,11 +1270,14 @@
       document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
     } catch (err) {
       const pb = getPendingBuild();
-      if (pb && pb.profileId === profileId) {
+      if (pb && pb.profileId === profileId && pb.issueNumber) {
         showProgressState();
         $obOverlay.hidden = false;
         await runBuildPhase(pb.profileId, false, null);
         return;
+      }
+      if (pb && pb.profileId === profileId && !pb.issueNumber) {
+        clearPendingBuild();
       }
       $meta.textContent = `Erreur de chargement : ${err.message}`;
       $empty.hidden = false;
