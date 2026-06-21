@@ -3,6 +3,7 @@
 Utilisé par build-profile.yml pour les créations ET les rebuilds.
 Tous les champs sauf profileId sont optionnels — seuls les champs présents sont écrits.
 """
+
 from __future__ import annotations
 
 import json
@@ -12,8 +13,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def _strip_code_fence(body: str) -> str:
+    """Retire les balises markdown ```json ... ``` si l'utilisateur les a ajoutées."""
+    if not body.startswith("```"):
+        return body
+    lines = body.splitlines()
+    start = 1
+    end = next(
+        (i for i in range(len(lines) - 1, 0, -1) if lines[i].strip() == "```"),
+        len(lines),
+    )
+    return "\n".join(lines[start:end]).strip()
+
+
 def main() -> int:
-    body = sys.stdin.read().strip()
+    body = _strip_code_fence(sys.stdin.read().strip())
     try:
         data = json.loads(body)
     except json.JSONDecodeError as e:
@@ -30,21 +44,29 @@ def main() -> int:
 
     if "poste" in data:
         meta_path = profile_dir / "meta.json"
-        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+        meta = (
+            json.loads(meta_path.read_text(encoding="utf-8"))
+            if meta_path.exists()
+            else {}
+        )
         meta["label"] = data["poste"]
-        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+        meta_path.write_text(
+            json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
 
     if "profileMd" in data:
         (profile_dir / "profile.md").write_text(data["profileMd"], encoding="utf-8")
 
     if "searchConfig" in data:
         (profile_dir / "search.config.json").write_text(
-            json.dumps(data["searchConfig"], ensure_ascii=False, indent=2), encoding="utf-8"
+            json.dumps(data["searchConfig"], ensure_ascii=False, indent=2),
+            encoding="utf-8",
         )
 
     if "scoringConfig" in data:
         (profile_dir / "scoring.config.json").write_text(
-            json.dumps(data["scoringConfig"], ensure_ascii=False, indent=2), encoding="utf-8"
+            json.dumps(data["scoringConfig"], ensure_ascii=False, indent=2),
+            encoding="utf-8",
         )
 
     Path("/tmp/job_agent_profile.json").write_text(

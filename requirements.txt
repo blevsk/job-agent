@@ -1,5 +1,6 @@
 black
 pre-commit
+pytest-watch
 ruff
 requests
 beautifulsoup4

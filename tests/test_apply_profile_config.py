@@ -1,8 +1,8 @@
 import io
 import json
 
-
 import scripts.apply_profile_config as sut
+from scripts.apply_profile_config import _strip_code_fence
 
 
 def run(body: str, tmp_path, monkeypatch) -> int:
@@ -87,3 +87,25 @@ def test_profile_id_max_length_valid(tmp_path, monkeypatch):
     body = json.dumps({"profileId": "a" * 32})
     code = run(body, tmp_path, monkeypatch)
     assert code == 0
+
+
+def test_strip_code_fence_json():
+    raw = '```json\n{"profileId": "abc"}\n```'
+    assert _strip_code_fence(raw) == '{"profileId": "abc"}'
+
+
+def test_strip_code_fence_plain():
+    raw = '```\n{"profileId": "abc"}\n```'
+    assert _strip_code_fence(raw) == '{"profileId": "abc"}'
+
+
+def test_strip_code_fence_noop_on_plain_json():
+    raw = '{"profileId": "abc"}'
+    assert _strip_code_fence(raw) == raw
+
+
+def test_code_fenced_body_parsed_correctly(tmp_path, monkeypatch):
+    body = '```json\n{"profileId": "p6", "poste": "Dev"}\n```'
+    code = run(body, tmp_path, monkeypatch)
+    assert code == 0
+    assert (tmp_path / "profiles" / "p6" / "meta.json").exists()
