@@ -28,8 +28,11 @@ __pycache__/
 
 .DS_Store
 
-# Claude Code
-.claude/
+# Claude Code (settings locaux, mémoire, hooks — hors commands qui sont partagés)
+.claude/*
+!.claude/commands/
+!.claude/commands/**
 
 # Sauvegardes locales
 job-agent-backup-*.zip
+.mcp.json
