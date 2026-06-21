@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
 
 concurrency:
   group: create-profile-${{ github.event.issue.number }}
@@ -65,6 +66,11 @@ jobs:
             git commit -m "feat: add profile ${PROFILE_ID}"
             git push
           fi
+
+      - name: Trigger Pages deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }}
 
       - name: Generate tracking token and notify browser
         env:
