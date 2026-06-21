@@ -22,13 +22,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Inject ISSUES_TOKEN
+      - name: Inject secrets and cache-bust
         env:
           ISSUES_TOKEN: ${{ secrets.ISSUES_TOKEN }}
         run: |
           if [ -n "$ISSUES_TOKEN" ]; then
             sed -i "s|REMPLACER_PAR_TON_TOKEN_ISSUES|${ISSUES_TOKEN}|g" docs/app.js
           fi
+          GIT_SHA=$(git rev-parse --short HEAD)
+          sed -i "s|CACHE_BUST|${GIT_SHA}|g" docs/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
