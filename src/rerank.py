@@ -4,6 +4,7 @@ Optionnel : si `ANTHROPIC_API_KEY` n'est pas définie, on skip silencieusement.
 L'API Claude reçoit le profil + un JSON compact des offres et renvoie un
 classement ordonné (rang 1 = meilleure offre) avec une justification courte.
 """
+
 from __future__ import annotations
 
 import json
@@ -17,7 +18,8 @@ from .models import JobOffer
 logger = logging.getLogger(__name__)
 
 MODEL = "claude-haiku-4-5-20251001"
-SYSTEM_PROMPT = textwrap.dedent("""
+SYSTEM_PROMPT = textwrap.dedent(
+    """
     Tu es un assistant de recrutement personnel. Ton rôle est de comparer un profil
     candidat avec une liste d'offres d'emploi et de les classer par pertinence.
 
@@ -30,7 +32,8 @@ SYSTEM_PROMPT = textwrap.dedent("""
     - Inclus toutes les offres reçues dans le ranking, du meilleur (rank=1) au pire.
     - reason : 1 phrase de 10-25 mots, en français, qui explique le match (positif ou négatif).
     - Pas de markdown, pas de texte hors JSON.
-""").strip()
+"""
+).strip()
 
 
 def _offer_to_dict(offer: JobOffer) -> dict[str, Any]:
@@ -137,8 +140,12 @@ def llm_rerank(
     for i in range(0, len(head), BATCH_SIZE):
         batch = head[i : i + BATCH_SIZE]
         try:
-            _process_batch(batch, profile_text, rank_offset=i, model=model, client=client)
+            _process_batch(
+                batch, profile_text, rank_offset=i, model=model, client=client
+            )
         except Exception:  # noqa: BLE001
-            logger.error("lot %d : erreur inattendue — skip", i // BATCH_SIZE + 1, exc_info=True)
+            logger.error(
+                "lot %d : erreur inattendue — skip", i // BATCH_SIZE + 1, exc_info=True
+            )
 
     return offers

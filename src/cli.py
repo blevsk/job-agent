@@ -14,13 +14,17 @@ from .france_travail import FranceTravailError, MissingCredentialsError
 from .models import ScoringConfig
 from .scoring import score_offers
 
-app = typer.Typer(add_completion=False, help="Recherche et scoring d'annonces France Travail.")
+app = typer.Typer(
+    add_completion=False, help="Recherche et scoring d'annonces France Travail."
+)
 console = Console()
 
 
 def _load_config(path: Path | None) -> ScoringConfig:
     if path is None:
-        console.print("[yellow]Aucune config de scoring fournie — valeurs par défaut.[/yellow]")
+        console.print(
+            "[yellow]Aucune config de scoring fournie — valeurs par défaut.[/yellow]"
+        )
         return ScoringConfig()
     if not path.exists():
         console.print(f"[red]Config introuvable : {path}[/red]")
@@ -31,10 +35,16 @@ def _load_config(path: Path | None) -> ScoringConfig:
 
 @app.command()
 def search(
-    keyword: str = typer.Option(..., "--keyword", "-k", help="Mots-clés (ex: 'alternance administratif')."),
-    location: str = typer.Option(..., "--location", "-l", help="Commune (ex: 'Villeneuve-d'Ascq')."),
+    keyword: str = typer.Option(
+        ..., "--keyword", "-k", help="Mots-clés (ex: 'alternance administratif')."
+    ),
+    location: str = typer.Option(
+        ..., "--location", "-l", help="Commune (ex: 'Villeneuve-d'Ascq')."
+    ),
     radius: int = typer.Option(25, "--radius", "-r", help="Rayon en km."),
-    max_results: int = typer.Option(75, "--max-results", "-n", help="Nombre max d'offres à récupérer."),
+    max_results: int = typer.Option(
+        75, "--max-results", "-n", help="Nombre max d'offres à récupérer."
+    ),
     contract_type: str | None = typer.Option(
         None,
         "--contract-type",
@@ -45,8 +55,12 @@ def search(
         "--published-within",
         help="Limiter aux offres publiées depuis N jours (1, 3, 7, 14, 31).",
     ),
-    config: Path | None = typer.Option(None, "--config", "-c", help="Chemin vers un fichier ScoringConfig JSON."),
-    output: Path = typer.Option(Path("offers.json"), "--output", "-o", help="Chemin du JSON résultat."),
+    config: Path | None = typer.Option(
+        None, "--config", "-c", help="Chemin vers un fichier ScoringConfig JSON."
+    ),
+    output: Path = typer.Option(
+        Path("offers.json"), "--output", "-o", help="Chemin du JSON résultat."
+    ),
 ) -> None:
     """Récupère les offres France Travail et exporte un JSON scoré."""
     scoring_config = _load_config(config)
@@ -98,7 +112,9 @@ def search(
         "radius_km": radius,
         "contract_type": contract_type,
         "published_within_days": published_within,
-        "scraped_at": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+        "scraped_at": datetime.now(timezone.utc)
+        .astimezone()
+        .isoformat(timespec="seconds"),
     }
     export_json(scored, output, meta)
     console.print(f"[green]✓ JSON écrit dans {output}[/green]")

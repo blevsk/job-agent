@@ -40,7 +40,10 @@ def test_alternance_inferred_from_nature_label():
 
 
 def test_normalize_contract_priorities():
-    assert _normalize_contract("CDD", "Contrat travail", alternance_flag=True) == "Alternance"
+    assert (
+        _normalize_contract("CDD", "Contrat travail", alternance_flag=True)
+        == "Alternance"
+    )
     assert _normalize_contract("CDD", "Contrat apprentissage") == "Alternance"
     assert _normalize_contract("CDD", "Contrat de professionnalisation") == "Alternance"
     assert _normalize_contract("CDI", "Contrat travail") == "CDI"
@@ -107,8 +110,7 @@ def test_get_credentials_loads_from_dotenv(tmp_path, monkeypatch):
     monkeypatch.delenv("FRANCE_TRAVAIL_CLIENT_SECRET", raising=False)
     env_file = tmp_path / ".env"
     env_file.write_text(
-        'FRANCE_TRAVAIL_CLIENT_ID="abc"\n'
-        "FRANCE_TRAVAIL_CLIENT_SECRET=secret-xyz\n"
+        'FRANCE_TRAVAIL_CLIENT_ID="abc"\n' "FRANCE_TRAVAIL_CLIENT_SECRET=secret-xyz\n"
     )
     cid, csec = get_credentials(env_file)
     assert cid == "abc"

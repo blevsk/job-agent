@@ -4,6 +4,7 @@ Modèle utilisé : `paraphrase-multilingual-MiniLM-L12-v2` (~120MB, multilingue 
 CPU friendly, rapide). Téléchargé à la 1re utilisation et caché dans
 `~/.cache/huggingface/` (le workflow GitHub Action cache ce dossier).
 """
+
 from __future__ import annotations
 
 from typing import Protocol

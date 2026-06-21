@@ -6,6 +6,7 @@ Requiert une variable d'environnement :
 Contrairement à France Travail, une seule requête accepte plusieurs codes ROME
 et retourne toutes les offres d'alternance dans un rayon donné.
 """
+
 from __future__ import annotations
 
 import os
@@ -18,7 +19,7 @@ import httpx
 
 from .models import JobOffer
 
-SEARCH_URL  = "https://api.apprentissage.beta.gouv.fr/api/job/v1/search"
+SEARCH_URL = "https://api.apprentissage.beta.gouv.fr/api/job/v1/search"
 GEOCODE_URL = "https://api-adresse.data.gouv.fr/search/"
 
 DIPLOMA_BAC = "4"  # niveau européen 4 = Bac
@@ -63,9 +64,13 @@ def get_api_key(dotenv_path: Path | None = None) -> str:
 
 def resolve_lat_lon(client: httpx.Client, location_label: str) -> tuple[float, float]:
     """Convertit un libellé de commune en (latitude, longitude) via api-adresse.data.gouv.fr."""
-    r = client.get(GEOCODE_URL, params={"q": location_label, "type": "municipality", "limit": 1})
+    r = client.get(
+        GEOCODE_URL, params={"q": location_label, "type": "municipality", "limit": 1}
+    )
     if r.status_code != 200:
-        raise LBAError(f"Géocodage échoué (HTTP {r.status_code}) pour « {location_label} »")
+        raise LBAError(
+            f"Géocodage échoué (HTTP {r.status_code}) pour « {location_label} »"
+        )
     features = r.json().get("features") or []
     if not features:
         raise LBAError(f"Aucune commune trouvée pour « {location_label} »")
@@ -95,23 +100,25 @@ def _clean_snippet(text: str | None, max_chars: int = 400) -> str | None:
 def map_offer(raw: dict[str, Any]) -> JobOffer | None:
     identifier = raw.get("identifier", {})
     offer_data = raw.get("offer", {})
-    workplace  = raw.get("workplace", {})
-    apply      = raw.get("apply", {})
-    contract   = raw.get("contract", {})
+    workplace = raw.get("workplace", {})
+    apply = raw.get("apply", {})
+    contract = raw.get("contract", {})
 
     partner_id = identifier.get("partner_job_id")
-    title      = offer_data.get("title")
+    title = offer_data.get("title")
     if not partner_id or not title:
         return None
 
     if offer_data.get("status") in ("Filled", "Cancelled"):
         return None
 
-    company  = (workplace.get("brand") or workplace.get("name") or workplace.get("legal_name")) or None
+    company = (
+        workplace.get("brand") or workplace.get("name") or workplace.get("legal_name")
+    ) or None
     location = (workplace.get("location") or {}).get("address") or None
 
     contract_types = contract.get("type") or []
-    contract_type  = "Alternance" if contract_types else None
+    contract_type = "Alternance" if contract_types else None
 
     url = apply.get("url") or (
         f"https://labonnealternance.apprentissage.beta.gouv.fr/recherche-apprentissage"
@@ -156,9 +163,9 @@ def search(
         lat, lon = resolve_lat_lon(client, location)
 
         params: dict[str, Any] = {
-            "latitude":  lat,
+            "latitude": lat,
             "longitude": lon,
-            "radius":    min(radius_km, 200),
+            "radius": min(radius_km, 200),
         }
         if diploma_level:
             params["target_diploma_level"] = diploma_level
@@ -168,7 +175,10 @@ def search(
         r = client.get(
             SEARCH_URL,
             params=params,
-            headers={"Authorization": f"Bearer {api_key}", "Accept": "application/json"},
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Accept": "application/json",
+            },
         )
         if r.status_code != 200:
             raise LBAError(
@@ -176,7 +186,7 @@ def search(
             )
 
         offers: list[JobOffer] = []
-        for raw in (r.json().get("jobs") or []):
+        for raw in r.json().get("jobs") or []:
             try:
                 mapped = map_offer(raw)
             except Exception:

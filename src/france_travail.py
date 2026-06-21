@@ -7,6 +7,7 @@ Requiert deux variables d'environnement (à mettre dans `.env`) :
 Inscription développeur : https://francetravail.io/data/api/offres-emploi
 Souscrire au scope « api_offresdemploiv2 » + « o2dsoffre » et créer une application.
 """
+
 from __future__ import annotations
 
 import os

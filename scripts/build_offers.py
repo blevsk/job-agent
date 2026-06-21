@@ -12,6 +12,7 @@ Usage :
   python scripts/build_offers.py                    # profil par défaut (dossier profiles/ unique)
   python scripts/build_offers.py --profile yohan    # profil explicite
 """
+
 from __future__ import annotations
 
 import argparse
@@ -36,7 +37,6 @@ from src.scoring import score_offers  # noqa: E402
 logger = setup_logging()
 
 
-
 def _load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -52,14 +52,16 @@ def _load_search_config(path: Path) -> tuple[list[dict[str, Any]], dict[str, Any
     raise ValueError(f"{path} : ni 'searches' ni 'keyword' trouvés.")
 
 
-def _merge_with_defaults(search: dict[str, Any], defaults: dict[str, Any]) -> dict[str, Any]:
+def _merge_with_defaults(
+    search: dict[str, Any], defaults: dict[str, Any]
+) -> dict[str, Any]:
     return {**defaults, **search}
 
 
 def _search_france_travail(idx: int, params: dict[str, Any]) -> list[JobOffer]:
-    keyword   = params.get("keyword") or None
+    keyword = params.get("keyword") or None
     rome_code = params.get("rome_code") or None
-    location  = params.get("location")
+    location = params.get("location")
     if not location or (not keyword and not rome_code):
         logger.warning("search #%d : location/keyword/rome_code manquants — skip", idx)
         return []
@@ -72,7 +74,9 @@ def _search_france_travail(idx: int, params: dict[str, Any]) -> list[JobOffer]:
         type_contrat=params.get("contract_type"),
         published_within_days=params.get("published_within_days"),
         alternance_only=bool(params.get("alternance_only", False)),
-        on_page=lambda p, f, n, _idx=idx: logger.debug("search #%d page %d → %d offres (%d nouvelles)", _idx, p, f, n),
+        on_page=lambda p, f, n, _idx=idx: logger.debug(
+            "search #%d page %d → %d offres (%d nouvelles)", _idx, p, f, n
+        ),
     )
 
 
@@ -95,15 +99,28 @@ def _search_lba(idx: int, params: dict[str, Any]) -> list[JobOffer]:
         return []
 
 
-def fan_out_search(searches: list[dict[str, Any]], defaults: dict[str, Any]) -> list[JobOffer]:
+def fan_out_search(
+    searches: list[dict[str, Any]], defaults: dict[str, Any]
+) -> list[JobOffer]:
     """Lance chaque recherche (France Travail ou La Bonne Alternance), agrège le tout."""
     all_offers: list[JobOffer] = []
     for idx, s in enumerate(searches, start=1):
         params = _merge_with_defaults(s, defaults)
         source = params.get("source", "france_travail")
-        label  = params.get("_label") or params.get("rome_code") or params.get("keyword") or source
+        label = (
+            params.get("_label")
+            or params.get("rome_code")
+            or params.get("keyword")
+            or source
+        )
 
-        logger.info("search #%d %s (%s) — location='%s'", idx, label, source, params.get("location"))
+        logger.info(
+            "search #%d %s (%s) — location='%s'",
+            idx,
+            label,
+            source,
+            params.get("location"),
+        )
         if source == "france_travail":
             offers = _search_france_travail(idx, params)
         elif source == "la_bonne_alternance":
@@ -148,7 +165,11 @@ def _generate_profiles_manifest() -> None:
     entries = []
     for d in sorted(p for p in profiles_root.iterdir() if p.is_dir()):
         meta_path = d / "meta.json"
-        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+        meta = (
+            json.loads(meta_path.read_text(encoding="utf-8"))
+            if meta_path.exists()
+            else {}
+        )
         entries.append({"id": d.name, "label": meta.get("label", d.name.capitalize())})
     manifest = {"profiles": entries, "default": entries[0]["id"] if entries else None}
     out = ROOT / "docs" / "profiles.json"
@@ -158,9 +179,15 @@ def _generate_profiles_manifest() -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--profile", default=None, help="Nom du profil (dossier dans profiles/)")
-    parser.add_argument("--all", dest="all_profiles", action="store_true",
-                        help="Build tous les profils + génère le manifeste")
+    parser.add_argument(
+        "--profile", default=None, help="Nom du profil (dossier dans profiles/)"
+    )
+    parser.add_argument(
+        "--all",
+        dest="all_profiles",
+        action="store_true",
+        help="Build tous les profils + génère le manifeste",
+    )
     args = parser.parse_args()
 
     if args.all_profiles:
@@ -193,29 +220,37 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
     # Chemins spécifiques au profil
     if profile_dir == ROOT:
         # Mode legacy : fichiers à la racine
-        search_cfg_path  = ROOT / "search.config.json"
+        search_cfg_path = ROOT / "search.config.json"
         scoring_cfg_path = ROOT / "scoring.config.json"
-        profile_path     = ROOT / "profile.md"
-        output           = ROOT / "docs" / "offers.json"
+        profile_path = ROOT / "profile.md"
+        output = ROOT / "docs" / "offers.json"
     else:
-        search_cfg_path  = profile_dir / "search.config.json"
+        search_cfg_path = profile_dir / "search.config.json"
         scoring_cfg_path = profile_dir / "scoring.config.json"
         if not scoring_cfg_path.exists():
             scoring_cfg_path = ROOT / "scoring.example.json"
         profile_path = profile_dir / "profile.md"
-        output       = ROOT / "docs" / profile_name / "offers.json"
+        output = ROOT / "docs" / profile_name / "offers.json"
         output.parent.mkdir(parents=True, exist_ok=True)
 
     if not search_cfg_path.exists():
         logger.error("%s introuvable", search_cfg_path)
         return 2
 
-    profile_text = profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
+    profile_text = (
+        profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
+    )
     searches, defaults = _load_search_config(search_cfg_path)
     scoring_cfg = ScoringConfig.model_validate(_load_json(scoring_cfg_path))
-    logger.info("config : %d recherche(s), scoring via %s", len(searches), scoring_cfg_path.name)
+    logger.info(
+        "config : %d recherche(s), scoring via %s", len(searches), scoring_cfg_path.name
+    )
     if profile_text.strip():
-        logger.info("profil : %d caractères chargés depuis %s", len(profile_text), profile_path.name)
+        logger.info(
+            "profil : %d caractères chargés depuis %s",
+            len(profile_text),
+            profile_path.name,
+        )
     else:
         logger.warning("profil vide — semantic et re-rank désactivés")
 
@@ -224,7 +259,11 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
     logger.info("fetch : %d offres brutes", len(raw_offers))
     deduped = dedupe_offers(raw_offers)
     if len(deduped) < len(raw_offers):
-        logger.info("dedup : -%d doublons → %d uniques", len(raw_offers) - len(deduped), len(deduped))
+        logger.info(
+            "dedup : -%d doublons → %d uniques",
+            len(raw_offers) - len(deduped),
+            len(deduped),
+        )
 
     # 3 : embeddings sémantiques (skip si pas de profil)
     if profile_text.strip() and deduped:
@@ -236,7 +275,9 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
             n_scored = sum(1 for o in deduped if o.semantic_score is not None)
             logger.info("semantic : %d offres enrichies", n_scored)
         except ImportError as exc:
-            logger.warning("semantic : sentence-transformers non installé (%s) — skip", exc)
+            logger.warning(
+                "semantic : sentence-transformers non installé (%s) — skip", exc
+            )
         except Exception:  # noqa: BLE001
             logger.error("semantic : erreur inattendue — skip", exc_info=True)
 
@@ -245,7 +286,11 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
 
     # 5 : re-rank LLM sur toutes les offres à score positif (skip si pas de clé)
     top_offers = [s.offer for s in scored if s.score > 0]
-    if profile_text.strip() and top_offers and os.environ.get("ANTHROPIC_API_KEY", "").strip():
+    if (
+        profile_text.strip()
+        and top_offers
+        and os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    ):
         try:
             from src.rerank import llm_rerank  # noqa: I001
 
@@ -275,7 +320,9 @@ def _build_profile(profile_name: str, profile_dir: Path) -> int:
         "source": "france_travail",
         "searches": [
             {
-                "label": _merge_with_defaults(s, defaults).get("_label") or s.get("rome_code") or s.get("keyword"),
+                "label": _merge_with_defaults(s, defaults).get("_label")
+                or s.get("rome_code")
+                or s.get("keyword"),
                 "rome_code": s.get("rome_code"),
                 "keyword": s.get("keyword"),
                 "location": _merge_with_defaults(s, defaults).get("location"),

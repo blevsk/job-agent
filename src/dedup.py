@@ -4,6 +4,7 @@ France Travail (et d'autres sources) republient parfois la même offre avec un i
 à quelques jours d'écart, parfois avec une variante de titre ("(H/F)" → "(F/H) (H/F)").
 On regroupe par (titre normalisé, lieu normalisé) et on garde la plus récente.
 """
+
 from __future__ import annotations
 
 import re

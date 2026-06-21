@@ -3,14 +3,28 @@ from src.models import JobOffer
 
 
 def make(id_, title, location, posted_days_ago=5):
-    return JobOffer(id=id_, title=title, location=location, posted_days_ago=posted_days_ago, url=f"x/{id_}")
+    return JobOffer(
+        id=id_,
+        title=title,
+        location=location,
+        posted_days_ago=posted_days_ago,
+        url=f"x/{id_}",
+    )
 
 
 def test_normalize_title_strips_gender_markers():
-    assert _normalize_title("Assistant Administratif (H/F)") == "assistant administratif"
-    assert _normalize_title("Assistant Administratif (F/H) (H/F)") == "assistant administratif"
+    assert (
+        _normalize_title("Assistant Administratif (H/F)") == "assistant administratif"
+    )
+    assert (
+        _normalize_title("Assistant Administratif (F/H) (H/F)")
+        == "assistant administratif"
+    )
     assert _normalize_title("Vendeur H/F") == "vendeur"
-    assert _normalize_title("Chef de Projets Partenariats F/H (H/F)") == "chef de projets partenariats"
+    assert (
+        _normalize_title("Chef de Projets Partenariats F/H (H/F)")
+        == "chef de projets partenariats"
+    )
 
 
 def test_normalize_title_strips_accents_and_case():
@@ -26,8 +40,18 @@ def test_normalize_location_strips_department_prefix():
 
 def test_dedupe_merges_gender_variants():
     offers = [
-        make("a", "Alternance Assistant Administratif - Roubaix (F/H) (H/F)", "59 - Roubaix", posted_days_ago=23),
-        make("b", "Alternance Assistant Administratif - Roubaix (H/F)", "59 - Roubaix", posted_days_ago=24),
+        make(
+            "a",
+            "Alternance Assistant Administratif - Roubaix (F/H) (H/F)",
+            "59 - Roubaix",
+            posted_days_ago=23,
+        ),
+        make(
+            "b",
+            "Alternance Assistant Administratif - Roubaix (H/F)",
+            "59 - Roubaix",
+            posted_days_ago=24,
+        ),
     ]
     result = dedupe_offers(offers)
     assert len(result) == 1
@@ -49,7 +73,7 @@ def test_dedupe_preserves_distinct_offers():
     offers = [
         make("a", "Assistant administratif", "59 - Roubaix"),
         make("b", "Assistant administratif", "59 - Lille"),  # lieu différent
-        make("c", "Assistant qualité", "59 - Roubaix"),       # titre différent
+        make("c", "Assistant qualité", "59 - Roubaix"),  # titre différent
     ]
     result = dedupe_offers(offers)
     assert {o.id for o in result} == {"a", "b", "c"}

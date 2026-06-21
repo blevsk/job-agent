@@ -28,7 +28,9 @@ def test_extract_json_handles_raw():
 
 def test_extract_json_strips_code_fence():
     payload = '```json\n{"ranking": [{"id": "a", "rank": 1, "reason": "ok"}]}\n```'
-    assert _extract_json(payload) == {"ranking": [{"id": "a", "rank": 1, "reason": "ok"}]}
+    assert _extract_json(payload) == {
+        "ranking": [{"id": "a", "rank": 1, "reason": "ok"}]
+    }
 
 
 def test_extract_json_picks_first_object_from_chatty_response():
@@ -46,13 +48,21 @@ def test_build_user_message_includes_profile_and_offers():
 
 def test_llm_rerank_assigns_rank_and_reason():
     offers = [make_offer("a"), make_offer("b"), make_offer("c")]
-    fake = FakeAnthropic(json.dumps({
-        "ranking": [
-            {"id": "b", "rank": 1, "reason": "Match parfait sur l'alternance et le lieu."},
-            {"id": "a", "rank": 2, "reason": "Bon profil mais lieu éloigné."},
-            {"id": "c", "rank": 3, "reason": "Pas d'alternance."},
-        ],
-    }))
+    fake = FakeAnthropic(
+        json.dumps(
+            {
+                "ranking": [
+                    {
+                        "id": "b",
+                        "rank": 1,
+                        "reason": "Match parfait sur l'alternance et le lieu.",
+                    },
+                    {"id": "a", "rank": 2, "reason": "Bon profil mais lieu éloigné."},
+                    {"id": "c", "rank": 3, "reason": "Pas d'alternance."},
+                ],
+            }
+        )
+    )
     result = llm_rerank(offers, "Mon profil", client=fake)
     by_id = {o.id: o for o in result}
     assert by_id["b"].llm_rank == 1
@@ -81,10 +91,16 @@ def test_llm_rerank_skips_empty_profile():
 
 def test_llm_rerank_ignores_unknown_ids_from_llm():
     offers = [make_offer("a"), make_offer("b")]
-    fake = FakeAnthropic(json.dumps({"ranking": [
-        {"id": "a", "rank": 1, "reason": "ok"},
-        {"id": "ghost", "rank": 2, "reason": "fantôme"},
-    ]}))
+    fake = FakeAnthropic(
+        json.dumps(
+            {
+                "ranking": [
+                    {"id": "a", "rank": 1, "reason": "ok"},
+                    {"id": "ghost", "rank": 2, "reason": "fantôme"},
+                ]
+            }
+        )
+    )
     llm_rerank(offers, "profile", client=fake)
     assert offers[0].llm_rank == 1
     assert offers[1].llm_rank is None  # 'b' n'apparaît pas dans le ranking

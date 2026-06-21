@@ -14,8 +14,12 @@ class FakeModel:
 
 def make_offer(id_, title, snippet="", location=None, contract_type=None):
     return JobOffer(
-        id=id_, title=title, snippet=snippet, location=location,
-        contract_type=contract_type, url=f"x/{id_}",
+        id=id_,
+        title=title,
+        snippet=snippet,
+        location=location,
+        contract_type=contract_type,
+        url=f"x/{id_}",
     )
 
 
@@ -32,7 +36,13 @@ def test_cosine_handles_zero_vector():
 
 
 def test_offer_to_text_concatenates_fields():
-    offer = make_offer("x", "Assistant", snippet="Tâches admin", location="Lille", contract_type="Alternance")
+    offer = make_offer(
+        "x",
+        "Assistant",
+        snippet="Tâches admin",
+        location="Lille",
+        contract_type="Alternance",
+    )
     text = _offer_to_text(offer)
     assert "Assistant" in text
     assert "Alternance" in text

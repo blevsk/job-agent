@@ -51,9 +51,20 @@ def test_location_no_match():
 
 def test_freshness_bonus_applies_within_window():
     config = ScoringConfig(freshness_bonus=2.0, freshness_max_days=7)
-    assert score_offer(make_offer(posted_days_ago=2), config).score_breakdown["freshness"] == 2.0
-    assert score_offer(make_offer(posted_days_ago=10), config).score_breakdown["freshness"] == 0.0
-    assert score_offer(make_offer(posted_days_ago=None), config).score_breakdown["freshness"] == 0.0
+    assert (
+        score_offer(make_offer(posted_days_ago=2), config).score_breakdown["freshness"]
+        == 2.0
+    )
+    assert (
+        score_offer(make_offer(posted_days_ago=10), config).score_breakdown["freshness"]
+        == 0.0
+    )
+    assert (
+        score_offer(make_offer(posted_days_ago=None), config).score_breakdown[
+            "freshness"
+        ]
+        == 0.0
+    )
 
 
 def test_total_score_is_sum_of_breakdown():
