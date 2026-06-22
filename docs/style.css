@@ -1070,6 +1070,7 @@ code {
 #onboarding-overlay[hidden] { display: none; }
 
 #onboarding-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -1077,8 +1078,34 @@ code {
   overflow: hidden;
   width: 100%;
   max-width: 900px;
+  min-height: 300px;
   max-height: calc(100dvh - 4rem);
   box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+}
+.ob-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  gap: 1rem;
+  z-index: 5;
+  text-align: center;
+  animation: dialog-in 0.2s ease;
+}
+.ob-card-overlay .ob-progress-bar-wrap {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 0;
+}
+.ob-progress-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--fg);
 }
 /* Proportions 1/3 champs — 2/3 profil, colonne gauche plus compacte */
 #onboarding-card .dialog-2col {

@@ -32,19 +32,21 @@ function clearPendingBuild() { localStorage.removeItem(LS_PENDING); }
 // ── Progress UI ───────────────────────────────────────────────────────────────
 
 export function showProgressState() {
-  const title = obIsEdit ? "Mise à jour du profil…" : "Construction du profil…";
-  $card().innerHTML = `
-    <div class="dialog-header">
-      <h2>${title}</h2>
-    </div>
-    <div class="dialog-body ob-progress-body">
-      <div class="ob-progress-bar-wrap" style="width:100%"><div class="ob-progress-bar" id="ob-bar"></div></div>
-      <p class="ob-progress-step" id="ob-step-label">&nbsp;</p>
-      <div class="ob-progress-meta">
-        <span class="ob-progress-label" id="ob-pct-label">0 %</span>
-        <span id="ob-timer">0:00</span>
-      </div>
+  const card = $card();
+  card.querySelector(".ob-card-overlay")?.remove();
+
+  const title = obIsEdit ? "Mise à jour en cours…" : "Construction en cours…";
+  const ol = document.createElement("div");
+  ol.className = "ob-card-overlay";
+  ol.innerHTML = `
+    <p class="ob-progress-title">${title}</p>
+    <div class="ob-progress-bar-wrap"><div class="ob-progress-bar" id="ob-bar"></div></div>
+    <p class="ob-progress-step" id="ob-step-label">&nbsp;</p>
+    <div class="ob-progress-meta">
+      <span class="ob-progress-label" id="ob-pct-label">0 %</span>
+      <span id="ob-timer">0:00</span>
     </div>`;
+  card.appendChild(ol);
 
   const start = Date.now();
   if (_timerInterval) clearInterval(_timerInterval);
@@ -84,7 +86,7 @@ function showProgressError(msg) {
   const card = $card();
   const bar  = card.querySelector(".ob-progress-bar-wrap");
   if (bar) bar.style.opacity = "0.3";
-  const body = card.querySelector(".dialog-body") || card;
+  const body = card.querySelector(".ob-card-overlay") || card;
   const errEl = document.createElement("p");
   errEl.className   = "ob-error";
   errEl.textContent = msg;
@@ -114,6 +116,7 @@ function collectOB() {
 }
 
 function renderOnboarding() {
+  $card().querySelector(".ob-card-overlay")?.remove();
   const cancelBtn = obIsEdit
     ? `<button type="button" class="btn-cancel" id="ob-cancel-edit">Annuler</button>`
     : "";
