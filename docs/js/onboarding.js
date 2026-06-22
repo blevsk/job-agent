@@ -10,7 +10,7 @@ let obData             = {};
 let obIsEdit           = false;
 let obFakeProgressStop = null;
 let _progressPct       = 0;
-let _timerInterval     = null;
+
 let _onProfileReady    = null;  // callback → loadProfile(pid)
 let _onOffersData      = null;  // callback → (pid, data) utilisé après rebuild pour bypasser le CDN Pages
 
@@ -43,18 +43,8 @@ export function showProgressState() {
         <div class="ob-progress-bar" id="ob-bar"></div>
         <span class="ob-bar-label" id="ob-step-label">en cours…</span>
       </div>
-      <span class="ob-timer-small" id="ob-timer">0:00</span>
     </div>
     <button class="btn-primary" disabled style="opacity:0.45;cursor:not-allowed">${escapeHtml(btnLabel)}</button>`;
-
-  const start = Date.now();
-  if (_timerInterval) clearInterval(_timerInterval);
-  _timerInterval = setInterval(() => {
-    const el = document.getElementById("ob-timer");
-    if (!el) { clearInterval(_timerInterval); _timerInterval = null; return; }
-    const s = Math.floor((Date.now() - start) / 1000);
-    el.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-  }, 1000);
 }
 
 export function updateProgress(pct, step) {
@@ -92,7 +82,7 @@ function startFakeProgress(from, to, durationMs) {
 function showProgressError(msg) {
   clearPendingBuild();
   if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
-  if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
+
   const card = $card();
   const bar  = card.querySelector(".ob-bar-wrap-inline");
   if (bar) bar.style.opacity = "0.3";
@@ -281,7 +271,7 @@ async function runBuildPhase(pid, doCreate, data) {
     const fakeStop = startFakeProgress(15, 92, 3 * 60 * 1000);
     await waitForOffers(pid);
     fakeStop();
-    if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
+  
     updateProgress(92, "chargement…");
     const offersData = await fetchOffers(pid);
     updateProgress(100, "prêt !");
@@ -311,7 +301,7 @@ async function saveProfileEdits(data) {
   const fakeStop = startFakeProgress(10, 88, 3 * 60 * 1000);
   await waitForRebuild(issue.number);
   fakeStop();
-  if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
+
   updateProgress(92, "chargement…");
   const offersData = await fetchOffers(pid);
   updateProgress(100, "mis à jour !");

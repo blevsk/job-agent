@@ -1386,12 +1386,7 @@ code {
   overflow: hidden;
   padding: 0 0.5rem;
 }
-.ob-timer-small {
-  font-size: 0.7rem;
-  color: var(--muted);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
+
 .ob-error {
   color: var(--neg);
   font-size: 0.85rem;
