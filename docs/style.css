@@ -1362,7 +1362,7 @@ code {
 }
 .ob-bar-wrap-inline {
   position: relative;
-  height: 26px;
+  height: 28px;
   background: var(--surface-raised);
   border-radius: 8px;
   overflow: hidden;
@@ -1370,6 +1370,21 @@ code {
 .ob-bar-wrap-inline .ob-progress-bar {
   height: 100%;
   border-radius: 8px;
+  background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 100%);
+  box-shadow: 0 2px 8px rgba(59,130,246,0.45);
+  position: relative;
+  overflow: hidden;
+}
+.ob-bar-wrap-inline .ob-progress-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%);
+  animation: ob-shimmer 1.6s ease-in-out infinite;
+}
+@keyframes ob-shimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(200%); }
 }
 .ob-bar-label {
   position: absolute;
