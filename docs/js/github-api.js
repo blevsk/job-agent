@@ -59,6 +59,7 @@ export async function fetchOffers(profileId) {
     { headers: authHeaders(), cache: "no-store" }
   );
   if (!r.ok) throw new Error(`Impossible de lire les offres (HTTP ${r.status})`);
-  const meta = await r.json();
-  return JSON.parse(atob(meta.content.replace(/\s/g, "")));
+  const meta  = await r.json();
+  const bytes = Uint8Array.from(atob(meta.content.replace(/\s/g, "")), c => c.charCodeAt(0));
+  return JSON.parse(new TextDecoder().decode(bytes));
 }
