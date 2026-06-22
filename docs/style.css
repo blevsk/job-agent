@@ -1076,7 +1076,7 @@ code {
   padding: 0;
   overflow: hidden;
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   max-height: calc(100dvh - 4rem);
   box-shadow: 0 8px 40px rgba(0,0,0,0.10);
 }
@@ -1091,6 +1091,12 @@ code {
 #onboarding-card .dialog-col select {
   padding: 0.38rem 0.65rem;
   font-size: 0.88rem;
+}
+/* Spécificité (1,1,0) > (1,0,1) de #onboarding-card label — checkbox inline */
+#onboarding-card .ob-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #onboarding-card h2 {
@@ -1336,6 +1342,24 @@ code {
   color: var(--muted);
   text-align: center;
   margin: 0;
+}
+.ob-progress-body {
+  align-items: center;
+  text-align: center;
+  min-height: 220px;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ob-progress-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+#ob-timer {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .ob-error {
   color: var(--neg);
