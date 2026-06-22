@@ -403,8 +403,6 @@ a:hover { text-decoration: underline; }
   width: calc(100vw - 2rem);
   max-height: calc(100dvh - 4rem);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 #add-dialog::backdrop,
 #notes-dialog::backdrop {
@@ -451,8 +449,8 @@ a:hover { text-decoration: underline; }
 .dialog-close:hover { background: var(--surface-raised); color: var(--fg); }
 
 .dialog-body {
-  flex: 1;
   overflow-y: auto;
+  max-height: min(460px, 55vh);
   padding: 1.1rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -465,7 +463,9 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid var(--border);
 }
 #add-form {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 #add-form label {
   display: flex;
