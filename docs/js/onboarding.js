@@ -272,11 +272,14 @@ async function runBuildPhase(pid, doCreate, data) {
     const fakeStop = startFakeProgress(15, 92, 10 * 60 * 1000);
     await waitForOffers(pid);
     fakeStop();
+    updateProgress(92, "Récupération des offres…", "Chargement depuis GitHub");
+    const offersData = await fetchOffers(pid);
     updateProgress(100, "C'est prêt !", "Chargement de votre tableau…");
     clearPendingBuild();
     await new Promise(r => setTimeout(r, 900));
     $overlay().hidden = true;
-    _onProfileReady?.(pid);
+    if (_onOffersData) _onOffersData(pid, offersData);
+    else _onProfileReady?.(pid);
   } catch (err) {
     if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
     showProgressError(`Erreur : ${err.message}`);
