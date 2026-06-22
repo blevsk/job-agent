@@ -85,56 +85,9 @@ function showProgressError(msg) {
   card.appendChild(retryBtn);
 }
 
-// ── Onboarding steps ──────────────────────────────────────────────────────────
+// ── Onboarding form (page unique, 2 colonnes) ─────────────────────────────────
 
-const OB_STEPS = [
-  {
-    title:    "Votre recherche",
-    subtitle: "Définissez le poste, la zone géographique et vos préférences.",
-    fields: () => `
-      <label>Intitulé du poste <span class="req">*</span>
-        <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
-      </label>
-      <label>Ville <span class="req">*</span>
-        <input name="ville" required value="${escapeHtml(obData.ville || "")}" placeholder="Ex : Lyon">
-      </label>
-      <div class="ob-row">
-        <label>Rayon (km)
-          <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
-        </label>
-        <label>Contrat
-          <select name="contrat">
-            ${["Tous","CDI","CDD","Alternance","Stage","Intérim"].map(c =>
-              `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
-            ).join("")}
-          </select>
-        </label>
-      </div>
-      <label>Fraîcheur des offres
-        <select name="fraicheur">
-          ${[["","Toutes les offres"],["7","7 derniers jours"],["14","14 derniers jours"],["30","30 derniers jours"]].map(([v, l]) =>
-            `<option value="${v}"${(obData.fraicheur || "") === v ? " selected" : ""}>${l}</option>`
-          ).join("")}
-        </select>
-      </label>
-      <p class="ob-checks-label">Préférences de scoring</p>
-      <div class="ob-checks">
-        <label class="ob-check"><input type="checkbox" name="pref_remote"${obData.pref_remote === "on" ? " checked" : ""}> Favoriser le télétravail / hybride</label>
-        <label class="ob-check"><input type="checkbox" name="pref_no_interim"${obData.pref_no_interim === "on" ? " checked" : ""}> Pénaliser les offres d'intérim</label>
-        <label class="ob-check"><input type="checkbox" name="pref_no_junior"${obData.pref_no_junior === "on" ? " checked" : ""}> Pénaliser les postes débutants / juniors</label>
-      </div>`,
-  },
-  {
-    title:    "Votre profil",
-    subtitle: "Ce texte aide le moteur sémantique à mieux cibler les offres. Plus c'est précis, plus le matching est efficace.",
-    fields: () => `
-      <label>Décrivez ce que vous cherchez, vos compétences, votre expérience… <span class="opt">(optionnel)</span>
-        <textarea name="profil" rows="5" placeholder="Ex : 5 ans d'expérience en gestion administrative…">${escapeHtml(obData.profil || "")}</textarea>
-      </label>`,
-  },
-];
-
-function collectOBStep(step) {
+function collectOB() {
   const form = document.getElementById("ob-form");
   if (!form) return;
   new FormData(form).forEach((v, k) => { obData[k] = v; });
@@ -144,51 +97,78 @@ function collectOBStep(step) {
   });
 }
 
-function renderOnboardStep(step) {
-  const s      = OB_STEPS[step];
-  const isLast = step === OB_STEPS.length - 1;
-  const dots   = OB_STEPS.map((_, i) =>
-    `<span class="ob-dot${i < step ? " done" : i === step ? " active" : ""}"></span>`
-  ).join("");
-  let leftBtn = "";
-  if (step > 0)    leftBtn = `<button type="button" class="ob-btn-secondary" id="ob-back">Retour</button>`;
-  else if (obIsEdit) leftBtn = `<button type="button" class="ob-btn-secondary" id="ob-cancel-edit">Annuler</button>`;
+function renderOnboarding() {
+  const cancelBtn = obIsEdit
+    ? `<button type="button" class="btn-cancel" id="ob-cancel-edit">Annuler</button>`
+    : "";
+  const submitLabel = obIsEdit ? "Sauvegarder" : "Créer mon profil";
 
   $card().innerHTML = `
-    <h2>${escapeHtml(s.title)}</h2>
-    <p class="ob-subtitle">${escapeHtml(s.subtitle)}</p>
-    <div class="ob-dots">${dots}</div>
+    <div class="dialog-header">
+      <h2>${obIsEdit ? "Modifier le profil" : "Votre profil de recherche"}</h2>
+    </div>
     <form id="ob-form">
-      ${s.fields()}
-      <div class="ob-actions">
-        ${leftBtn}
-        <button type="submit" class="ob-btn-primary">${isLast ? (obIsEdit ? "Sauvegarder" : "Créer mon profil") : "Suivant →"}</button>
+      <div class="dialog-2col">
+        <div class="dialog-col">
+          <label>Intitulé du poste <span class="req">*</span>
+            <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
+          </label>
+          <label>Ville <span class="req">*</span>
+            <input name="ville" required value="${escapeHtml(obData.ville || "")}" placeholder="Ex : Lyon">
+          </label>
+          <div class="ob-row">
+            <label>Rayon (km)
+              <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
+            </label>
+            <label>Contrat
+              <select name="contrat">
+                ${["Tous","CDI","CDD","Alternance","Stage","Intérim"].map(c =>
+                  `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
+                ).join("")}
+              </select>
+            </label>
+          </div>
+          <label>Fraîcheur des offres
+            <select name="fraicheur">
+              ${[["","Toutes les offres"],["7","7 derniers jours"],["14","14 derniers jours"],["30","30 derniers jours"]].map(([v, l]) =>
+                `<option value="${v}"${(obData.fraicheur || "") === v ? " selected" : ""}>${l}</option>`
+              ).join("")}
+            </select>
+          </label>
+          <p class="ob-checks-label">Préférences de scoring</p>
+          <div class="ob-checks">
+            <label class="ob-check"><input type="checkbox" name="pref_remote"${obData.pref_remote === "on" ? " checked" : ""}> Favoriser le télétravail / hybride</label>
+            <label class="ob-check"><input type="checkbox" name="pref_no_interim"${obData.pref_no_interim === "on" ? " checked" : ""}> Pénaliser les offres d'intérim</label>
+            <label class="ob-check"><input type="checkbox" name="pref_no_junior"${obData.pref_no_junior === "on" ? " checked" : ""}> Pénaliser les postes débutants / juniors</label>
+          </div>
+        </div>
+        <div class="dialog-col dialog-col-text">
+          <label>Décrivez vos compétences et ce que vous cherchez <span class="opt">(optionnel)</span>
+            <textarea name="profil" placeholder="Ex : 5 ans d'expérience en gestion administrative, maîtrise des outils bureautiques…">${escapeHtml(obData.profil || "")}</textarea>
+          </label>
+        </div>
       </div>
-    </form>`;
+    </form>
+    <div class="dialog-footer">
+      ${cancelBtn}
+      <button type="submit" form="ob-form" class="btn-primary">${submitLabel}</button>
+    </div>`;
 
-  document.getElementById("ob-back")?.addEventListener("click", () => {
-    collectOBStep(step);
-    renderOnboardStep(step - 1);
-  });
   document.getElementById("ob-cancel-edit")?.addEventListener("click", () => {
     $overlay().hidden = true;
     obIsEdit = false;
   });
   document.getElementById("ob-form").addEventListener("submit", e => {
     e.preventDefault();
-    collectOBStep(step);
-    if (isLast) {
-      if (obIsEdit) {
-        showProgressState();
-        saveProfileEdits(obData).catch(err => {
-          if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
-          showProgressError(`Erreur : ${err.message}`);
-        });
-      } else {
-        startCreation(obData);
-      }
+    collectOB();
+    if (obIsEdit) {
+      showProgressState();
+      saveProfileEdits(obData).catch(err => {
+        if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
+        showProgressError(`Erreur : ${err.message}`);
+      });
     } else {
-      renderOnboardStep(step + 1);
+      startCreation(obData);
     }
   });
   $card().querySelector("input, select")?.focus();
@@ -200,7 +180,7 @@ export function showOnboarding() {
   obIsEdit = false;
   obData   = { profileId: generateProfileId() };
   $overlay().hidden = false;
-  renderOnboardStep(0);
+  renderOnboarding();
 }
 
 export async function showEditProfile(pid) {
@@ -230,7 +210,7 @@ export async function showEditProfile(pid) {
     };
     obIsEdit = true;
     $overlay().hidden = false;
-    renderOnboardStep(0);
+    renderOnboarding();
   } catch {
     alert("Impossible de charger le profil. Réessayez.");
   }

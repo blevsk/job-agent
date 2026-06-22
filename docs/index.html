@@ -25,37 +25,41 @@
       <button type="button" class="dialog-close" aria-label="Fermer">✕</button>
       <h2>Ajouter une offre</h2>
     </div>
-    <div class="dialog-body">
-      <form id="add-form">
-        <label>Titre <span class="req">*</span><input name="title" required placeholder="Ex : Assistante administrative…"></label>
-        <label>Entreprise<input name="company" placeholder="Ex : Mairie de Lille"></label>
-        <label>Lieu<input name="location" placeholder="Ex : Lille, Roubaix…"></label>
-        <div class="form-row">
-          <label>Contrat
-            <select name="contract_type">
-              <option value="">—</option>
-              <option value="Alternance" selected>Alternance</option>
-              <option value="CDI">CDI</option>
-              <option value="CDD">CDD</option>
-              <option value="Stage">Stage</option>
-              <option value="Intérim">Intérim</option>
-            </select>
-          </label>
-          <label>Trouvée sur
-            <select name="source">
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="Indeed">Indeed</option>
-              <option value="APEC">APEC</option>
-              <option value="HelloWork">HelloWork</option>
-              <option value="Site entreprise">Site entreprise</option>
-              <option value="Autre">Autre</option>
-            </select>
-          </label>
+    <form id="add-form">
+      <div class="dialog-2col">
+        <div class="dialog-col">
+          <label>Titre <span class="req">*</span><input name="title" required placeholder="Ex : Assistante administrative…"></label>
+          <label>Entreprise<input name="company" placeholder="Ex : Mairie de Lille"></label>
+          <label>Lieu<input name="location" placeholder="Ex : Lille, Roubaix…"></label>
+          <div class="form-row">
+            <label>Contrat
+              <select name="contract_type">
+                <option value="">—</option>
+                <option value="Alternance" selected>Alternance</option>
+                <option value="CDI">CDI</option>
+                <option value="CDD">CDD</option>
+                <option value="Stage">Stage</option>
+                <option value="Intérim">Intérim</option>
+              </select>
+            </label>
+            <label>Trouvée sur
+              <select name="source">
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Indeed">Indeed</option>
+                <option value="APEC">APEC</option>
+                <option value="HelloWork">HelloWork</option>
+                <option value="Site entreprise">Site entreprise</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </label>
+          </div>
+          <label>Lien vers l'offre <span class="req">*</span><input name="url" type="url" required placeholder="https://…"></label>
         </div>
-        <label>Lien vers l'offre <span class="req">*</span><input name="url" type="url" required placeholder="https://…"></label>
-        <label>Description <span class="opt">(optionnel)</span><textarea name="snippet" rows="6" placeholder="Colle ici un extrait de l'offre…"></textarea></label>
-      </form>
-    </div>
+        <div class="dialog-col dialog-col-text">
+          <label>Description <span class="opt">(optionnel)</span><textarea name="snippet" placeholder="Colle ici un extrait de l'offre…"></textarea></label>
+        </div>
+      </div>
+    </form>
     <div class="dialog-footer">
       <button type="button" id="cancel-add" class="btn-cancel">Annuler</button>
       <button type="submit" form="add-form" class="btn-primary">Ajouter l'offre</button>

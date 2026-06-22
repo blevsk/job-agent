@@ -430,23 +430,24 @@ function openNotesModal(id) {
       <button type="button" class="dialog-close nd-cancel" aria-label="Fermer">✕</button>
       <h2>${escapeHtml(offer?.title || "Détail de l'offre")}</h2>
     </div>
-    <div class="dialog-body">
-      ${offer ? `
-        <div class="offer-detail">
+    <div class="dialog-2col">
+      <div class="dialog-col">
+        ${offer ? `
           <div class="offer-detail-top">
             ${meta ? `<p class="offer-detail-meta">${meta}</p>` : ""}
             <span class="score ${scoreCls}">${(offer.score ?? 0).toFixed(1)} pts</span>
           </div>
           ${bodyHtml}
           <a href="${escapeHtml(offer.url)}" target="_blank" rel="noopener" class="offer-detail-link">Voir l'offre sur le site →</a>
-        </div>
-        <hr class="offer-detail-sep">
-      ` : ""}
-      <label>Vos notes
-        <textarea id="notes-dialog-area" rows="5"
-          placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
-        >${escapeHtml(_notesInitial)}</textarea>
-      </label>
+        ` : `<p class="offer-detail-meta">Aucun détail disponible.</p>`}
+      </div>
+      <div class="dialog-col dialog-col-text">
+        <label>Vos notes
+          <textarea id="notes-dialog-area"
+            placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
+          >${escapeHtml(_notesInitial)}</textarea>
+        </label>
+      </div>
     </div>
     <div class="dialog-footer">
       <button type="button" class="btn-cancel nd-cancel">Annuler</button>
