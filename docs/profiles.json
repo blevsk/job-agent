@@ -1,9 +1,4 @@
 {
-  "profiles": [
-    {
-      "id": "demo",
-      "label": "Démo"
-    }
-  ],
-  "default": "demo"
+  "profiles": [],
+  "default": null
 }
