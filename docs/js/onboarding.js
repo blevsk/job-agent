@@ -33,7 +33,6 @@ function clearPendingBuild() { localStorage.removeItem(LS_PENDING); }
 export function showProgressState() {
   $card().innerHTML = `
     <div class="ob-progress-header">
-      <div class="ob-spinner"></div>
       <h2>Construction de votre profil…</h2>
       <p class="ob-subtitle">Votre tableau sera prêt dans quelques minutes.</p>
     </div>
@@ -269,7 +268,7 @@ async function runBuildPhase(pid, doCreate, data) {
       setPendingBuild({ profileId: pid, issueNumber: issue.number });
     }
     updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
-    const fakeStop = startFakeProgress(15, 92, 10 * 60 * 1000);
+    const fakeStop = startFakeProgress(15, 92, 3 * 60 * 1000);
     await waitForOffers(pid);
     fakeStop();
     updateProgress(92, "Récupération des offres…", "Chargement depuis GitHub");

@@ -24,7 +24,7 @@ export async function waitForOffers(profileId) {
   const deadline = Date.now() + 12 * 60 * 1000;
   const headers  = authHeaders();
   while (Date.now() < deadline) {
-    await new Promise(r => setTimeout(r, 10000));
+    await new Promise(r => setTimeout(r, 3000));
     try {
       const res = await fetch(
         `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/offers.json`,
@@ -39,7 +39,7 @@ export async function waitForOffers(profileId) {
 export async function waitForRebuild(issueNumber) {
   const deadline = Date.now() + 8 * 60 * 1000;
   while (Date.now() < deadline) {
-    await new Promise(r => setTimeout(r, 10000));
+    await new Promise(r => setTimeout(r, 3000));
     try {
       const r = await fetch(
         `https://api.github.com/repos/${GH_REPO}/issues/${issueNumber}`,

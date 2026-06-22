@@ -430,7 +430,7 @@ function openNotesModal(id) {
       <button type="button" class="dialog-close nd-cancel" aria-label="Fermer">✕</button>
       <h2>${escapeHtml(offer?.title || "Détail de l'offre")}</h2>
     </div>
-    <div id="notes-form">
+    <div class="dialog-body">
       ${offer ? `
         <div class="offer-detail">
           <div class="offer-detail-top">
@@ -447,10 +447,10 @@ function openNotesModal(id) {
           placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
         >${escapeHtml(_notesInitial)}</textarea>
       </label>
-      <div class="form-actions">
-        <button type="button" class="btn-cancel nd-cancel">Annuler</button>
-        <button type="button" class="btn-primary nd-save">Enregistrer</button>
-      </div>
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn-cancel nd-cancel">Annuler</button>
+      <button type="button" class="btn-primary nd-save">Enregistrer</button>
     </div>`;
 
   const $area = $notesDialog.querySelector("#notes-dialog-area");
