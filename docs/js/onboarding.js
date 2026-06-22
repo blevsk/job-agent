@@ -32,21 +32,20 @@ function clearPendingBuild() { localStorage.removeItem(LS_PENDING); }
 // ── Progress UI ───────────────────────────────────────────────────────────────
 
 export function showProgressState() {
-  const card = $card();
-  card.querySelector(".ob-card-overlay")?.remove();
+  const footer = $card().querySelector(".dialog-footer");
+  if (!footer) return;
 
-  const title = obIsEdit ? "Mise à jour en cours…" : "Construction en cours…";
-  const ol = document.createElement("div");
-  ol.className = "ob-card-overlay";
-  ol.innerHTML = `
-    <p class="ob-progress-title">${title}</p>
-    <div class="ob-progress-bar-wrap"><div class="ob-progress-bar" id="ob-bar"></div></div>
-    <p class="ob-progress-step" id="ob-step-label">&nbsp;</p>
-    <div class="ob-progress-meta">
-      <span class="ob-progress-label" id="ob-pct-label">0 %</span>
-      <span id="ob-timer">0:00</span>
-    </div>`;
-  card.appendChild(ol);
+  const btnLabel = obIsEdit ? "Sauvegarder" : "Créer mon profil";
+  footer.style.cssText = "flex-direction:column;gap:0.6rem;align-items:stretch";
+  footer.innerHTML = `
+    <div class="ob-inline-progress">
+      <div class="ob-bar-wrap-inline">
+        <div class="ob-progress-bar" id="ob-bar"></div>
+        <span class="ob-bar-label" id="ob-step-label">en cours…</span>
+      </div>
+      <span class="ob-timer-small" id="ob-timer">0:00</span>
+    </div>
+    <button class="btn-primary" disabled style="opacity:0.45;cursor:not-allowed">${escapeHtml(btnLabel)}</button>`;
 
   const start = Date.now();
   if (_timerInterval) clearInterval(_timerInterval);
@@ -58,14 +57,16 @@ export function showProgressState() {
   }, 1000);
 }
 
-export function updateProgress(pct, step, label) {
+export function updateProgress(pct, step) {
   if (pct !== null) _progressPct = pct;
   const bar    = document.getElementById("ob-bar");
   const stepEl = document.getElementById("ob-step-label");
-  const pctEl  = document.getElementById("ob-pct-label");
-  if (bar)   bar.style.width       = `${Math.round(_progressPct)}%`;
-  if (pctEl) pctEl.textContent     = `${Math.round(_progressPct)} %`;
-  if (stepEl && step !== null) stepEl.textContent = label ? `${step} — ${label}` : step;
+  if (bar) bar.style.width = `${Math.round(_progressPct)}%`;
+  if (stepEl && step !== null) {
+    stepEl.textContent = step
+      ? `${Math.round(_progressPct)} % — ${step}`
+      : `${Math.round(_progressPct)} %`;
+  }
 }
 
 function startFakeProgress(from, to, durationMs) {
@@ -73,7 +74,16 @@ function startFakeProgress(from, to, durationMs) {
   const inc   = (to - from) / (durationMs / 1500);
   const timer = setInterval(() => {
     _progressPct = Math.min(to, _progressPct + inc);
-    updateProgress(_progressPct, null, null);
+    const bar = document.getElementById("ob-bar");
+    if (bar) bar.style.width = `${Math.round(_progressPct)}%`;
+    const stepEl = document.getElementById("ob-step-label");
+    if (stepEl) {
+      const sep  = stepEl.textContent.indexOf(" — ");
+      const step = sep !== -1 ? stepEl.textContent.slice(sep + 3) : "";
+      stepEl.textContent = step
+        ? `${Math.round(_progressPct)} % — ${step}`
+        : `${Math.round(_progressPct)} %`;
+    }
   }, 1500);
   obFakeProgressStop = () => clearInterval(timer);
   return obFakeProgressStop;
@@ -84,9 +94,9 @@ function showProgressError(msg) {
   if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
   if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
   const card = $card();
-  const bar  = card.querySelector(".ob-progress-bar-wrap");
+  const bar  = card.querySelector(".ob-bar-wrap-inline");
   if (bar) bar.style.opacity = "0.3";
-  const body = card.querySelector(".ob-card-overlay") || card;
+  const body = card.querySelector(".dialog-footer") || card;
   const errEl = document.createElement("p");
   errEl.className   = "ob-error";
   errEl.textContent = msg;
@@ -237,8 +247,9 @@ export async function showEditProfile(pid) {
 
 // Reprend un build interrompu (rechargement de page en plein build)
 export async function resumeBuild(pid) {
-  showProgressState();
   $overlay().hidden = false;
+  renderOnboarding();  // crée la structure dialog-footer nécessaire à showProgressState
+  showProgressState();
   await runBuildPhase(pid, false, null);
 }
 
@@ -255,7 +266,7 @@ async function startCreation(data) {
 async function runBuildPhase(pid, doCreate, data) {
   try {
     if (doCreate) {
-      updateProgress(5, "Envoi de la demande…", "Création de l'issue GitHub");
+      updateProgress(5, "envoi…");
       const issueBody = JSON.stringify({
         profileId:    pid,
         poste:        data.poste,
@@ -266,14 +277,14 @@ async function runBuildPhase(pid, doCreate, data) {
       const issue = await createIssue(`[job-agent] ${pid}`, issueBody);
       setPendingBuild({ profileId: pid, issueNumber: issue.number });
     }
-    updateProgress(15, "Build en cours…", "Workflow GitHub Actions déclenché");
+    updateProgress(15, "build en cours…");
     const fakeStop = startFakeProgress(15, 92, 3 * 60 * 1000);
     await waitForOffers(pid);
     fakeStop();
     if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
-    updateProgress(92, "Récupération des offres…", "Chargement depuis GitHub");
+    updateProgress(92, "chargement…");
     const offersData = await fetchOffers(pid);
-    updateProgress(100, "C'est prêt !", "Chargement de votre tableau…");
+    updateProgress(100, "prêt !");
     clearPendingBuild();
     await new Promise(r => setTimeout(r, 900));
     $overlay().hidden = true;
@@ -287,7 +298,7 @@ async function runBuildPhase(pid, doCreate, data) {
 
 async function saveProfileEdits(data) {
   const pid = data.profileId;
-  updateProgress(5, "Envoi des modifications…", "Création de l'issue GitHub");
+  updateProgress(5, "envoi…");
   const issueBody = JSON.stringify({
     profileId:     pid,
     poste:         data.poste,
@@ -296,15 +307,14 @@ async function saveProfileEdits(data) {
     scoringConfig: buildScoringConfig(data),
   });
   const issue = await createIssue(`[job-agent-rebuild] ${pid}`, issueBody);
-  updateProgress(10, "Rebuild en cours…", "Workflow GitHub Actions déclenché");
+  updateProgress(10, "build en cours…");
   const fakeStop = startFakeProgress(10, 88, 3 * 60 * 1000);
   await waitForRebuild(issue.number);
   fakeStop();
   if (_timerInterval) { clearInterval(_timerInterval); _timerInterval = null; }
-  // Récupérer les offres directement via l'API GitHub pour éviter le délai CDN Pages
-  updateProgress(92, "Récupération des offres…", "Chargement depuis GitHub");
+  updateProgress(92, "chargement…");
   const offersData = await fetchOffers(pid);
-  updateProgress(100, "Mis à jour !", "Chargement de votre tableau…");
+  updateProgress(100, "mis à jour !");
   await new Promise(r => setTimeout(r, 900));
   $overlay().hidden = true;
   obIsEdit = false;

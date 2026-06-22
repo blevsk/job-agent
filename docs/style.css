@@ -1078,34 +1078,8 @@ code {
   overflow: hidden;
   width: 100%;
   max-width: 900px;
-  min-height: 300px;
   max-height: calc(100dvh - 4rem);
   box-shadow: 0 8px 40px rgba(0,0,0,0.10);
-}
-.ob-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--surface);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem 2rem;
-  gap: 1rem;
-  z-index: 5;
-  text-align: center;
-  animation: dialog-in 0.2s ease;
-}
-.ob-card-overlay .ob-progress-bar-wrap {
-  width: 100%;
-  max-width: 380px;
-  margin-bottom: 0;
-}
-.ob-progress-title {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--fg);
 }
 /* Proportions 1/3 champs — 2/3 profil, colonne gauche plus compacte */
 #onboarding-card .dialog-2col {
@@ -1118,6 +1092,15 @@ code {
 #onboarding-card .dialog-col select {
   padding: 0.38rem 0.65rem;
   font-size: 0.88rem;
+  line-height: 1.4;
+}
+#onboarding-card .dialog-col select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b73' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  padding-right: 1.9rem;
 }
 /* Spécificité (1,1,0) > (1,0,1) de #onboarding-card label — checkbox inline */
 #onboarding-card .ob-check {
@@ -1370,22 +1353,43 @@ code {
   text-align: center;
   margin: 0;
 }
-.ob-progress-body {
-  align-items: center;
-  text-align: center;
-  min-height: 220px;
-  justify-content: center;
+/* Barre de progression inline dans le footer */
+.ob-inline-progress {
   width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
-.ob-progress-meta {
+.ob-bar-wrap-inline {
+  position: relative;
+  height: 26px;
+  background: var(--surface-raised);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ob-bar-wrap-inline .ob-progress-bar {
+  height: 100%;
+  border-radius: 8px;
+}
+.ob-bar-label {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.5rem;
 }
-#ob-timer {
-  font-size: 0.78rem;
+.ob-timer-small {
+  font-size: 0.7rem;
   color: var(--muted);
+  text-align: right;
   font-variant-numeric: tabular-nums;
 }
 .ob-error {
