@@ -176,7 +176,7 @@ def create() -> None:
 
     print(f"[ok] démo créée → {offers_path.relative_to(ROOT)}")
     print(f"[ok] profiles.json mis à jour ({len(manifest['profiles'])} profil(s))")
-    print("[  ] lance `make serve` puis ouvre http://localhost:8080")
+    print("[  ] ouvre docs/index.html directement dans le navigateur (ou déploie sur staging)")
 
 
 def clean() -> None:

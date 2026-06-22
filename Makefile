@@ -1,4 +1,4 @@
-.PHONY: help test lint format check typecheck build build-all watch coverage coverage-html serve demo demo-clean
+.PHONY: help test lint format check typecheck build build-all watch coverage coverage-html demo demo-clean
 
 help:
 	@echo "Cibles disponibles :"
@@ -12,7 +12,6 @@ help:
 	@echo "  watch         Lance pytest en mode watch (ptw)"
 	@echo "  coverage      Rapport de couverture dans le terminal"
 	@echo "  coverage-html Rapport HTML + ouverture dans le navigateur"
-	@echo "  serve         Sert docs/ en local sur http://localhost:8080"
 	@echo "  demo          Crée le profil démo local (données fictives, sans API)"
 	@echo "  demo-clean    Supprime le profil démo local"
 
@@ -44,9 +43,6 @@ coverage:
 
 coverage-html:
 	pytest --cov=src --cov-report=html -q && open htmlcov/index.html
-
-serve:
-	python3 -m http.server 8080 --directory docs
 
 demo:
 	python scripts/setup_demo.py
