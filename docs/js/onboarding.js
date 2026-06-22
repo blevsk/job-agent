@@ -110,22 +110,22 @@ function renderOnboarding() {
     <form id="ob-form">
       <div class="dialog-2col">
         <div class="dialog-col">
-          <label>Intitulé du poste <span class="req">*</span>
+          <label><span class="req">*</span> Intitulé du poste
             <input name="poste" required value="${escapeHtml(obData.poste || "")}" placeholder="Ex : Assistante administrative">
           </label>
-          <label>Ville <span class="req">*</span>
+          <label><span class="req">*</span> Ville
             <input name="ville" required value="${escapeHtml(obData.ville || "")}" placeholder="Ex : Lyon">
           </label>
           <div class="ob-row">
-            <label>Rayon (km)
-              <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
-            </label>
             <label>Contrat
               <select name="contrat">
                 ${["Tous","CDI","CDD","Alternance","Stage","Intérim"].map(c =>
                   `<option${c === (obData.contrat || "Tous") ? " selected" : ""}>${c}</option>`
                 ).join("")}
               </select>
+            </label>
+            <label>Rayon (km)
+              <input name="rayon" type="number" min="1" max="200" value="${obData.rayon || 25}">
             </label>
           </div>
           <label>Fraîcheur des offres
