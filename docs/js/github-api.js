@@ -2,7 +2,7 @@ import { GH_REPO, ISSUES_TOKEN } from './constants.js?v=CACHE_BUST';
 
 function authHeaders() {
   const h = { Accept: "application/vnd.github+json" };
-  if (ISSUES_TOKEN && ISSUES_TOKEN !== "REMPLACER_PAR_TON_TOKEN_ISSUES")
+  if (ISSUES_TOKEN?.startsWith("github_"))
     h["Authorization"] = `Bearer ${ISSUES_TOKEN}`;
   return h;
 }
