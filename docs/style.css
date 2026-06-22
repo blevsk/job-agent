@@ -190,21 +190,17 @@ th {
 
 th:hover { color: var(--accent); }
 
-tbody tr:not(.notes-row) {
+tbody tr {
   background: var(--surface);
   box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
   transition: box-shadow 0.15s, transform 0.12s;
 }
-tbody tr:not(.notes-row):hover {
+tbody tr:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
   transform: translateY(-1px);
 }
-tbody tr:not(.notes-row) td:first-child { border-radius: 12px 0 0 12px; }
-tbody tr:not(.notes-row) td:last-child  { border-radius: 0 12px 12px 0; }
-
-/* Quand les notes sont ouvertes : coins bas carrés sur la ligne parent */
-tbody tr.notes-open td:first-child { border-radius: 12px 0 0 0; }
-tbody tr.notes-open td:last-child  { border-radius: 0 12px 0 0; }
+tbody tr td:first-child { border-radius: 12px 0 0 12px; }
+tbody tr td:last-child  { border-radius: 0 12px 12px 0; }
 
 .score {
   font-weight: 600;
@@ -303,51 +299,9 @@ tbody tr.notes-open td:last-child  { border-radius: 0 12px 0 0; }
   margin-top: 0.1rem;
 }
 
-.notes-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: var(--muted);
-  padding: 0.1rem 0.25rem;
-  border-radius: 3px;
-  vertical-align: middle;
-  margin-left: 0.15rem;
-}
-.notes-toggle:hover    { color: var(--accent); }
-.notes-toggle.has-notes { color: var(--accent); }
-
-/* Ligne de notes — connectée visuellement à la carte parent */
-.notes-row td {
-  padding: 0 0.85rem 0.75rem;
-  background: var(--surface);
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-}
-.notes-area {
-  width: 100%;
-  min-height: 4.5rem;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 0.88rem;
-  resize: vertical;
-  background: var(--surface);
-  color: var(--fg);
-  line-height: 1.5;
-}
-.notes-area:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
-}
-
-/* Offres lues */
-tbody tr.read {
-  opacity: 0.38;
-}
-tbody tr.read .title-line {
-  font-weight: 400;
+/* Offres non lues — bordure accent à gauche pour les faire ressortir */
+tbody tr:not(.read) td:first-child {
+  border-left: 3px solid var(--accent);
 }
 
 /* Badge source (FT / LBA) */
@@ -439,7 +393,8 @@ a:hover { text-decoration: underline; }
 .btn-add:hover { filter: brightness(0.85); }
 
 /* Dialog */
-#add-dialog {
+#add-dialog,
+#notes-dialog {
   border: none;
   border-radius: 16px;
   padding: 0;
@@ -448,12 +403,14 @@ a:hover { text-decoration: underline; }
   width: calc(100vw - 2rem);
   overflow: hidden;
 }
-#add-dialog::backdrop {
+#add-dialog::backdrop,
+#notes-dialog::backdrop {
   background: rgba(15,23,42,0.55);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
-#add-dialog[open] {
+#add-dialog[open],
+#notes-dialog[open] {
   animation: dialog-in 0.18s cubic-bezier(0.16,1,0.3,1);
 }
 @keyframes dialog-in {
@@ -645,6 +602,40 @@ code {
   white-space: nowrap;
 }
 
+/* Détails offre dans la modal notes */
+.offer-detail {
+  margin-bottom: 0.25rem;
+}
+.offer-detail-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.offer-detail-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+.offer-detail-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.offer-snippet {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0.35rem 0 0;
+}
+.offer-detail-sep {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
 /* 601-1200px : enlève les colonnes secondaires, réduit les marges */
 @media (max-width: 1200px) {
   body { padding: 1.5rem 2rem; }
@@ -694,7 +685,7 @@ code {
   #offers tbody { display: flex; flex-direction: column; gap: 0; }
 
   /* Carte principale */
-  #offers tbody tr:not(.notes-row) {
+  #offers tbody tr {
     display: grid;
     grid-template-columns: 1fr 6.5rem;
     border: 1px solid var(--border);
@@ -703,12 +694,9 @@ code {
     overflow: hidden;
     background: var(--surface);
   }
-  /* Notes inline cachées sur mobile (remplacées par la modal) */
-  #offers tbody tr.notes-row { display: none; }
 
   #offers td { border: none; padding: 0; vertical-align: top; }
-  #offers tbody tr:hover { background: transparent; }
-  #offers tbody tr:not(.notes-row):hover { background: var(--surface-alt); }
+  #offers tbody tr:hover { background: var(--surface-alt); }
 
   /* Colonne Rang LLM : cachée */
   #offers td.col-rank { display: none; }
@@ -776,11 +764,6 @@ code {
   }
   #offers .status-select { max-width: 100%; width: 6rem; font-size: 0.75rem; }
   #offers .status-date { font-size: 0.68rem; text-align: right; }
-  #offers .notes-toggle { margin-left: 0; }
-
-  /* Offres lues */
-  #offers tr.read { opacity: 0.38; }
-  #offers tr.read .title-line { font-weight: 400; }
 
   /* ── Bottom sheet sur mobile ── */
   #add-dialog,
@@ -950,7 +933,8 @@ code {
 }
 
 .kanban-card.dragging { opacity: 0.35; cursor: grabbing; }
-.kanban-card.read     { opacity: 0.35; }
+/* Kanban : non lues en avant, lues neutres */
+.kanban-card:not(.read) { border-left: 3px solid var(--accent); }
 
 .kanban-card-top {
   display: flex;
@@ -993,7 +977,7 @@ code {
 .kanban-card-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 0.5rem;
   padding-top: 0.4rem;
   border-top: 1px solid var(--border);
@@ -1011,16 +995,12 @@ code {
 }
 
 /* ── Dark mode : éléments colorés ── */
-[data-theme="dark"] tbody tr:not(.notes-row) {
+[data-theme="dark"] tbody tr {
   box-shadow: 0 1px 4px rgba(0,0,0,0.35);
 }
-[data-theme="dark"] tbody tr:not(.notes-row):hover {
+[data-theme="dark"] tbody tr:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
-[data-theme="dark"] .notes-row td {
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
 [data-theme="dark"] #add-dialog,
 [data-theme="dark"] #notes-dialog { background: var(--surface); }
 

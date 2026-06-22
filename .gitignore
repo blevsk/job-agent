@@ -38,3 +38,6 @@ htmlcov/
 # Sauvegardes locales
 job-agent-backup-*.zip
 .mcp.json
+
+# Profil démo local (généré par make demo, données fictives)
+docs/demo/

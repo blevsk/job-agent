@@ -21,6 +21,7 @@ function profileKey(base) { return `${base}:${currentProfile || "default"}`; }
 function lsRead()          { return profileKey("job-agent:read-ids"); }
 function lsKnown()         { return profileKey("job-agent:known-ids"); }
 function lsTracking()      { return profileKey("job-agent:tracking"); }
+function lsView()          { return profileKey("job-agent:view-mode"); }
 function offersUrl()       { return `${currentProfile}/offers.json`; }
 
 function loadSet(key) {
@@ -76,8 +77,7 @@ const state = {
   filter:    "",
   hideRead:  false,
   filterStatus: "",
-  openNotes: new Set(),
-  viewMode:  "table",
+  viewMode:  localStorage.getItem(lsView()) || "table",
 };
 
 // ── DOM refs ──────────────────────────────────────────────────────────────────
@@ -98,10 +98,9 @@ const $openAdd       = document.getElementById("open-add");
 const $addDialog     = document.getElementById("add-dialog");
 const $addForm       = document.getElementById("add-form");
 const $cancelAdd     = document.getElementById("cancel-add");
-const $notesDialog      = document.getElementById("notes-dialog");
-const $notesDialogArea  = document.getElementById("notes-dialog-area");
-const $notesDialogTitle = document.getElementById("notes-dialog-title");
-let currentNotesId = null;
+const $notesDialog = document.getElementById("notes-dialog");
+let currentNotesId  = null;
+let _notesInitial   = "";
 
 // ── Badges / helpers ──────────────────────────────────────────────────────────
 
@@ -229,7 +228,7 @@ function markRead(id) {
   if (readIds.has(id)) return;
   readIds.add(id);
   saveSet(lsRead(), readIds);
-  $tbody.querySelectorAll(`tr[data-id="${id}"]:not(.notes-row)`).forEach(tr => tr.classList.add("read"));
+  $tbody.querySelectorAll(`tr[data-id="${id}"]`).forEach(tr => tr.classList.add("read"));
   document.querySelector(`#kanban-wrapper .kanban-card[data-id="${id}"]`)?.classList.add("read");
   renderMeta();
 }
@@ -242,17 +241,17 @@ function render() {
   $empty.hidden = true;
   $tbody.innerHTML = rows.map(o => {
     const isRead   = readIds.has(o.id);
-    const hasNotes = state.openNotes.has(o.id);
     const t        = tracking[o.id] || {};
+    const hasNotes = !!t.notes?.trim();
     const scoreCls = o.score > 0 ? "pos" : o.score < 0 ? "neg" : "";
     const reasonHtml = o.llm_reason
       ? `<div class="llm-reason">💡 ${escapeHtml(o.llm_reason)}</div>`
       : (o.snippet ? `<div class="snippet">${escapeHtml(o.snippet)}</div>` : "");
     const metaHtml = [o.location, o.contract_type, o.posted_days_ago != null ? fmtAge(o.posted_days_ago) : null]
       .filter(Boolean).map(escapeHtml).join(" · ");
-    const trClass  = [isRead ? "read" : "", hasNotes ? "notes-open" : ""].filter(Boolean).join(" ");
+    const trClass  = [isRead ? "read" : "", hasNotes ? "has-notes" : ""].filter(Boolean).join(" ");
     return `
-      <tr data-id="${escapeHtml(o.id)}"${trClass ? ` class="${trClass}"` : ""}>
+      <tr data-id="${escapeHtml(o.id)}"${trClass ? ` class="${trClass}"` : ""} style="cursor:pointer">
         <td class="rank-cell col-rank">${rankBadge(o.llm_rank)}</td>
         <td class="score ${scoreCls}" title="${escapeHtml(breakdownTooltip(o))}">${(o.score ?? 0).toFixed(1)}</td>
         <td class="title">
@@ -268,14 +267,6 @@ function render() {
         <td class="status-cell">
           ${statusSelectHtml(o.id)}
           ${statusDateHtml(o.id)}
-          <button class="notes-toggle${t.notes ? " has-notes" : ""}" data-id="${escapeHtml(o.id)}" title="Notes">✏</button>
-        </td>
-      </tr>
-      <tr class="notes-row" data-id="${escapeHtml(o.id)}"${hasNotes ? "" : " hidden"}>
-        <td colspan="10">
-          <textarea class="notes-area" data-id="${escapeHtml(o.id)}"
-            placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
-          >${escapeHtml(t.notes || "")}</textarea>
         </td>
       </tr>`;
   }).join("");
@@ -283,6 +274,14 @@ function render() {
   $tbody.querySelectorAll("a[data-id]").forEach(a =>
     a.addEventListener("click", () => markRead(a.dataset.id))
   );
+
+  $tbody.querySelectorAll("tr[data-id]").forEach(tr => {
+    tr.addEventListener("click", e => {
+      if (e.target.closest("a, select, button")) return;
+      markRead(tr.dataset.id);
+      openNotesModal(tr.dataset.id);
+    });
+  });
 
   $tbody.querySelectorAll(".status-select").forEach(sel => {
     sel.addEventListener("change", () => {
@@ -296,33 +295,11 @@ function render() {
       cell.querySelector(".status-date")?.remove();
       const dh = statusDateHtml(id);
       if (dh) sel.insertAdjacentHTML("afterend", dh);
-      if (status === "Refusée") markRead(id);
+      markRead(id);
       renderDashboard();
     });
   });
 
-  $tbody.querySelectorAll(".notes-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
-      if (window.matchMedia("(max-width: 600px)").matches) { openNotesModal(id); return; }
-      const row     = $tbody.querySelector(`.notes-row[data-id="${id}"]`);
-      const mainRow = $tbody.querySelector(`tr:not(.notes-row)[data-id="${id}"]`);
-      if (!row) return;
-      const open = !row.hidden;
-      if (open) { state.openNotes.delete(id); row.hidden = true; mainRow?.classList.remove("notes-open"); }
-      else      { state.openNotes.add(id);    row.hidden = false; mainRow?.classList.add("notes-open"); row.querySelector("textarea")?.focus(); }
-    });
-  });
-
-  $tbody.querySelectorAll(".notes-area").forEach(ta => {
-    ta.addEventListener("input", () => {
-      const id = ta.dataset.id;
-      if (!tracking[id]) tracking[id] = {};
-      tracking[id].notes = ta.value;
-      saveTracking();
-      $tbody.querySelector(`.notes-toggle[data-id="${id}"]`)?.classList.toggle("has-notes", !!ta.value.trim());
-    });
-  });
 }
 
 // ── Kanban ────────────────────────────────────────────────────────────────────
@@ -345,7 +322,6 @@ function kanbanCard(o) {
       ${o.llm_reason ? `<div class="llm-reason">💡 ${escapeHtml(o.llm_reason)}</div>` : ""}
       <div class="kanban-card-actions">
         <a href="${escapeHtml(o.url)}" target="_blank" rel="noopener" class="kanban-link" data-id="${escapeHtml(o.id)}">Voir →</a>
-        <button class="notes-toggle${t.notes ? " has-notes" : ""} kanban-notes-btn" data-id="${escapeHtml(o.id)}" title="Notes">✏</button>
       </div>
     </div>`;
 }
@@ -371,9 +347,16 @@ function renderKanban() {
       </div>
     </div>`).join("");
 
+  let _dragging = false;
   $kanbanWrapper.querySelectorAll(".kanban-card").forEach(card => {
-    card.addEventListener("dragstart", e => { e.dataTransfer.setData("text/plain", card.dataset.id); setTimeout(() => card.classList.add("dragging"), 0); });
-    card.addEventListener("dragend",   () => card.classList.remove("dragging"));
+    card.addEventListener("dragstart", e => { _dragging = true; e.dataTransfer.setData("text/plain", card.dataset.id); setTimeout(() => card.classList.add("dragging"), 0); });
+    card.addEventListener("dragend",   () => { card.classList.remove("dragging"); setTimeout(() => { _dragging = false; }, 0); });
+    card.addEventListener("click", e => {
+      if (_dragging) return;
+      if (e.target.closest(".kanban-link")) return;
+      markRead(card.dataset.id);
+      openNotesModal(card.dataset.id);
+    });
   });
   $kanbanWrapper.querySelectorAll(".kanban-cards").forEach(zone => {
     zone.addEventListener("dragover",  e => { e.preventDefault(); zone.classList.add("drag-over"); });
@@ -387,13 +370,10 @@ function renderKanban() {
       tracking[id].status      = newStatus;
       tracking[id].status_date = newStatus ? new Date().toISOString().slice(0, 10) : null;
       saveTracking();
-      if (newStatus === "Refusée") markRead(id);
+      markRead(id);
       renderKanban(); renderDashboard();
     });
   });
-  $kanbanWrapper.querySelectorAll(".kanban-notes-btn").forEach(btn =>
-    btn.addEventListener("click", () => openNotesModal(btn.dataset.id))
-  );
   $kanbanWrapper.querySelectorAll(".kanban-link").forEach(a =>
     a.addEventListener("click", () => markRead(a.dataset.id))
   );
@@ -434,28 +414,77 @@ function unlockScroll() { document.documentElement.style.overflow = ""; window.s
 
 function openNotesModal(id) {
   currentNotesId = id;
-  const offer = state.offers.find(o => o.id === id);
-  if ($notesDialogTitle) $notesDialogTitle.textContent = offer?.title || "Notes";
-  if ($notesDialogArea)  $notesDialogArea.value = tracking[id]?.notes || "";
+  const offer    = state.offers.find(o => o.id === id);
+  _notesInitial  = tracking[id]?.notes || "";
+
+  // Générer le contenu dynamiquement : détails offre + champ notes
+  const scoreCls = (offer?.score ?? 0) > 0 ? "pos" : (offer?.score ?? 0) < 0 ? "neg" : "";
+  const meta = [offer?.company, offer?.location, offer?.contract_type, offer?.salary]
+    .filter(Boolean).map(escapeHtml).join(" · ");
+  const bodyHtml = offer?.llm_reason
+    ? `<div class="llm-reason">💡 ${escapeHtml(offer.llm_reason)}</div>`
+    : offer?.snippet ? `<p class="offer-snippet">${escapeHtml(offer.snippet)}</p>` : "";
+
+  $notesDialog.innerHTML = `
+    <div class="dialog-header">
+      <button type="button" class="dialog-close nd-cancel" aria-label="Fermer">✕</button>
+      <h2>${escapeHtml(offer?.title || "Détail de l'offre")}</h2>
+    </div>
+    <div id="notes-form">
+      ${offer ? `
+        <div class="offer-detail">
+          <div class="offer-detail-top">
+            ${meta ? `<p class="offer-detail-meta">${meta}</p>` : ""}
+            <span class="score ${scoreCls}">${(offer.score ?? 0).toFixed(1)} pts</span>
+          </div>
+          ${bodyHtml}
+          <a href="${escapeHtml(offer.url)}" target="_blank" rel="noopener" class="offer-detail-link">Voir l'offre sur le site →</a>
+        </div>
+        <hr class="offer-detail-sep">
+      ` : ""}
+      <label>Vos notes
+        <textarea id="notes-dialog-area" rows="5"
+          placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
+        >${escapeHtml(_notesInitial)}</textarea>
+      </label>
+      <div class="form-actions">
+        <button type="button" class="btn-cancel nd-cancel">Annuler</button>
+        <button type="button" class="btn-primary nd-save">Enregistrer</button>
+      </div>
+    </div>`;
+
+  const $area = $notesDialog.querySelector("#notes-dialog-area");
+
+  function saveNotes() {
+    const val = $area.value;
+    if (!tracking[currentNotesId]) tracking[currentNotesId] = {};
+    tracking[currentNotesId].notes = val;
+    saveTracking();
+    const hasNotes = !!val.trim();
+    $tbody.querySelector(`tr[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
+    $kanbanWrapper?.querySelector(`.kanban-card[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
+    $notesDialog.close();
+  }
+
+  function maybeClose() {
+    if ($area.value !== _notesInitial &&
+        !confirm("Des modifications n'ont pas été enregistrées. Fermer sans sauvegarder ?")) return;
+    $notesDialog.close();
+  }
+
+  $notesDialog.querySelector(".nd-save")?.addEventListener("click", saveNotes);
+  $notesDialog.querySelectorAll(".nd-cancel").forEach(b => b.addEventListener("click", maybeClose));
+  // Stocker maybeClose pour backdrop click et ESC
+  $notesDialog._maybeClose = maybeClose;
+
   lockScroll();
   $notesDialog.showModal();
-  setTimeout(() => $notesDialogArea?.focus(), 80);
+  setTimeout(() => $area?.focus(), 80);
 }
 
-$notesDialogArea?.addEventListener("input", () => {
-  if (!currentNotesId) return;
-  if (!tracking[currentNotesId]) tracking[currentNotesId] = {};
-  tracking[currentNotesId].notes = $notesDialogArea.value;
-  saveTracking();
-  const hasNotes = !!$notesDialogArea.value.trim();
-  $tbody.querySelector(`.notes-toggle[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
-  $kanbanWrapper?.querySelector(`.kanban-notes-btn[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
-});
-document.getElementById("close-notes")?.addEventListener("click",     () => $notesDialog.close());
-document.getElementById("close-notes-btn")?.addEventListener("click", () => $notesDialog.close());
-$notesDialog?.addEventListener("click",  e => { if (e.target === $notesDialog) $notesDialog.close(); });
-$notesDialog?.addEventListener("cancel", e => { e.preventDefault(); $notesDialog.close(); });
-$notesDialog?.addEventListener("close",  () => { unlockScroll(); currentNotesId = null; });
+$notesDialog?.addEventListener("click",  e => { if (e.target === $notesDialog) $notesDialog._maybeClose?.(); });
+$notesDialog?.addEventListener("cancel", e => { e.preventDefault(); $notesDialog._maybeClose?.(); });
+$notesDialog?.addEventListener("close",  () => { unlockScroll(); currentNotesId = null; _notesInitial = ""; });
 
 // ── Add manual offer ──────────────────────────────────────────────────────────
 
@@ -510,13 +539,20 @@ document.querySelectorAll("th[data-sort]").forEach(th => {
   });
 });
 
+// Appliquer la vue sauvegardée dès le chargement
+if (state.viewMode === "kanban") {
+  $viewKanban?.classList.add("active"); $viewTable?.classList.remove("active");
+}
+
 $viewTable?.addEventListener("click", () => {
   state.viewMode = "table";
+  localStorage.setItem(lsView(), "table");
   $viewTable.classList.add("active"); $viewKanban.classList.remove("active");
   renderView();
 });
 $viewKanban?.addEventListener("click", () => {
   state.viewMode = "kanban";
+  localStorage.setItem(lsView(), "kanban");
   $viewKanban.classList.add("active"); $viewTable.classList.remove("active");
   renderView();
 });
