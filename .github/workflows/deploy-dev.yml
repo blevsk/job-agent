@@ -1,15 +1,15 @@
-name: Deploy to GitHub Pages
+name: Deploy dev to staging
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: prod-pages
+  group: staging-pages
   cancel-in-progress: true
 
 jobs:
@@ -29,10 +29,10 @@ jobs:
           done
           sed -i "s|CACHE_BUST|${GIT_SHA}|g" docs/index.html
 
-      - name: Deploy prod
+      - name: Deploy staging
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs/
+          target-folder: staging/
           clean: true
-          clean-exclude: staging/
