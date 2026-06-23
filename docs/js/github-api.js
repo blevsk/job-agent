@@ -63,3 +63,41 @@ export async function fetchOffers(profileId) {
   const bytes = Uint8Array.from(atob(meta.content.replace(/\s/g, "")), c => c.charCodeAt(0));
   return JSON.parse(new TextDecoder().decode(bytes));
 }
+
+// Lit tracking.json depuis le repo. Retourne { data, sha } ou { data: null, sha: null } si absent.
+export async function fetchTracking(profileId) {
+  const r = await fetch(
+    `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/tracking.json`,
+    { headers: authHeaders(), cache: "no-store" }
+  );
+  if (r.status === 404) return { data: null, sha: null };
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  const meta  = await r.json();
+  const bytes = Uint8Array.from(atob(meta.content.replace(/\s/g, "")), c => c.charCodeAt(0));
+  return { data: JSON.parse(new TextDecoder().decode(bytes)), sha: meta.sha };
+}
+
+// Crée ou met à jour tracking.json. Retourne le nouveau SHA du fichier.
+export async function pushTracking(profileId, data, sha) {
+  const encoded = new TextEncoder().encode(JSON.stringify(data, null, 2));
+  let binary = "";
+  encoded.forEach(b => { binary += String.fromCharCode(b); });
+  const body = {
+    message: `tracking: ${profileId}`,
+    content: btoa(binary),
+    ...(sha ? { sha } : {}),
+  };
+  const r = await fetch(
+    `https://api.github.com/repos/${GH_REPO}/contents/docs/${profileId}/tracking.json`,
+    {
+      method:  "PUT",
+      headers: { ...authHeaders(), "Content-Type": "application/json" },
+      body:    JSON.stringify(body),
+    }
+  );
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    throw new Error(err.message || `HTTP ${r.status}`);
+  }
+  return (await r.json()).content.sha;
+}

@@ -1,7 +1,8 @@
-import { LS_PROFILE, LS_PENDING }                                  from './js/constants.js?v=CACHE_BUST';
+import { LS_PROFILE, LS_PENDING, ISSUES_TOKEN }                     from './js/constants.js?v=CACHE_BUST';
 import { escapeHtml, fmtDate, fmtAge, fmtStatusDate }               from './js/config.js?v=CACHE_BUST';
 import { init as initOnboarding, showOnboarding, showEditProfile,
          showProgressState, resumeBuild }                            from './js/onboarding.js?v=CACHE_BUST';
+import { fetchTracking, pushTracking }                               from './js/github-api.js?v=CACHE_BUST';
 
 // ── Reset localStorage (param ?reset pour tester proprement) ─────────────────
 // Redirige vers ?fresh pour que le boot ignore manifest.default et affiche l'onboarding.
@@ -41,11 +42,60 @@ function loadTracking()    {
   try { return JSON.parse(localStorage.getItem(lsTracking()) || "{}"); }
   catch { return {}; }
 }
-function saveTracking()    { localStorage.setItem(lsTracking(), JSON.stringify(tracking)); }
+// sync=false évite le ping-pong quand on vient de charger les données depuis GH
+function saveTracking(sync = true) {
+  localStorage.setItem(lsTracking(), JSON.stringify(tracking));
+  if (sync) scheduleSyncToGH();
+}
+
+// Charge tracking.json depuis GitHub et fusionne dans le tracking local.
+// GH est la source de vérité ; les offres manuelles locales absentes du GH sont préservées.
+async function loadTrackingFromGH(profileId) {
+  if (!ISSUES_TOKEN?.startsWith("github_")) return;
+  try {
+    const { data, sha } = await fetchTracking(profileId);
+    if (!data) return;
+    _ghTrackingSha = sha;
+    const localManual  = tracking.__manual__ || [];
+    Object.assign(tracking, data);
+    if (Array.isArray(data.__manual__)) {
+      const remoteIds = new Set(data.__manual__.map(o => o.id));
+      tracking.__manual__ = [
+        ...data.__manual__,
+        ...localManual.filter(o => !remoteIds.has(o.id)),
+      ];
+    }
+    saveTracking(false); // écriture locale uniquement, pas de re-sync vers GH
+  } catch (_) {
+    // Non-bloquant — localStorage reste le fallback silencieux
+  }
+}
+
+// Envoie le tracking vers GitHub avec un debounce de 2 s.
+// En cas de conflit SHA (modification concurrente depuis un autre appareil), re-fetch et réessaie.
+function scheduleSyncToGH() {
+  if (!ISSUES_TOKEN?.startsWith("github_") || !currentProfile) return;
+  clearTimeout(_syncTimer);
+  _syncTimer = setTimeout(async () => {
+    try {
+      _ghTrackingSha = await pushTracking(currentProfile, tracking, _ghTrackingSha);
+    } catch (err) {
+      if (/sha|conflict/i.test(err.message || "")) {
+        try {
+          const { sha } = await fetchTracking(currentProfile);
+          _ghTrackingSha = sha;
+          _ghTrackingSha = await pushTracking(currentProfile, tracking, _ghTrackingSha);
+        } catch (_) {}
+      }
+    }
+  }, 2000);
+}
 
 const readIds  = loadSet(lsRead());
 const tracking = loadTracking();
-let newIds   = new Set();
+let newIds         = new Set();
+let _ghTrackingSha = null;  // SHA du dernier tracking.json lu/écrit sur GH
+let _syncTimer     = null;  // timer debounce pour la sync GH
 
 function getManualOffers() { return tracking.__manual__ || []; }
 
@@ -694,7 +744,11 @@ $copyLink?.addEventListener("click", () => {
 async function loadProfile(profileId) {
   currentProfile = profileId;
   try {
-    const r = await fetch(offersUrl(), { cache: "no-store" });
+    // Fetch offres + tracking GH en parallèle pour ne pas ajouter de latence
+    const [r] = await Promise.all([
+      fetch(offersUrl(), { cache: "no-store" }),
+      loadTrackingFromGH(profileId),
+    ]);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const data = await r.json();
     state.meta      = data.meta;
@@ -715,6 +769,13 @@ async function loadProfile(profileId) {
       return;
     }
     if (pb?.profileId === profileId) localStorage.removeItem(LS_PENDING);
+    // Profil introuvable → onboarding plutôt qu'une erreur brute
+    if (err.message === "HTTP 404") {
+      localStorage.removeItem(LS_PROFILE);
+      currentProfile = null;
+      showOnboarding();
+      return;
+    }
     $meta.textContent = `Erreur de chargement : ${err.message}`;
     $empty.hidden = false;
   }
@@ -761,12 +822,8 @@ fetch("profiles.json", { cache: "no-store" })
       }
       return;
     }
-    if (!profiles.some(p => p.id === currentProfile)) {
-      localStorage.removeItem(LS_PROFILE);
-      currentProfile = null;
-      showOnboarding();
-      return;
-    }
+    // Ne pas bloquer sur le manifest : on tente le chargement directement.
+    // loadProfile gère le 404 (profil inconnu → onboarding).
     loadProfile(currentProfile);
   })
   .catch(() => {
