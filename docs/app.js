@@ -811,19 +811,8 @@ fetch("profiles.json", { cache: "no-store" })
     const profiles = manifest?.profiles || [];
     renderProfileSwitcher(profiles);
     if (!currentProfile) {
-      if (_fresh) {
-        history.replaceState(null, "", location.pathname);
-        showOnboarding();
-        return;
-      }
-      const defaultId = manifest?.default;
-      if (defaultId && profiles.some(p => p.id === defaultId)) {
-        currentProfile = defaultId;
-        localStorage.setItem(LS_PROFILE, defaultId);
-        loadProfile(defaultId);
-      } else {
-        showOnboarding();
-      }
+      if (_fresh) history.replaceState(null, "", location.pathname);
+      showOnboarding();
       return;
     }
     // Ne pas bloquer sur le manifest : on tente le chargement directement.

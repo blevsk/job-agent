@@ -216,7 +216,7 @@ function showReconnect() {
         <input id="ob-pid-input" placeholder="ex : abc123def4" autocomplete="off" autocorrect="off" spellcheck="false">
         <button id="ob-pid-load" class="btn-primary">Charger</button>
       </div>
-      <p id="ob-pid-error" hidden class="ob-error">Profil introuvable. Vérifiez l'identifiant.</p>
+      <p id="ob-pid-error" hidden class="ob-error"></p>
     </div>
     <div class="dialog-footer">
       <button type="button" class="btn-cancel" id="ob-back">← Retour</button>
@@ -235,12 +235,16 @@ function showReconnect() {
     $btn.disabled = true;
     try {
       const r = await fetch(`${pid}/offers.json`, { cache: "no-store" });
-      if (!r.ok) throw new Error();
+      if (r.status === 404) {
+        $err.textContent = "Profil introuvable. Vérifiez l'identifiant.";
+        $err.hidden = false; $btn.disabled = false; return;
+      }
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
       $overlay().hidden = true;
       _onProfileReady?.(pid);
-    } catch {
-      $err.hidden   = false;
-      $btn.disabled = false;
+    } catch (err) {
+      $err.textContent = `Erreur réseau — réessayez (${err.message}).`;
+      $err.hidden = false; $btn.disabled = false;
     }
   };
 
