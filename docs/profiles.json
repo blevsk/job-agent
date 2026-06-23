@@ -1,4 +1,13 @@
 {
-  "profiles": [],
-  "default": null
+  "profiles": [
+    {
+      "id": "6b6b7740ef",
+      "label": "Ingénieur Réseau"
+    },
+    {
+      "id": "demo",
+      "label": "Développeur Python / Django"
+    }
+  ],
+  "default": "6b6b7740ef"
 }
