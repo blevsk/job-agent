@@ -168,6 +168,7 @@ const $cancelAdd         = document.getElementById("cancel-add");
 const $notesOverlay      = document.getElementById("notes-overlay");
 const $notesCard         = document.getElementById("notes-card");
 const $copyLink          = document.getElementById("copy-link-btn");
+const $switchProfile     = document.getElementById("switch-profile-btn");
 const $exportJson        = document.getElementById("exportJson");
 const $importJsonTrigger = document.getElementById("importJsonTrigger");
 const $importJson        = document.getElementById("importJson");
@@ -726,6 +727,7 @@ $importJson?.addEventListener("change", () => {
 });
 
 document.getElementById("edit-profile-btn")?.addEventListener("click", () => showEditProfile(currentProfile));
+$switchProfile?.addEventListener("click", () => showOnboarding(true));
 
 $copyLink?.addEventListener("click", () => {
   const url = new URL(location.href);
@@ -762,6 +764,7 @@ async function loadProfile(profileId) {
     syncUrl(profileId);
     document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
     $copyLink?.removeAttribute("hidden");
+    $switchProfile?.removeAttribute("hidden");
   } catch (err) {
     const pb = JSON.parse(localStorage.getItem(LS_PENDING) || "null");
     if (pb?.profileId === profileId && pb?.issueNumber) {
@@ -797,6 +800,7 @@ function receiveOffers(pid, data) {
   syncUrl(pid);
   document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
   $copyLink?.removeAttribute("hidden");
+  $switchProfile?.removeAttribute("hidden");
 }
 
 initOnboarding(loadProfile, receiveOffers);

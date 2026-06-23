@@ -8,6 +8,7 @@ import {
 // Module state
 let obData             = {};
 let obIsEdit           = false;
+let obCanCancel        = false;  // true quand ouvert depuis un profil déjà chargé
 let obFakeProgressStop = null;
 let _progressPct       = 0;
 
@@ -119,14 +120,14 @@ function renderOnboarding() {
   $card().querySelector(".ob-card-overlay")?.remove();
   const cancelBtn = obIsEdit
     ? `<button type="button" class="btn-cancel" id="ob-cancel-edit">Annuler</button>`
-    : "";
+    : (obCanCancel ? `<button type="button" class="btn-cancel" id="ob-cancel-switch">Fermer</button>` : "");
   const submitLabel = obIsEdit ? "Sauvegarder" : "Créer mon profil";
 
   $card().innerHTML = `
     <div class="dialog-header">
       <h2>${obIsEdit ? "Modifier le profil" : "Votre profil de recherche"}</h2>
     </div>
-    <form id="ob-form">
+    <form id="ob-form" autocomplete="off">
       <div class="dialog-2col">
         <div class="dialog-col">
           <label><span><span class="req">*</span> Intitulé du poste</span>
@@ -171,11 +172,20 @@ function renderOnboarding() {
     <div class="dialog-footer">
       ${cancelBtn}
       <button type="submit" form="ob-form" class="btn-primary">${submitLabel}</button>
-    </div>`;
+    </div>
+    ${!obIsEdit ? `<div class="ob-reconnect-toggle"><a href="#" id="ob-toggle-reconnect">J'ai déjà un identifiant de profil →</a></div>` : ""}`;
 
   document.getElementById("ob-cancel-edit")?.addEventListener("click", () => {
     $overlay().hidden = true;
     obIsEdit = false;
+  });
+  document.getElementById("ob-cancel-switch")?.addEventListener("click", () => {
+    $overlay().hidden = true;
+    obCanCancel = false;
+  });
+  document.getElementById("ob-toggle-reconnect")?.addEventListener("click", e => {
+    e.preventDefault();
+    showReconnect();
   });
   document.getElementById("ob-form").addEventListener("submit", e => {
     e.preventDefault();
@@ -193,11 +203,97 @@ function renderOnboarding() {
   $card().querySelector("input, select")?.focus();
 }
 
+// ── Reconnect (J'ai déjà un profil) ──────────────────────────────────────────
+
+function showReconnect() {
+  $card().innerHTML = `
+    <div class="dialog-header">
+      <h2>Retrouver mon profil</h2>
+    </div>
+    <div class="ob-simple-body">
+      <p>Entrez l'identifiant de votre profil (visible dans l'URL après <code>?profile=</code>) :</p>
+      <div class="ob-input-row">
+        <input id="ob-pid-input" placeholder="ex : abc123def4" autocomplete="off" autocorrect="off" spellcheck="false">
+        <button id="ob-pid-load" class="btn-primary">Charger</button>
+      </div>
+      <p id="ob-pid-error" hidden class="ob-error">Profil introuvable. Vérifiez l'identifiant.</p>
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn-cancel" id="ob-back">← Retour</button>
+    </div>`;
+
+  document.getElementById("ob-back")?.addEventListener("click", renderOnboarding);
+  const $input = document.getElementById("ob-pid-input");
+  $input?.focus();
+
+  const doLoad = async () => {
+    const pid = $input?.value.trim();
+    if (!pid) return;
+    const $err = document.getElementById("ob-pid-error");
+    $err.hidden = true;
+    const $btn  = document.getElementById("ob-pid-load");
+    $btn.disabled = true;
+    try {
+      const r = await fetch(`${pid}/offers.json`, { cache: "no-store" });
+      if (!r.ok) throw new Error();
+      $overlay().hidden = true;
+      _onProfileReady?.(pid);
+    } catch {
+      $err.hidden   = false;
+      $btn.disabled = false;
+    }
+  };
+
+  document.getElementById("ob-pid-load")?.addEventListener("click", doLoad);
+  $input?.addEventListener("keydown", e => { if (e.key === "Enter") doLoad(); });
+}
+
+// ── Save-link screen (affiché après la création d'un profil) ──────────────────
+
+function showSaveLink(pid, afterFn) {
+  const url = (() => {
+    const u = new URL(location.href);
+    u.searchParams.set("profile", pid);
+    u.searchParams.delete("fresh");
+    return u.toString();
+  })();
+
+  $card().innerHTML = `
+    <div class="dialog-header">
+      <h2>Profil créé !</h2>
+    </div>
+    <div class="ob-simple-body">
+      <p>Sauvegardez ce lien — c'est la seule façon de retrouver votre profil :</p>
+      <div class="ob-input-row">
+        <input id="ob-perm-link" type="text" readonly value="${escapeHtml(url)}">
+        <button id="ob-copy-link" class="btn-primary">Copier</button>
+      </div>
+      <p class="ob-save-hint">Sans ce lien, vos offres et candidatures seront inaccessibles depuis un autre appareil.</p>
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn-primary" id="ob-continue">Continuer →</button>
+    </div>`;
+
+  const $btn = document.getElementById("ob-copy-link");
+  $btn?.addEventListener("click", () => {
+    navigator.clipboard.writeText(url)
+      .then(() => { $btn.textContent = "✓ Copié !"; setTimeout(() => { $btn.textContent = "Copier"; }, 2000); })
+      .catch(() => { prompt("Copiez ce lien permanent :", url); });
+  });
+
+  document.getElementById("ob-perm-link")?.addEventListener("click", e => e.target.select());
+  document.getElementById("ob-continue")?.addEventListener("click", () => {
+    $overlay().hidden = true;
+    afterFn();
+  });
+}
+
 // ── Public: entry points ──────────────────────────────────────────────────────
 
-export function showOnboarding() {
-  obIsEdit = false;
-  obData   = { profileId: generateProfileId() };
+export function showOnboarding(canCancel = false) {
+  obIsEdit    = false;
+  obCanCancel = canCancel;
+  obData      = { profileId: generateProfileId() };
   $overlay().hidden = false;
   renderOnboarding();
 }
@@ -276,10 +372,18 @@ async function runBuildPhase(pid, doCreate, data) {
     const offersData = await fetchOffers(pid);
     updateProgress(100, "prêt !");
     clearPendingBuild();
-    await new Promise(r => setTimeout(r, 900));
-    $overlay().hidden = true;
-    if (_onOffersData) _onOffersData(pid, offersData);
-    else _onProfileReady?.(pid);
+    await new Promise(r => setTimeout(r, 600));
+
+    if (doCreate) {
+      showSaveLink(pid, () => {
+        if (_onOffersData) _onOffersData(pid, offersData);
+        else _onProfileReady?.(pid);
+      });
+    } else {
+      $overlay().hidden = true;
+      if (_onOffersData) _onOffersData(pid, offersData);
+      else _onProfileReady?.(pid);
+    }
   } catch (err) {
     if (obFakeProgressStop) { obFakeProgressStop(); obFakeProgressStop = null; }
     showProgressError(`Erreur : ${err.message}`);

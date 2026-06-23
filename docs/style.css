@@ -1367,6 +1367,46 @@ code {
   margin-top: 0.75rem;
 }
 
+/* Écrans "J'ai déjà un profil" et "Sauvegardez votre lien" */
+.ob-reconnect-toggle {
+  text-align: center;
+  padding: 0.6rem 1.5rem 1rem;
+  font-size: 0.82rem;
+}
+.ob-reconnect-toggle a { color: var(--muted); text-decoration: none; }
+.ob-reconnect-toggle a:hover { color: var(--accent); text-decoration: underline; }
+
+.ob-simple-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+}
+.ob-simple-body p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.ob-simple-body code { font-size: 0.85em; background: var(--surface-raised); padding: 0.1em 0.35em; border-radius: 4px; }
+
+.ob-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.ob-input-row input {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+.ob-input-row .btn-primary { flex-shrink: 0; }
+
+.ob-save-hint {
+  font-size: 0.8rem !important;
+  color: var(--muted) !important;
+  padding: 0.6rem 0.75rem;
+  background: var(--surface-raised);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+
 @media (max-width: 620px) {
   .dialog-2col {
     grid-template-columns: 1fr;
