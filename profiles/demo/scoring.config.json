@@ -1,0 +1,21 @@
+{
+  "keywords": [
+    { "pattern": "python",                          "weight":  5.0 },
+    { "pattern": "django|fastapi",                  "weight":  4.0 },
+    { "pattern": "t[eé]l[eé]travail|remote|hybride?", "weight": 4.0 },
+    { "pattern": "junior|d[eé]butant",              "weight": -5.0 }
+  ],
+  "preferred_contracts": {
+    "Alternance": 8.0
+  },
+  "preferred_location": "Lille",
+  "location_bonus": 2.0,
+  "freshness_bonus": 3.0,
+  "freshness_max_days": 14,
+  "semantic_weight": 12.0,
+  "_prefs": {
+    "remote": true,
+    "no_interim": false,
+    "no_junior": true
+  }
+}

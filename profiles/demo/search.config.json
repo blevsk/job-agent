@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "location": "Lille",
+    "radius_km": 30,
+    "max_results": 150,
+    "published_within_days": 14,
+    "alternance_only": true,
+    "contract_type": null
+  },
+  "searches": [
+    { "keyword": "Développeur Python", "_label": "Développeur Python" },
+    { "keyword": "Django",             "_label": "Django" },
+    { "source": "la_bonne_alternance", "_label": "La Bonne Alternance — Développeur Python / Django" }
+  ]
+}

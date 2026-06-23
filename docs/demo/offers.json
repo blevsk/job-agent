@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "source": "demo",
+    "searches": [
+      {
+        "label": "Démo locale",
+        "keyword": "développeur",
+        "location": "Lille"
+      }
+    ],
+    "scraped_at": "2026-06-21T19:53:07+00:00",
+    "rerank_active": true,
+    "semantic_active": true,
+    "total": 5
+  },
+  "offers": [
+    {
+      "id": "demo_001",
+      "title": "Développeur Python / Django",
+      "company": "Acme Corp",
+      "location": "Lille (59)",
+      "contract_type": "Alternance",
+      "salary": "1 800 € brut/mois",
+      "posted_days_ago": 2,
+      "snippet": "Rejoignez notre équipe pour développer des APIs REST en Python et Django. Vous travaillerez sur une plateforme SaaS B2B en pleine croissance.",
+      "url": "https://example.com/offre/001",
+      "rome_code": "M1805",
+      "semantic_score": 0.87,
+      "llm_rank": 1,
+      "llm_reason": "Correspond parfaitement au profil : Python, Django, alternance à Lille.",
+      "score": 28.7,
+      "score_breakdown": {
+        "keywords": 15.0,
+        "contract": 5.0,
+        "rome": 4.0,
+        "location": 3.0,
+        "freshness": 2.0,
+        "semantic": -0.3
+      }
+    },
+    {
+      "id": "demo_002",
+      "title": "Alternant Développeur Web React/Node",
+      "company": "StartupXYZ",
+      "location": "Roubaix (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 5,
+      "snippet": "Mission : développement de nouvelles fonctionnalités sur notre application web. Stack : React, Node.js, PostgreSQL.",
+      "url": "https://example.com/offre/002",
+      "rome_code": "M1805",
+      "semantic_score": 0.72,
+      "llm_rank": 2,
+      "llm_reason": "Bon match sur l'alternance et le lieu, mais stack JS plutôt que Python.",
+      "score": 22.4,
+      "score_breakdown": {
+        "keywords": 8.0,
+        "contract": 5.0,
+        "rome": 4.0,
+        "location": 0.0,
+        "freshness": 2.0,
+        "semantic": 3.4
+      }
+    },
+    {
+      "id": "demo_003",
+      "title": "Data Scientist Junior",
+      "company": "DataLab France",
+      "location": "Lille (59)",
+      "contract_type": "CDI",
+      "salary": "35 000 € brut/an",
+      "posted_days_ago": 10,
+      "snippet": "Analyse de données, machine learning, Python/scikit-learn. Profil junior accepté avec stage ou alternance significatif.",
+      "url": "https://example.com/offre/003",
+      "rome_code": "M1403",
+      "semantic_score": 0.61,
+      "llm_rank": 3,
+      "llm_reason": "Profil data science intéressant mais contrat CDI, pas alternance.",
+      "score": 18.1,
+      "score_breakdown": {
+        "keywords": 10.0,
+        "contract": 0.0,
+        "rome": 0.0,
+        "location": 3.0,
+        "freshness": 0.0,
+        "semantic": 5.1
+      }
+    },
+    {
+      "id": "demo_004",
+      "title": "Technicien Support Informatique",
+      "company": "Groupe Renard",
+      "location": "Lens (62)",
+      "contract_type": "CDD",
+      "salary": "1 600 € brut/mois",
+      "posted_days_ago": 20,
+      "snippet": "Support utilisateurs niveau 1 et 2, gestion du parc informatique, helpdesk.",
+      "url": "https://example.com/offre/004",
+      "rome_code": "M1607",
+      "semantic_score": 0.38,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 8.0,
+      "score_breakdown": {
+        "keywords": 2.0,
+        "contract": 0.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 6.0
+      }
+    },
+    {
+      "id": "demo_005",
+      "title": "Chargé de projet digital",
+      "company": "Agence Web Nord",
+      "location": "Villeneuve-d'Ascq (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 3,
+      "snippet": "Pilotage de projets de transformation digitale, coordination équipes techniques et clients.",
+      "url": "https://example.com/offre/005",
+      "rome_code": null,
+      "semantic_score": 0.44,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 12.5,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 5.0,
+        "rome": 0.0,
+        "location": 3.0,
+        "freshness": 2.0,
+        "semantic": 2.5
+      }
+    }
+  ]
+}
