@@ -395,10 +395,10 @@ a:hover { text-decoration: underline; }
 /* Dialog */
 #add-dialog,
 #notes-dialog {
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.16);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 32px 64px rgba(0,0,0,0.12);
   max-width: 760px;
   width: calc(100vw - 2rem);
   max-height: calc(100dvh - 4rem);
@@ -489,11 +489,34 @@ a:hover { text-decoration: underline; }
   min-height: 0;
   display: flex;
   flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--fg);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .dialog-col-text textarea {
   flex: 1;
   min-height: 120px;
   resize: none;
+  font-size: 0.94rem;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  color: var(--fg);
+  background: var(--surface);
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.dialog-col-text textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
 #add-form {
@@ -1374,7 +1397,7 @@ code {
 .ob-bar-wrap-inline .ob-progress-bar {
   height: 100%;
   border-radius: 99px;
-  background: #007AFF;
+  background: var(--accent);
   position: relative;
   overflow: hidden;
 }
@@ -1422,4 +1445,115 @@ code {
   #onboarding-card {
     border-radius: 12px;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   THEMING NAVIGATEUR
+   data-browser est posé sur <html> par app.js au chargement.
+   ─────────────────────────────────────────────────────────────────────────────
+   Safari / WebKit : SF Pro, coins très arrondis, backdrop blur, bleu Apple
+   Chrome          : bleu Google, boutons Material, coins modérés
+   Firefox         : bleu Firefox, coins sobres, style Proton
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Safari / WebKit ──────────────────────────────────────────────────────── */
+
+html[data-browser="safari"] {
+  --accent:      #007AFF;
+  --accent-glow: rgba(0,122,255,0.18);
+}
+html[data-browser="safari"][data-theme="dark"] {
+  --accent:      #0A84FF;
+  --accent-glow: rgba(10,132,255,0.22);
+}
+
+/* Backdrop des modales : blur frosted-glass au lieu du voile sombre plat */
+html[data-browser="safari"] #add-dialog::backdrop,
+html[data-browser="safari"] #notes-dialog::backdrop {
+  background: rgba(0,0,0,0.32);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Overlay onboarding : translucidité douce + blur */
+html[data-browser="safari"] #onboarding-overlay {
+  background: rgba(242,242,247,0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+html[data-browser="safari"][data-theme="dark"] #onboarding-overlay {
+  background: rgba(28,28,30,0.88);
+}
+
+/* Coins généreux — style macOS */
+html[data-browser="safari"] #add-dialog,
+html[data-browser="safari"] #notes-dialog,
+html[data-browser="safari"] #onboarding-card {
+  border-radius: 20px;
+}
+
+/* Boutons pill */
+html[data-browser="safari"] .btn-primary,
+html[data-browser="safari"] .btn-cancel,
+html[data-browser="safari"] .btn-add,
+html[data-browser="safari"] .ob-btn-primary,
+html[data-browser="safari"] .ob-btn-secondary,
+html[data-browser="safari"] .ob-edit-btn {
+  border-radius: 99px;
+}
+
+/* Champs de saisie arrondis */
+html[data-browser="safari"] #add-form input,
+html[data-browser="safari"] #add-form select,
+html[data-browser="safari"] #add-form textarea,
+html[data-browser="safari"] #onboarding-card input,
+html[data-browser="safari"] #onboarding-card select,
+html[data-browser="safari"] #onboarding-card textarea,
+html[data-browser="safari"] .dialog-col-text textarea {
+  border-radius: 10px;
+}
+
+/* ── Chrome / Chromium : Material You ────────────────────────────────────── */
+
+html[data-browser="chrome"] {
+  --accent:      #1a73e8;
+  --accent-glow: rgba(26,115,232,0.2);
+}
+html[data-browser="chrome"][data-theme="dark"] {
+  --accent:      #8ab4f8;
+  --accent-glow: rgba(138,180,248,0.2);
+}
+
+/* Boutons à coins modérés, style Material */
+html[data-browser="chrome"] .btn-primary,
+html[data-browser="chrome"] .btn-cancel,
+html[data-browser="chrome"] .btn-add,
+html[data-browser="chrome"] .ob-btn-primary,
+html[data-browser="chrome"] .ob-btn-secondary {
+  border-radius: 20px;
+}
+
+/* ── Firefox : Proton ─────────────────────────────────────────────────────── */
+
+html[data-browser="firefox"] {
+  --accent:      #0060df;
+  --accent-glow: rgba(0,96,223,0.2);
+}
+html[data-browser="firefox"][data-theme="dark"] {
+  --accent:      #45a1ff;
+  --accent-glow: rgba(69,161,255,0.2);
+}
+
+/* Coins sobres, style Proton */
+html[data-browser="firefox"] #add-dialog,
+html[data-browser="firefox"] #notes-dialog,
+html[data-browser="firefox"] #onboarding-card {
+  border-radius: 8px;
+}
+html[data-browser="firefox"] .btn-primary,
+html[data-browser="firefox"] .btn-cancel,
+html[data-browser="firefox"] .btn-add,
+html[data-browser="firefox"] .ob-btn-primary,
+html[data-browser="firefox"] .ob-btn-secondary {
+  border-radius: 6px;
 }

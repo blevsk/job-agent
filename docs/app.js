@@ -51,6 +51,14 @@ function getManualOffers() { return tracking.__manual__ || []; }
   );
 })();
 
+// ── Détection navigateur → data-browser sur <html> ────────────────────────────
+(() => {
+  const ua = navigator.userAgent;
+  document.documentElement.dataset.browser =
+    /Firefox\//.test(ua)                                    ? "firefox" :
+    /Safari\//.test(ua) && !/Chrome\/|Chromium\//.test(ua) ? "safari"  : "chrome";
+})();
+
 // ── Constants ─────────────────────────────────────────────────────────────────
 
 const STATUS_OPTIONS = ["Postulée", "Entretien", "Relancée", "Refusée"];
@@ -111,7 +119,7 @@ function semanticBadge(s) {
 function rankBadge(r) {
   if (r == null) return "";
   const cls = r === 1 ? "rank gold" : r <= 3 ? "rank silver" : "rank";
-  return `<span class="${cls}" title="Rang re-rank LLM">★ ${r}</span>`;
+  return `<span class="${cls}" title="Rang reclassement LLM">★ ${r}</span>`;
 }
 function newBadge(id) {
   if (!newIds.has(id) || readIds.has(id)) return "";
@@ -158,9 +166,11 @@ function renderMeta() {
   if (!state.meta) { $meta.textContent = ""; return; }
   const m        = state.meta;
   const features = [];
-  if (m.semantic_active) features.push("matching sémantique");
-  if (m.rerank_active)   features.push("re-rank LLM");
-  const featStr  = features.length ? ` · ${features.join(" + ")} actif` : "";
+  if (m.semantic_active) features.push("correspondance sémantique");
+  if (m.rerank_active)   features.push("reclassement LLM");
+  const featStr  = features.length
+    ? ` · ${features.join(" + ")} ${features.length > 1 ? "actifs" : "actif"}`
+    : "";
   const searches = (m.searches || []).map(s => s.label || s.keyword).filter(Boolean).join(", ");
   const unread   = state.offers.filter(o => !readIds.has(o.id)).length;
   const unreadStr = unread > 0 ? ` · <strong>${unread} non lue${unread > 1 ? "s" : ""}</strong>` : "";
