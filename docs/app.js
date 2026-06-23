@@ -4,18 +4,20 @@ import { init as initOnboarding, showOnboarding, showEditProfile,
          showProgressState, resumeBuild }                            from './js/onboarding.js?v=CACHE_BUST';
 
 // ── Reset localStorage (param ?reset pour tester proprement) ─────────────────
+// Redirige vers ?fresh pour que le boot ignore manifest.default et affiche l'onboarding.
 if (new URLSearchParams(location.search).has('reset')) {
   Object.keys(localStorage)
     .filter(k => k.startsWith('job-agent:'))
     .forEach(k => localStorage.removeItem(k));
-  location.replace(location.pathname + location.search.replace(/[?&]reset/, '').replace(/^&/, '?'));
+  location.replace(location.pathname + '?fresh');
 }
 
 // ── App state ─────────────────────────────────────────────────────────────────
 
-let currentProfile = new URLSearchParams(location.search).get("profile")
-  || localStorage.getItem(LS_PROFILE)
-  || null;
+const _params = new URLSearchParams(location.search);
+const _fresh  = _params.has('fresh');
+let currentProfile = _fresh ? null
+  : (_params.get("profile") || localStorage.getItem(LS_PROFILE) || null);
 
 function profileKey(base) { return `${base}:${currentProfile || "default"}`; }
 function lsRead()          { return profileKey("job-agent:read-ids"); }
@@ -23,6 +25,12 @@ function lsKnown()         { return profileKey("job-agent:known-ids"); }
 function lsTracking()      { return profileKey("job-agent:tracking"); }
 function lsView()          { return profileKey("job-agent:view-mode"); }
 function offersUrl()       { return `${currentProfile}/offers.json`; }
+
+function syncUrl(pid) {
+  const url = new URL(location.href);
+  url.searchParams.set("profile", pid);
+  history.replaceState(null, "", url.toString());
+}
 
 function loadSet(key) {
   try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
@@ -102,11 +110,17 @@ const $viewTable     = document.getElementById("view-table");
 const $viewKanban    = document.getElementById("view-kanban");
 const $tableWrapper  = document.getElementById("table-wrapper");
 const $kanbanWrapper = document.getElementById("kanban-wrapper");
-const $openAdd       = document.getElementById("open-add");
-const $addDialog     = document.getElementById("add-dialog");
-const $addForm       = document.getElementById("add-form");
-const $cancelAdd     = document.getElementById("cancel-add");
-const $notesDialog = document.getElementById("notes-dialog");
+const $openAdd           = document.getElementById("open-add");
+const $addOverlay        = document.getElementById("add-overlay");
+const $addCard           = document.getElementById("add-card");
+const $addForm           = document.getElementById("add-form");
+const $cancelAdd         = document.getElementById("cancel-add");
+const $notesOverlay      = document.getElementById("notes-overlay");
+const $notesCard         = document.getElementById("notes-card");
+const $copyLink          = document.getElementById("copy-link-btn");
+const $exportJson        = document.getElementById("exportJson");
+const $importJsonTrigger = document.getElementById("importJsonTrigger");
+const $importJson        = document.getElementById("importJson");
 let currentNotesId  = null;
 let _notesInitial   = "";
 
@@ -422,12 +436,18 @@ let _scrollY = 0;
 function lockScroll()   { _scrollY = window.scrollY; document.documentElement.style.overflow = "hidden"; }
 function unlockScroll() { document.documentElement.style.overflow = ""; window.scrollTo(0, _scrollY); }
 
+function closeNotesModal() {
+  $notesOverlay.hidden = true;
+  unlockScroll();
+  currentNotesId = null;
+  _notesInitial  = "";
+}
+
 function openNotesModal(id) {
   currentNotesId = id;
   const offer    = state.offers.find(o => o.id === id);
   _notesInitial  = tracking[id]?.notes || "";
 
-  // Générer le contenu dynamiquement : détails offre + champ notes
   const scoreCls = (offer?.score ?? 0) > 0 ? "pos" : (offer?.score ?? 0) < 0 ? "neg" : "";
   const meta = [offer?.company, offer?.location, offer?.contract_type, offer?.salary]
     .filter(Boolean).map(escapeHtml).join(" · ");
@@ -435,7 +455,7 @@ function openNotesModal(id) {
     ? `<div class="llm-reason">💡 ${escapeHtml(offer.llm_reason)}</div>`
     : offer?.snippet ? `<p class="offer-snippet">${escapeHtml(offer.snippet)}</p>` : "";
 
-  $notesDialog.innerHTML = `
+  $notesCard.innerHTML = `
     <div class="dialog-header">
       <button type="button" class="dialog-close nd-cancel" aria-label="Fermer">✕</button>
       <h2>${escapeHtml(offer?.title || "Détail de l'offre")}</h2>
@@ -453,7 +473,7 @@ function openNotesModal(id) {
       </div>
       <div class="dialog-col dialog-col-text">
         <label>Vos notes
-          <textarea id="notes-dialog-area"
+          <textarea id="notes-area"
             placeholder="Numéro de tél, nom du contact, ressenti, infos importantes…"
           >${escapeHtml(_notesInitial)}</textarea>
         </label>
@@ -464,7 +484,7 @@ function openNotesModal(id) {
       <button type="button" class="btn-primary nd-save">Enregistrer</button>
     </div>`;
 
-  const $area = $notesDialog.querySelector("#notes-dialog-area");
+  const $area = $notesCard.querySelector("#notes-area");
 
   function saveNotes() {
     const val = $area.value;
@@ -474,47 +494,56 @@ function openNotesModal(id) {
     const hasNotes = !!val.trim();
     $tbody.querySelector(`tr[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
     $kanbanWrapper?.querySelector(`.kanban-card[data-id="${currentNotesId}"]`)?.classList.toggle("has-notes", hasNotes);
-    $notesDialog.close();
+    closeNotesModal();
   }
 
   function maybeClose() {
     if ($area.value !== _notesInitial &&
         !confirm("Des modifications n'ont pas été enregistrées. Fermer sans sauvegarder ?")) return;
-    $notesDialog.close();
+    closeNotesModal();
   }
 
-  $notesDialog.querySelector(".nd-save")?.addEventListener("click", saveNotes);
-  $notesDialog.querySelectorAll(".nd-cancel").forEach(b => b.addEventListener("click", maybeClose));
-  // Stocker maybeClose pour backdrop click et ESC
-  $notesDialog._maybeClose = maybeClose;
+  $notesCard.querySelector(".nd-save")?.addEventListener("click", saveNotes);
+  $notesCard.querySelectorAll(".nd-cancel").forEach(b => b.addEventListener("click", maybeClose));
+  $notesCard._maybeClose = maybeClose;
 
   lockScroll();
-  $notesDialog.showModal();
+  $notesOverlay.hidden = false;
   setTimeout(() => $area?.focus(), 80);
 }
 
-$notesDialog?.addEventListener("click",  e => { if (e.target === $notesDialog) $notesDialog._maybeClose?.(); });
-$notesDialog?.addEventListener("cancel", e => { e.preventDefault(); $notesDialog._maybeClose?.(); });
-$notesDialog?.addEventListener("close",  () => { unlockScroll(); currentNotesId = null; _notesInitial = ""; });
+$notesOverlay?.addEventListener("click", e => { if (e.target === $notesOverlay) $notesCard._maybeClose?.(); });
 
 // ── Add manual offer ──────────────────────────────────────────────────────────
 
 function hasFormContent() {
   return [...$addForm.querySelectorAll("input, textarea")].some(el => el.value.trim() !== "");
 }
+function closeAddModal() {
+  $addOverlay.hidden = true;
+  unlockScroll();
+}
 function confirmClose() {
   if (hasFormContent() && !confirm("Des informations ont été saisies. Fermer sans sauvegarder ?")) return;
-  $addDialog.close();
+  closeAddModal();
 }
 
-$openAdd?.addEventListener("click", () => { $addForm.reset(); lockScroll(); $addDialog.showModal(); });
-$cancelAdd?.addEventListener("click", confirmClose);
-document.querySelector("#add-dialog .dialog-close")?.addEventListener("click", confirmClose);
-$addDialog?.addEventListener("click",  e => { if (e.target === $addDialog) confirmClose(); });
-$addDialog?.addEventListener("cancel", e => {
-  if (hasFormContent()) { e.preventDefault(); if (confirm("Des informations ont été saisies. Fermer sans sauvegarder ?")) $addDialog.close(); }
+$openAdd?.addEventListener("click", () => {
+  $addForm.reset();
+  lockScroll();
+  $addOverlay.hidden = false;
+  setTimeout(() => $addCard.querySelector("input")?.focus(), 80);
 });
-$addDialog?.addEventListener("close", unlockScroll);
+$cancelAdd?.addEventListener("click", confirmClose);
+document.getElementById("add-close")?.addEventListener("click", confirmClose);
+$addOverlay?.addEventListener("click", e => { if (e.target === $addOverlay) confirmClose(); });
+
+// Gestion ESC globale (remplace l'événement "cancel" natif des <dialog>)
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (!$notesOverlay.hidden) $notesCard._maybeClose?.();
+  else if (!$addOverlay.hidden) confirmClose();
+});
 
 $addForm?.addEventListener("submit", e => {
   e.preventDefault();
@@ -532,7 +561,7 @@ $addForm?.addEventListener("submit", e => {
   tracking.__manual__.push(offer);
   saveTracking();
   state.offers = [...state.rawOffers, ...getManualOffers()];
-  $addDialog.close();
+  closeAddModal();
   renderView(); renderDashboard();
   setTimeout(() => {
     $tbody.querySelector(`tr[data-id="${id}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -603,7 +632,62 @@ $exportCsv?.addEventListener("click", e => {
   URL.revokeObjectURL(url);
 });
 
+function exportJson() {
+  const data = {
+    version:     1,
+    profileId:   currentProfile,
+    exported_at: new Date().toISOString(),
+    tracking:    tracking,
+    read_ids:    [...readIds],
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url  = URL.createObjectURL(blob);
+  Object.assign(document.createElement("a"), {
+    href:     url,
+    download: `job-agent-${currentProfile || "backup"}_${new Date().toISOString().slice(0, 10)}.json`,
+  }).click();
+  URL.revokeObjectURL(url);
+}
+
+function importJson(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (data.version !== 1) throw new Error("Format non reconnu (version inconnue)");
+      Object.assign(tracking, data.tracking || {});
+      saveTracking();
+      (data.read_ids || []).forEach(id => readIds.add(id));
+      saveSet(lsRead(), readIds);
+      if (data.profileId && data.profileId !== currentProfile)
+        alert(`Données importées depuis le profil « ${data.profileId} » vers le profil actuel « ${currentProfile} ».`);
+      renderView(); renderDashboard(); renderMeta();
+    } catch (err) {
+      alert(`Erreur d'import : ${err.message}`);
+    }
+  };
+  reader.readAsText(file);
+}
+
+$exportJson?.addEventListener("click", e => { e.preventDefault(); exportJson(); });
+$importJsonTrigger?.addEventListener("click", e => { e.preventDefault(); $importJson?.click(); });
+$importJson?.addEventListener("change", () => {
+  if ($importJson.files[0]) { importJson($importJson.files[0]); $importJson.value = ""; }
+});
+
 document.getElementById("edit-profile-btn")?.addEventListener("click", () => showEditProfile(currentProfile));
+
+$copyLink?.addEventListener("click", () => {
+  const url = new URL(location.href);
+  url.searchParams.set("profile", currentProfile);
+  navigator.clipboard.writeText(url.toString())
+    .then(() => {
+      const orig = $copyLink.textContent;
+      $copyLink.textContent = "✓ Copié !";
+      setTimeout(() => { $copyLink.textContent = orig; }, 2000);
+    })
+    .catch(() => { prompt("Copiez ce lien permanent :", url.toString()); });
+});
 
 // ── Load profile ──────────────────────────────────────────────────────────────
 
@@ -621,7 +705,9 @@ async function loadProfile(profileId) {
       newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));
     saveSet(lsKnown(), new Set(state.offers.map(o => o.id)));
     renderMeta(); renderView(); renderDashboard();
+    syncUrl(profileId);
     document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
+    $copyLink?.removeAttribute("hidden");
   } catch (err) {
     const pb = JSON.parse(localStorage.getItem(LS_PENDING) || "null");
     if (pb?.profileId === profileId && pb?.issueNumber) {
@@ -647,7 +733,9 @@ function receiveOffers(pid, data) {
     newIds = new Set(state.offers.filter(o => !knownIds.has(o.id)).map(o => o.id));
   saveSet(lsKnown(), new Set(state.offers.map(o => o.id)));
   renderMeta(); renderView(); renderDashboard();
+  syncUrl(pid);
   document.getElementById("edit-profile-btn")?.removeAttribute("hidden");
+  $copyLink?.removeAttribute("hidden");
 }
 
 initOnboarding(loadProfile, receiveOffers);
@@ -658,6 +746,11 @@ fetch("profiles.json", { cache: "no-store" })
     const profiles = manifest?.profiles || [];
     renderProfileSwitcher(profiles);
     if (!currentProfile) {
+      if (_fresh) {
+        history.replaceState(null, "", location.pathname);
+        showOnboarding();
+        return;
+      }
       const defaultId = manifest?.default;
       if (defaultId && profiles.some(p => p.id === defaultId)) {
         currentProfile = defaultId;

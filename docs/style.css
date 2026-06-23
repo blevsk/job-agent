@@ -351,12 +351,13 @@ a:hover { text-decoration: underline; }
   color: var(--fg);
 }
 
-#markAllRead, #exportCsv {
+#markAllRead, #exportCsv, #exportJson, #importJsonTrigger {
   font-size: 0.85rem;
   color: var(--muted);
   white-space: nowrap;
 }
-#markAllRead:hover, #exportCsv:hover { color: var(--accent); }
+#markAllRead:hover, #exportCsv:hover,
+#exportJson:hover, #importJsonTrigger:hover { color: var(--accent); }
 
 .sync-status {
   font-size: 0.8rem;
@@ -392,36 +393,6 @@ a:hover { text-decoration: underline; }
 }
 .btn-add:hover { filter: brightness(0.85); }
 
-/* Dialog */
-#add-dialog,
-#notes-dialog {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 0;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 32px 64px rgba(0,0,0,0.12);
-  max-width: 760px;
-  width: calc(100vw - 2rem);
-  max-height: calc(100dvh - 4rem);
-  overflow: hidden;
-}
-#add-dialog::backdrop,
-#notes-dialog::backdrop {
-  background: rgba(15,23,42,0.55);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-#add-dialog[open],
-#notes-dialog[open] {
-  animation: dialog-in 0.18s cubic-bezier(0.16,1,0.3,1);
-}
-@keyframes dialog-in {
-  from { opacity: 0; transform: translateY(-8px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0)   scale(1); }
-}
-@keyframes dialog-slide-up {
-  from { opacity: 0; transform: translateY(50%); }
-  to   { opacity: 1; transform: translateY(0); }
-}
 
 .dialog-header {
   display: flex;
@@ -464,10 +435,10 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid var(--border);
 }
 
-/* 2-column dialog layout */
+/* 2-column layout partagé par les trois cards */
 .dialog-2col {
   display: grid;
-  grid-template-columns: 55fr 45fr;
+  grid-template-columns: 1fr 2fr;
 }
 .dialog-col {
   padding: 1.1rem 1.5rem;
@@ -475,7 +446,7 @@ a:hover { text-decoration: underline; }
   max-height: min(480px, 60vh);
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.5rem;
   min-height: 0;
 }
 .dialog-col + .dialog-col {
@@ -487,86 +458,8 @@ a:hover { text-decoration: underline; }
 .dialog-col-text label {
   flex: 1;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--fg);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.dialog-col-text textarea {
-  flex: 1;
-  min-height: 120px;
-  resize: none;
-  font-size: 0.94rem;
-  padding: 0.55rem 0.75rem;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  font-family: inherit;
-  color: var(--fg);
-  background: var(--surface);
-  font-weight: 400;
-  line-height: 1.5;
-  text-transform: none;
-  letter-spacing: normal;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  outline: none;
-}
-.dialog-col-text textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-#add-form {
-  /* block by default — layout delegated to .dialog-2col child */
-}
-#add-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--fg);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-#add-form input,
-#add-form select,
-#add-form textarea {
-  font-size: 0.94rem;
-  padding: 0.55rem 0.75rem;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  font-family: inherit;
-  color: var(--fg);
-  background: var(--surface);
-  text-transform: none;
-  letter-spacing: normal;
-  font-weight: 400;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  -webkit-appearance: none;
-  appearance: none;
-}
-#add-form select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b73' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.7rem center;
-  padding-right: 2.2rem;
-}
-#add-form input:focus,
-#add-form select:focus,
-#add-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-glow);
-}
-#add-form textarea {
-  resize: none;
-  min-height: 120px;
-  line-height: 1.5;
-}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -819,22 +712,21 @@ code {
   #offers .status-date { font-size: 0.68rem; text-align: right; }
 
   /* ── Bottom sheet sur mobile ── */
-  #add-dialog,
-  #notes-dialog {
+  #add-overlay,
+  #notes-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  #add-card,
+  #notes-card {
     max-width: 100%;
     width: 100%;
-    margin-bottom: 0;
-    margin-top: auto;
     border-radius: 20px 20px 0 0;
     max-height: 90svh;
   }
-  #add-dialog[open],
-  #notes-dialog[open] {
-    animation: dialog-slide-up 0.28s cubic-bezier(0.16,1,0.3,1);
-  }
-  /* Poignée visuelle en haut du sheet */
-  #add-dialog::before,
-  #notes-dialog::before {
+  /* Poignée visuelle */
+  #add-card::before,
+  #notes-card::before {
     content: "";
     display: block;
     width: 36px;
@@ -843,7 +735,9 @@ code {
     border-radius: 2px;
     margin: 0.75rem auto 0.25rem;
   }
-  /* Header sticky pour toujours voir le titre et le bouton ✕ */
+  [data-theme="dark"] #add-card::before,
+  [data-theme="dark"] #notes-card::before { background: #3a3a42; }
+  /* Header sticky */
   .dialog-header {
     position: sticky;
     top: 0;
@@ -853,12 +747,7 @@ code {
     padding-bottom: 0.85rem;
     margin-bottom: 0;
   }
-  .dialog-body { padding-bottom: 1.5rem; }
-  .dialog-body textarea { min-height: 110px; }
   .dialog-footer { flex-direction: column-reverse; }
-  [data-theme="dark"] #add-dialog::before,
-  [data-theme="dark"] #notes-dialog::before { background: #3a3a42; }
-  [data-theme="dark"] .dialog-header { border-color: var(--border); }
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1047,8 +936,6 @@ code {
 [data-theme="dark"] tbody tr:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
-[data-theme="dark"] #add-dialog,
-[data-theme="dark"] #notes-dialog { background: var(--surface); }
 
 [data-theme="dark"] .dash-stat.s-applied   { background: #1e3058; color: #93c5fd; }
 [data-theme="dark"] .dash-stat.s-interview { background: #3d2008; color: #fcd34d; }
@@ -1079,8 +966,10 @@ code {
   box-shadow: 0 4px 14px rgba(0,0,0,0.5);
 }
 
-/* ── Onboarding overlay ─────────────────────────────────────────────────────── */
-#onboarding-overlay {
+/* ── Overlays (onboarding / ajouter offre / notes) ─────────────────────────── */
+#onboarding-overlay,
+#add-overlay,
+#notes-overlay {
   position: fixed;
   inset: 0;
   z-index: 200;
@@ -1090,9 +979,14 @@ code {
   background: var(--bg);
   padding: 1rem;
 }
-#onboarding-overlay[hidden] { display: none; }
+#onboarding-overlay[hidden],
+#add-overlay[hidden],
+#notes-overlay[hidden] { display: none; }
 
-#onboarding-card {
+/* ── Cards — style identique pour les trois modales ─────────────────────────── */
+#onboarding-card,
+#add-card,
+#notes-card {
   position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1103,21 +997,44 @@ code {
   max-width: 900px;
   max-height: calc(100dvh - 4rem);
   box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
 }
-/* Proportions 1/3 champs — 2/3 profil, colonne gauche plus compacte */
-#onboarding-card .dialog-2col {
+/* Proportions 1/3 champs — 2/3 profil/texte ; s'étire pour remplir la hauteur de la card */
+#onboarding-card .dialog-2col,
+#add-card .dialog-2col,
+#notes-card .dialog-2col {
   grid-template-columns: 1fr 2fr;
+  flex: 1;
+  min-height: 0;
 }
-#onboarding-card .dialog-col {
+/* La form intermédiaire (onboarding + add) doit aussi se comporter comme un flex item */
+#onboarding-card > form,
+#add-card > form {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+#onboarding-card .dialog-col,
+#add-card .dialog-col,
+#notes-card .dialog-col {
   gap: 0.5rem;
+  flex: 1;
+  max-height: none;
 }
-#onboarding-card .dialog-col input,
-#onboarding-card .dialog-col select {
+/* Champs compacts dans la colonne gauche */
+#onboarding-card .dialog-col input:not([type="checkbox"]),
+#onboarding-card .dialog-col select,
+#add-card .dialog-col input:not([type="checkbox"]),
+#add-card .dialog-col select {
   padding: 0.38rem 0.65rem;
   font-size: 0.88rem;
   line-height: 1.4;
 }
-#onboarding-card .dialog-col select {
+/* Chevron select */
+#onboarding-card .dialog-col select,
+#add-card .dialog-col select {
   -webkit-appearance: none;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b73' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -1125,12 +1042,67 @@ code {
   background-position: right 0.6rem center;
   padding-right: 1.9rem;
 }
-/* Spécificité (1,1,0) > (1,0,1) de #onboarding-card label — checkbox inline */
+/* Spécificité (1,1,0) — checkbox inline */
 #onboarding-card .ob-check {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
+
+/* Labels */
+#onboarding-card label,
+#add-card label,
+#notes-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+/* Inputs / selects — exclure les checkboxes pour ne pas écraser leur apparence native */
+#onboarding-card input:not([type="checkbox"]),
+#onboarding-card select,
+#add-card input:not([type="checkbox"]),
+#add-card select {
+  font-size: 0.95rem;
+  color: var(--fg);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#onboarding-card input:not([type="checkbox"]):focus,
+#onboarding-card select:focus,
+#add-card input:not([type="checkbox"]):focus,
+#add-card select:focus { border-color: var(--accent); }
+
+/* Textareas */
+#onboarding-card textarea,
+#add-card textarea,
+#notes-card textarea {
+  font-size: 0.9rem;
+  color: var(--fg);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  resize: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  line-height: 1.5;
+  flex: 1;
+  min-height: 0;
+}
+#onboarding-card textarea:focus,
+#add-card textarea:focus,
+#notes-card textarea:focus { border-color: var(--accent); }
 
 #onboarding-card h2 {
   margin: 0 0 0.25rem;
@@ -1160,28 +1132,6 @@ code {
 .ob-dot.active { background: var(--accent); }
 .ob-dot.done   { background: var(--accent); opacity: 0.45; }
 
-#onboarding-card label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--muted);
-}
-#onboarding-card input,
-#onboarding-card select {
-  font-size: 0.95rem;
-  color: var(--fg);
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-  transition: border-color 0.15s;
-  font-family: inherit;
-}
-#onboarding-card input:focus,
-#onboarding-card select:focus { border-color: var(--accent); }
 
 .ob-row {
   display: grid;
@@ -1192,20 +1142,6 @@ code {
 .ob-row input,
 .ob-row select { flex: 1; }
 
-#onboarding-card textarea {
-  font-size: 0.9rem;
-  color: var(--fg);
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-  resize: none;
-  transition: border-color 0.15s;
-  font-family: inherit;
-  line-height: 1.5;
-}
-#onboarding-card textarea:focus { border-color: var(--accent); }
 
 .ob-checks-label {
   font-size: 0.8rem;
@@ -1442,7 +1378,9 @@ code {
   .dialog-col {
     max-height: min(300px, 40vh);
   }
-  #onboarding-card {
+  #onboarding-card,
+  #add-card,
+  #notes-card {
     border-radius: 12px;
   }
 }
@@ -1467,28 +1405,24 @@ html[data-browser="safari"][data-theme="dark"] {
   --accent-glow: rgba(10,132,255,0.22);
 }
 
-/* Backdrop des modales : blur frosted-glass au lieu du voile sombre plat */
-html[data-browser="safari"] #add-dialog::backdrop,
-html[data-browser="safari"] #notes-dialog::backdrop {
-  background: rgba(0,0,0,0.32);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-}
-
-/* Overlay onboarding : translucidité douce + blur */
-html[data-browser="safari"] #onboarding-overlay {
+/* Overlays Safari : frosted-glass sur les trois modales */
+html[data-browser="safari"] #onboarding-overlay,
+html[data-browser="safari"] #add-overlay,
+html[data-browser="safari"] #notes-overlay {
   background: rgba(242,242,247,0.88);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
-html[data-browser="safari"][data-theme="dark"] #onboarding-overlay {
+html[data-browser="safari"][data-theme="dark"] #onboarding-overlay,
+html[data-browser="safari"][data-theme="dark"] #add-overlay,
+html[data-browser="safari"][data-theme="dark"] #notes-overlay {
   background: rgba(28,28,30,0.88);
 }
 
 /* Coins généreux — style macOS */
-html[data-browser="safari"] #add-dialog,
-html[data-browser="safari"] #notes-dialog,
-html[data-browser="safari"] #onboarding-card {
+html[data-browser="safari"] #onboarding-card,
+html[data-browser="safari"] #add-card,
+html[data-browser="safari"] #notes-card {
   border-radius: 20px;
 }
 
@@ -1503,13 +1437,13 @@ html[data-browser="safari"] .ob-edit-btn {
 }
 
 /* Champs de saisie arrondis */
-html[data-browser="safari"] #add-form input,
-html[data-browser="safari"] #add-form select,
-html[data-browser="safari"] #add-form textarea,
 html[data-browser="safari"] #onboarding-card input,
 html[data-browser="safari"] #onboarding-card select,
 html[data-browser="safari"] #onboarding-card textarea,
-html[data-browser="safari"] .dialog-col-text textarea {
+html[data-browser="safari"] #add-card input,
+html[data-browser="safari"] #add-card select,
+html[data-browser="safari"] #add-card textarea,
+html[data-browser="safari"] #notes-card textarea {
   border-radius: 10px;
 }
 
@@ -1545,9 +1479,9 @@ html[data-browser="firefox"][data-theme="dark"] {
 }
 
 /* Coins sobres, style Proton */
-html[data-browser="firefox"] #add-dialog,
-html[data-browser="firefox"] #notes-dialog,
-html[data-browser="firefox"] #onboarding-card {
+html[data-browser="firefox"] #onboarding-card,
+html[data-browser="firefox"] #add-card,
+html[data-browser="firefox"] #notes-card {
   border-radius: 8px;
 }
 html[data-browser="firefox"] .btn-primary,
