@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-06-24T12:37:06+00:00",
+    "scraped_at": "2026-06-24T13:57:36+00:00",
     "rerank_active": true,
     "semantic_active": true,
     "total": 21
@@ -26,17 +26,17 @@
       "snippet": "Nous recherchons un Ingénieur Systèmes, Réseaux et Cybersécurité pour notre partenaire, un groupe multi-site en Europe comptant plus de 250 collaborateurs. Rattaché au Responsable SI, vous travaillerez sur les projets liés à l'infrastructure informatique ainsi qu'à la cybersécurité. Les missions sont les suivantes : Auditer l'infrastructure Identifier des améliorations et des projets à mener Cons…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4067301",
       "rome_code": "M1884",
-      "semantic_score": 0.6012077331542969,
+      "semantic_score": 0.6012077927589417,
       "llm_rank": 1,
-      "llm_reason": "CDI Lille, ingénieur réseaux-cybersécurité parfait match, dimension infrastructure et expertise sécurité alignée.",
-      "score": 20.214492797851562,
+      "llm_reason": "CDI Lille, ingénieur réseaux et cybersécurité, aligné expertise et localisation candidat.",
+      "score": 20.2144935131073,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 7.2144927978515625
+        "semantic": 7.2144935131073
       }
     },
     {
@@ -50,17 +50,17 @@
       "snippet": "Ingénieur réseaux H/F - Lille Dans le cadre de projets d'évolution et d'harmonisation des infrastructures réseau de ses établissements, nous recherchons un(e) Ingénieur / Administrateur Réseau orienté(e) intégration technique terrain. La mission s'inscrit dans un contexte opérationnel, avec un fort besoin d'expertise technique et d'autonomie sur le déploiement des solutions réseau. Vos missions *…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3208616",
       "rome_code": "M1802",
-      "semantic_score": 0.6046783328056335,
+      "semantic_score": 0.6046783924102783,
       "llm_rank": 2,
-      "llm_reason": "CDI Lille, ingénieur réseaux intégration terrain, bon match compétences réseau malgré absence de mention management.",
-      "score": 17.256139993667603,
+      "llm_reason": "CDI Lille, ingénieur réseaux intégration technique, bon match compétences sans dimension management.",
+      "score": 17.25614070892334,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 7.2561399936676025
+        "semantic": 7.25614070892334
       }
     },
     {
@@ -74,41 +74,17 @@
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Mission Générale Sous la responsabilité du manager de service, le/la Cartographe Réseaux Secs est chargé(e) de la saisie, de la mise à jour, de l'analyse et de la valori…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546332",
       "rome_code": "M1804",
-      "semantic_score": 0.5706467032432556,
+      "semantic_score": 0.5706468224525452,
       "llm_rank": 3,
-      "llm_reason": "CDI Ronchin (proche Lille), ingénieur telecom-réseaux, compétences réseau pertinentes, localisation acceptable.",
-      "score": 14.847760438919067,
+      "llm_reason": "CDI Ronchin (proche Lille), télécom réseaux, pertinent mais localisation légèrement excentrée.",
+      "score": 14.847761869430542,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.847760438919067
-      }
-    },
-    {
-      "id": "1462350",
-      "title": "Security Engineer - Tech Lead (f/m/d) (H/F)",
-      "company": null,
-      "location": "59 - Villeneuve-d'Ascq",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 70,
-      "snippet": "Notre Cybersecurity Team recherche un·e Tech Lead Engineer basé·e à Lille ou Paris L'équipe Cybersécurité Decathlon assure la protection et la sécurisation de l'ensemble du groupe : elle pilote la stratégie de gouvernance et les processus de gestion du risque, s'assure de la conformité de nos systèmes d'information, définit les moyens techniques nécessaires à la détection et à la réponse aux inci…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1462350",
-      "rome_code": "M1802",
-      "semantic_score": 0.5113192796707153,
-      "llm_rank": 4,
-      "llm_reason": "CDI Villeneuve-d'Ascq, tech lead cybersécurité Decathlon, dimension encadrement mais focus sécurité plutôt que réseau.",
-      "score": 14.135831356048584,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 6.135831356048584
+        "semantic": 6.847761869430542
       }
     },
     {
@@ -123,8 +99,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3740018",
       "rome_code": "M1804",
       "semantic_score": 0.5354968905448914,
-      "llm_rank": 5,
-      "llm_reason": "CDI Lambersart, validation réseaux telecoms Thales, compétences réseau chez grand groupe, orientation plus validation.",
+      "llm_rank": 4,
+      "llm_reason": "CDI Lambersart, validation réseaux télécom, compétences réseaux mais moins architecture/infrastructure.",
       "score": 17.425962686538696,
       "score_breakdown": {
         "keywords": 0.0,
@@ -133,54 +109,6 @@
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 6.425962686538696
-      }
-    },
-    {
-      "id": "3828924",
-      "title": "Ingénieur intégration système (H/F)",
-      "company": null,
-      "location": "59 - Lambersart",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 8,
-      "snippet": "Description du poste : Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3828924",
-      "rome_code": "M1802",
-      "semantic_score": 0.49573591351509094,
-      "llm_rank": 6,
-      "llm_reason": "CDI Lambersart, intégration système Thales, compétences systèmes mais moins spécifique aux réseaux/architecture.",
-      "score": 16.94883096218109,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 5.948830962181091
-      }
-    },
-    {
-      "id": "3874525",
-      "title": "Ingénieure / Ingénieur Système (H/F)",
-      "company": null,
-      "location": "59 - Lezennes",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 7,
-      "snippet": "Vos missions Vous réalisez le maintien en conditions opérationnelles et l’évolution des infrastructures systèmes. A ce titre, vos missions seront : Administration des systèmes AIX / Linux Assurer le traitement des incidents N3 Assurer le suivi production et hors production dans le respect des SLA Installer et mettre à jour les environnements techniques Oeuvrer à l'amélioration continue (via des a…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3874525",
-      "rome_code": "M1802",
-      "semantic_score": 0.5312356352806091,
-      "llm_rank": 7,
-      "llm_reason": "CDI Lezennes, ingénieur système AIX-Linux, MCO focus mais pas de dimension réseau ni management.",
-      "score": 17.37482762336731,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 6.37482762336731
       }
     },
     {
@@ -194,17 +122,89 @@
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Dans le cadre de projets d'aménagement urbain, de déploiement de réseaux (fibre optique, électricité, gaz, eau) ou de travaux publics, vous serez responsable de la détec…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546464",
       "rome_code": "M1804",
-      "semantic_score": 0.548446536064148,
-      "llm_rank": 9,
-      "llm_reason": "CDI Lille, ingénieur telecom-réseaux aménagement urbain, domaine moins aligné (infra publiques vs entreprise).",
-      "score": 16.581358432769775,
+      "semantic_score": 0.5484466552734375,
+      "llm_rank": 5,
+      "llm_reason": "CDI Lille, ingénieur télécom réseaux, mais poste orienté aménagement urbain non prioritaire.",
+      "score": 16.58135986328125,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.581358432769775
+        "semantic": 6.58135986328125
+      }
+    },
+    {
+      "id": "3828924",
+      "title": "Ingénieur intégration système (H/F)",
+      "company": null,
+      "location": "59 - Lambersart",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 8,
+      "snippet": "Description du poste : Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3828924",
+      "rome_code": "M1802",
+      "semantic_score": 0.4957357943058014,
+      "llm_rank": 6,
+      "llm_reason": "CDI Lambersart, intégration système Thales, expertise système mais peu réseau infrastructure.",
+      "score": 16.948829531669617,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 5.948829531669617
+      }
+    },
+    {
+      "id": "1462350",
+      "title": "Security Engineer - Tech Lead (f/m/d) (H/F)",
+      "company": null,
+      "location": "59 - Villeneuve-d'Ascq",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 70,
+      "snippet": "Notre Cybersecurity Team recherche un·e Tech Lead Engineer basé·e à Lille ou Paris L'équipe Cybersécurité Decathlon assure la protection et la sécurisation de l'ensemble du groupe : elle pilote la stratégie de gouvernance et les processus de gestion du risque, s'assure de la conformité de nos systèmes d'information, définit les moyens techniques nécessaires à la détection et à la réponse aux inci…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/1462350",
+      "rome_code": "M1802",
+      "semantic_score": 0.5113193988800049,
+      "llm_rank": 7,
+      "llm_reason": "CDI Villeneuve-d'Ascq, tech lead cybersécurité, dimension management intéressante mais focus sécurité.",
+      "score": 14.135832786560059,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 6.135832786560059
+      }
+    },
+    {
+      "id": "3874525",
+      "title": "Ingénieure / Ingénieur Système (H/F)",
+      "company": null,
+      "location": "59 - Lezennes",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 7,
+      "snippet": "Vos missions Vous réalisez le maintien en conditions opérationnelles et l’évolution des infrastructures systèmes. A ce titre, vos missions seront : Administration des systèmes AIX / Linux Assurer le traitement des incidents N3 Assurer le suivi production et hors production dans le respect des SLA Installer et mettre à jour les environnements techniques Oeuvrer à l'amélioration continue (via des a…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3874525",
+      "rome_code": "M1802",
+      "semantic_score": 0.5312356948852539,
+      "llm_rank": 8,
+      "llm_reason": "CDI Lezennes, ingénieur système, maintenance opérationnelle AIX/Linux, moins réseaux infrastructure.",
+      "score": 17.374828338623047,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 6.374828338623047
       }
     },
     {
@@ -218,17 +218,65 @@
       "snippet": "Mission principale : Au sein de SADTEM, votre profil hybride – alliant informatique industrielle, automatisme et électrotechnique – vous permet d'appréhender les enjeux métiers de l'entreprise avec une compréhension terrain que peu de profils IT classiques possèdent. Vous intervenez en support du Responsable des Systèmes d'Information. Vous participez à la gestion, la sécurisation et l'évolution…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3984847",
       "rome_code": "H1206",
-      "semantic_score": 0.5879666209220886,
-      "llm_rank": 10,
-      "llm_reason": "CDI Douai, admin systèmes-réseaux industriel, profil hybride différent sans dimension encadrement visée.",
-      "score": 22.055599451065063,
+      "semantic_score": 0.5879665613174438,
+      "llm_rank": 9,
+      "llm_reason": "CDI Douai, développeur administrateur systèmes réseaux, profil hybride mais orientation industrielle non recherchée.",
+      "score": 22.055598735809326,
       "score_breakdown": {
         "keywords": 4.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 7.0555994510650635
+        "semantic": 7.055598735809326
+      }
+    },
+    {
+      "id": "210CZLQ",
+      "title": "Responsable de projet infrastructures de réseaux et VRD (H/F)",
+      "company": "CABINET D'ETUDES MARC MERLIN",
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": "Annuel de 45000.0 Euros à 50000.0 Euros sur 12 mois",
+      "posted_days_ago": 1,
+      "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/210CZLQ",
+      "rome_code": "F1111",
+      "semantic_score": 0.4745202958583832,
+      "llm_rank": 10,
+      "llm_reason": "CDI Lille, responsable projet réseaux VRD, infrastructure but domaine VRD/territoires non pertinent.",
+      "score": 18.694243550300598,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 5.694243550300598
+      }
+    },
+    {
+      "id": "4163457",
+      "title": "Ingénieur systèmes Poste de travail H/F",
+      "company": "Econocom",
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": "Annuel de 42000.0 Euros à 45000.0 Euros",
+      "posted_days_ago": 0,
+      "snippet": "RESPONSABILITÉS : Au sein de la DSI de l'un de nos clients (grand groupe spécialisé dans la location de matériel), vous intégrez une équipe technique et intervenez sur l'ingénierie Poste de travail. Vous participez également à des projets IT, en assurant un rôle de référent sur les sujets d'administration. Vos responsabilités : - Assurer le support technique de niveau 3 sur les environnements pos…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4163457",
+      "rome_code": "M1802",
+      "semantic_score": 0.5182380080223083,
+      "llm_rank": 11,
+      "llm_reason": "CDI Lille, ingénieur poste de travail, compétences système administrateur non alignées recherche réseau.",
+      "score": 19.2188560962677,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 6.2188560962677
       }
     },
     {
@@ -243,8 +291,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209BMVY",
       "rome_code": "M1802",
       "semantic_score": 0.5147640109062195,
-      "llm_rank": 11,
-      "llm_reason": "CDI Lille, ingénieur z/OS mainframe, domaine très spécialisé éloigné du profil réseau-sécurité cloud.",
+      "llm_rank": 12,
+      "llm_reason": "CDI Lille, ingénieur z/OS mainframe, expertise système très spécialisée non recherchée.",
       "score": 16.177168130874634,
       "score_breakdown": {
         "keywords": 0.0,
@@ -258,7 +306,7 @@
     {
       "id": "3231277",
       "title": "Ingénieur système mainframe H/F",
-      "company": null,
+      "company": "VERSPIEREN",
       "location": "59 - Wasquehal",
       "contract_type": "CDI",
       "salary": null,
@@ -267,8 +315,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3231277",
       "rome_code": "M1802",
       "semantic_score": 0.5414668917655945,
-      "llm_rank": 12,
-      "llm_reason": "CDI Wasquehal, système mainframe, compétences mainframe sans lien avec architecture réseau.",
+      "llm_rank": 13,
+      "llm_reason": "CDI Wasquehal, système mainframe, expertise très spécialisée mainframe non alignée candidat.",
       "score": 14.497602701187134,
       "score_breakdown": {
         "keywords": 0.0,
@@ -290,17 +338,65 @@
       "snippet": "descriptif du posteEn tant qu'Ingénieur Systèmes, vos missions seront le suivantes : Maintien en condition opérationnelle de la Production :- Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents- Mise en place de flux sur ordonnanceur- Résolution d'incidents- scripting (powershell , bat , shell ..)Maintenance et développement des infrastructures système :- M…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1771097",
       "rome_code": "M1802",
-      "semantic_score": 0.4642292559146881,
-      "llm_rank": 13,
-      "llm_reason": "CDI Lille, ingénieur systèmes MCO, trop ancien (63j) et focus production sans management.",
-      "score": 15.570751070976257,
+      "semantic_score": 0.4642292857170105,
+      "llm_rank": 14,
+      "llm_reason": "CDI Lille, ingénieur systèmes, mais très ancien (63 jours) et focus production plutôt que réseaux.",
+      "score": 15.570751428604126,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.570751070976257
+        "semantic": 5.570751428604126
+      }
+    },
+    {
+      "id": "3491516",
+      "title": "INGÉNIEUR RÉSEAUX - VRD (H/F)",
+      "company": null,
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 19,
+      "snippet": "Vous souhaitez piloter des projets d'infrastructures hydrauliques et intervenir sur des missions complètes de maîtrise d'œuvre dans un environnement d'ingénierie structuré et collaboratif ? Société incontournable sur le marché du recrutement français et européen, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers des VRD / Travaux Publics et de l'Eau…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3491516",
+      "rome_code": "M1841",
+      "semantic_score": 0.4821621775627136,
+      "llm_rank": 15,
+      "llm_reason": "CDI Lille, ingénieur réseaux VRD, domaine infrastructure publique/VRD non pertinent candidat.",
+      "score": 15.785946130752563,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 0.0,
+        "semantic": 5.7859461307525635
+      }
+    },
+    {
+      "id": "3724936",
+      "title": "Géomètre Détection de Réseaux (H/F)",
+      "company": null,
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 13,
+      "snippet": "LTd est une agence de travail temporaire et un cabinet de recrutement spécialisé dans le domaine des Travaux Publics VRD, de la topographie, et des Télécoms riche de 20 ans d'expérience sur toute la France. Le poste : Pour une Société de topographie en pleine croissance, spécialisée dans les relevés terrain et la détection de réseaux, nous recherchons un(e) Géomètre Détection de Réseaux (H/F) pou…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3724936",
+      "rome_code": "M1841",
+      "semantic_score": 0.58880615234375,
+      "llm_rank": 16,
+      "llm_reason": "CDI Lille, géomètre détection réseaux, métier géomatique complètement différent.",
+      "score": 20.065673828125,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 7.065673828125
       }
     },
     {
@@ -315,8 +411,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3230264",
       "rome_code": "M1841",
       "semantic_score": 0.5459402799606323,
-      "llm_rank": 14,
-      "llm_reason": "CDI Lille, chef projet réseaux gaz-biométhane, domaine infrastructure spécialisé non IT-réseau.",
+      "llm_rank": 17,
+      "llm_reason": "CDI Lille, chef projet réseaux gaz biométhane, domaine utility/infrastructure spécialisée non pertinent.",
       "score": 16.551283359527588,
       "score_breakdown": {
         "keywords": 0.0,
@@ -325,78 +421,6 @@
         "location": 2.0,
         "freshness": 0.0,
         "semantic": 6.551283359527588
-      }
-    },
-    {
-      "id": "3491516",
-      "title": "INGÉNIEUR RÉSEAUX - VRD (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 19,
-      "snippet": "Vous souhaitez piloter des projets d'infrastructures hydrauliques et intervenir sur des missions complètes de maîtrise d'œuvre dans un environnement d'ingénierie structuré et collaboratif ? Société incontournable sur le marché du recrutement français et européen, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers des VRD / Travaux Publics et de l'Eau…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3491516",
-      "rome_code": "M1841",
-      "semantic_score": 0.482162207365036,
-      "llm_rank": 15,
-      "llm_reason": "CDI Lille, ingénieur réseaux-VRD hydraulique, domaine génie civil sans pertinence IT-réseau.",
-      "score": 15.785946488380432,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 5.785946488380432
-      }
-    },
-    {
-      "id": "3724936",
-      "title": "Géomètre Détection de Réseaux (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 13,
-      "snippet": "LTd est une agence de travail temporaire et un cabinet de recrutement spécialisé dans le domaine des Travaux Publics VRD, de la topographie, et des Télécoms riche de 20 ans d'expérience sur toute la France. Le poste : Pour une Société de topographie en pleine croissance, spécialisée dans les relevés terrain et la détection de réseaux, nous recherchons un(e) Géomètre Détection de Réseaux (H/F) pou…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/3724936",
-      "rome_code": "M1841",
-      "semantic_score": 0.5888060927391052,
-      "llm_rank": 16,
-      "llm_reason": "CDI Lille, géomètre détection réseaux, métier topographie telecoms sans rapport avec ingénierie réseau.",
-      "score": 20.065673112869263,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 7.065673112869263
-      }
-    },
-    {
-      "id": "210CZLQ",
-      "title": "Responsable de projet infrastructures de réseaux et VRD (H/F)",
-      "company": "CABINET D'ETUDES MARC MERLIN",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 45000.0 Euros à 50000.0 Euros sur 12 mois",
-      "posted_days_ago": 1,
-      "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/210CZLQ",
-      "rome_code": "F1111",
-      "semantic_score": 0.4745202362537384,
-      "llm_rank": 17,
-      "llm_reason": "CDI Lille, responsable projets infrastructures VRD, domaine aménagement territorial non IT.",
-      "score": 18.69424283504486,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.694242835044861
       }
     },
     {
@@ -410,17 +434,65 @@
       "snippet": "Kali Group est une société de conseil née d'un constat simple : le modèle actuel ne convient ni aux industriels, ni aux consultants. Aujourd'hui, le seul gagnant ; c'est le cabinet de conseil. Notre mission - Concilier les intérêts de tout le monde en créant un nouveau standard qui vous donne la liberté de construire votre plan de carrière. Comment - En relevant les challenges techniques, organis…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955491",
       "rome_code": "M1802",
-      "semantic_score": 0.4032534956932068,
+      "semantic_score": 0.40325355529785156,
       "llm_rank": 18,
-      "llm_reason": "CDI Lille, ingénieur soudage IWE, compétence industrial hors champ IT réseau.",
-      "score": 17.83904194831848,
+      "llm_reason": "CDI Lille, ingénieur soudage IWE, métier industriel sans lien avec réseaux informatiques.",
+      "score": 17.83904266357422,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.8390419483184814
+        "semantic": 4.839042663574219
+      }
+    },
+    {
+      "id": "4007757",
+      "title": "Ingénieur process et Projets - équipements de remplissage (H/F)",
+      "company": null,
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 5,
+      "snippet": "Ingénieur process et Projets - équipements de remplissage (H/F) ASAP Hauts-de-France Freelance / CDIC / CDD À propos de Nalys Nalys est une société de conseil franco-belge spécialisée sur les projets life sciences, innovative software et énergie depuis 2011. Notre mission : offrir aux ingénieurs des projets à forte valeur ajoutée et leur donner tous les moyens nécessaires pour accomplir leurs mis…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007757",
+      "rome_code": "M1802",
+      "semantic_score": 0.5049887299537659,
+      "llm_rank": 19,
+      "llm_reason": "CDI Lille, ingénieur process équipements remplissage, métier industriel non pertinent.",
+      "score": 19.05986475944519,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 6.05986475944519
+      }
+    },
+    {
+      "id": "209PJLQ",
+      "title": "GESTIONNAIRE MULTI-SITES (H/F)",
+      "company": null,
+      "location": "59 - LILLE",
+      "contract_type": "CDI",
+      "salary": "Mensuel de 2000.0 Euros à 2800.0 Euros sur 12.0 mois",
+      "posted_days_ago": 13,
+      "snippet": "Gestionnaire Multi-Sites H/F - Restauration Rapide Description du poste Dans le cadre de notre développement, nous recherchons un(e) Gestionnaire Multi-Sites afin d'assurer le pilotage opérationnel de plusieurs établissements de restauration rapide. Rattaché(e) à la Direction, vous garantissez la performance économique, la qualité de service, le respect des procédures et l'animation des équipes s…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PJLQ",
+      "rome_code": "M1884",
+      "semantic_score": 0.47569698095321655,
+      "llm_rank": 20,
+      "llm_reason": "CDI Lille, gestionnaire multi-sites restauration rapide, domaine complètement différent.",
+      "score": 18.7083637714386,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 5.708363771438599
       }
     },
     {
@@ -435,8 +507,8 @@
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3491746",
       "rome_code": "M1802",
       "semantic_score": 0.31210461258888245,
-      "llm_rank": 19,
-      "llm_reason": "CDI Lille, ingénieur méthode industriel, compétence manufacturing sans rapport IT-réseau.",
+      "llm_rank": null,
+      "llm_reason": null,
       "score": 13.74525535106659,
       "score_breakdown": {
         "keywords": 0.0,
@@ -445,78 +517,6 @@
         "location": 2.0,
         "freshness": 0.0,
         "semantic": 3.7452553510665894
-      }
-    },
-    {
-      "id": "4163457",
-      "title": "Ingénieur systèmes Poste de travail H/F",
-      "company": "Econocom",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 42000.0 Euros à 45000.0 Euros",
-      "posted_days_ago": 0,
-      "snippet": "RESPONSABILITÉS : Au sein de la DSI de l'un de nos clients (grand groupe spécialisé dans la location de matériel), vous intégrez une équipe technique et intervenez sur l'ingénierie Poste de travail. Vous participez également à des projets IT, en assurant un rôle de référent sur les sujets d'administration. Vos responsabilités : - Assurer le support technique de niveau 3 sur les environnements pos…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4163457",
-      "rome_code": "M1802",
-      "semantic_score": 0.5182379484176636,
-      "llm_rank": 20,
-      "llm_reason": "CDI Lille, ingénieur poste de travail, focus desktop/endpoints sans dimension réseau/architecture.",
-      "score": 19.218855381011963,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.218855381011963
-      }
-    },
-    {
-      "id": "4007757",
-      "title": "Ingénieur process et Projets - équipements de remplissage (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 5,
-      "snippet": "Ingénieur process et Projets - équipements de remplissage (H/F) ASAP Hauts-de-France Freelance / CDIC / CDD À propos de Nalys Nalys est une société de conseil franco-belge spécialisée sur les projets life sciences, innovative software et énergie depuis 2011. Notre mission : offrir aux ingénieurs des projets à forte valeur ajoutée et leur donner tous les moyens nécessaires pour accomplir leurs mis…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007757",
-      "rome_code": "M1802",
-      "semantic_score": 0.5049886703491211,
-      "llm_rank": 21,
-      "llm_reason": "CDI Lille, ingénieur process équipements remplissage, domaine industrial sans pertinence IT.",
-      "score": 19.059864044189453,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 6.059864044189453
-      }
-    },
-    {
-      "id": "209PJLQ",
-      "title": "GESTIONNAIRE MULTI-SITES (H/F)",
-      "company": null,
-      "location": "59 - LILLE",
-      "contract_type": "CDI",
-      "salary": "Mensuel de 2000.0 Euros à 2800.0 Euros sur 12.0 mois",
-      "posted_days_ago": 13,
-      "snippet": "Gestionnaire Multi-Sites H/F - Restauration Rapide Description du poste Dans le cadre de notre développement, nous recherchons un(e) Gestionnaire Multi-Sites afin d'assurer le pilotage opérationnel de plusieurs établissements de restauration rapide. Rattaché(e) à la Direction, vous garantissez la performance économique, la qualité de service, le respect des procédures et l'animation des équipes s…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209PJLQ",
-      "rome_code": "M1884",
-      "semantic_score": 0.47569671273231506,
-      "llm_rank": 22,
-      "llm_reason": "CDI Lille, gestionnaire multi-sites restauration rapide, domaine métier sans rapport IT-réseau.",
-      "score": 18.70836055278778,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.708360552787781
       }
     }
   ]
