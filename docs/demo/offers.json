@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-06-29T16:49:15+00:00",
+    "scraped_at": "2026-06-29T17:15:39+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 182
@@ -1426,7 +1426,7 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Annuel de 38000.0 Euros à 42000.0 Euros sur 12 mois",
-      "posted_days_ago": 12,
+      "posted_days_ago": 13,
       "snippet": "Dans le cadre de la prise en charge des activités de gestion d'incident et d'évolutions, GESER BEST Lille recherche un.e Analyste Développeur AS400 H/F pour intégrer une équipe organisée en méthodologie agile. Poste à pouvoir ASAP 2 jours de télétravail possible Missions - Analyse des besoins, - Rédaction de spécification, - Réalisation des développements. Compétences requises - Expérience sur AS…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209WGBZ",
       "rome_code": "M1860",
@@ -2074,7 +2074,7 @@
       "location": "59320 Hallennes-lez-Haubourdin",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 3,
+      "posted_days_ago": 4,
       "snippet": "Le poste est pour une alternance durée, démarrage et horaire selon le candidat et son école. Missions principales : Le vendeur (H/F) en boulangerie pâtisserie, est un professionnel essentiel qui assure la disponibilité et la qualité des produits Accueille et conseille les clients sur les produits alimentaires Gère les stocks et approvisionnements des produits Assure la présentation attrayante des…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/210JHMG",
       "rome_code": "D1106",
