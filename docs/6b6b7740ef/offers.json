@@ -9,7 +9,11 @@
         "location": "Lille"
       }
     ],
+<<<<<<< Updated upstream
     "scraped_at": "2026-06-30T12:32:46+00:00",
+=======
+    "scraped_at": "2026-06-30T12:34:29+00:00",
+>>>>>>> Stashed changes
     "rerank_active": false,
     "semantic_active": true,
     "total": 17
