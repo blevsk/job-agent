@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-01T13:45:58+00:00",
+    "scraped_at": "2026-07-01T14:00:43+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 176
@@ -1450,7 +1450,7 @@
       "location": "59155 Faches-Thumesnil",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 13,
+      "posted_days_ago": 14,
       "snippet": "Poste à pourvoir en partenariat avec le Centre de Formation RFCI Le Centre de Formation RFCI recrute pour son partenaire majeur, le magasin Auchan Faches-Thumesnil, un(e) apprenti(e) pour intégrer les équipes de la Boulangerie / Pâtisserie. Rejoindre ce magasin, c'est apprendre votre métier au sein d'un rayon dynamique, reconnu pour sa fabrication sur place, la fraîcheur de ses produits et le sav…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XGFR",
       "rome_code": "D1106",
@@ -1810,7 +1810,7 @@
       "location": "59155 Faches-Thumesnil",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 13,
+      "posted_days_ago": 14,
       "snippet": "Notre Hypermarché AUCHAN recherche des employés pour le Stand charcuterie-fromage en priorité puis drive dans le secteur de Fâches DESCRIPTION DU CONTRAT : Tout en étant rémunéré, nous vous proposons de vous former et d'obtenir un titre professionnel d'employé de commerce pour acquérir les bonnes pratiques. La formation vous permet d'obtenir un certificat reconnu par notre branche et toutes les e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XFWR",
       "rome_code": "D1106",
@@ -2410,7 +2410,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 34,
+      "posted_days_ago": 35,
       "snippet": "Descriptif de mission Vous aurez pour mission principale de renseigner les usagers par téléphone, sur les diverses problématiques traitées par la Banque de France : surendettement, droit au compte, fichage, médiation du crédit, cotation des entreprises et questions liées au fiduciaire. Vous serez également sollicité(e) pour répondre aux demandes écrites des usagers, sur les mêmes thématiques, ain…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208VDRR",
       "rome_code": "C1212",
@@ -2425,30 +2425,6 @@
         "location": 2.0,
         "freshness": 0.0,
         "semantic": 2.1630088090896606
-      }
-    },
-    {
-      "id": "lba_209VSLW",
-      "title": "BP BOULANGER EN ALTERNANCE (H/F)",
-      "company": null,
-      "location": "59260 Lezennes",
-      "contract_type": "Alternance",
-      "salary": null,
-      "posted_days_ago": 14,
-      "snippet": "Le titulaire du Brevet Professionnel Boulanger est un professionnel hautement qualifié qui conçoit et réalise des produits de panification, de viennoiserie, de sandwicherie et de restauration boulangère. Il maîtrise les techniques professionnelles dans un objectif permanent d'optimisation de la production en respectant les règles d'hygiène et de prévention des risques professionnels. Il maîtrise…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VSLW",
-      "rome_code": "H2108",
-      "semantic_score": 0.09382892400026321,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 12.125947088003159,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 1.1259470880031586
       }
     },
     {
@@ -3577,6 +3553,30 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 4.155914068222046
+      }
+    },
+    {
+      "id": "lba_209VSLW",
+      "title": "BP BOULANGER EN ALTERNANCE (H/F)",
+      "company": null,
+      "location": "59260 Lezennes",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 15,
+      "snippet": "Le titulaire du Brevet Professionnel Boulanger est un professionnel hautement qualifié qui conçoit et réalise des produits de panification, de viennoiserie, de sandwicherie et de restauration boulangère. Il maîtrise les techniques professionnelles dans un objectif permanent d'optimisation de la production en respectant les règles d'hygiène et de prévention des risques professionnels. Il maîtrise…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VSLW",
+      "rome_code": "H2108",
+      "semantic_score": 0.09382892400026321,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 9.125947088003159,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 1.1259470880031586
       }
     },
     {
