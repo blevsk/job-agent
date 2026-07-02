@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-02T12:31:56+00:00",
+    "scraped_at": "2026-07-02T12:34:23+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 18
@@ -286,7 +286,7 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 70,
+      "posted_days_ago": 71,
       "snippet": "descriptif du posteEn tant qu'Ingénieur Systèmes, vos missions seront le suivantes : Maintien en condition opérationnelle de la Production :- Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents- Mise en place de flux sur ordonnanceur- Résolution d'incidents- scripting (powershell , bat , shell ..)Maintenance et développement des infrastructures système :- M…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1771097",
       "rome_code": "M1802",
