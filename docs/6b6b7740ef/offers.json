@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-06T16:46:08+00:00",
+    "scraped_at": "2026-07-06T17:19:40+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 18
@@ -26,17 +26,17 @@
       "snippet": "Acteur reconnu de la transformation digitale et des services IT (1000 collaborateurs / 5 pays), notre client accompagne des ETI et grands comptes dans leurs projets stratégiques autour des solutions digitales, de la gestion documentaire, des environnements collaboratifs et des prestations à forte valeur ajoutée. Présente au niveau national et international, la société s'appuie sur une forte exper…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4494324",
       "rome_code": "M1802",
-      "semantic_score": 0.5799124836921692,
+      "semantic_score": 0.5799124240875244,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.95894980430603,
+      "score": 19.958949089050293,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 6.95894980430603
+        "semantic": 6.958949089050293
       }
     },
     {
@@ -74,17 +74,17 @@
       "snippet": "RESPONSABILITÉS : Au sein de la DSI de l'un de nos clients (grand groupe spécialisé dans la location de matériel), vous intégrez une équipe technique et intervenez sur l'ingénierie Poste de travail. Vous participez également à des projets IT, en assurant un rôle de référent sur les sujets d'administration. Vos responsabilités : - Assurer le support technique de niveau 3 sur les environnements pos…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4163457",
       "rome_code": "M1802",
-      "semantic_score": 0.5182379484176636,
+      "semantic_score": 0.5182380080223083,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.218855381011963,
+      "score": 19.2188560962677,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 6.218855381011963
+        "semantic": 6.2188560962677
       }
     },
     {
@@ -122,17 +122,17 @@
       "snippet": "Vous souhaitez piloter des projets d'infrastructures hydrauliques et intervenir sur des missions complètes de maîtrise d'œuvre dans un environnement d'ingénierie structuré et collaboratif ? Société incontournable sur le marché du recrutement français et européen, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers des VRD / Travaux Publics et de l'Eau…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4313774",
       "rome_code": "M1841",
-      "semantic_score": 0.482162207365036,
+      "semantic_score": 0.4821621775627136,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.785946488380432,
+      "score": 18.785946130752563,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.785946488380432
+        "semantic": 5.7859461307525635
       }
     },
     {
@@ -146,17 +146,17 @@
       "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/210CZLQ",
       "rome_code": "F1111",
-      "semantic_score": 0.4745202362537384,
+      "semantic_score": 0.4745202958583832,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.69424283504486,
+      "score": 18.694243550300598,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.694242835044861
+        "semantic": 5.694243550300598
       }
     },
     {
@@ -194,17 +194,17 @@
       "snippet": "LTd est une agence de travail temporaire et un cabinet de recrutement spécialisé dans le domaine des Travaux Publics VRD, de la topographie, et des Télécoms riche de 20 ans d'expérience sur toute la France. Le poste : Pour une Société de topographie en pleine croissance, spécialisée dans les relevés terrain et la détection de réseaux, nous recherchons un(e) Géomètre Détection de Réseaux (H/F) pou…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3724936",
       "rome_code": "M1841",
-      "semantic_score": 0.5888060927391052,
+      "semantic_score": 0.58880615234375,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.065673112869263,
+      "score": 17.065673828125,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 7.065673112869263
+        "semantic": 7.065673828125
       }
     },
     {
@@ -242,17 +242,17 @@
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Dans le cadre de projets d'aménagement urbain, de déploiement de réseaux (fibre optique, électricité, gaz, eau) ou de travaux publics, vous serez responsable de la détec…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546464",
       "rome_code": "M1804",
-      "semantic_score": 0.548446536064148,
+      "semantic_score": 0.5484466552734375,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.581358432769775,
+      "score": 16.58135986328125,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.581358432769775
+        "semantic": 6.58135986328125
       }
     },
     {
@@ -266,17 +266,17 @@
       "snippet": "Ingénieur process et Projets - équipements de remplissage (H/F) ASAP Hauts-de-France Freelance / CDIC / CDD À propos de Nalys Nalys est une société de conseil franco-belge spécialisée sur les projets life sciences, innovative software et énergie depuis 2011. Notre mission : offrir aux ingénieurs des projets à forte valeur ajoutée et leur donner tous les moyens nécessaires pour accomplir leurs mis…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007757",
       "rome_code": "M1802",
-      "semantic_score": 0.5049886703491211,
+      "semantic_score": 0.5049887299537659,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.059864044189453,
+      "score": 16.05986475944519,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 6.059864044189453
+        "semantic": 6.05986475944519
       }
     },
     {
@@ -290,17 +290,17 @@
       "snippet": "descriptif du posteEn tant qu'Ingénieur Systèmes, vos missions seront le suivantes : Maintien en condition opérationnelle de la Production :- Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents- Mise en place de flux sur ordonnanceur- Résolution d'incidents- scripting (powershell , bat , shell ..)Maintenance et développement des infrastructures système :- M…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/1771097",
       "rome_code": "M1802",
-      "semantic_score": 0.4642293155193329,
+      "semantic_score": 0.4642292857170105,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.570751786231995,
+      "score": 15.570751428604126,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.570751786231995
+        "semantic": 5.570751428604126
       }
     },
     {
@@ -314,17 +314,17 @@
       "snippet": "Description du poste : Société incontournable sur le marché du recrutement français, LTd est un Cabinet de Recrutement et une Agence de Travail Temporaire spécialisé dans les métiers de l'Ingénierie et des Entreprises. Le poste : Mission Générale Sous la responsabilité du manager de service, le/la Cartographe Réseaux Secs est chargé(e) de la saisie, de la mise à jour, de l'analyse et de la valori…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3546332",
       "rome_code": "M1804",
-      "semantic_score": 0.5706466436386108,
+      "semantic_score": 0.5706468224525452,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.84775972366333,
+      "score": 14.847761869430542,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.84775972366333
+        "semantic": 6.847761869430542
       }
     },
     {
@@ -338,17 +338,17 @@
       "snippet": "Kali Group est une société de conseil née d'un constat simple : le modèle actuel ne convient ni aux industriels, ni aux consultants. Aujourd'hui, le seul gagnant ; c'est le cabinet de conseil. Notre mission - Concilier les intérêts de tout le monde en créant un nouveau standard qui vous donne la liberté de construire votre plan de carrière. Comment - En relevant les challenges techniques, organis…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3955491",
       "rome_code": "M1802",
-      "semantic_score": 0.4032534658908844,
+      "semantic_score": 0.40325355529785156,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.839041590690613,
+      "score": 14.839042663574219,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 4.839041590690613
+        "semantic": 4.839042663574219
       }
     },
     {
@@ -362,17 +362,17 @@
       "snippet": "POSTE : Administrateur Cybersécurité H/F DESCRIPTION : Protéger, anticiper, faire progresser. Rejoignez une organisation qui place la cybersécurité au coeur de la performance et de la confiance numérique. Dans un environnement technique exigeant et en constante évolution, vous jouez un rôle clé dans la protection du système d'information et dans l'accompagnement des équipes métiers au quotidien.…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3840783",
       "rome_code": "M1802",
-      "semantic_score": 0.5546150207519531,
+      "semantic_score": 0.5546150803565979,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.655380249023438,
+      "score": 14.655380964279175,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.6553802490234375
+        "semantic": 6.655380964279175
       }
     },
     {
@@ -386,17 +386,17 @@
       "snippet": "Chez Thales, nous sommes fiers de travailler ensemble pour imaginer des solutions innovantes qui contribuent à construire un avenir plus sûr, plus vert et plus inclusif. Un avenir de confiance. Mais ces technologies ne viennent pas de nulle part. L'intelligence humaine est le moteur derrière la technologie qui fait la renommée de Thales. Les projets que nous conduisons sont complexes et nos clien…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/3740018",
       "rome_code": "M1804",
-      "semantic_score": 0.5354970097541809,
+      "semantic_score": 0.5354968905448914,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.425964117050171,
+      "score": 14.425962686538696,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.425964117050171
+        "semantic": 6.425962686538696
       }
     },
     {
