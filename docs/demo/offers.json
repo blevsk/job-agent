@@ -21,10 +21,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-07T13:28:16+00:00",
+    "scraped_at": "2026-07-07T13:57:40+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 172
+    "total": 173
   },
   "offers": [
     {
@@ -2314,7 +2314,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 40,
+      "posted_days_ago": 41,
       "snippet": "Descriptif de mission Vous aurez pour mission principale de renseigner les usagers par téléphone, sur les diverses problématiques traitées par la Banque de France : surendettement, droit au compte, fichage, médiation du crédit, cotation des entreprises et questions liées au fiduciaire. Vous serez également sollicité(e) pour répondre aux demandes écrites des usagers, sur les mêmes thématiques, ain…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/208VDRR",
       "rome_code": "C1212",
@@ -3154,7 +3154,7 @@
       "location": "59155 Faches-Thumesnil",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 19,
+      "posted_days_ago": 20,
       "snippet": "Notre Hypermarché AUCHAN recherche des employés pour le Stand charcuterie-fromage en priorité puis drive dans le secteur de Fâches DESCRIPTION DU CONTRAT : Tout en étant rémunéré, nous vous proposons de vous former et d'obtenir un titre professionnel d'employé de commerce pour acquérir les bonnes pratiques. La formation vous permet d'obtenir un certificat reconnu par notre branche et toutes les e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209XFWR",
       "rome_code": "D1106",
@@ -3442,7 +3442,7 @@
       "location": "59260 Lezennes",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 20,
+      "posted_days_ago": 21,
       "snippet": "Le titulaire du Brevet Professionnel Boulanger est un professionnel hautement qualifié qui conçoit et réalise des produits de panification, de viennoiserie, de sandwicherie et de restauration boulangère. Il maîtrise les techniques professionnelles dans un objectif permanent d'optimisation de la production en respectant les règles d'hygiène et de prévention des risques professionnels. Il maîtrise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209VSLW",
       "rome_code": "H2108",
@@ -3634,7 +3634,7 @@
       "location": "272 CHEMIN DE SAINGHIN 59890 QUESNOY-SUR-DEULE",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 18,
+      "posted_days_ago": 19,
       "snippet": "Apporte une aide à l'éleveur dans les activités quotidiennes auprès des animaux (distribution de nourriture, aide à la traite, ramassage des œufs, ...) Participe aux soins et veille au bien-être des animaux. Peut conduire un troupeau. Peut réaliser des opérations de tri et de conditionnement de produits issus de l'élevage.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a33f5f16e356e71b4d49ed3/apprenti-e-en-élevage-bovin-lait",
       "rome_code": "A1403",
@@ -3913,6 +3913,30 @@
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 4.4302918910980225
+      }
+    },
+    {
+      "id": "4662357",
+      "title": "Ingénieur développeur JAVA (H/F)",
+      "company": null,
+      "location": "59 - Nord",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 0,
+      "snippet": "Description du poste : En tant qu'organisateur de forums de recrutement, Talents Handicap accompagne de très nombreuses entreprises & organisations en France dans leurs recrutements de collaborateurs en situation de handicap. Participant actuellement à l'un de nos forums. L'entreprise Sopra Steria recherche actuellement des profils : Description de l'entreprise Sopra Steria , acteur majeur de la…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4662357",
+      "rome_code": "M1827",
+      "semantic_score": 0.3509254455566406,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 7.2111053466796875,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 0.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 4.2111053466796875
       }
     },
     {
