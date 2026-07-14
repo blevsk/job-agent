@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-14T11:01:55+00:00",
+    "scraped_at": "2026-07-14T11:14:30+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 175
@@ -322,7 +322,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 11,
+      "posted_days_ago": 12,
       "snippet": "Description du poste : L'aventure a commencé à deux, il y a plus de 25 ans. Aujourd'hui Fed Group, fort de ses 300 collaborateurs &amp;11 cabinets de recrutements spécialisés, est présent en France, au Portugal, mais aussi au Canada, en Côte d'Ivoire, en Suisse et depuis peu au Maroc. Notre métier ? Provoquer des rencontres et des opportunités qui ont du sens. Véritable couteau suisse, tu as un p…",
       "url": "https://www.meteojob.com/jobs/54801932?utm_source=pole-emploi&utm_medium=aggregator-free",
       "rome_code": "M1502",
@@ -610,7 +610,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 13,
+      "posted_days_ago": 14,
       "snippet": "POSTE EN APPRENTISSAGE, VOUS DEVEZ OBLIGATOIREMENT ETRE ELIGIBLE AU CONTRAT D'APPRENTISSAGE Vous intégrez le centre de formation IDMN à un rythme de : 1 jour d'école par semaine le reste au restaurant. Vous préparez soit un diplome d'employé de commerce ou assistant manager, technico commercial,... Au coeur du centre commercial lillenium, notre restaurant recherche des employés (es) polyvalents(e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/210MVYM",
       "rome_code": "G1603",
