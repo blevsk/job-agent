@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-16T07:21:37+00:00",
+    "scraped_at": "2026-07-16T08:40:20+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 174
@@ -394,7 +394,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Chez DECATHLON, nous sommes engagés pour le sport et nous partageons ses valeurs avec tous. Quel que soit son parcours et son profil, chaque co-équipier-e est mis-e en valeur et contribue à l'innovation au sein de l'entreprise. Nous aimons aussi « Jouer collectif », cela fait partie de notre ADN car nous gagnons ensemble uniquement si nous sommes une équipe unie et engagée.Au sein de l'Internatio…",
       "url": "https://www.directemploi.com/candidatOffre/55675282?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
       "rome_code": "C1202",
@@ -418,7 +418,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 7,
+      "posted_days_ago": 8,
       "snippet": "Au sein d'un estaminet traditionnel vous préparez un CAP en 1 ou 2 ans selon votre profil. Vous contribuez à la bonne réalisations des entrées, plats et desserts de la carte. Vous conjuguez semaine entreprise et centre de formation. Vous participez au bon entretien du matériel et locaux.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/210XJRX",
       "rome_code": "G1609",
@@ -1018,7 +1018,7 @@
       "location": "59 - Villeneuve-d'Ascq",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 5,
+      "posted_days_ago": 6,
       "snippet": "Tu es curieux, rigoureux, passionné par le sport, et tu veux contribuer à des réflexions stratégiques à l'échelle internationale ? L'équipe Market Intelligence de Decathlon recherche sa ou son futur.e stagiaire / alternant.e.&nbsp;Notre équipe, rattachée à la direction Stategy &amp; Operations, aide les leaders de Decathlon à mieux comprendre les marchés dans lesquels nous opérons : tendances mac…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4788390",
       "rome_code": "M1824",
