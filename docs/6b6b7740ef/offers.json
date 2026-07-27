@@ -9,10 +9,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-27T08:27:01+00:00",
+    "scraped_at": "2026-07-27T09:32:25+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 17
+    "total": 16
   },
   "offers": [
     {
@@ -325,30 +325,6 @@
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 6.034500360488892
-      }
-    },
-    {
-      "id": "4007757",
-      "title": "Ingénieur process et Projets - équipements de remplissage (H/F)",
-      "company": null,
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 37,
-      "snippet": "Ingénieur process et Projets - équipements de remplissage (H/F) ASAP Hauts-de-France Freelance / CDIC / CDD À propos de Nalys Nalys est une société de conseil franco-belge spécialisée sur les projets life sciences, innovative software et énergie depuis 2011. Notre mission : offrir aux ingénieurs des projets à forte valeur ajoutée et leur donner tous les moyens nécessaires pour accomplir leurs mis…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/4007757",
-      "rome_code": "M1802",
-      "semantic_score": 0.5049887299537659,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 16.05986475944519,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 0.0,
-        "semantic": 6.05986475944519
       }
     },
     {
