@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-28T07:36:58+00:00",
+    "scraped_at": "2026-07-28T08:16:48+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 171
@@ -697,6 +697,30 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 2.070427358150482
+      }
+    },
+    {
+      "id": "lba_6a6863f68bbc3358a67a610f",
+      "title": "Educateur / Educatrice d'activités physiques",
+      "company": "RIDE ON LILLE",
+      "location": "4 RUE PARMENTIER 59800 LILLE",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 0,
+      "snippet": "Selon sa formation, enseigne et encadre des activités sportives et physiques dans une ou plusieurs disciplines, en fonction des attentes de son public (loisirs, initiation, compétition). Veille à la sécurité des personnes et au respect du règlement Selon la taille du club, peut participer à la gestion de la structure, au développement de l'activité, à l'organisation d'événements, à la gestion de…",
+      "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a6863f68bbc3358a67a610f/educateur-educatrice-d-activités-physiques",
+      "rome_code": "G1204",
+      "semantic_score": 0.1621936559677124,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.946323871612549,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 1.9463238716125488
       }
     },
     {
@@ -1690,7 +1714,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 19,
+      "posted_days_ago": 20,
       "snippet": "Au sein d'un estaminet traditionnel vous préparez un CAP en 1 ou 2 ans selon votre profil. Vous contribuez à la bonne réalisations des entrées, plats et desserts de la carte. Vous conjuguez semaine entreprise et centre de formation. Vous participez au bon entretien du matériel et locaux.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/210XJRX",
       "rome_code": "G1609",
@@ -2833,30 +2857,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 2.338996946811676
-      }
-    },
-    {
-      "id": "lba_210QPVS",
-      "title": "Alternance - Assistant manager (BTS MCO/Titre MUM) - H/F (H/F)",
-      "company": "BURGER KING FRANCE",
-      "location": "59491 Villeneuve-d'Ascq",
-      "contract_type": "Alternance",
-      "salary": null,
-      "posted_days_ago": 25,
-      "snippet": "Mission En rejoignant l'un de nos restaurants, tu seras formé(e) sur un poste de d'Assistant Manager (Shift Leader). Et surtout, tu ne seras jamais seul(e) : tu intègreras une équipe soudée qui t'accompagnera au quotidien pour te faire progresser, répondra à tes questions et te fera monter en compétences rapidement. Chez nous, une journée ne ressemble jamais à une autre : on gère, on s'adapte, on…",
-      "url": "https://burgerking.career-portal.io/jobs/69c2b0cde51d143724823fe0?utm_source=francetravail&utm_medium=TargetingSourcing&utm_campaign=Burgerking",
-      "rome_code": "G1401",
-      "semantic_score": 0.19466766715049744,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 10.33601200580597,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 0.0,
-        "semantic": 2.3360120058059692
       }
     },
     {

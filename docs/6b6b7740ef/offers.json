@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-28T07:36:42+00:00",
+    "scraped_at": "2026-07-28T08:16:32+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 16
@@ -358,7 +358,7 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 20,
+      "posted_days_ago": 21,
       "snippet": "Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit près de 4 milliards d'e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4635546",
       "rome_code": "M1884",
