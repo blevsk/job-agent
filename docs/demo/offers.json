@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-07-30T07:33:00+00:00",
+    "scraped_at": "2026-07-30T08:10:07+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 175
@@ -3010,7 +3010,7 @@
       "location": "59810 Lesquin",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 31,
+      "posted_days_ago": 32,
       "snippet": "Nous sommes. Auchan Retail France, une entreprise de distribution de plus de collaborateurs au service de millions de clients chaque année. Ce que nous voulons, c'est aider nos clients à bien manger et vivre mieux, tout en préservant la planète. Que l'on soit en entrepôt, en magasin ou sur des fonctions support, notre point commun à tous, c'est de faire en sorte que nos clients aient plaisir à fa…",
       "url": "https://www.directemploi.com/candidatOffre/55493827?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
       "rome_code": "N1301",
