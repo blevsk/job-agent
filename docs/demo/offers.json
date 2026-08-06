@@ -21,7 +21,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-08-06T07:37:19+00:00",
+    "scraped_at": "2026-08-06T08:16:53+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 171
@@ -682,7 +682,7 @@
       "location": "4 RUE PARMENTIER 59800 LILLE",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "Selon sa formation, enseigne et encadre des activités sportives et physiques dans une ou plusieurs disciplines, en fonction des attentes de son public (loisirs, initiation, compétition). Veille à la sécurité des personnes et au respect du règlement Selon la taille du club, peut participer à la gestion de la structure, au développement de l'activité, à l'organisation d'événements, à la gestion de…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a6863f68bbc3358a67a610f/educateur-educatrice-d-activités-physiques",
       "rome_code": "G1204",
@@ -898,7 +898,7 @@
       "location": "59710 Avelin",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "HBC SCHOOL recherche pour son partenaire, entreprise spécialisée dans les métiers de la propreté et du nettoyage courant au bio-nettoyage, un(e) assistant(e) de direction en contrat d'apprentissage. Vous préparez un titre professionnel reconnu BAC + 2 :\"Assistant de Direction\". Vous aurez cours tous les lundis + 1 mardi sur deux au sein de notre école basée à Anzin. Vous aurez pour missions: - El…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212CGCJ",
       "rome_code": "M1604",
