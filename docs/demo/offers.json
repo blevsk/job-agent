@@ -21,10 +21,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-08-15T05:21:44+00:00",
+    "scraped_at": "2026-08-15T06:22:23+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 176
+    "total": 174
   },
   "offers": [
     {
@@ -2956,30 +2956,6 @@
       }
     },
     {
-      "id": "5996891",
-      "title": "DEVELOPPEUR C / C++ CHEZ CLIENT FINAL H/F",
-      "company": "STUDIO RH",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 40000.0 Euros à 45000.0 Euros",
-      "posted_days_ago": 0,
-      "snippet": "Pour le compte de notre client, un acteur technologique reconnu de la Métropole Lilloise développant des solutions de pointes en micro et nanotechnologies et connaissant une forte croissance nous recherchons : Un Développeur C/C++ Expérimenté Rattaché à l'équipe développement logiciel et sous la direction du département informatique vos principales missions seront les suivantes : Développement lo…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/5996891",
-      "rome_code": "M1805",
-      "semantic_score": 0.39465031027793884,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 9.735803723335266,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 0.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 4.735803723335266
-      }
-    },
-    {
       "id": "lba_211WHYK",
       "title": "(ALTERNANCE) - Ingénieur Vison (H/F)",
       "company": "AUTOMOTIVE CELLS COMPANY SE",
@@ -3457,30 +3433,6 @@
         "location": 2.0,
         "freshness": 3.0,
         "semantic": 4.091041445732117
-      }
-    },
-    {
-      "id": "5996886",
-      "title": "CONCEPTEUR DEVELOPPEUR COBOL H/F",
-      "company": "STUDIO RH",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": "Annuel de 30000.0 Euros à 35000.0 Euros",
-      "posted_days_ago": 0,
-      "snippet": "Pour le compte de notre client, une ESN Française à taille humaine (100 collaborateurs), située sur la Métropole Lilloise, proposant une expertise technologique pointue et des missions valorisantes au sein de clients finaux de la région et ceci dans un cadre de vie alliant performance et convivialité, nous recherchons : Un Concepteur Développeur Cobol H/F Intervenant directement dans les équipes…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/5996886",
-      "rome_code": "M1861",
-      "semantic_score": 0.33173537254333496,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 8.98082447052002,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 0.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 3.9808244705200195
       }
     },
     {
@@ -4018,7 +3970,7 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974316",
       "rome_code": "M1855",
@@ -4090,7 +4042,7 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974309",
       "rome_code": "H1218",
@@ -4162,7 +4114,7 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974300",
       "rome_code": "M1805",
