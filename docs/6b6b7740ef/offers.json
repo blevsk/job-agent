@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-08-15T06:22:06+00:00",
+    "scraped_at": "2026-08-16T05:24:10+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 15
@@ -22,21 +22,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "LTd est une agence de travail temporaire et un cabinet de recrutement spécialisé dans le domaine des Travaux Publics VRD, de la topographie, et des Télécoms riche de 20 ans d'expérience sur toute la France. Le poste : Pour une Société de topographie en pleine croissance, spécialisée dans les relevés terrain et la détection de réseaux, nous recherchons un(e) Géomètre Détection de Réseaux (H/F) pou…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5777436",
       "rome_code": "M1841",
-      "semantic_score": 0.58880615234375,
+      "semantic_score": 0.5888060927391052,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 20.065673828125,
+      "score": 20.065673112869263,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 7.065673828125
+        "semantic": 7.065673112869263
       }
     },
     {
@@ -46,21 +46,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Annuel de 40000.0 Euros à 45000.0 Euros",
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "Description du poste : Nous recrutons pour notre client, éditeur de logiciel reconnu dans son secteur d'activité un DevOps H/F. Votre responsabilité principale est de participer à l'évolution des solutions concernant l'infrastructure. En étroite collaboration avec les équipes de développement logiciels et support, vos missions sont Automatiser et industrialiser la mise en place et l'administratio…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5798921",
       "rome_code": "M1802",
-      "semantic_score": 0.5512101054191589,
+      "semantic_score": 0.5512099862098694,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.614521265029907,
+      "score": 19.614519834518433,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 6.614521265029907
+        "semantic": 6.614519834518433
       }
     },
     {
@@ -70,7 +70,7 @@
       "location": "62 - Béthune",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 2,
+      "posted_days_ago": 3,
       "snippet": "Description du poste : Vous avez un réel intérêt pour les technologies IT et les systèmes de sûreté et souhaitez intervenir sur des projets à fort impact ? Dans le cadre de notre développement, nous recherchons un Expert technique Vidéosurveillance GENETEC pour renforcer notre équipe technique. Rattaché(e) au manager du pôle Services, vous interviendrez sur des missions de support, d'exploitation…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5942181",
       "rome_code": "M1802",
@@ -94,21 +94,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 21,
+      "posted_days_ago": 22,
       "snippet": "Intégrateur de solutions IT, notre client conçoit, déploie et sécurise les infrastructures de ses clients : datacenter, virtualisation, réseau, mobilité et cybersécurité. Ses équipes transforment au quotidien des enjeux techniques complexes en solutions concrètes, fiables et durables, pour des entreprises de toutes tailles.Ce qui l'anime : la proximité client, l'exigence technique, l'esprit d'équ…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5423814",
       "rome_code": "M1841",
-      "semantic_score": 0.6634051203727722,
+      "semantic_score": 0.663405179977417,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.960861444473267,
+      "score": 17.960862159729004,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 7.960861444473267
+        "semantic": 7.960862159729004
       }
     },
     {
@@ -118,21 +118,21 @@
       "location": "62 - Béthune",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 0,
+      "posted_days_ago": 1,
       "snippet": "Envie de contribuer à un projet hors normes ? Prenez part à l'implantation sur notre territoire d'un data center dédié à l'intelligence artificielle, appelé à devenir l'une des infrastructures majeures pour l'IA en France et en Europe. Dans ce cadre PROCH EMPLOI recherche un Ingénieur Conception Câblage Structuré pour rejoindre une start-up néerlandaise ambitieuse ! Contribuez à un défi technolog…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212MBCP",
       "rome_code": "M1802",
-      "semantic_score": 0.5619113445281982,
+      "semantic_score": 0.561911404132843,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.74293613433838,
+      "score": 17.742936849594116,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.742936134338379
+        "semantic": 6.742936849594116
       }
     },
     {
@@ -142,7 +142,7 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 4,
+      "posted_days_ago": 5,
       "snippet": "Au sein du Département Grands Travaux de la DTGP Nord-Ouest, vous intégrez l'équipe Ingénierie-Process. Vous réalisez les études de conception des process énergétiques des réseaux de chaleur couvrant les phases APS/APD/Exécution.Sous la responsabilité du Responsable Ingénierie-Process, l'ingénieur conception réseau de chaleur a pour tâches de :- Concevoir les process hydrauliques (PID, dimensionn…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5886608",
       "rome_code": "F1112",
@@ -166,21 +166,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 25,
+      "posted_days_ago": 26,
       "snippet": "Nous recherchons pour le compte de notre client un Ingénieur systèmesMaintien en condition opérationnelle de la Production - Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents - Mise en place de flux sur ordonnanceur - Résolution d'incidents - scripting (powershell , bat , shell ..) Maintenance et développement des infrastructures système : - Mesurer et op…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5193208",
       "rome_code": "M1802",
-      "semantic_score": 0.4795340299606323,
+      "semantic_score": 0.4795339107513428,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.754408359527588,
+      "score": 15.754406929016113,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.754408359527588
+        "semantic": 5.754406929016113
       }
     },
     {
@@ -190,21 +190,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Annuel de 45000.0 Euros à 50000.0 Euros sur 12 mois",
-      "posted_days_ago": 22,
+      "posted_days_ago": 23,
       "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211PVTN",
       "rome_code": "F1111",
-      "semantic_score": 0.4745202958583832,
+      "semantic_score": 0.4745202362537384,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.694243550300598,
+      "score": 15.69424283504486,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.694243550300598
+        "semantic": 5.694242835044861
       }
     },
     {
@@ -214,21 +214,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 29,
+      "posted_days_ago": 30,
       "snippet": "Notre client est un groupe mutualiste français indépendant qui accompagne depuis près de 40 ans ses adhérents dans leurs projets d'épargne, de retraite et de prévoyance. Porté par une croissance régulière, il place la qualité du conseil, la proximité client et les valeurs humaines au coeur de son développement. Rejoindre cette entreprise, c'est intégrer une structure : - solide financièrement et…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5036190",
       "rome_code": "M1802",
-      "semantic_score": 0.47354334592819214,
+      "semantic_score": 0.47354331612586975,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.682520151138306,
+      "score": 15.682519793510437,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.682520151138306
+        "semantic": 5.682519793510437
       }
     },
     {
@@ -238,21 +238,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 38,
+      "posted_days_ago": 39,
       "snippet": "Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit près de 4 milliards d'e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4635546",
       "rome_code": "M1884",
-      "semantic_score": 0.4623582065105438,
+      "semantic_score": 0.4623582363128662,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.548298478126526,
+      "score": 15.548298835754395,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.548298478126526
+        "semantic": 5.5482988357543945
       }
     },
     {
@@ -262,7 +262,7 @@
       "location": "59 - Lambersart",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 17,
+      "posted_days_ago": 18,
       "snippet": "Description du poste : Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5522067",
       "rome_code": "M1884",
@@ -286,21 +286,21 @@
       "location": "62 - Lens",
       "contract_type": "CDI",
       "salary": "Annuel de 26000.0 Euros à 40800.0 Euros",
-      "posted_days_ago": 32,
+      "posted_days_ago": 33,
       "snippet": "Description du poste : Humanis-Partners , cabinet de conseil RH 360° spécialisé dans le recrutement, la formation et l'accompagnement des transformations organisationnelles, recherche pour son client, établissement régional de santé, un(e) Technicien(ne) interopérabilité SIH H/F, pour son site de Lens (62). Le poste est issu d'une Direction des Systèmes d'Information engagée dans une transformati…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4934474",
       "rome_code": "M1802",
-      "semantic_score": 0.5175418853759766,
+      "semantic_score": 0.5175418257713318,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 14.210502624511719,
+      "score": 14.210501909255981,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 6.210502624511719
+        "semantic": 6.2105019092559814
       }
     },
     {
@@ -310,7 +310,7 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 15,
+      "posted_days_ago": 16,
       "snippet": "L'industrie européenne se transforme. Les capitaux sont là, les projets aussi. Mais sur le terrain, il manque l'essentiel : les compétences pour faire tourner les lignes. C'est pour répondre à ce contexte que Kali Group existe. Nous sommes un cabinet de conseil spécialisé à 100% dans le manufacturing opérationnel. De l'industrialisation à la modernisation, nous résolvons les défis que la complexi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5590122",
       "rome_code": "M1802",
@@ -334,21 +334,21 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 7,
+      "posted_days_ago": 8,
       "snippet": "Qui sommes-nous ? Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace - Cloud & DevOps - Cybersécurité - Transformation des SI - Data & IA Le poste :…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5819290",
       "rome_code": "M1802",
-      "semantic_score": 0.4293734133243561,
+      "semantic_score": 0.42937329411506653,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.152480959892273,
+      "score": 13.152479529380798,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.152480959892273
+        "semantic": 5.152479529380798
       }
     },
     {
@@ -358,21 +358,21 @@
       "location": "62 - Béthune",
       "contract_type": "CDI",
       "salary": "Annuel de 30000.0 Euros à 35000.0 Euros sur 12 mois",
-      "posted_days_ago": 16,
+      "posted_days_ago": 17,
       "snippet": "Votre environnement de travail : Ginger CEBTP recrute un(e) Ingénieur(e) Chargé(e) d'Affaires Junior H/F pour son agence de BETHUNE. Vous évoluerez dans un métier varié qui allie bureau et chantier. Vos missions : En tant qu'Ingénieur(e) Chargé(e) d'Affaires Junior, vous réaliserez des missions d'ingénierie de diagnostic, de conception et de suivi de travaux sur tous types d'ouvrages. Vous êtes g…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211VSNV",
       "rome_code": "I1104",
-      "semantic_score": 0.5938190817832947,
+      "semantic_score": 0.5938189625740051,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.125828981399536,
+      "score": 10.125827550888062,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 7.125828981399536
+        "semantic": 7.1258275508880615
       }
     }
   ]
