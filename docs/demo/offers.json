@@ -21,12 +21,60 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-08-18T05:24:52+00:00",
+    "scraped_at": "2026-08-18T06:26:50+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 112
+    "total": 133
   },
   "offers": [
+    {
+      "id": "lba_55911176",
+      "title": "Apprenti  BP (H/F)",
+      "company": null,
+      "location": "Lille (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 14,
+      "snippet": "<p> <strong>Mission</strong> </p> <p> <strong>Vog Coiffure recherche son futur apprenti !</strong> </p> <p>Si vous avez :</p> <p>• L'envie d'apprendre dans un univers exigeant, élégant et bienveillant</p> <p>• Le sens de l'écoute et du service client</p> <p>• Une passion pour la coiffure, la beauté et les tendances</p> <p>• De l'énergie, de la curiosité et un sourire communicatif</p> <p>• Le souh…",
+      "url": "https://www.meteojob.com/jobs/55911176?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1216",
+      "semantic_score": 0.4162348210811615,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 17.994817852973938,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 4.994817852973938
+      }
+    },
+    {
+      "id": "lba_56058802",
+      "title": "Apprenti  BP  2 ème année",
+      "company": null,
+      "location": "Lille (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 6,
+      "snippet": "<p> <strong>Mission</strong> </p> <p> <strong>Vog Coiffure recherche son futur apprenti en BP 2 ème année !</strong> </p> <p>Si vous avez :</p> <p>• L'envie d'apprendre dans un univers exigeant, élégant et bienveillant</p> <p>• Le sens de l'écoute et du service client</p> <p>• Une passion pour la coiffure, la beauté et les tendances</p> <p>• De l'énergie, de la curiosité et un sourire communicati…",
+      "url": "https://www.meteojob.com/jobs/56058802?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1216",
+      "semantic_score": 0.36989477276802063,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 17.438737273216248,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 4.438737273216248
+      }
+    },
     {
       "id": "6054146",
       "title": "Développeur / Développeuse informatique (H/F)",
@@ -38,17 +86,17 @@
       "snippet": "Description du poste : Notre organisme de formation est à la recherche du candidat idéal pour le poste de Développeur Web en alternance pour l'un de nos partenaire. Renforcer l'équipe technique et participer à la conception, au développement et à l'évolution de site. Missions Encadré(e) par un développeur confirmé, tu interviendras sur les missions suivantes Développement et maintenance de sites…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6054146",
       "rome_code": "M1805",
-      "semantic_score": 0.5347985029220581,
+      "semantic_score": 0.5347983837127686,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.417582035064697,
+      "score": 17.417580604553223,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.417582035064697
+        "semantic": 6.417580604553223
       }
     },
     {
@@ -62,17 +110,17 @@
       "snippet": "Envie de vous sentir utile tout en boostant votre avenir professionnel ? Le GEIQ à Domicile Hauts-de-France vous ouvre ses portes ! Nous vous proposons une aventure humaine unique : une formation rémunérée pour décrocher votre Titre Professionnel (ADVF) et un emploi durable à la clé. Vous serez en Alternance en Contrat de Professionnalisation afin d'être formé(e) tout en apprenant sur le terrain…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212JZJJ",
       "rome_code": "K1311",
-      "semantic_score": 0.292957067489624,
+      "semantic_score": 0.29295697808265686,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.51548480987549,
+      "score": 16.515483736991882,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.5154848098754883
+        "semantic": 3.5154837369918823
       }
     },
     {
@@ -100,6 +148,54 @@
       }
     },
     {
+      "id": "lba_55688620",
+      "title": "ALTERNANCE MECANICIEN POIDS LOURDS H/F",
+      "company": "ALLIANCE AUTOMOTIVE",
+      "location": "Lille (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 2,
+      "snippet": "<p>Sous la responsabilité de notre Chef d'Atelier Poids Lourds, vous assurez les missions suivantes afin de vous faire monter en compétence en tant que futur(e) mécano :</p> <ul> <li>Rechercher la panne en utilisant des instruments de mesure et de contrôle informatisés</li> <li>Effectuer un diagnostic</li> <li>Élaborer une méthode de réparation ou d'entretien en tenant compte des coûts induits</l…",
+      "url": "https://www.meteojob.com/jobs/55688620?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1613",
+      "semantic_score": 0.25528082251548767,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 16.063369870185852,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 3.063369870185852
+      }
+    },
+    {
+      "id": "lba_56058804",
+      "title": "Apprenti  BP Coiffure 2 ème année",
+      "company": null,
+      "location": "Lille (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 6,
+      "snippet": "<p> <strong>Mission</strong> </p> <p> <strong>Tchip Coiffure recherche son futur apprenti BP en 2 ème année !</strong> </p> <p> <strong>Tu es en deuxième année de BP COIFFURE et tu rêves de te former dans un salon qui bouge et qui valorise ton talent ? C'est le moment de te lancer !</strong> </p> <p>Depuis plus de 30 ans, Tchip Coiffure rend la coiffure professionnelle accessible à toutes : être…",
+      "url": "https://www.meteojob.com/jobs/56058804?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1217",
+      "semantic_score": 0.2550847828388214,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 16.061017394065857,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 3.061017394065857
+      }
+    },
+    {
       "id": "lba_6a7561b876e1ceb2641e0181",
       "title": "Assistant / Assistante community manager",
       "company": "T2A",
@@ -110,17 +206,161 @@
       "snippet": "L'Animateur de communauté virtuelle dynamise et modère les échanges entre utilisateurs sur les plateformes numériques. Anime les échanges au sein des communautés en ligne pour favoriser une ambiance positive et constructive Crée et partage du contenu pertinent et attractif pour maintenir l'intérêt des membres de la communauté Surveille les tendances du web et adapte les activités de la communauté…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a7561b876e1ceb2641e0181/assistant-assistante-community-manager",
       "rome_code": "E1101",
-      "semantic_score": 0.36852824687957764,
+      "semantic_score": 0.36852818727493286,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.422338962554932,
+      "score": 15.422338247299194,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.422338962554932
+        "semantic": 4.422338247299194
+      }
+    },
+    {
+      "id": "lba_55243870",
+      "title": "Apprenti(e) Vendeur(se) - RONCQ H/F",
+      "company": "Boulangerie LOUISE",
+      "location": "Roncq (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 14,
+      "snippet": "<p>L'école de Boulangerie Louise recrute !</p> <p>Prépare ton titre pro conseiller de vente avec notre CFA et apprend le métier au cœur de notre magasin de RONCQ</p> <p> <strong>CHEZ NOUS !</strong> </p> <p>Chez Boulangerie Louise, nous te proposons de te former pour acquérir notre savoir-faire, entouré par des passionnés ! Tu apprendras notamment :</p> <ul> <li>La relation « clients », en les co…",
+      "url": "https://www.meteojob.com/jobs/55243870?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1108",
+      "semantic_score": 0.35879549384117126,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 15.305545926094055,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 4.305545926094055
+      }
+    },
+    {
+      "id": "lba_56063488",
+      "title": "Apprenti  BP Coiffure",
+      "company": null,
+      "location": "Marcq-en-Barœul (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 6,
+      "snippet": "<p> <strong>Mission</strong> </p> <p> <strong>Tchip Coiffure recherche son futur apprenti !</strong> </p> <p> <strong>Tu rêves de te former dans un salon qui bouge et qui valorise ton talent ? C'est le moment de te lancer !</strong> </p> <p>Depuis plus de 30 ans, Tchip Coiffure rend la coiffure professionnelle accessible à toutes : être canon sans se ruiner ? C'est possible grâce à nous ! Aujourd…",
+      "url": "https://www.meteojob.com/jobs/56063488?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1217",
+      "semantic_score": 0.30872833728790283,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.704740047454834,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 3.704740047454834
+      }
+    },
+    {
+      "id": "lba_55524024",
+      "title": "Conseiller Commercial (h/f)",
+      "company": "ADECCO",
+      "location": "Lens (62)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 3,
+      "snippet": "<p>Nous recrutons pour un de nos clients, une entreprise reconnue, engagée dans le développement de jeunes talents dans le domaine de la banque et de l'assurance, des Conseillers commerciaux (h/f) et des Gestionnaires sinistres (h/f) en alternance.</p> <p>Dans le cadre du partenariat négocié avec les écoles, nous recherchons des alternants pour l'ouverture de deux classes.</p> <p>Postes à pourvoi…",
+      "url": "https://www.meteojob.com/jobs/55524024?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1403",
+      "semantic_score": 0.2847382128238678,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.416858553886414,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 3.4168585538864136
+      }
+    },
+    {
+      "id": "lba_55688622",
+      "title": "ALTERNANCE MECANICIEN POIDS LOURDS H/F",
+      "company": "ALLIANCE AUTOMOTIVE",
+      "location": "Lesquin (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 2,
+      "snippet": "<p>Sous la responsabilité de notre Chef d'Atelier Poids Lourds, vous assurez les missions suivantes afin de vous faire monter en compétence en tant que futur(e) mécano :</p> <ul> <li>Rechercher la panne en utilisant des instruments de mesure et de contrôle informatisés</li> <li>Effectuer un diagnostic</li> <li>Élaborer une méthode de réparation ou d'entretien en tenant compte des coûts induits</l…",
+      "url": "https://www.meteojob.com/jobs/55688622?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1613",
+      "semantic_score": 0.27357950806617737,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.282954096794128,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 3.2829540967941284
+      }
+    },
+    {
+      "id": "lba_55243871",
+      "title": "Apprenti(e) Vendeur(se) - HALLUIN H/F",
+      "company": "Boulangerie LOUISE",
+      "location": "Halluin (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 14,
+      "snippet": "<p>L'école de Boulangerie Louise recrute !</p> <p>Prépare ton titre pro conseiller de vente avec notre CFA et apprend le métier au cœur de notre magasin de HALLUIN</p> <p> <strong>CHEZ NOUS !</strong> </p> <p>Chez Boulangerie Louise, nous te proposons de te former pour acquérir notre savoir-faire, entouré par des passionnés ! Tu apprendras notamment :</p> <ul> <li>La relation « clients », en les…",
+      "url": "https://www.meteojob.com/jobs/55243871?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1108",
+      "semantic_score": 0.27217230200767517,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.266067624092102,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 3.266067624092102
+      }
+    },
+    {
+      "id": "lba_53540228",
+      "title": "Mécanicien en alternance H/F Hallennes-lez-Haubourdin",
+      "company": "LOXAM",
+      "location": "Hallennes-lez-Haubourdin (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 1,
+      "snippet": "<p>Au sein de l'atelier, vous assurez le bon état (technique, sécurité, présentation) des matériels proposés à la location. Dans le cadre de votre alternance, vous assurez la maintenance préventive et curative du matériel mis à la disposition des clients.</p> <p>Vos missions parmi nous :</p> <ul> <li>Contrôler le matériel à son entrée et sa sortie de l'atelier ;</li> <li>Exécuter la maintenance p…",
+      "url": "https://www.meteojob.com/jobs/53540228?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1618",
+      "semantic_score": 0.27215105295181274,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 14.265812635421753,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 3.265812635421753
       }
     },
     {
@@ -158,17 +398,41 @@
       "snippet": "Et si vous découvriez le métier d'opticien au sein d'un réseau reconnu pour la qualité de son accompagnement, tout en préparant votre BTS dans un environnement formateur et évolutif ?<br /><br />Rejoignez Générale d'Optique, enseigne du groupe EssilorLuxottica, acteur mondial de la santé visuelle et reconnu pour ses innovations en matière de correction, de prévention et d'équipement optique. Depu…",
       "url": "https://job.mytalentplug.com/api/JobOffer/redirect/?id=aa77d739-a9fb-470c-b933-8149d01bfaa4",
       "rome_code": "J1405",
-      "semantic_score": 0.24892258644104004,
+      "semantic_score": 0.24892257153987885,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.98707103729248,
+      "score": 13.987070858478546,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 2.9870710372924805
+        "semantic": 2.987070858478546
+      }
+    },
+    {
+      "id": "lba_55688621",
+      "title": "ALTERNANCE MECANICIEN POIDS LOURDS H/F",
+      "company": "ALLIANCE AUTOMOTIVE",
+      "location": "Bondues (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 2,
+      "snippet": "<p>Sous la responsabilité de notre Chef d'Atelier Poids Lourds, vous assurez les missions suivantes afin de vous faire monter en compétence en tant que futur(e) mécano :</p> <ul> <li>Rechercher la panne en utilisant des instruments de mesure et de contrôle informatisés</li> <li>Effectuer un diagnostic</li> <li>Élaborer une méthode de réparation ou d'entretien en tenant compte des coûts induits</l…",
+      "url": "https://www.meteojob.com/jobs/55688621?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1613",
+      "semantic_score": 0.24666908383369446,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.960029006004333,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.9600290060043335
       }
     },
     {
@@ -182,17 +446,65 @@
       "snippet": "Devenez acteur de la transition énergétique : Rejoignez Dalkia en alternance ! Dalkia, filiale du groupe EDF et leader des services énergétiques, vous ouvre ses portes. Nous accompagnons les entreprises et les collectivités vers la décarbonation grâce à des solutions innovantes. Pour notre région Nord-Ouest, nous recherchons nos futurs Techniciens de Maintenance CVC (H/F) en alternance dès septem…",
       "url": "https://www.edf.fr/edf-recrute/offre/detail/DKA-REC-2026-13378?idOrigine=502",
       "rome_code": "H2701",
-      "semantic_score": 0.31230399012565613,
+      "semantic_score": 0.31230396032333374,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.747647881507874,
+      "score": 13.747647523880005,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 3.7476478815078735
+        "semantic": 3.747647523880005
+      }
+    },
+    {
+      "id": "lba_53540231",
+      "title": "Mécanicien en alternance H/F Lesquin",
+      "company": "LOXAM",
+      "location": "Lesquin (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 1,
+      "snippet": "<p>Au sein de l'atelier, vous assurez le bon état (technique, sécurité, présentation) des matériels proposés à la location. Dans le cadre de votre alternance, vous assurez la maintenance préventive et curative du matériel mis à la disposition des clients.</p> <p> <strong>Vos missions parmi nous :</strong> </p> <ul> <li>Contrôler le matériel à son entrée et sa sortie de l'atelier ;</li> <li>Exécut…",
+      "url": "https://www.meteojob.com/jobs/53540231?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1618",
+      "semantic_score": 0.21029916405677795,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.523589968681335,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.5235899686813354
+      }
+    },
+    {
+      "id": "lba_55688618",
+      "title": "ALTERNANCE MECANICIEN POIDS LOURDS H/F",
+      "company": "ALLIANCE AUTOMOTIVE",
+      "location": "Carvin (62)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 2,
+      "snippet": "<p>Sous la responsabilité de notre Chef d'Atelier Poids Lourds, vous assurez les missions suivantes afin de vous faire monter en compétence en tant que futur(e) mécano :</p> <ul> <li>Rechercher la panne en utilisant des instruments de mesure et de contrôle informatisés</li> <li>Effectuer un diagnostic</li> <li>Élaborer une méthode de réparation ou d'entretien en tenant compte des coûts induits</l…",
+      "url": "https://www.meteojob.com/jobs/55688618?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1613",
+      "semantic_score": 0.20816870033740997,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.49802440404892,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.4980244040489197
       }
     },
     {
@@ -206,17 +518,41 @@
       "snippet": "Rejoindre Auchan Retail France, c’est rejoindre une entreprise en mouvement qui agit au quotidien pour réinventer le métier de commerçant en mêlant digital et magasin physique pour une expérience client inédite et incomparable. Nous nous appuyons sur nos valeurs de confiance, d’ouverture et d’excellence pour vous proposer des expériences authentiques dans un environnement bienveillant. Fort de no…",
       "url": "https://auchan.talentview.io/jobs/8tll4s?source=la_bonne_alternance",
       "rome_code": "H1303",
-      "semantic_score": 0.20744594931602478,
+      "semantic_score": 0.20744597911834717,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.489351391792297,
+      "score": 13.489351749420166,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 2.4893513917922974
+        "semantic": 2.489351749420166
+      }
+    },
+    {
+      "id": "lba_53538641",
+      "title": "Mécanicien en alternance H/F Wambrechies",
+      "company": "LOXAM",
+      "location": "Wambrechies (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 1,
+      "snippet": "<p>Au sein de l'atelier, vous assurez le bon état (technique, sécurité, présentation) des matériels proposés à la location. Dans le cadre de votre alternance, vous assurez la maintenance préventive et curative du matériel mis à la disposition des clients.</p> <p>Vos missions parmi nous :</p> <ul> <li>Contrôler le matériel à son entrée et sa sortie de l'atelier ;</li> <li>Exécuter la maintenance p…",
+      "url": "https://www.meteojob.com/jobs/53538641?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1618",
+      "semantic_score": 0.19407600164413452,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.328912019729614,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.3289120197296143
       }
     },
     {
@@ -230,17 +566,65 @@
       "snippet": "LILLE (59) / Début : Septembre / Contrat de 12 mois Fais de ta passion du contact un véritable métier ! Tu aimes le travail en équipe, le contact avec les gens et les journées qui ne se ressemblent pas ? Tu souhaites apprendre un métier recherché tout en étant rémunéré(e) et obtenir un diplôme reconnu ? Rejoins une équipe dynamique et forme toi au métier de Serveur(se) en restauration grâce à l'a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211SCYT",
       "rome_code": "G1803",
-      "semantic_score": 0.2739889919757843,
+      "semantic_score": 0.2739889323711395,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.287867903709412,
+      "score": 13.287867188453674,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 3.2878679037094116
+        "semantic": 3.2878671884536743
+      }
+    },
+    {
+      "id": "lba_53538639",
+      "title": "Mécanicien en alternance H/F Marcq-en-Barœul",
+      "company": "LOXAM",
+      "location": "Marcq-en-Barœul (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 1,
+      "snippet": "<p>Au sein de l'atelier, vous assurez le bon état (technique, sécurité, présentation) des matériels proposés à la location. Dans le cadre de votre alternance, vous assurez la maintenance préventive et curative du matériel mis à la disposition des clients.</p> <p>Vos missions parmi nous :</p> <ul> <li>Contrôler le matériel à son entrée et sa sortie de l'atelier ;</li> <li>Exécuter la maintenance p…",
+      "url": "https://www.meteojob.com/jobs/53538639?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1618",
+      "semantic_score": 0.18675120174884796,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.241014420986176,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.2410144209861755
+      }
+    },
+    {
+      "id": "lba_55599107",
+      "title": "Employé(e) commercial(e)",
+      "company": "ESD Formation",
+      "location": "Villeneuve-d'Ascq (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 4,
+      "snippet": "<p>ALTERNANCE IMMÉDIATE – Employé(e) Commercial(e) (H/F)</p> <p> Villeneuve d’Ascq (59) <br /> <strong>Démarrage dès maintenant – Poste à pourvoir immédiatement</strong> </p> <p>Tu veux un job + un diplôme + un salaire ?</p> <p> Rejoins <strong>ESD Formation (CFA Axio School)</strong> et forme toi aux métiers du <strong>commerce et de la grande distribution</strong> , tout en travaillant en entre…",
+      "url": "https://www.meteojob.com/jobs/55599107?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1438",
+      "semantic_score": 0.18076790869235992,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 13.169214904308319,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 2.169214904308319
       }
     },
     {
@@ -254,17 +638,41 @@
       "snippet": "Le Coiffeur barbier / La Coiffeuse barbière, un(e) artiste du style et de la précision, façonne l'apparence de ses clients avec expertise. Réalise des coupes de cheveux, des tailles de barbe et des rasages selon les dernières tendances ou les préférences des clients Conseille les clients sur les soins des cheveux et de la barbe pour maintenir leur style entre les visites Crée une atmosphère accue…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a2d9e715d74f81b70381fd4/coiffeur-coiffeuse-barbier-cdi-ou-brevet-professionnel",
       "rome_code": "D1216",
-      "semantic_score": 0.2539663016796112,
+      "semantic_score": 0.25396639108657837,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.047595620155334,
+      "score": 13.04759669303894,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 3.0475956201553345
+        "semantic": 3.0475966930389404
+      }
+    },
+    {
+      "id": "lba_52796315",
+      "title": "Boucher (alternance) - H/F",
+      "company": "E.Leclerc",
+      "location": "Loison-sous-Lens (62)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 3,
+      "snippet": "<p>Toute l'équipe de la Boucherie s'est préparée pour vous accueillir.</p> <p>Avec nous, vous apprendrez non seulement la fabrication de bons produits, mais aussi la commercialisation et les techniques commerciales et sanitaires pour exercer votre future profession avec un haut niveau d'exigence.</p> <p>Vous participerez aux missions suivantes :</p> <ul> <li> <p>Confectionner les produits mis en…",
+      "url": "https://www.meteojob.com/jobs/52796315?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1101",
+      "semantic_score": 0.16595692932605743,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 12.99148315191269,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 1.9914831519126892
       }
     },
     {
@@ -278,17 +686,17 @@
       "snippet": "LILLE (59) / Début : Septembre / Contrat de 12 mois Fais de ta passion pour la cuisine un véritable métier ! Tu aimes cuisiner, apprendre de nouvelles techniques et travailler en équipe ? Tu souhaites obtenir un diplôme tout en étant rémunéré(e) et acquérir une expérience concrète en cuisine ? Rejoins une brigade passionnée et forme-toi au métier de Commis de cuisine grâce à l'alternance ! TES MI…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211SDKY",
       "rome_code": "G1602",
-      "semantic_score": 0.22227245569229126,
+      "semantic_score": 0.22227244079113007,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.667269468307495,
+      "score": 12.66726928949356,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 2.667269468307495
+        "semantic": 2.667269289493561
       }
     },
     {
@@ -302,17 +710,17 @@
       "snippet": "Un fleuriste est un professionnel spécialisé dans la vente et l'arrangement de fleurs et de plantes. \\nConçoit et réalise des compositions florales adaptées à divers événements\\nConseille les clients dans le choix des plantes et des arrangements\\nAssure l'entretien quotidien des fleurs et des plantes pour garantir leur fraîcheur\\nGère les stocks de fleurs et passe des commandes auprès des fournis…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a43e91a4acef524be46d2b2",
       "rome_code": "D1209",
-      "semantic_score": 0.22094672918319702,
+      "semantic_score": 0.2209467589855194,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.651360750198364,
+      "score": 12.651361107826233,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 2.6513607501983643
+        "semantic": 2.651361107826233
       }
     },
     {
@@ -326,17 +734,17 @@
       "snippet": "Le pâtissier de restaurant, un artiste culinaire qui éveille les papilles avec ses créations sucrées. Conçoit et réalise des desserts à la carte du restaurant, en accord avec le style culinaire de l'établissement Collabore étroitement avec le chef cuisinier pour développer des menus saisonniers et des offres spéciales Gère les stocks de matières premières et commande les ingrédients nécessaires à…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a7c3e9b38f3ea2efb74856a/chef-cuisinier-pâtissier-cheffe-cuisinière-pâtissière",
       "rome_code": "G1610",
-      "semantic_score": 0.12369579821825027,
+      "semantic_score": 0.12369585782289505,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.484349578619003,
+      "score": 12.48435029387474,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 1.4843495786190033
+        "semantic": 1.4843502938747406
       }
     },
     {
@@ -374,17 +782,17 @@
       "snippet": "L'Équipier polyvalent de restauration rapide travaille principalement en fast-food, garantissant un service rapide et de qualité. Assure la préparation et la vente de produits alimentaires selon les normes d'hygiène Gère les commandes et le stock de produits frais Maintient la propreté des équipements et du lieu de travail Peut effectuer des livraisons en respectant les délais promis Fournit un s…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a799a434a68727735271ff5/employé-polyvalent-employée-polyvalente-de-restauration",
       "rome_code": "G1603",
-      "semantic_score": 0.11728135496377945,
+      "semantic_score": 0.11728149652481079,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.407376259565353,
+      "score": 12.40737795829773,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 1.4073762595653534
+        "semantic": 1.4073779582977295
       }
     },
     {
@@ -422,17 +830,17 @@
       "snippet": "L’association L’association World Cleanup Day - France (WCD-F) opère en France depuis 2017 et porte deux opérations : le World Cleanup Day et le Digital Cleanup Day. Le but de l’association est de créer une prise de conscience sur le terrain les jours J dans un même objectif : lutter contre les déchets abandonnés d’une part et électroniques d’autre part. Mais aussi et surtout de provoquer une vra…",
       "url": "https://jobs.makesense.org/fr/jobs/world-cleanup-day-france-alternance-chargee-de-mission-animation-reseau-TMUgQQRfSOiki5N2SeRa?source=api-apprentissage",
       "rome_code": "A1313",
-      "semantic_score": 0.1977485567331314,
+      "semantic_score": 0.19774861633777618,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.372982680797577,
+      "score": 12.372983396053314,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 2.372982680797577
+        "semantic": 2.372983396053314
       }
     },
     {
@@ -446,17 +854,17 @@
       "snippet": "Doté(e) d'un sens aigu de créativité, cet artiste du cheveu sculpte, colore et soigne les chevelures pour sublimer chaque client.\\nAccueille et conseille les clients en fonction de leur style et de leurs attentes\\nRéalise des coupes, des colorations et des coiffures adaptées à chaque individu\\nPropose et effectue des soins capillaires pour améliorer la santé des cheveux\\nGère les rendez-vous et l…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a3a86bc4acef524be442605",
       "rome_code": "D1216",
-      "semantic_score": 0.18876305222511292,
+      "semantic_score": 0.18876302242279053,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.265156626701355,
+      "score": 12.265156269073486,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 2.265156626701355
+        "semantic": 2.2651562690734863
       }
     },
     {
@@ -470,17 +878,17 @@
       "snippet": "Depuis plus de dix ans, le GEIQ Eco-Activités propose des contrats de professionnalisation et/ou d'apprentissage et de réelles possibilités d'intégration durable au sein de nos entreprises partenaires. Accompagné(e) de professionnels reconnus, vous alternez périodes en entreprise et formation innovante. Vous bénéficiez d'un accompagnement personnalisé pendant toute la durée de votre contrat. Pour…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZSQZ",
       "rome_code": "H2906",
-      "semantic_score": 0.35010093450546265,
+      "semantic_score": 0.35010096430778503,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 12.201211214065552,
+      "score": 12.20121157169342,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 4.201211214065552
+        "semantic": 4.20121157169342
       }
     },
     {
@@ -542,17 +950,17 @@
       "snippet": "Selon sa formation, enseigne et encadre des activités sportives et physiques dans une ou plusieurs disciplines, en fonction des attentes de son public (loisirs, initiation, compétition). Veille à la sécurité des personnes et au respect du règlement Selon la taille du club, peut participer à la gestion de la structure, au développement de l'activité, à l'organisation d'événements, à la gestion de…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a6863f68bbc3358a67a610f/educateur-educatrice-d-activités-physiques",
       "rome_code": "G1204",
-      "semantic_score": 0.16219370067119598,
+      "semantic_score": 0.1621936559677124,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.946324408054352,
+      "score": 11.946323871612549,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 1.9463244080543518
+        "semantic": 1.9463238716125488
       }
     },
     {
@@ -604,6 +1012,30 @@
       }
     },
     {
+      "id": "lba_54506478",
+      "title": "Apprenti(e) Vendeur(se) - VILLENEUVE D'ASCQ H/F",
+      "company": "Boulangerie LOUISE",
+      "location": "Villeneuve-d'Ascq (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 16,
+      "snippet": "<p>L'école de Boulangerie Louise recrute !</p> <p>Prépare ton titre pro conseiller de vente avec notre CFA et apprend le métier au cœur de notre magasin de VILLENEUVE D'ASCQ</p> <p> <strong>CHEZ NOUS !</strong> </p> <p>Chez Boulangerie Louise, nous te proposons de te former pour acquérir notre savoir-faire, entouré par des passionnés ! Tu apprendras notamment :</p> <ul> <li>La relation « clients…",
+      "url": "https://www.meteojob.com/jobs/54506478?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1108",
+      "semantic_score": 0.31271493434906006,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 11.75257921218872,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 3.7525792121887207
+      }
+    },
+    {
       "id": "lba_174897",
       "title": "Technicien d'exploitation en alternance H/F H/F",
       "company": "EDF",
@@ -638,17 +1070,17 @@
       "snippet": "Le Crefo en partenariat avec des structures, recherche ses futurs apprenti(es) pour être formé au métier d'auxiliaire de vie en apprentissage.<br /><br />Vos missions : Accompagner les personnes âgées, en situation de handicap ou en perte d'autonomie dans les gestes de la vie quotidienne. Aider à la toilette, à l'habillage et à la mobilité. Préparer les repas et accompagner à la prise des repas.…",
       "url": "https://job.mytalentplug.com/api/JobOffer/redirect/?id=e5f791df-7db8-4576-8059-36e13b5eceb6",
       "rome_code": "K1311",
-      "semantic_score": 0.30663013458251953,
+      "semantic_score": 0.3066302537918091,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.679561614990234,
+      "score": 11.679563045501709,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.6795616149902344
+        "semantic": 3.679563045501709
       }
     },
     {
@@ -662,17 +1094,17 @@
       "snippet": "Le Crefo en partenariat avec des structures, recherche ses futurs apprenti(es) pour être formé au métier d'auxiliaire de vie en apprentissage. <br />Vos missions : Accompagner les personnes âgées, en situation de handicap ou en perte d'autonomie dans les gestes de la vie quotidienne. Aider à la toilette, à l'habillage et à la mobilité. Préparer les repas et accompagner à la prise des repas. Réali…",
       "url": "https://job.mytalentplug.com/api/JobOffer/redirect/?id=8c4e2d87-19dd-4c62-bef0-491c8e7848c0",
       "rome_code": "K1311",
-      "semantic_score": 0.29519543051719666,
+      "semantic_score": 0.29519546031951904,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.54234516620636,
+      "score": 11.542345523834229,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.54234516620636
+        "semantic": 3.5423455238342285
       }
     },
     {
@@ -686,17 +1118,17 @@
       "snippet": "Devenez acteur de la transition énergétique : Rejoignez Dalkia en alternance ! Dalkia, filiale du groupe EDF et leader des services énergétiques, vous ouvre ses portes. Nous accompagnons les entreprises et les collectivités vers la décarbonation grâce à des solutions innovantes. Pour notre région Nord-Ouest, nous recherchons nos futurs Techniciens de Maintenance CVC (H/F) en alternance dès septem…",
       "url": "https://www.edf.fr/edf-recrute/offre/detail/DKA-REC-2026-13380?idOrigine=502",
       "rome_code": "H2701",
-      "semantic_score": 0.294945627450943,
+      "semantic_score": 0.2949456572532654,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.539347529411316,
+      "score": 11.539347887039185,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.539347529411316
+        "semantic": 3.5393478870391846
       }
     },
     {
@@ -710,17 +1142,17 @@
       "snippet": "Devenez acteur de la transition énergétique : Rejoignez Dalkia en alternance ! Dalkia, filiale du groupe EDF et leader des services énergétiques, vous ouvre ses portes. Nous accompagnons les entreprises et les collectivités vers la décarbonation grâce à des solutions innovantes. Pour notre région Nord-Ouest, nous recherchons nos futurs Techniciens de Maintenance CVC (H/F) en alternance dès septem…",
       "url": "https://www.edf.fr/edf-recrute/offre/detail/DKA-REC-2026-13593?idOrigine=502",
       "rome_code": "H2701",
-      "semantic_score": 0.29412928223609924,
+      "semantic_score": 0.29412925243377686,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.529551386833191,
+      "score": 11.529551029205322,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.529551386833191
+        "semantic": 3.5295510292053223
       }
     },
     {
@@ -734,17 +1166,17 @@
       "snippet": "L'esthéticien(ne) valorise la beauté et le bien-être à travers des soins personnalisés. Réalise des soins du visage et du corps adaptés aux clients Propose et vend des produits de beauté et de soin Effectue des épilations et prépare la peau avant et après les soins Conseille les clients sur les soins à effectuer chez eux pour prolonger les effets des traitements Gère les rendez-vous et maintient…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a6e6351bb092dca9f0f905b/clinique-du-château",
       "rome_code": "D1208",
-      "semantic_score": 0.12364663928747177,
+      "semantic_score": 0.12364668399095535,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.483759671449661,
+      "score": 11.483760207891464,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 1.4837596714496613
+        "semantic": 1.4837602078914642
       }
     },
     {
@@ -758,17 +1190,17 @@
       "snippet": "L'Équipier polyvalent de restauration rapide travaille principalement en fast-food, garantissant un service rapide et de qualité. Assure la préparation et la vente de produits alimentaires selon les normes d'hygiène Gère les commandes et le stock de produits frais Maintient la propreté des équipements et du lieu de travail Peut effectuer des livraisons en respectant les délais promis Fournit un s…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/68b6aff07bf4d1c2a0b5d5d7/employé-polyvalent-employée-polyvalente-de-restauration",
       "rome_code": "G1603",
-      "semantic_score": 0.12149197608232498,
+      "semantic_score": 0.12149210274219513,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.4579037129879,
+      "score": 11.457905232906342,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 1.4579037129878998
+        "semantic": 1.4579052329063416
       }
     },
     {
@@ -782,17 +1214,41 @@
       "snippet": "Organise et met en oeuvre les modalités de traitement des demandes des clients, des consommateurs (suggestions, réclamations, besoins, ...) en lien avec les services concernés (marketing, commercial, communication, ...), selon des objectifs de fidélisation et de satisfaction de la clientèle.\\nDirige un service.\\nPeut réaliser la gestion de dossiers clients.",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a636f154acef524be4ec9d3",
       "rome_code": "D1432",
-      "semantic_score": 0.2742152512073517,
+      "semantic_score": 0.2742152214050293,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.29058301448822,
+      "score": 11.290582656860352,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.29058301448822
+        "semantic": 3.2905826568603516
+      }
+    },
+    {
+      "id": "lba_53950732",
+      "title": "Pâtissier (alternance) h/f - H/F",
+      "company": "E.Leclerc",
+      "location": "Roubaix (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 11,
+      "snippet": "<p>Si pour vous le Paris-Brest est un gâteau, avant d'être un itinéraire de train, et si la chantilly fait frissonner vos papilles, vous devriez songer à rejoindre l'un des 2.000 pâtissiers qui oeuvrent chaque jour dans les 600 magasins *** !</p> <p>En magasin, votre tuteur vous formera aux nombreuses facettes de ce métier-passion : fabrication, recettes, techniques commerciales et marketing, rel…",
+      "url": "https://www.meteojob.com/jobs/53950732?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1104",
+      "semantic_score": 0.019883545115590096,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 11.238602541387081,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 0.23860254138708115
       }
     },
     {
@@ -806,17 +1262,17 @@
       "snippet": "<b>Description :</b><br /><p> </p><b>REJOINS NOTRE CENTRE DE FORMATION DECATHLON</b><br /><b>pour devenir Technicien·ne Vendeur·euse Atelier</b><b><br /></b><br />Le sport n'a de sens que dans un environnement préservé. Nous développons nos activités sans dégrader nos terrains de jeux en proposant des services liés à l'économie circulaire (Occasion / location /réparation / recyclage) <br /><br />…",
       "url": "https://joinus.decathlon.fr/fr/annonce/4476063-rejoins-notre-ecole-pour-devenir-technicien-ne-atelier-hf-alternance-59320-sequedin?s_o=la-bonne-alternance#declareStep1",
       "rome_code": "I1628",
-      "semantic_score": 0.26527494192123413,
+      "semantic_score": 0.26527491211891174,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.18329930305481,
+      "score": 11.183298945426941,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.1832993030548096
+        "semantic": 3.183298945426941
       }
     },
     {
@@ -830,17 +1286,17 @@
       "snippet": "Neuville-en-Ferrain (59) / Début : Septembre / Contrat de 12 mois Fais de ta passion du contact un véritable métier ! Tu aimes le travail en équipe, le contact avec les gens et les journées qui ne se ressemblent pas ? Tu souhaites apprendre un métier recherché tout en étant rémunéré(e) et obtenir un diplôme reconnu ? Rejoins une équipe dynamique et forme toi au métier de Serveur(se) en restaurati…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211SCGP",
       "rome_code": "G1803",
-      "semantic_score": 0.2599906027317047,
+      "semantic_score": 0.25999054312705994,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.119887232780457,
+      "score": 11.11988651752472,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.1198872327804565
+        "semantic": 3.1198865175247192
       }
     },
     {
@@ -854,17 +1310,17 @@
       "snippet": "Pour l'une de nos entreprises adhérentes située à Harnes, acteur engagé de l'économie circulaire et de la valorisation des déchets, nous recherchons aujourd'hui son/sa futur(e) Assistant(e) Chef de Quai. Si vous aimez travailler au cœur des opérations logistiques, assurer la bonne gestion des flux et contribuer chaque jour à un projet à impact environnemental, vous êtes peut-être la personne que…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211PRZB",
       "rome_code": "N1112",
-      "semantic_score": 0.25805893540382385,
+      "semantic_score": 0.2580587863922119,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 11.096707224845886,
+      "score": 11.096705436706543,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.0967072248458862
+        "semantic": 3.096705436706543
       }
     },
     {
@@ -902,17 +1358,17 @@
       "snippet": "<p><strong>✨Nous sommes…</strong></p><p><strong> </strong></p><p><strong>Auchan Retail France, une entreprise de distribution de plus de 50 000 collaborateurs au service de millions de clients chaque année.</strong></p><p>Ce que nous voulons, c’est aider nos clients à bien manger et vivre mieux, tout en préservant la planète.</p><p>Que l’on soit en entrepôt, en magasin ou sur des fonctions suppor…",
       "url": "https://auchan.talentview.io/jobs/o5htyh?source=la_bonne_alternance",
       "rome_code": "H1406",
-      "semantic_score": 0.2474004179239273,
+      "semantic_score": 0.24740034341812134,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.968805015087128,
+      "score": 10.968804121017456,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.9688050150871277
+        "semantic": 2.968804121017456
       }
     },
     {
@@ -926,17 +1382,17 @@
       "snippet": "Le GEIQ est un Groupement d'Employeurs pour l'Insertion et la Qualification, une association pilotée par ses entreprises adhérentes, pour favoriser l'insertion des personnes éloignées du marché du travail. Toutes nos entreprises sont impliquées dans le secteur de l'environnement. Vous avez toujours rêvé d'être acteur.trice dans le développement de votre projet. Besoin d'un tremplin pour devenir c…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZTLY",
       "rome_code": "I1305",
-      "semantic_score": 0.2446947991847992,
+      "semantic_score": 0.24469470977783203,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.93633759021759,
+      "score": 10.936336517333984,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.9363375902175903
+        "semantic": 2.9363365173339844
       }
     },
     {
@@ -950,17 +1406,17 @@
       "snippet": "<b>Description :</b><br /><b>REJOINS NOTRE CENTRE DE FORMATION DECATHLON pour devenir Préparateur.trice de commandes</b> !<br /><br />Chez <b>DECATHLON</b>, la logistique n’est pas qu’une affaire de colis, c'est une affaire de <b>collectif</b>. On ne cherche pas un simple préparateur de commandes, mais un(e) coéquipier(e) assurant une performance durable pour la planète.<br /><br />Ton terrain de…",
       "url": "https://joinus.decathlon.fr/fr/annonce/4482837-alternance-preparateur-trice-de-commandes-niveau-cap-avec-le-cfa-decathlon-59840-lompret?s_o=la-bonne-alternance#declareStep1",
       "rome_code": "N1103",
-      "semantic_score": 0.24225199222564697,
+      "semantic_score": 0.2422521412372589,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.907023906707764,
+      "score": 10.907025694847107,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.9070239067077637
+        "semantic": 2.907025694847107
       }
     },
     {
@@ -998,17 +1454,17 @@
       "snippet": "Le Préparateur en pharmacie, en collaboration étroite avec le pharmacien, assure la préparation, la gestion et la délivrance des médicaments aux patients.\\nPrépare et délivre les médicaments sous la supervision d'un pharmacien\\nConseille et informe les clients sur l'utilisation des produits pharmaceutiques et la compatibilité avec d'autres\\nGère les stocks de médicaments et passe les commandes né…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a6375284acef524be4eca4e",
       "rome_code": "J1307",
-      "semantic_score": 0.23388947546482086,
+      "semantic_score": 0.23388952016830444,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.80667370557785,
+      "score": 10.806674242019653,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.8066737055778503
+        "semantic": 2.8066742420196533
       }
     },
     {
@@ -1046,17 +1502,17 @@
       "snippet": "Un fleuriste est un professionnel spécialisé dans la vente et l'arrangement de fleurs et de plantes. \\nConçoit et réalise des compositions florales adaptées à divers événements\\nConseille les clients dans le choix des plantes et des arrangements\\nAssure l'entretien quotidien des fleurs et des plantes pour garantir leur fraîcheur\\nGère les stocks de fleurs et passe des commandes auprès des fournis…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a63700c4acef524be4ec9dc",
       "rome_code": "D1209",
-      "semantic_score": 0.23274488747119904,
+      "semantic_score": 0.23274484276771545,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.792938649654388,
+      "score": 10.792938113212585,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.7929386496543884
+        "semantic": 2.7929381132125854
       }
     },
     {
@@ -1094,17 +1550,17 @@
       "snippet": "Doté(e) d'un sens aigu de créativité, cet artiste du cheveu sculpte, colore et soigne les chevelures pour sublimer chaque client.\\nAccueille et conseille les clients en fonction de leur style et de leurs attentes\\nRéalise des coupes, des colorations et des coiffures adaptées à chaque individu\\nPropose et effectue des soins capillaires pour améliorer la santé des cheveux\\nGère les rendez-vous et l…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a6368a74acef524be4ec94f",
       "rome_code": "D1202",
-      "semantic_score": 0.2259150743484497,
+      "semantic_score": 0.22591504454612732,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.710980892181396,
+      "score": 10.710980534553528,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.7109808921813965
+        "semantic": 2.710980534553528
       }
     },
     {
@@ -1118,17 +1574,17 @@
       "snippet": "Au sein de la Direction Comptabilité et Contrôle de Gestion, rattaché au Responsable Contrôle de Gestion du Groupe VILOGIA, vous êtes l'interlocuteur privilégié des différentes Fonctions Support du Groupe.<br /><br />Vos principales missions sont les suivantes :<br /><br />- Animation du processus budgétaire :<br />Préparation des matrices budgétaires<br />Suivi budgétaire, actualisation et analy…",
       "url": "https://job.mytalentplug.com/api/JobOffer/redirect/?id=c31b69f8-615d-474d-a5c1-5eb8bb3fe3a5",
       "rome_code": "M1204",
-      "semantic_score": 0.2129354476928711,
+      "semantic_score": 0.2129354327917099,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.555225372314453,
+      "score": 10.555225193500519,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.555225372314453
+        "semantic": 2.555225193500519
       }
     },
     {
@@ -1156,6 +1612,30 @@
       }
     },
     {
+      "id": "lba_53099098",
+      "title": "Mécanicien egins TP en alternance H/F - Lille",
+      "company": "LOXAM",
+      "location": "Fretin (59)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 21,
+      "snippet": "<p> Nous recherchons un <strong>Mécanicien H/F</strong> en alternance sur notre agence basée à Fretin (59). </p> <p> <strong>Des missions enrichissantes</strong> </p> <p>Au sein de l'atelier, vous assurez le bon état (technique, sécurité, présentation) des matériels proposés à la location. Dans le cadre de votre alternance, vous assurez la maintenance préventive et curative du matériel mis à la d…",
+      "url": "https://www.meteojob.com/jobs/53099098?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "I1616",
+      "semantic_score": 0.21017961204051971,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 10.522155344486237,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 2.5221553444862366
+      }
+    },
+    {
       "id": "lba_134902",
       "title": "Apprenti Macon",
       "company": "Geiq Btp Hauts-De-France",
@@ -1166,17 +1646,17 @@
       "snippet": "Offre d’apprentissage : Apprenti Maçon (H/F) – CAP / BP Entreprise locale de bâtiment en plein développement recherche un(e) apprenti(e) maçon(ne) motivé(e) pour préparer un CAP ou un BP en alternance. Au sein d'une équipe dynamique, vous participerez activement à la réalisation de gros œuvres, du coulage de chapes à la pose de briques, parpaings et structures en béton. Nous vous offrons un accom…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6a516befcead659ac0ffb557/apprenti-macon",
       "rome_code": "F1703",
-      "semantic_score": 0.2098463773727417,
+      "semantic_score": 0.20984633266925812,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.5181565284729,
+      "score": 10.518155992031097,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.5181565284729004
+        "semantic": 2.5181559920310974
       }
     },
     {
@@ -1190,17 +1670,17 @@
       "snippet": "Et si vous démarriez une nouvelle expérience avec Alliance Emploi ?<br />Avec 27 ans d'expertise, 1700 salariés et un réseau de 400 entreprises dans les secteurs industriel, agroalimentaire, automobile, métallurgie, pharmaceutique, sidérurgie ou encore logistique, Alliance Emploi accompagne celles et ceux qui cherchent un emploi durable.<br />Notre mission est simple : apporter la bonne compétenc…",
       "url": "https://job.mytalentplug.com/api/JobOffer/redirect/?id=17849594-b112-409a-8857-bc62a8569f5d",
       "rome_code": "A1313",
-      "semantic_score": 0.2067345380783081,
+      "semantic_score": 0.20673461258411407,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.480814456939697,
+      "score": 10.480815351009369,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.4808144569396973
+        "semantic": 2.480815351009369
       }
     },
     {
@@ -1214,17 +1694,17 @@
       "snippet": "L'hôte de caisse est un professionnel chargé de la gestion des transactions financières au sein d'un point de vente. Accueille et oriente les clients dans le magasin Enregistre les achats, assure l'encaissement des produits et gère la caisse Contrôle le flux des clients à la caisse pour minimiser l'attente Propose des services complémentaires et informe sur les promotions en cours Veille au respe…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a3ba8d1aaf462df6218d1fc/caissier-caissière",
       "rome_code": "D1505",
-      "semantic_score": 0.20271532237529755,
+      "semantic_score": 0.20271538197994232,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.43258386850357,
+      "score": 10.432584583759308,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.4325838685035706
+        "semantic": 2.432584583759308
       }
     },
     {
@@ -1238,17 +1718,17 @@
       "snippet": "<p><strong>✨Nous sommes…</strong></p><p><strong> </strong></p><p><strong>Auchan Retail France, une entreprise de distribution de plus de 50 000 collaborateurs au service de millions de clients chaque année.</strong></p><p>Ce que nous voulons, c’est aider nos clients à bien manger et vivre mieux, tout en préservant la planète.</p><p>Que l’on soit en entrepôt, en magasin ou sur des fonctions suppor…",
       "url": "https://auchan.talentview.io/jobs/yw728f?source=la_bonne_alternance",
       "rome_code": "D1438",
-      "semantic_score": 0.19327890872955322,
+      "semantic_score": 0.1932789832353592,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.319346904754639,
+      "score": 10.31934779882431,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.3193469047546387
+        "semantic": 2.3193477988243103
       }
     },
     {
@@ -1262,17 +1742,17 @@
       "snippet": "Pour l'une de nos entreprises adhérentes, acteur reconnu de l'économie circulaire et de la gestion d'infrastructures industrielles, nous recherchons aujourd'hui son/sa futur(e) Pontier-Rondier. Si vous aimez travailler au sein d'un environnement industriel actif, contribuer à la sécurité du site et effectuer des manœuvres précises avec des engins lourds, vous êtes peut-être la personne que nous a…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/209ZSSG",
       "rome_code": "N1104",
-      "semantic_score": 0.19320544600486755,
+      "semantic_score": 0.19320546090602875,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.31846535205841,
+      "score": 10.318465530872345,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.3184653520584106
+        "semantic": 2.318465530872345
       }
     },
     {
@@ -1286,17 +1766,17 @@
       "snippet": "L'Employé de rayon libre-service est en charge de la présentation, la mise en rayon des produits et la gestion de l'espace de vente dans un magasin. Approvisionne et organise les produits en rayon selon la politique du magasin Veille à la propreté et à l'ordre de son espace de travail pour garantir un environnement agréable Contrôle les dates de péremption, la signalétique des prix et retire les…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a3558bd48b78c8bcba1fe77/employé-employée-de-rayon",
       "rome_code": "D1507",
-      "semantic_score": 0.18966148793697357,
+      "semantic_score": 0.18966151773929596,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.275937855243683,
+      "score": 10.275938212871552,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.275937855243683
+        "semantic": 2.2759382128715515
       }
     },
     {
@@ -1310,17 +1790,17 @@
       "snippet": "L'assistant médico-technique est un professionnel de santé qui travaille en étroite collaboration avec les médecins, les infirmiers et les autres membres de l'équipe médicale. \\nAccueille et oriente les patients dans un cabinet médical ou un établissement de santé\\nGère les rendez-vous, les appels téléphoniques et les dossiers médicaux des patients\\nAssiste les médecins lors des consultations et…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a636a204acef524be4ec97a",
       "rome_code": "J1303",
-      "semantic_score": 0.1893758624792099,
+      "semantic_score": 0.1893758773803711,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.272510349750519,
+      "score": 10.272510528564453,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.272510349750519
+        "semantic": 2.272510528564453
       }
     },
     {
@@ -1334,17 +1814,17 @@
       "snippet": "Travaille au sein d'une structure collective de jeunes enfants \\nAccompagne l'enfant de 0 à 3 ans dans son développement, ses apprentissages, l'acquisition de l'autonomie et la socialisation, en garantissant son bien-être et sa sécurité physique et affective.\\nParticipe aux tâches courantes de la structure (préparation des repas, entretien des locaux, du linge et des équipements dont jeux et joue…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a636acf4acef524be4ec984",
       "rome_code": "K1306",
-      "semantic_score": 0.18738853931427002,
+      "semantic_score": 0.18738850951194763,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.24866247177124,
+      "score": 10.248662114143372,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.2486624717712402
+        "semantic": 2.2486621141433716
       }
     },
     {
@@ -1358,17 +1838,17 @@
       "snippet": "Rejoignez notre pâtisserie artisanale à Lesquin, où tradition et passion s'unissent pour offrir des douceurs d'exception. Notre mission est d'émerveiller nos clients avec des créations gourmandes tout en préservant l'artisanat authentique.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6a4230039555b179588d2b06/apprenti-pâtisserie-lesquin-59810",
       "rome_code": "G1610",
-      "semantic_score": 0.18504250049591064,
+      "semantic_score": 0.185042604804039,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.220510005950928,
+      "score": 10.220511257648468,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.2205100059509277
+        "semantic": 2.220511257648468
       }
     },
     {
@@ -1382,17 +1862,17 @@
       "snippet": "Réalise la vente de produits alimentaires (frais et hors frais) selon la réglementation du commerce, les règles d'hygiène et de sécurité alimentaires et les objectifs commerciaux de l'enseigne, de l'entreprise. Peut effectuer la préparation (cuisson, coupe, réalisation de plateaux, ...) de produits frais.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a4638f7c1d729c0b95fae7a/vendeur-conseil-h-f-contrat-d-apprentissage-de-12-mois",
       "rome_code": "D1106",
-      "semantic_score": 0.18139000236988068,
+      "semantic_score": 0.18139015138149261,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 10.176680028438568,
+      "score": 10.176681816577911,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 2.176680028438568
+        "semantic": 2.1766818165779114
       }
     },
     {
@@ -1430,17 +1910,17 @@
       "snippet": "Un fleuriste est un professionnel spécialisé dans la vente et l'arrangement de fleurs et de plantes. \\nConçoit et réalise des compositions florales adaptées à divers événements\\nConseille les clients dans le choix des plantes et des arrangements\\nAssure l'entretien quotidien des fleurs et des plantes pour garantir leur fraîcheur\\nGère les stocks de fleurs et passe des commandes auprès des fournis…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a43e8064acef524be46d29a",
       "rome_code": "D1209",
-      "semantic_score": 0.16163921356201172,
+      "semantic_score": 0.16163913905620575,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.93967056274414,
+      "score": 9.939669668674469,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.9396705627441406
+        "semantic": 1.939669668674469
       }
     },
     {
@@ -1454,17 +1934,17 @@
       "snippet": "Rejoindre Auchan Retail France, c’est rejoindre une entreprise en mouvement qui agit au quotidien pour réinventer le métier de commerçant en mêlant digital et magasin physique pour une expérience client inédite et incomparable. Nous nous appuyons sur nos valeurs de confiance, d’ouverture et d’excellence pour vous proposer des expériences authentiques dans un environnement bienveillant. Fort de no…",
       "url": "https://auchan.talentview.io/jobs/zudh8f?source=la_bonne_alternance",
       "rome_code": "N1303",
-      "semantic_score": 0.15641570091247559,
+      "semantic_score": 0.15641571581363678,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.876988410949707,
+      "score": 9.876988589763641,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.876988410949707
+        "semantic": 1.8769885897636414
       }
     },
     {
@@ -1478,17 +1958,17 @@
       "snippet": "<p>Acteur majeur du drive depuis 2004, Chronodrive améliore le quotidien de ses clients en livrant les courses directement dans leur coffre.</p><p><br /></p><p>L’objectif ? Faire de la corvée des courses une expérience unique et agréable tout en permettant à nos clients d'économiser du temps précieux. Pour ce faire, nous mettons en place quotidiennement des services novateurs adaptés aux attentes…",
       "url": "https://chronodrive-recrute.talentview.io/jobs/m2jdow?source=la_bonne_alternance",
       "rome_code": "N1113",
-      "semantic_score": 0.15627580881118774,
+      "semantic_score": 0.15627576410770416,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.875309705734253,
+      "score": 9.87530916929245,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.875309705734253
+        "semantic": 1.87530916929245
       }
     },
     {
@@ -1502,17 +1982,17 @@
       "snippet": "DOUAISIS AGGLO déploie de nombreux projets sur son territoire. Afin d’accompagner la gestion et la maintenance d’un patrimoine bâti de 30 bâtiments répartis sur environ 47000 m², DOUAISIS AGGLO recrute un(e) Apprenti(e) en maintenance / énergie des bâtiments. Au sein de la Direction Bâtiments et Energie, sous l’autorité du Directeur, vous serez accompagné(e) dans la découverte et l’apprentissage…",
       "url": "https://recrutement.douaisis-agglo.com/front-jobs-detail.html?id_job=170&id_origin=1",
       "rome_code": "I1309",
-      "semantic_score": 0.1560356467962265,
+      "semantic_score": 0.1560356318950653,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.872427761554718,
+      "score": 9.872427582740784,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.872427761554718
+        "semantic": 1.8724275827407837
       }
     },
     {
@@ -1526,17 +2006,17 @@
       "snippet": "<p><strong>✨Nous sommes…</strong></p><p><strong> </strong></p><p><strong>Auchan Retail France, une entreprise de distribution de plus de 50 000 collaborateurs au service de millions de clients chaque année.</strong></p><p>Ce que nous voulons, c’est aider nos clients à bien manger et vivre mieux, tout en préservant la planète.</p><p>Que l’on soit en entrepôt, en magasin ou sur des fonctions suppor…",
       "url": "https://auchan.talentview.io/jobs/ctgz2c?source=la_bonne_alternance",
       "rome_code": "D1438",
-      "semantic_score": 0.15545043349266052,
+      "semantic_score": 0.1554504781961441,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.865405201911926,
+      "score": 9.86540573835373,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.8654052019119263
+        "semantic": 1.8654057383537292
       }
     },
     {
@@ -1550,17 +2030,17 @@
       "snippet": "✨Nous sommes… Auchan Retail France, une entreprise de distribution de plus de 50 000 collaborateurs au service de millions de clients chaque année. Ce que nous voulons, c’est aider nos clients à bien manger et vivre mieux, tout en préservant la planète. Que l’on soit en entrepôt, en magasin ou sur des fonctions support, notre point commun à tous, c’est de faire en sorte que nos clients aient plai…",
       "url": "https://auchan.talentview.io/jobs/s6m3up?source=la_bonne_alternance",
       "rome_code": "M1846",
-      "semantic_score": 0.15103326737880707,
+      "semantic_score": 0.15103328227996826,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.812399208545685,
+      "score": 9.81239938735962,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.8123992085456848
+        "semantic": 1.8123993873596191
       }
     },
     {
@@ -1574,17 +2054,17 @@
       "snippet": "Pour l'une de nos entreprises adhérentes située à Pont Sainte Maxence, Oignies ou Quesnoy sur Deule, acteur engagé de l'économie circulaire, nous recherchons aujourd'hui son futur Chauffeur Grutier. Si vous aimez travailler au cœur des opérations, assurer la bonne gestion des flux et contribuer chaque jour à un projet à impact environnemental, vous êtes peut-être la personne que nous attendons !…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211PRXM",
       "rome_code": "F1301",
-      "semantic_score": 0.1469847559928894,
+      "semantic_score": 0.14698466658592224,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.763817071914673,
+      "score": 9.763815999031067,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.7638170719146729
+        "semantic": 1.763815999031067
       }
     },
     {
@@ -1598,17 +2078,41 @@
       "snippet": "L'esthéticien(ne) valorise la beauté et le bien-être à travers des soins personnalisés.\\nRéalise des soins du visage et du corps adaptés aux clients\\nPropose et vend des produits de beauté et de soin\\nEffectue des épilations et prépare la peau avant et après les soins\\nConseille les clients sur les soins à effectuer chez eux pour prolonger les effets des traitements\\nGère les rendez-vous et maint…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a636b7c4acef524be4ec991",
       "rome_code": "D1208",
-      "semantic_score": 0.14211300015449524,
+      "semantic_score": 0.14211304485797882,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.705356001853943,
+      "score": 9.705356538295746,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.7053560018539429
+        "semantic": 1.7053565382957458
+      }
+    },
+    {
+      "id": "lba_55810760",
+      "title": "Alternance Hôte/ Hôtesse de caisse - H/F",
+      "company": "E.Leclerc",
+      "location": "Loison-sous-Lens (62)",
+      "contract_type": "Alternance",
+      "salary": null,
+      "posted_days_ago": 18,
+      "snippet": "<p>Vous assurez l'enregistrement des articles et effectuez l'encaissement final des achats. Responsable de votre fonds de caisse, vous maîtrisez toutes les procédures liées au bon fonctionnement de la caisse.</p> <p> L'hôte(sse) de caisse est le dernier contact entre le client et le magasin. <br /> A l'écoute des clients, vous savez faire remonter leurs remarques et les informer sur les différent…",
+      "url": "https://www.meteojob.com/jobs/55810760?utm_source=labonnealternance&utm_medium=aggregator-free&utm_campaign=alternance",
+      "rome_code": "D1505",
+      "semantic_score": 0.14019103348255157,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 9.682292401790619,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 0.0,
+        "semantic": 1.682292401790619
       }
     },
     {
@@ -1622,17 +2126,17 @@
       "snippet": "Le Chef de rayon produits alimentaires supervise les flux de vente des produits de son rayon pour satisfaire la clientèle. Gère l'approvisionnement et l'assortiment des produits en rayon en s'assurant de la disponibilité des stocks Optimise la présentation des produits par des animations et promotions en veillant à leur bonne visibilité Contrôle la qualité et la fraîcheur des produits alimentaire…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a69df129e9ea39cf1ced59b/assistant-de-manager-h-f-titre-pro-niveau-bac",
       "rome_code": "D1502",
-      "semantic_score": 0.1389746516942978,
+      "semantic_score": 0.13897457718849182,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.667695820331573,
+      "score": 9.667694926261902,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.6676958203315735
+        "semantic": 1.6676949262619019
       }
     },
     {
@@ -1646,17 +2150,17 @@
       "snippet": "Pour l'une de nos entreprises adhérentes située à Pont Sainte Maxence, Oignies ou Quesnoy sur Deule, acteur engagé de l'économie circulaire, nous recherchons aujourd'hui son futur Chauffeur Grutier. Si vous aimez travailler au cœur des opérations, assurer la bonne gestion des flux et contribuer chaque jour à un projet à impact environnemental, vous êtes peut-être la personne que nous attendons !…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211PSBD",
       "rome_code": "F1301",
-      "semantic_score": 0.13863003253936768,
+      "semantic_score": 0.13863001763820648,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.663560390472412,
+      "score": 9.663560211658478,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.663560390472412
+        "semantic": 1.6635602116584778
       }
     },
     {
@@ -1694,17 +2198,17 @@
       "snippet": "Description du poste : En tant qu'organisateur de forums de recrutement, Talents Handicap accompagne de très nombreuses entreprises & organisations en France dans leurs recrutements de collaborateurs en situation de handicap. Participant actuellement à l'un de nos forums. L'entreprise Sopra Steria recherche actuellement des profils : Description de l'entreprise Sopra Steria , acteur majeur de la…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5968465",
       "rome_code": "M1861",
-      "semantic_score": 0.38811415433883667,
+      "semantic_score": 0.38811418414115906,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.65736985206604,
+      "score": 9.657370209693909,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.65736985206604
+        "semantic": 4.657370209693909
       }
     },
     {
@@ -1718,17 +2222,17 @@
       "snippet": "Le charcutier-traiteur, un artisan de goût qui valorise les traditions culinaires.\\nPrépare et vend des produits de charcuterie et des plats cuisinés\\nAssure la gestion des stocks et des commandes de matières premières\\nVeille au respect des normes d'hygiène et de sécurité alimentaire\\nConseille les clients sur les produits et leur préparation\\nPeut organiser des réceptions et élaborer des menus…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a4783e34acef524be470190",
       "rome_code": "D1103",
-      "semantic_score": 0.13043877482414246,
+      "semantic_score": 0.13043875992298126,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.56526529788971,
+      "score": 9.565265119075775,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.5652652978897095
+        "semantic": 1.5652651190757751
       }
     },
     {
@@ -1742,17 +2246,17 @@
       "snippet": "L'Employé de rayon libre-service est en charge de la présentation, la mise en rayon des produits et la gestion de l'espace de vente dans un magasin. Approvisionne et organise les produits en rayon selon la politique du magasin Veille à la propreté et à l'ordre de son espace de travail pour garantir un environnement agréable Contrôle les dates de péremption, la signalétique des prix et retire les…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a68b8948bbc3358a67acf02/caissier-vendeur",
       "rome_code": "D1507",
-      "semantic_score": 0.127801775932312,
+      "semantic_score": 0.12780186533927917,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.533621311187744,
+      "score": 9.53362238407135,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.5336213111877441
+        "semantic": 1.53362238407135
       }
     },
     {
@@ -1790,17 +2294,17 @@
       "snippet": "Le Préparateur au drive, prépare les commandes des clients. Vérifie les commandes du drive Prépare les produits sélectionnés avec précision et rapidité Assure le conditionnement et l'organisation optimale des produits pour le retrait Gère l'inventaire et signale les écarts de stock Optimise les parcours de préparation pour réduire le temps d'attente des clients Fournit un service client de qualit…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a355327667b737af21efa0e/employé-employée-de-drive",
       "rome_code": "N1113",
-      "semantic_score": 0.12234658747911453,
+      "semantic_score": 0.12234654277563095,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.468159049749374,
+      "score": 9.468158513307571,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.4681590497493744
+        "semantic": 1.4681585133075714
       }
     },
     {
@@ -1838,17 +2342,17 @@
       "snippet": "L'Équipier polyvalent de restauration rapide travaille principalement en fast-food, garantissant un service rapide et de qualité. Assure la préparation et la vente de produits alimentaires selon les normes d'hygiène Gère les commandes et le stock de produits frais Maintient la propreté des équipements et du lieu de travail Peut effectuer des livraisons en respectant les délais promis Fournit un s…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a2fbeb21824d56034ffacc2/employé-polyvalent-employée-polyvalente-de-restauration",
       "rome_code": "G1603",
-      "semantic_score": 0.11099815368652344,
+      "semantic_score": 0.11099818348884583,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.331977844238281,
+      "score": 9.33197820186615,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.3319778442382812
+        "semantic": 1.33197820186615
       }
     },
     {
@@ -1910,17 +2414,17 @@
       "snippet": "Qui sommes-nous ? Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace - Cloud & DevOps - Cybersécurité - Transformation des SI - Data & IA Le poste :…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5819241",
       "rome_code": "M1855",
-      "semantic_score": 0.3415810465812683,
+      "semantic_score": 0.3415811359882355,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.09897255897522,
+      "score": 9.098973631858826,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.09897255897522
+        "semantic": 4.098973631858826
       }
     },
     {
@@ -1934,17 +2438,17 @@
       "snippet": "Talents IT est un cabinet de recrutement national spécialisé dans les MÉTIERS DE L'IT ET DU DIGITAL, NOUS VOUS PROPOSONS RÉGULIÈREMENT DES OFFRES D'EMPLOI DANS CES DOMAINES : DÉVELOPPEMENT, SÉCURITÉ, INFRASTRUCTURE, R&D, DATA, PROJET, PRODUIT... Nos consultants expérimentés vous offrent un ACCOMPAGNEMENT PERSONNALISÉ et des conseils avisés pour vous aider à évoluer dans votre carrière. L'équipe T…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5906412",
       "rome_code": "M1855",
-      "semantic_score": 0.34092018008232117,
+      "semantic_score": 0.3409201204776764,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.091042160987854,
+      "score": 9.091041445732117,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 4.091042160987854
+        "semantic": 4.091041445732117
       }
     },
     {
@@ -1958,17 +2462,17 @@
       "snippet": "Réalise la vente de produits alimentaires (frais et hors frais) selon la réglementation du commerce, les règles d'hygiène et de sécurité alimentaires et les objectifs commerciaux de l'enseigne, de l'entreprise. \\nPeut effectuer la préparation (cuisson, coupe, réalisation de plateaux, ...) de produits frais.",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a4612014acef524be46efd1",
       "rome_code": "D1108",
-      "semantic_score": 0.08870194852352142,
+      "semantic_score": 0.0887020081281662,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 9.064423382282257,
+      "score": 9.064424097537994,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 1.064423382282257
+        "semantic": 1.0644240975379944
       }
     },
     {
@@ -1982,17 +2486,17 @@
       "snippet": "Réalise la vente de produits alimentaires (frais et hors frais) selon la réglementation du commerce, les règles d'hygiène et de sécurité alimentaires et les objectifs commerciaux de l'enseigne, de l'entreprise. \\nPeut effectuer la préparation (cuisson, coupe, réalisation de plateaux, ...) de produits frais.",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a59d1934acef524be4c2fda",
       "rome_code": "D1108",
-      "semantic_score": 0.07635818421840668,
+      "semantic_score": 0.07635824382305145,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.91629821062088,
+      "score": 8.916298925876617,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.9162982106208801
+        "semantic": 0.9162989258766174
       }
     },
     {
@@ -2006,17 +2510,17 @@
       "snippet": "LILLE (59) / Début : Septembre / Contrat de 12 mois Et si ton avenir commençait ici ? Tu souhaites apprendre un métier concret, obtenir un diplôme tout en étant rémunéré et intégrer une équipe dynamique ? Cette alternance est faite pour toi ! Que tu sois débutant(e) ou en reconversion, nous t'accompagnons pour construire ton projet professionnel dans le secteur de l'hôtellerie. TES MISSIONS Au se…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211SDCD",
       "rome_code": "G1501",
-      "semantic_score": 0.32532012462615967,
+      "semantic_score": 0.3253200352191925,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.903841495513916,
+      "score": 8.90384042263031,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 3.903841495513916
+        "semantic": 3.90384042263031
       }
     },
     {
@@ -2054,17 +2558,17 @@
       "snippet": "Le Boulanger, artisan essentiel de notre quotidien, transforme et valorise les matières premières pour régaler nos papilles.\\nPrépare et réalise des produits de boulangerie et de viennoiserie selon les règles d'hygiène et de sécurité alimentaires\\nConçoit de nouvelles recettes de pains et viennoiseries pour diversifier l'offre\\nGère les stocks de matières premières et commande les fournitures néc…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a6368024acef524be4ec946",
       "rome_code": "D1102",
-      "semantic_score": 0.057534150779247284,
+      "semantic_score": 0.05753415450453758,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.690409809350967,
+      "score": 8.690409854054451,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.6904098093509674
+        "semantic": 0.690409854054451
       }
     },
     {
@@ -2078,17 +2582,17 @@
       "snippet": "Le Cuisinier, créateur de saveurs et d'expériences culinaires, est au cœur de l'art gastronomique. Prépare et cuisine des mets selon un plan de production culinaire, les règles d'hygiène et de sécurité alimentaires et la charte qualité de l'établissement Coordonne une équipe en cuisine lors de la préparation des plats Assure la mise en valeur des plats, en respectant les techniques de dressage et…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/69f3276cb9bc88d83e181531/chef-de-partie-formation-restaurant-gastronomique",
       "rome_code": "G1609",
-      "semantic_score": 0.05741997808218002,
+      "semantic_score": 0.05741999298334122,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.68903973698616,
+      "score": 8.689039915800095,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.6890397369861603
+        "semantic": 0.6890399158000946
       }
     },
     {
@@ -2102,17 +2606,17 @@
       "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5819111",
       "rome_code": "M1855",
-      "semantic_score": 0.30457353591918945,
+      "semantic_score": 0.30457356572151184,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.654882431030273,
+      "score": 8.654882788658142,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.6548824310302734
+        "semantic": 3.654882788658142
       }
     },
     {
@@ -2126,17 +2630,17 @@
       "snippet": "Réalise la vente de produits alimentaires (frais et hors frais) selon la réglementation du commerce, les règles d'hygiène et de sécurité alimentaires et les objectifs commerciaux de l'enseigne, de l'entreprise. \\nPeut effectuer la préparation (cuisson, coupe, réalisation de plateaux, ...) de produits frais.",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a4763ed4acef524be47006a",
       "rome_code": "D1108",
-      "semantic_score": 0.05253458768129349,
+      "semantic_score": 0.052534643560647964,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.630415052175522,
+      "score": 8.630415722727776,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.6304150521755219
+        "semantic": 0.6304157227277756
       }
     },
     {
@@ -2150,17 +2654,17 @@
       "snippet": "Le Commis de cuisine, un acteur essentiel dans la préparation des mets et la production en cuisine. Assiste les cuisiniers, chefs de partie dans la préparation des plats Prépare les ingrédients nécessaires à la confection des recettes Maintient la propreté des plans de travail et des ustensiles de cuisine Participe à la réception et au stockage des marchandises Applique les normes d'hygiène et de…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a155f2add78fc0b4759d7e2/commis-de-cuisine",
       "rome_code": "G1602",
-      "semantic_score": 0.052016910165548325,
+      "semantic_score": 0.052016936242580414,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.62420292198658,
+      "score": 8.624203234910965,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.6242029219865799
+        "semantic": 0.624203234910965
       }
     },
     {
@@ -2174,17 +2678,17 @@
       "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5819128",
       "rome_code": "M1855",
-      "semantic_score": 0.3018117845058441,
+      "semantic_score": 0.3018118739128113,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.62174141407013,
+      "score": 8.621742486953735,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.6217414140701294
+        "semantic": 3.6217424869537354
       }
     },
     {
@@ -2198,17 +2702,17 @@
       "snippet": "Le Serveur en restauration joue un rôle clé dans l'accueil et la réalisation d'un service à table de qualité. Accueille et installe les clients à leur table avec courtoisie Conseille les clients sur la carte, les différents plats et les boissons Prend les commandes et sert les clients avec efficacité Gère les encaissements et les transactions financières Veille à la propreté et à la bonne présent…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a5881638bfdaae34d697ad7/commis-commise-de-restaurant",
       "rome_code": "G1803",
-      "semantic_score": 0.049725115299224854,
+      "semantic_score": 0.04972514510154724,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.596701383590698,
+      "score": 8.596701741218567,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.5967013835906982
+        "semantic": 0.5967017412185669
       }
     },
     {
@@ -2222,17 +2726,17 @@
       "snippet": "Prépare et pose toutes fermetures intérieures et extérieures en bois, métal, aluminium, PVC (portes, fenêtres, battants, volets roulants, grilles, murs, stores, clôtures, portes de garages,...) selon les règles de sécurité. Peut installer et régler des automatismes de fermetures. Peut entretenir, réparer, remplacer des éléments posés et leur système de fermeture.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a4d1ff30e9af8d2dd803349/menuisier-poseur-en-aménagement-de-bureau",
       "rome_code": "F1614",
-      "semantic_score": 0.04874347522854805,
+      "semantic_score": 0.048743538558483124,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.584921702742577,
+      "score": 8.584922462701797,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.5849217027425766
+        "semantic": 0.5849224627017975
       }
     },
     {
@@ -2246,17 +2750,17 @@
       "snippet": "Le Cuisinier, créateur de saveurs et d'expériences culinaires, est au cœur de l'art gastronomique. Prépare et cuisine des mets selon un plan de production culinaire, les règles d'hygiène et de sécurité alimentaires et la charte qualité de l'établissement Coordonne une équipe en cuisine lors de la préparation des plats Assure la mise en valeur des plats, en respectant les techniques de dressage et…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/69625bed4daef4635c5ac19c/chef-de-partie-h-f-restaurant-gastronomique-seclin",
       "rome_code": "G1609",
-      "semantic_score": 0.04785458371043205,
+      "semantic_score": 0.04785459488630295,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.574255004525185,
+      "score": 8.574255138635635,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.5742550045251846
+        "semantic": 0.5742551386356354
       }
     },
     {
@@ -2270,17 +2774,17 @@
       "snippet": "Le Boulanger, artisan essentiel de notre quotidien, transforme et valorise les matières premières pour régaler nos papilles.\\nPrépare et réalise des produits de boulangerie et de viennoiserie selon les règles d'hygiène et de sécurité alimentaires\\nConçoit de nouvelles recettes de pains et viennoiseries pour diversifier l'offre\\nGère les stocks de matières premières et commande les fournitures néc…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a6372e34acef524be4eca24",
       "rome_code": "D1108",
-      "semantic_score": 0.03720603510737419,
+      "semantic_score": 0.037206023931503296,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.44647242128849,
+      "score": 8.44647228717804,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.4464724212884903
+        "semantic": 0.44647228717803955
       }
     },
     {
@@ -2294,17 +2798,17 @@
       "snippet": "Réalise la vente de produits alimentaires (frais et hors frais) selon la réglementation du commerce, les règles d'hygiène et de sécurité alimentaires et les objectifs commerciaux de l'enseigne, de l'entreprise. Peut effectuer la préparation (cuisson, coupe, réalisation de plateaux, ...) de produits frais.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a35538b667b737af21efa2a/vendeur-vendeuse-en-boucherie-charcuterie",
       "rome_code": "D1106",
-      "semantic_score": 0.02677777409553528,
+      "semantic_score": 0.026777848601341248,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.321333289146423,
+      "score": 8.321334183216095,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.32133328914642334
+        "semantic": 0.32133418321609497
       }
     },
     {
@@ -2318,17 +2822,17 @@
       "snippet": "Doté(e) d'un sens aigu du détail, cet artisan de la viande garantit des produits de qualité.\\nSélectionne et achète les carcasses de viande chez les grossistes ou les abattoirs\\nDécoupe, désosse et prépare les pièces de viande\\nPrésente et vend la viande en respectant les normes d'hygiène et de sécurité alimentaires\\nConseille les clients sur le choix des produits et leur préparation\\nPeut prépar…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a3d5d584acef524be444ddc",
       "rome_code": "D1109",
-      "semantic_score": 0.025930821895599365,
+      "semantic_score": 0.025930799543857574,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.311169862747192,
+      "score": 8.311169594526291,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.3111698627471924
+        "semantic": 0.3111695945262909
       }
     },
     {
@@ -2342,17 +2846,17 @@
       "snippet": "Doté(e) d'un sens aigu du détail, cet artisan de la viande garantit des produits de qualité.\\nSélectionne et achète les carcasses de viande chez les grossistes ou les abattoirs\\nDécoupe, désosse et prépare les pièces de viande\\nPrésente et vend la viande en respectant les normes d'hygiène et de sécurité alimentaires\\nConseille les clients sur le choix des produits et leur préparation\\nPeut prépar…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a6364d94acef524be4ec919",
       "rome_code": "D1109",
-      "semantic_score": 0.02064594067633152,
+      "semantic_score": 0.020645875483751297,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.247751288115978,
+      "score": 8.247750505805016,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.24775128811597824
+        "semantic": 0.24775050580501556
       }
     },
     {
@@ -2366,17 +2870,17 @@
       "snippet": "Trouver un travail, c'est un travail et c'est le nôtreNous recrutons pour un de l'un de nos clients deux étudiants pour un poste de magasinier (H/F) dans le domaine de logistique, spécialisé dans le commerce de gros d'ordinateurs, d'équipements informatiques Vos missions seront les suivantes :Réception et préparation des commandesRangement des arrivagesEmballage/Etiquetage de la marchandiseVérifi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6023122",
       "rome_code": "M1805",
-      "semantic_score": 0.2678505778312683,
+      "semantic_score": 0.26785048842430115,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.21420693397522,
+      "score": 8.214205861091614,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.2142069339752197
+        "semantic": 3.2142058610916138
       }
     },
     {
@@ -2414,17 +2918,17 @@
       "snippet": "Doté(e) d'un sens aigu du détail, cet artisan de la viande garantit des produits de qualité.\\nSélectionne et achète les carcasses de viande chez les grossistes ou les abattoirs\\nDécoupe, désosse et prépare les pièces de viande\\nPrésente et vend la viande en respectant les normes d'hygiène et de sécurité alimentaires\\nConseille les clients sur le choix des produits et leur préparation\\nPeut prépar…",
       "url": "https://hub-alternance.opcoep.fr/jeune/je-cherche-un-emploi/offre-emploi/6a47836e4acef524be47018a",
       "rome_code": "D1109",
-      "semantic_score": 0.010825539007782936,
+      "semantic_score": 0.010825509205460548,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 8.129906468093395,
+      "score": 8.129906110465527,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 0.12990646809339523
+        "semantic": 0.12990611046552658
       }
     },
     {
@@ -2438,17 +2942,17 @@
       "snippet": "Description du poste : En tant qu'organisateur de forums de recrutement, Talents Handicap accompagne de très nombreuses entreprises & organisations en France dans leurs recrutements de collaborateurs en situation de handicap. Participant actuellement à l'un de nos forums. L'entreprise Sopra Steria recherche actuellement des profils : Description de l'entreprise Sopra Steria , acteur majeur de la…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6027032",
       "rome_code": "M1861",
-      "semantic_score": 0.38566502928733826,
+      "semantic_score": 0.3856649398803711,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 7.627980351448059,
+      "score": 7.627979278564453,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 4.627980351448059
+        "semantic": 4.627979278564453
       }
     },
     {
@@ -2462,17 +2966,17 @@
       "snippet": "DESCRIPTIF ENTREPRISE BPCE Solutions Informatiques, une entreprise dynamique et innovante fait partie du groupe BPCE, 2ème groupe bancaire français. Nos 2600 collaborateurs, présents sur 19 villes en France, imaginent et inventent, des solutions SI pour faciliter la vie des utilisateurs des Caisses d'épargne, des Banques Populaires et de plusieurs autres filiales. Entreprise humaine et engagée, n…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212GMRZ",
       "rome_code": "M1855",
-      "semantic_score": 0.3290037512779236,
+      "semantic_score": 0.3290037214756012,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.948045015335083,
+      "score": 6.948044657707214,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.948045015335083
+        "semantic": 3.9480446577072144
       }
     },
     {
@@ -2486,17 +2990,17 @@
       "snippet": "Soors est une société spécialisée dans le recrutement et la délégation de talents IT, intervenant auprès de clients variés sur des missions à forte valeur ajoutée. Notre expertise reconnue nous permet d'accompagner aussi bien de grandes entreprises que des structures innovantes dans leurs projets de transformation digitale. Nous plaçons l'humain, l'innovation et la qualité de service au coeur de…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5725959",
       "rome_code": "M1855",
-      "semantic_score": 0.3282206058502197,
+      "semantic_score": 0.32822057604789734,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.938647270202637,
+      "score": 6.938646912574768,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.9386472702026367
+        "semantic": 3.938646912574768
       }
     },
     {
@@ -2510,17 +3014,17 @@
       "snippet": "Chez Nexitum, notre croissance rapide et nos ambitions d'innovation nécessitent des talents engagés et créatifs. Nous sommes à la recherche de collaborateurs passionnés par les nouvelles technologies, prêts à relever les défis de la transformation numérique et à contribuer à des projets à fort impact. Notre objectif est de former une équipe d'experts qui partagent nos valeurs : l'innovation, la c…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212CHWW",
       "rome_code": "M1805",
-      "semantic_score": 0.3204621374607086,
+      "semantic_score": 0.32046201825141907,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.845545649528503,
+      "score": 6.845544219017029,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.8455456495285034
+        "semantic": 3.845544219017029
       }
     },
     {
@@ -2534,17 +3038,17 @@
       "snippet": "Notre agence Qualis IT Paris (10) recherche un Technicien Informatique H/F pour l'un de ses clients à 59509 DOUAI. Missions principales Réception et gestion des nouveaux équipements Réceptionner les palettes et livraisons de nouveaux PC. Contrôler la conformité et l'état des équipements réceptionnés. Déballer, identifier et organiser les équipements. Enregistrer les nouveaux matériels dans le sto…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5910030",
       "rome_code": "M1805",
-      "semantic_score": 0.3164016306400299,
+      "semantic_score": 0.3164016902446747,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.796819567680359,
+      "score": 6.796820282936096,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.796819567680359
+        "semantic": 3.796820282936096
       }
     },
     {
@@ -2554,21 +3058,21 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 3,
+      "posted_days_ago": 4,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974316",
       "rome_code": "M1855",
-      "semantic_score": 0.30527254939079285,
+      "semantic_score": 0.3052724599838257,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.663270592689514,
+      "score": 6.663269519805908,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.663270592689514
+        "semantic": 3.663269519805908
       }
     },
     {
@@ -2578,21 +3082,21 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 3,
+      "posted_days_ago": 4,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974309",
       "rome_code": "H1218",
-      "semantic_score": 0.28084513545036316,
+      "semantic_score": 0.2808450758457184,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.370141625404358,
+      "score": 6.370140910148621,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.370141625404358
+        "semantic": 3.3701409101486206
       }
     },
     {
@@ -2630,17 +3134,17 @@
       "snippet": "Neuville-en-Ferrain (59) / Début : Septembre / Contrat de 12 mois Et si ton avenir commençait ici ? Tu souhaites apprendre un métier concret, obtenir un diplôme tout en étant rémunéré et intégrer une équipe dynamique ? Cette alternance est faite pour toi ! Que tu sois débutant(e) ou en reconversion, nous t'accompagnons pour construire ton projet professionnel dans le secteur de l'hôtellerie. TES…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/211SBXW",
       "rome_code": "G1501",
-      "semantic_score": 0.2768065929412842,
+      "semantic_score": 0.2768065631389618,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.32167911529541,
+      "score": 6.3216787576675415,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 3.32167911529541
+        "semantic": 3.3216787576675415
       }
     },
     {
@@ -2650,21 +3154,21 @@
       "location": "59 - Lezennes",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 3,
+      "posted_days_ago": 4,
       "snippet": "Description de l'entrepriseSopra Steria, acteur majeur de la Tech en Europe, avec 51000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de conseil, de services et solutions numériques. Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables. Le Groupe apporte une réponse globale aux enjeux de compétitivité des grandes entreprise…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5974300",
       "rome_code": "M1805",
-      "semantic_score": 0.2688840925693512,
+      "semantic_score": 0.26888397336006165,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.226609110832214,
+      "score": 6.22660768032074,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.2266091108322144
+        "semantic": 3.2266076803207397
       }
     },
     {
@@ -2678,17 +3182,17 @@
       "snippet": "Depuis sa création, KLANIK s'est donnée pour mission de conjuguer expertise technologique et authenticité. Ce pari audacieux, né à Marseille en 2011, en France, s'est transformé en une aventure internationale qui compte aujourd'hui plus de 800 collaborateurs, des implantations dans 10 pays et des filiales innovantes. Nous rejoignons en 2026 le groupe ALTEN, acteur mondial de l'ingénierie et des s…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5866363",
       "rome_code": "M1855",
-      "semantic_score": 0.26192283630371094,
+      "semantic_score": 0.2619229257106781,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 6.143074035644531,
+      "score": 6.143075108528137,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 3.1430740356445312
+        "semantic": 3.143075108528137
       }
     },
     {
@@ -2702,17 +3206,17 @@
       "snippet": "Notre équipe Commercialisation SAP recherche un-e Senior Développeur-se SAP Full Stack basé-e à Lille. LA SUPPLY CHAIN A BESOIN DE TES TALENTS ! Nos équipes Value Chain opèrent une ambitieuse transformation technologique et organisationnelle pour accompagner l'ensemble des activités Retail Decathlon et partenaires à travers le monde. Cette transformation a pour but de se doter d'un système d'info…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5960383",
       "rome_code": "M1855",
-      "semantic_score": 0.2288433015346527,
+      "semantic_score": 0.22884327173233032,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 5.7461196184158325,
+      "score": 5.746119260787964,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 0.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 2.7461196184158325
+        "semantic": 2.746119260787964
       }
     }
   ]
