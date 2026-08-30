@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-08-30T10:15:32+00:00",
+    "scraped_at": "2026-08-30T10:55:45+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 15
@@ -166,7 +166,7 @@
       "location": "59 - Lille",
       "contract_type": "CDI",
       "salary": "Annuel de 45000.0 Euros à 50000.0 Euros sur 12 mois",
-      "posted_days_ago": 5,
+      "posted_days_ago": 6,
       "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212VBWF",
       "rome_code": "F1111",
