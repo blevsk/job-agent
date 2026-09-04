@@ -21,10 +21,10 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-09-04T09:18:40+00:00",
+    "scraped_at": "2026-09-04T10:11:17+00:00",
     "rerank_active": false,
     "semantic_active": true,
-    "total": 181
+    "total": 180
   },
   "offers": [
     {
@@ -292,30 +292,6 @@
       }
     },
     {
-      "id": "6381874",
-      "title": "Développeur Python - Ops (H/F)",
-      "company": "Act Digital France",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 6,
-      "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6381874",
-      "rome_code": "M1861",
-      "semantic_score": 0.48860687017440796,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 15.863282442092896,
-      "score_breakdown": {
-        "keywords": 5.0,
-        "contract": 0.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 5.8632824420928955
-      }
-    },
-    {
       "id": "lba_212ZVYJ",
       "title": "Alternance chargé/e de l'accompagnement des projets (H/F)",
       "company": "MJC-CENTRE SOCIAL MAISON POUR TOUS DE CROIX",
@@ -442,7 +418,7 @@
       "location": "Avenue de Dunkerque (Lomme) 59160 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 13,
+      "posted_days_ago": 14,
       "snippet": "Dans le cadre d'un contrat d'apprentissage d'une durée de deux ans, nous vous proposons de vous former au métier de vendeur(se) au sein d'une équipe Henri Boucher. Par le biais d'une alternance riche en missions, nous formons nos futur(e)s vendeur(e)s Aimer être au contact des clients et répondre à leurs besoins avec le sourire : c'est tout ce dont vous avez besoin. Le reste, nous vous l'apprenon…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212SSQY",
       "rome_code": "D1106",
@@ -1306,7 +1282,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 22,
+      "posted_days_ago": 23,
       "snippet": "Envie de vous sentir utile tout en boostant votre avenir professionnel ? Le GEIQ à Domicile Hauts-de-France vous ouvre ses portes ! Nous vous proposons une aventure humaine unique : une formation rémunérée pour décrocher votre Titre Professionnel (ADVF) et un emploi durable à la clé. Vous serez en Alternance en Contrat de Professionnalisation afin d'être formé(e) tout en apprenant sur le terrain…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212JZJJ",
       "rome_code": "K1311",
@@ -1738,7 +1714,7 @@
       "location": "59100 Roubaix",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 2,
+      "posted_days_ago": 3,
       "snippet": "Le titulaire du Titre Professionnel Employé polyvalent de restauration est un professionnel qualifié qui, sous l'autorité d'un responsable, exerce son métier dans différents secteurs de la restauration. Par sa maîtrise de la technique culinaire et sa posture de service, l'employé polyvalent en restauration contribue à la satisfaction de la clientèle et à la réputation de l'établissement. Il réali…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/213FCCS",
       "rome_code": "G1603",
@@ -1858,7 +1834,7 @@
       "location": "7 BIS RUE JULES GUESDE 59162 OSTRICOURT",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 10,
+      "posted_days_ago": 11,
       "snippet": "Réalise des ouvrages, structures chaudronnés par la mise en forme et l'assemblage de tôles, tubes et profilés de différentes dimensions, selon les règles de sécurité. Peut coordonner une équipe.",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a8c142ac9494c8c3e55f153/chaudronnier-chaudronnière-sur-métaux",
       "rome_code": "H2902",
@@ -2170,7 +2146,7 @@
       "location": "59000 Lille",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 28,
+      "posted_days_ago": 29,
       "snippet": "La SAS CLEAN OFFICE vous propose un contrat de professionnalisation sur un poste de Femme/valet de Chambre. Avant le contrat de professionnalisation, une formation POEI (Préparation Opérationnelle à l'Emploi Individuelle) sera assurée , suivie de 3 jours pratiques en hôtellerie. Une réunion d'information aura lieu le 15/09/2026 matin au 21 rue de Vaucanson LILLE (France Travail Lille) Contenu du…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212DKSQ",
       "rome_code": "G1501",
@@ -3010,7 +2986,7 @@
       "location": "59491 Villeneuve-d'Ascq",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 24,
+      "posted_days_ago": 25,
       "snippet": "L'école de Boulangerie Louise recrute ! Prépare ton CAP Boulanger avec notre CFA et apprend le métier au cœur de notre magasin de LA PILATERIE. CHEZ NOUS ! Chez Boulangerie Louise, nous te proposons de te former pour acquérir notre savoir-faire, entouré par des passionnés ! Tu apprendras notamment : Fabriquer les pains traditionnels et les pains spéciaux (pétrissage, façonnage et cuisson) proposé…",
       "url": "https://louise.accelerh.fr/offre/apprenti-e-vendeur-se-villeneuve-d-ascq-h-f-louise8266?mode=postuler&source=207090&scsource=652#offre_detail_postuler",
       "rome_code": "D1102",
@@ -3178,7 +3154,7 @@
       "location": "59 - LILLE",
       "contract_type": "CDI",
       "salary": null,
-      "posted_days_ago": 8,
+      "posted_days_ago": 9,
       "snippet": "CDI - Lille / Démarrage ASAP Vous êtes développeur(se) JavaScript senior et souhaitez rejoindre une équipe où expertise technique, qualité du code et partage des bonnes pratiques sont au cœur des projets ? Au sein de nos équipes, vous concevrez et développerez des applications web fullstack modernes et performantes, de la conception technique jusqu'à la mise en production. Vos missions : - Concev…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212XVMD",
       "rome_code": "M1855",
@@ -3370,7 +3346,7 @@
       "location": "40 RUE SERE DE RIVIERES 59118 WAMBRECHIES",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 22,
+      "posted_days_ago": 23,
       "snippet": "Le pâtissier de restaurant, un artiste culinaire qui éveille les papilles avec ses créations sucrées. Conçoit et réalise des desserts à la carte du restaurant, en accord avec le style culinaire de l'établissement Collabore étroitement avec le chef cuisinier pour développer des menus saisonniers et des offres spéciales Gère les stocks de matières premières et commande les ingrédients nécessaires à…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a7c3e9b38f3ea2efb74856a/chef-cuisinier-pâtissier-cheffe-cuisinière-pâtissière",
       "rome_code": "G1610",
@@ -3442,7 +3418,7 @@
       "location": "AVENUE DU GRAND COTTIGNIES 59290 WASQUEHAL",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 24,
+      "posted_days_ago": 25,
       "snippet": "L'Équipier polyvalent de restauration rapide travaille principalement en fast-food, garantissant un service rapide et de qualité. Assure la préparation et la vente de produits alimentaires selon les normes d'hygiène Gère les commandes et le stock de produits frais Maintient la propreté des équipements et du lieu de travail Peut effectuer des livraisons en respectant les délais promis Fournit un s…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a799a434a68727735271ff5/employé-polyvalent-employée-polyvalente-de-restauration",
       "rome_code": "G1603",
@@ -3484,6 +3460,30 @@
       }
     },
     {
+      "id": "6623630",
+      "title": "Développeur Java / React (H/F)",
+      "company": "AMILTONE",
+      "location": "59 - Lille",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 0,
+      "snippet": "Qui sommes-nous ? Nous sommes passionnés par les nouvelles technologies, et vous ? Rejoindre Amiltone, c'est intégrer des équipes dynamiques et soudées dans le cadre de projets novateurs et ambitieux. Nous relevons les challenges techniques de nos clients et les accompagnons dans leur transformation digitale. Pourquoi choisir Amiltone Amiltone, plus qu'une entreprise, un état d'esprit ! Notre obj…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6623630",
+      "rome_code": "M1855",
+      "semantic_score": 0.35890600085258484,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 9.306872010231018,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 0.0,
+        "rome": 0.0,
+        "location": 2.0,
+        "freshness": 3.0,
+        "semantic": 4.306872010231018
+      }
+    },
+    {
       "id": "6495331",
       "title": "Architecte DevOps - Lille (H/F)",
       "company": "Synapsys",
@@ -3514,7 +3514,7 @@
       "location": "59251 Allennes-les-Marais",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 27,
+      "posted_days_ago": 28,
       "snippet": "Vous serez amener à: Apprentissage du travail de la viande - la réalisation des préparations bouchères - saucisses - paté -entretien des locaux.",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212FNMB",
       "rome_code": "D1101",
@@ -3682,7 +3682,7 @@
       "location": "40 RUE SERE DE RIVIERES 59118 WAMBRECHIES",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 22,
+      "posted_days_ago": 23,
       "snippet": "Le Cuisinier, créateur de saveurs et d'expériences culinaires, est au cœur de l'art gastronomique. Prépare et cuisine des mets selon un plan de production culinaire, les règles d'hygiène et de sécurité alimentaires et la charte qualité de l'établissement Coordonne une équipe en cuisine lors de la préparation des plats Assure la mise en valeur des plats, en respectant les techniques de dressage et…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/6a7c3e6038f3ea2efb748546/premier-commis-première-commise-de-cuisine",
       "rome_code": "G1609",
@@ -3778,7 +3778,7 @@
       "location": "17 RUE ROGER BOUVRY 59113 SECLIN",
       "contract_type": "Alternance",
       "salary": null,
-      "posted_days_ago": 126,
+      "posted_days_ago": 127,
       "snippet": "Le Cuisinier, créateur de saveurs et d'expériences culinaires, est au cœur de l'art gastronomique. Prépare et cuisine des mets selon un plan de production culinaire, les règles d'hygiène et de sécurité alimentaires et la charte qualité de l'établissement Coordonne une équipe en cuisine lors de la préparation des plats Assure la mise en valeur des plats, en respectant les techniques de dressage et…",
       "url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_lba/69f3276cb9bc88d83e181531/chef-de-partie-formation-restaurant-gastronomique",
       "rome_code": "G1609",
@@ -3793,30 +3793,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 0.6890402287244797
-      }
-    },
-    {
-      "id": "6264253",
-      "title": "Développeur Backend Java/Kafka (H/F)",
-      "company": "Act Digital France",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 9,
-      "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6264253",
-      "rome_code": "M1855",
-      "semantic_score": 0.30457359552383423,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 8.65488314628601,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 0.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 3.6548831462860107
       }
     },
     {
@@ -3841,30 +3817,6 @@
         "location": 0.0,
         "freshness": 0.0,
         "semantic": 0.6242033690214157
-      }
-    },
-    {
-      "id": "6264262",
-      "title": "Développeur Fullstack Java VueJS (H/F)",
-      "company": "Act Digital France",
-      "location": "59 - Lille",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 9,
-      "snippet": "act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique. Présent dans 12 pays et fort de plus de 5 600 collaborateurs, nous mettons nos expertises au service de leurs enjeux en développement logiciel, cybersécurité, data, cloud et IA. Notre ambition : devenir le partenaire technologique de confiance des entrepris…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6264262",
-      "rome_code": "M1855",
-      "semantic_score": 0.30181199312210083,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 8.62174391746521,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 0.0,
-        "rome": 0.0,
-        "location": 2.0,
-        "freshness": 3.0,
-        "semantic": 3.62174391746521
       }
     },
     {
@@ -4057,6 +4009,30 @@
         "location": 2.0,
         "freshness": 0.0,
         "semantic": 2.540699064731598
+      }
+    },
+    {
+      "id": "6626561",
+      "title": "Application Manager - webMethods / Boomi (f/m/d) H/F",
+      "company": null,
+      "location": "59 - Villeneuve-d'Ascq",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 0,
+      "snippet": "Notre équipe Data Exchange (Value Chain Engineering) recherche un-e Application Manager en CDI basé-e à Lille. Au sein de Decathlon Digital, l'équipe Data Exchange assure le transport de la donnée entre les différentes applications du SI. Avec une équipe composée de passionné-es (développeur-euses, ingénieur-es support, responsable d'applications), nous garantissons des échanges fiables, performa…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6626561",
+      "rome_code": "M1805",
+      "semantic_score": 0.3748212456703186,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 7.497854948043823,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 0.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 4.497854948043823
       }
     },
     {

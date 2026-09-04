@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-09-04T09:18:26+00:00",
+    "scraped_at": "2026-09-04T10:11:04+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 19
@@ -256,6 +256,30 @@
       }
     },
     {
+      "id": "6626560",
+      "title": "Security Engineer - Tech Lead (f/m/d) H/F",
+      "company": null,
+      "location": "59 - Villeneuve-d'Ascq",
+      "contract_type": "CDI",
+      "salary": null,
+      "posted_days_ago": 0,
+      "snippet": "Notre Cybersecurity Team recherche un-e Tech Lead Engineer basé-e à Lille ou Paris L'équipe Cybersécurité Decathlon assure la protection et la sécurisation de l'ensemble du groupe : elle pilote la stratégie de gouvernance et les processus de gestion du risque, s'assure de la conformité de nos systèmes d'information, définit les moyens techniques nécessaires à la détection et à la réponse aux inci…",
+      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6626560",
+      "rome_code": "M1802",
+      "semantic_score": 0.5149402618408203,
+      "llm_rank": null,
+      "llm_reason": null,
+      "score": 17.179283142089844,
+      "score_breakdown": {
+        "keywords": 0.0,
+        "contract": 8.0,
+        "rome": 0.0,
+        "location": 0.0,
+        "freshness": 3.0,
+        "semantic": 6.179283142089844
+      }
+    },
+    {
       "id": "6444567",
       "title": "Ingénieur Conception Réseaux de Chaleur (H/F)",
       "company": "Forums Talents Handicap",
@@ -277,30 +301,6 @@
         "location": 0.0,
         "freshness": 3.0,
         "semantic": 6.101938962936401
-      }
-    },
-    {
-      "id": "6574128",
-      "title": "Ingénieur commercial (IT-Télécom-Impression) - Lille (H/F)",
-      "company": "DFM",
-      "location": "59 - Villeneuve-d'Ascq",
-      "contract_type": "CDI",
-      "salary": null,
-      "posted_days_ago": 0,
-      "snippet": "Rejoignez DFM, entreprise certifiée Great Place To Work et acteur majeur de la transformation digitale. Depuis 2002, DFM accompagne les entreprises dans leur performance en intégrant les meilleures technologies. Groupe français indépendant, nous réalisons aujourd'hui 71 Meuros de chiffre d'affaires et rassemblons plus de 300 collaborateurs, répartis sur 10 agences nationales autour d'une ambition…",
-      "url": "https://candidat.francetravail.fr/offres/recherche/detail/6574128",
-      "rome_code": "F1623",
-      "semantic_score": 0.502875030040741,
-      "llm_rank": null,
-      "llm_reason": null,
-      "score": 17.03450036048889,
-      "score_breakdown": {
-        "keywords": 0.0,
-        "contract": 8.0,
-        "rome": 0.0,
-        "location": 0.0,
-        "freshness": 3.0,
-        "semantic": 6.034500360488892
       }
     },
     {
