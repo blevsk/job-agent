@@ -9,7 +9,7 @@
         "location": "Lille"
       }
     ],
-    "scraped_at": "2026-09-05T08:46:44+00:00",
+    "scraped_at": "2026-09-05T09:40:24+00:00",
     "rerank_active": false,
     "semantic_active": true,
     "total": 19
@@ -26,17 +26,17 @@
       "snippet": "Description du poste : Nous recrutons pour notre client, éditeur de logiciel reconnu dans son secteur d'activité un DevOps H/F. Votre responsabilité principale est de participer à l'évolution des solutions concernant l'infrastructure. En étroite collaboration avec les équipes de développement logiciels et support, vos missions sont Automatiser et industrialiser la mise en place et l'administratio…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6356024",
       "rome_code": "M1802",
-      "semantic_score": 0.5512101054191589,
+      "semantic_score": 0.5512100458145142,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.614521265029907,
+      "score": 19.61452054977417,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 6.614521265029907
+        "semantic": 6.61452054977417
       }
     },
     {
@@ -74,17 +74,17 @@
       "snippet": "La plateforme Proch'emploi de Lens-Hénin, recrute pour une entreprise locale, experte en intégration de technologies systèmes réseaux et cybersécurité, un(e) Ingénieur Réseaux et Télécoms (H/F) dans le cadre d'un CDI sur Amiens (déplacements à prévoir). Vous interviendrez en expertise et en support niveau 3 sur des infrastructures réseaux critiques. Les missions principales sont les suivantes : -…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/213BXYD",
       "rome_code": "M1804",
-      "semantic_score": 0.6742151379585266,
+      "semantic_score": 0.6742151975631714,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 19.09058165550232,
+      "score": 19.090582370758057,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 8.09058165550232
+        "semantic": 8.090582370758057
       }
     },
     {
@@ -122,17 +122,17 @@
       "snippet": "Nous recherchons pour le compte de notre client un Ingénieur systèmesMaintien en condition opérationnelle de la Production - Supervision de l'infrastructure et proactivité afin de limiter les impacts et les incidents - Mise en place de flux sur ordonnanceur - Résolution d'incidents - scripting (powershell , bat , shell ..) Maintenance et développement des infrastructures système : - Mesurer et op…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6476035",
       "rome_code": "M1802",
-      "semantic_score": 0.4795340299606323,
+      "semantic_score": 0.4795339107513428,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.754408359527588,
+      "score": 18.754406929016113,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.754408359527588
+        "semantic": 5.754406929016113
       }
     },
     {
@@ -146,17 +146,17 @@
       "snippet": "La plateforme Proch'emploi de Lens-Hénin, recrute pour une entreprise locale, experte en intégration de technologies systèmes réseaux et cybersécurité, un(e) Ingénieur Réseaux et Télécoms (H/F) dans le cadre d'un CDI sur Amiens (déplacements à prévoir). Vous interviendrez en expertise et en support niveau 3 sur des infrastructures réseaux critiques. Les missions principales sont les suivantes : -…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212ZZJJ",
       "rome_code": "I1104",
-      "semantic_score": 0.6438647508621216,
+      "semantic_score": 0.6438646912574768,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.72637701034546,
+      "score": 18.72637629508972,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 7.726377010345459
+        "semantic": 7.726376295089722
       }
     },
     {
@@ -170,17 +170,17 @@
       "snippet": "Rejoignez un acteur clé de l'ingénierie des territoires Groupe reconnu depuis 100 ans dans les domaines de l'eau, de l'énergie, l'aménagement urbain et des mobilités, nous accompagnons les collectivités dans leurs projets à fort impact territorial et environnemental. Dans un contexte de croissance, notre agence de Lille recherche un Ingénieur traitement des eaux afin de consolider son équipe comp…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/212VBWF",
       "rome_code": "F1111",
-      "semantic_score": 0.4745202958583832,
+      "semantic_score": 0.4745202362537384,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.694243550300598,
+      "score": 18.69424283504486,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.694243550300598
+        "semantic": 5.694242835044861
       }
     },
     {
@@ -194,17 +194,17 @@
       "snippet": "Acteur indépendant reconnu dans le conseil et l'accompagnement des maîtres d'ouvrage, cette structure à taille humaine intervient sur des projets complexes à forte valeur ajoutée. Elle accompagne ses clients de la définition stratégique à la réalisation opérationnelle, avec une expertise pointue en montage d'opérations, programmation et management de projets immobiliers. Présente sur plusieurs se…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6341877",
       "rome_code": "M1802",
-      "semantic_score": 0.46145099401474,
+      "semantic_score": 0.4614509046077728,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 18.53741192817688,
+      "score": 18.537410855293274,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.53741192817688
+        "semantic": 5.537410855293274
       }
     },
     {
@@ -218,17 +218,17 @@
       "snippet": "Intégrateur de solutions IT, notre client conçoit, déploie et sécurise les infrastructures de ses clients : datacenter, virtualisation, réseau, mobilité et cybersécurité. Ses équipes transforment au quotidien des enjeux techniques complexes en solutions concrètes, fiables et durables, pour des entreprises de toutes tailles.Ce qui l'anime : la proximité client, l'exigence technique, l'esprit d'équ…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6077662",
       "rome_code": "M1841",
-      "semantic_score": 0.6634051203727722,
+      "semantic_score": 0.663405179977417,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.960861444473267,
+      "score": 17.960862159729004,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 7.960861444473267
+        "semantic": 7.960862159729004
       }
     },
     {
@@ -242,17 +242,17 @@
       "snippet": "Ingénieur réseaux H/F - Lille Dans le cadre de projets d'évolution et d'harmonisation des infrastructures réseau de ses établissements, nous recherchons un(e) Ingénieur / Administrateur Réseau orienté(e) intégration technique terrain. La mission s'inscrit dans un contexte opérationnel, avec un fort besoin d'expertise technique et d'autonomie sur le déploiement des solutions réseau. Vos missions *…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6051577",
       "rome_code": "M1802",
-      "semantic_score": 0.6046783924102783,
+      "semantic_score": 0.6046785712242126,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.25614070892334,
+      "score": 17.25614285469055,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 7.25614070892334
+        "semantic": 7.256142854690552
       }
     },
     {
@@ -266,17 +266,17 @@
       "snippet": "Notre Cybersecurity Team recherche un-e Tech Lead Engineer basé-e à Lille ou Paris L'équipe Cybersécurité Decathlon assure la protection et la sécurisation de l'ensemble du groupe : elle pilote la stratégie de gouvernance et les processus de gestion du risque, s'assure de la conformité de nos systèmes d'information, définit les moyens techniques nécessaires à la détection et à la réponse aux inci…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6626560",
       "rome_code": "M1802",
-      "semantic_score": 0.5149404406547546,
+      "semantic_score": 0.5149402618408203,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.179285287857056,
+      "score": 17.179283142089844,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.179285287857056
+        "semantic": 6.179283142089844
       }
     },
     {
@@ -290,17 +290,17 @@
       "snippet": "Au sein du Département Grands Travaux de la DTGP Nord-Ouest, vous intégrez l'équipe Ingénierie-Process. Vous réalisez les études de conception des process énergétiques des réseaux de chaleur couvrant les phases APS/APD/Exécution.Sous la responsabilité du Responsable Ingénierie-Process, l'ingénieur conception réseau de chaleur a pour tâches de :- Concevoir les process hydrauliques (PID, dimensionn…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6444567",
       "rome_code": "F1112",
-      "semantic_score": 0.5084949135780334,
+      "semantic_score": 0.5084949731826782,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 17.1019389629364,
+      "score": 17.10193967819214,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 3.0,
-        "semantic": 6.101938962936401
+        "semantic": 6.101939678192139
       }
     },
     {
@@ -314,17 +314,17 @@
       "snippet": "L'industrie européenne se transforme. Les capitaux sont là, les projets aussi. Mais sur le terrain, il manque l'essentiel : les compétences pour faire tourner les lignes. C'est pour répondre à ce contexte que Kali Group existe. Nous sommes un cabinet de conseil spécialisé à 100% dans le manufacturing opérationnel. De l'industrialisation à la modernisation, nous résolvons les défis que la complexi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6341724",
       "rome_code": "M1802",
-      "semantic_score": 0.31210461258888245,
+      "semantic_score": 0.3121047019958496,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.74525535106659,
+      "score": 16.745256423950195,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.7452553510665894
+        "semantic": 3.7452564239501953
       }
     },
     {
@@ -338,17 +338,17 @@
       "snippet": "L'industrie européenne se transforme. Les capitaux sont là, les projets aussi. Mais sur le terrain, il manque l'essentiel : les compétences pour faire tourner les lignes. C'est pour répondre à ce contexte que Kali Group existe. Nous sommes un cabinet de conseil spécialisé à 100% dans le manufacturing opérationnel. De l'industrialisation à la modernisation, nous résolvons les défis que la complexi…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6574152",
       "rome_code": "M1802",
-      "semantic_score": 0.27577224373817444,
+      "semantic_score": 0.275772362947464,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.309266924858093,
+      "score": 16.309268355369568,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 3.3092669248580933
+        "semantic": 3.309268355369568
       }
     },
     {
@@ -362,17 +362,17 @@
       "snippet": "Description du poste : Vous avez un réel intérêt pour les technologies IT et les systèmes de sûreté et souhaitez intervenir sur des projets à fort impact ? Dans le cadre de notre développement, nous recherchons un Expert technique Vidéosurveillance GENETEC pour renforcer notre équipe technique. Rattaché(e) au manager du pôle Services, vous interviendrez sur des missions de support, d'exploitation…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/5942181",
       "rome_code": "M1802",
-      "semantic_score": 0.6859778165817261,
+      "semantic_score": 0.6859777569770813,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 16.231733798980713,
+      "score": 16.231733083724976,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 0.0,
         "freshness": 0.0,
-        "semantic": 8.231733798980713
+        "semantic": 8.231733083724976
       }
     },
     {
@@ -386,17 +386,17 @@
       "snippet": "Lieu : Lille, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'activité : Défense & Sécurité, Aéronautique & Spatial, et Cyber & Digital. Il développe des produits et solutions qui contribuent à un monde plus sûr, plus respectueux de l'environnement et plus inclusif. Le Groupe investit près de 4 milliards d'e…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/4635546",
       "rome_code": "M1884",
-      "semantic_score": 0.4623582065105438,
+      "semantic_score": 0.46235817670822144,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 15.548298478126526,
+      "score": 15.548298120498657,
       "score_breakdown": {
         "keywords": 0.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 0.0,
-        "semantic": 5.548298478126526
+        "semantic": 5.548298120498657
       }
     },
     {
@@ -458,17 +458,17 @@
       "snippet": "Qui sommes-nous ? Créée en 2012, Synapsys est une société de conseil et d'expertise spécialisée dans la transformation des infrastructures IT. Notre mission : accompagner les plus grandes entreprises tout au long du cycle de vie de leurs projets de transformation numérique. Nos domaines d'expertise : Digital Workplace - Cloud & DevOps - Cybersécurité - Transformation des SI - Data & IA Le poste :…",
       "url": "https://candidat.francetravail.fr/offres/recherche/detail/6495345",
       "rome_code": "M1802",
-      "semantic_score": 0.4293734133243561,
+      "semantic_score": 0.4293733537197113,
       "llm_rank": null,
       "llm_reason": null,
-      "score": 13.152480959892273,
+      "score": 13.152480244636536,
       "score_breakdown": {
         "keywords": -5.0,
         "contract": 8.0,
         "rome": 0.0,
         "location": 2.0,
         "freshness": 3.0,
-        "semantic": 5.152480959892273
+        "semantic": 5.152480244636536
       }
     }
   ]
